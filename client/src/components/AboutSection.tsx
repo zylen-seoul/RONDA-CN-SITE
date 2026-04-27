@@ -40,7 +40,7 @@ export default function AboutSection() {
 
   const stats = [
     { value: 10, suffix: '+', label: t('stats.years'), unit: t('stats.years.unit') },
-    { value: 20, suffix: '+', label: t('stats.factories'), unit: '' },
+    { value: 2000, suffix: '+', label: t('stats.factories'), unit: '' },
     { value: 500, suffix: '+', label: t('stats.fabrics'), unit: '' },
     { value: 100, suffix: '', label: t('stats.moq'), unit: '' },
   ];
