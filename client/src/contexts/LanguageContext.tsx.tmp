@@ -1,0 +1,16 @@
+    'inquiry.cancel': '취소',
+
+    // Uppercase aliases for backward compatibility
+    'NAV.HOME': '홈',
+    'NAV.PRODUCTS': '제품',
+    'NAV.SERVICES': '서비스',
+    'NAV.GLOBAL': '글로벌',
+    'NAV.ABOUT': '회사소개',
+    'NAV.CONTACT': '문의',
+    'HERO.CTA1': '제품 탐색',
+    'HERO.CTA2': '문의하기',
+    'HERO.LABEL': '국제 의류',
+    'SERVICES.CTA': '자세히 알아보기',
+    'CONTACT.LABEL': '문의하기',
+  },
+};
