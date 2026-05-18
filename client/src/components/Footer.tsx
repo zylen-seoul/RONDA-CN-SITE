@@ -189,24 +189,24 @@ export default function Footer({ onInquiryOpen, onPrivacyOpen, onTermsOpen }: Fo
             {t('footer.rights')}
           </span>
           <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
-            <button
-              onClick={() => onPrivacyOpen?.()}
+            <a
+              href="/privacy"
               style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '0.65rem',
-                color: '#9A9590',
-                textDecoration: 'none',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                padding: 0,
-                transition: 'color 0.3s',
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: '0.65rem',
+              color: '#9A9590',
+              textDecoration: 'none',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: 0,
+              transition: 'color 0.3s',
               }}
               onMouseEnter={e => (e.currentTarget.style.color = '#8B7355')}
               onMouseLeave={e => (e.currentTarget.style.color = '#9A9590')}
-            >
+
               {t('footer.privacy')}
-            </button>
+              </a>
             <span style={{ color: 'rgba(139,115,85,0.3)', fontSize: '0.65rem' }}>|</span>
             <button
               onClick={() => onTermsOpen?.()}
