@@ -11,7 +11,7 @@ interface FooterProps {
   onTermsOpen?: () => void;
 }
 
-export default function Footer({ onInquiryOpen, onPrivacyOpen, onTermsOpen }: FooterProps) {
+export default function Footer({ onInquiryOpen, onTermsOpen }: FooterProps) {
   const { t } = useLanguage();
 
   const navLinks = [
@@ -204,7 +204,7 @@ export default function Footer({ onInquiryOpen, onPrivacyOpen, onTermsOpen }: Fo
               }}
               onMouseEnter={e => (e.currentTarget.style.color = '#8B7355')}
               onMouseLeave={e => (e.currentTarget.style.color = '#9A9590')}
-
+            >
               {t('footer.privacy')}
               </a>
             <span style={{ color: 'rgba(139,115,85,0.3)', fontSize: '0.65rem' }}>|</span>
