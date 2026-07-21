@@ -8,7 +8,6 @@ import { useRef, useState } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import InquiryModal from './InquiryModal';
 
 const QR = {
   wechatWork: '/manus-storage/wechat_work_qr_fbd3eec0.png',
@@ -126,12 +125,11 @@ function QRModal({ name, qr, onClose }: { name: string; qr: string; onClose: () 
   );
 }
 
-export default function ContactSection({ onInquiryOpen }: { onInquiryOpen?: () => void }) {
+export default function ContactSection() {
   const { t } = useLanguage();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
   const [activeQR, setActiveQR] = useState<{ name: string; qr: string } | null>(null);
-  const [showInquiry, setShowInquiry] = useState(false);
 
   return (
     <section id="contact" style={{ background: '#F7F5F2' }} className="py-10 md:py-16">
@@ -303,8 +301,8 @@ export default function ContactSection({ onInquiryOpen }: { onInquiryOpen?: () =
           transition={{ duration: 0.7, delay: 0.3 }}
           style={{ textAlign: 'center' }}
         >
-          <motion.button
-            onClick={() => onInquiryOpen?.()}
+          <motion.a
+            href="/inquiry/"
             whileHover={{ scale: 1.05 }}
             style={{
               padding: '1.2rem 2.5rem',
@@ -317,11 +315,13 @@ export default function ContactSection({ onInquiryOpen }: { onInquiryOpen?: () =
               letterSpacing: '0.1em',
               textTransform: 'uppercase',
               cursor: 'pointer',
+              textDecoration: 'none',
+              display: 'inline-block',
               transition: 'all 0.3s ease',
             }}
           >
             {t('contact.label')}
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
 
@@ -336,12 +336,6 @@ export default function ContactSection({ onInquiryOpen }: { onInquiryOpen?: () =
         )}
       </AnimatePresence>
 
-      {/* Inquiry Modal */}
-      <AnimatePresence>
-        {showInquiry && (
-          <InquiryModal onClose={() => setShowInquiry(false)} />
-        )}
-      </AnimatePresence>
     </section>
   );
 }

@@ -8,12 +8,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage, Language } from '@/contexts/LanguageContext';
 
 const NAV_ITEMS = [
-  { key: 'nav.home', href: '#hero' },
-  { key: 'nav.products', href: '#products' },
-  { key: 'nav.services', href: '#services' },
-  { key: 'nav.global', href: '#global' },
-  { key: 'nav.about', href: '#about' },
-  { key: 'nav.contact', href: '#contact' },
+  { key: 'nav.home', href: '/' },
+  { key: 'nav.products', href: '/products/' },
+  { key: 'nav.services', href: '/services/' },
+  { key: 'nav.global', href: '/global/' },
+  { key: 'nav.about', href: '/about/' },
+  { key: 'nav.contact', href: '/contact/' },
 ];
 
 const LANGS: { code: Language; label: string; full: string }[] = [
@@ -33,12 +33,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNav = (href: string) => {
-    setMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <>
       <motion.header
@@ -56,8 +50,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
             <a
-              href="#hero"
-              onClick={(e) => { e.preventDefault(); handleNav('#hero'); }}
+              href="/"
               className="flex flex-col leading-none group"
               style={{ textDecoration: 'none' }}
             >
@@ -81,7 +74,7 @@ export default function Navbar() {
                 color: '#8B7355',
                 marginTop: '2px',
               }}>
-                Hangzhou · Seoul
+                {lang === 'zh' ? '杭州绒达科技 · RONDA' : 'RONGDA · HANGZHOU'}
               </span>
             </a>
 
@@ -91,7 +84,6 @@ export default function Navbar() {
                 <a
                   key={key}
                   href={href}
-                  onClick={(e) => { e.preventDefault(); handleNav(href); }}
                   className="relative group"
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
@@ -142,8 +134,7 @@ export default function Navbar() {
 
               {/* CTA */}
               <a
-                href="#contact"
-                onClick={(e) => { e.preventDefault(); handleNav('#contact'); }}
+                href="/contact/"
                 className="hidden md:inline-flex items-center gap-2"
                 style={{
                   backgroundColor: '#1C1F24',
@@ -210,7 +201,7 @@ export default function Navbar() {
                 <motion.a
                   key={key}
                   href={href}
-                  onClick={(e) => { e.preventDefault(); handleNav(href); }}
+                  onClick={() => setMobileOpen(false)}
                   style={{
                     fontFamily: "'Cormorant Garamond', serif",
                     fontSize: '2.5rem',

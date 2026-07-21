@@ -5,26 +5,16 @@
  */
 import { useLanguage } from '@/contexts/LanguageContext';
 
-interface FooterProps {
-  onInquiryOpen?: () => void;
-  onPrivacyOpen?: () => void;
-  onTermsOpen?: () => void;
-}
-
-export default function Footer({ onInquiryOpen, onTermsOpen }: FooterProps) {
+export default function Footer() {
   const { t } = useLanguage();
 
   const navLinks = [
-    { key: 'nav.home', href: '#hero' },
-    { key: 'nav.products', href: '#products' },
-    { key: 'nav.services', href: '#services' },
-    { key: 'nav.global', href: '#global' },
-    { key: 'nav.about', href: '#about' },
+    { key: 'nav.home', href: '/' },
+    { key: 'nav.products', href: '/products/' },
+    { key: 'nav.services', href: '/services/' },
+    { key: 'nav.global', href: '/global/' },
+    { key: 'nav.about', href: '/about/' },
   ];
-
-  const handleClick = (href: string) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <footer style={{
@@ -56,7 +46,7 @@ export default function Footer({ onInquiryOpen, onTermsOpen }: FooterProps) {
               display: 'block',
               marginBottom: '0.4rem',
             }}>
-              RONDA · ATLY
+              RONDA · ATLY · 杭州绒达科技
             </span>
             <span style={{
               fontFamily: "'Cormorant Garamond', serif",
@@ -79,8 +69,8 @@ export default function Footer({ onInquiryOpen, onTermsOpen }: FooterProps) {
               {t('footer.tagline')}
             </p>
             {/* CTA Button */}
-            <button
-              onClick={() => onInquiryOpen?.()}
+            <a
+              href="/inquiry/"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '0.62rem',
@@ -93,12 +83,14 @@ export default function Footer({ onInquiryOpen, onTermsOpen }: FooterProps) {
                 padding: '0.75rem 1.8rem',
                 cursor: 'pointer',
                 transition: 'background 0.3s',
+                textDecoration: 'none',
+                display: 'inline-block',
               }}
               onMouseEnter={e => (e.currentTarget.style.background = '#8B7355')}
               onMouseLeave={e => (e.currentTarget.style.background = '#1A1A1A')}
             >
               {t('nav.contact')}
-            </button>
+            </a>
           </div>
 
           {/* Navigation */}
@@ -126,7 +118,6 @@ export default function Footer({ onInquiryOpen, onTermsOpen }: FooterProps) {
                 <li key={key}>
                   <a
                     href={href}
-                    onClick={(e) => { e.preventDefault(); handleClick(href); }}
                     style={{
                       fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
                       fontSize: '0.75rem',
@@ -190,7 +181,7 @@ export default function Footer({ onInquiryOpen, onTermsOpen }: FooterProps) {
           </span>
           <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
             <a
-              href="/privacy"
+              href="/privacy/"
               style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '0.65rem',
@@ -208,8 +199,8 @@ export default function Footer({ onInquiryOpen, onTermsOpen }: FooterProps) {
               {t('footer.privacy')}
               </a>
             <span style={{ color: 'rgba(139,115,85,0.3)', fontSize: '0.65rem' }}>|</span>
-            <button
-              onClick={() => onTermsOpen?.()}
+            <a
+              href="/terms/"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
                 fontSize: '0.65rem',
@@ -225,7 +216,7 @@ export default function Footer({ onInquiryOpen, onTermsOpen }: FooterProps) {
               onMouseLeave={e => (e.currentTarget.style.color = '#9A9590')}
             >
               {t('footer.terms')}
-            </button>
+            </a>
           </div>
         </div>
       </div>

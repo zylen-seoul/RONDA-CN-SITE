@@ -181,4 +181,29 @@
     background: rgba(139, 115, 85, 0.2);
     color: #1A1A1A;
   }
+
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid #8B7355;
+    outline-offset: 4px;
+  }
+
+  @media (max-width: 900px) {
+    .page-hero-grid,
+    .brand-overview-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    .site-directory-grid,
+    .related-links-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .site-directory-grid,
+    .related-links-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
 }
