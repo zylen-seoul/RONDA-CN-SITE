@@ -1,7 +1,7 @@
 /**
  * InquiryPage — Standalone full-page inquiry form
  * Triggered by "Contact Us" buttons in Hero and Footer.
- * Submits to /api/send-inquiry → bound to guangmdc0901@gmail.com
+ * Prepares a structured email to the Samplewear company inbox.
  */
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -45,23 +45,33 @@ export default function InquiryPage({ onClose }: InquiryPageProps) {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
     setError('');
+
     try {
-      const res = await fetch('/api/send-inquiry', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, to: 'guangmdc0901@gmail.com' }),
-      });
-      if (res.ok) {
-        setSubmitted(true);
-      } else {
-        setError(t('inquiry.error') || '提交失败，请稍后重试。');
-      }
+      const details = [
+        [t('inquiry.sampleType'), formData.sampleType],
+        [t('inquiry.hasSample'), formData.hasSample],
+        [t('inquiry.expectedQty'), formData.expectedQty],
+        [t('inquiry.color'), formData.color],
+        [t('inquiry.size'), formData.size],
+        [t('inquiry.region'), formData.region],
+        [t('inquiry.brand'), formData.brand],
+        [t('inquiry.contact'), formData.contact],
+        [t('inquiry.message'), formData.message],
+      ]
+        .filter(([, value]) => value)
+        .map(([label, value]) => `${label}: ${value}`)
+        .join('\n');
+      const subject = `Samplewear · ${formData.brand || formData.sampleType || t('inquiry.heading')}`;
+      const body = `${details}\n\nSource: https://www.samplewear.com/inquiry/`;
+
+      setSubmitted(true);
+      window.location.href = `mailto:zylen@samplewear.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     } catch {
-      setError(t('inquiry.error') || '网络错误，请稍后重试。');
+      setError(t('inquiry.error'));
     } finally {
       setSubmitting(false);
     }
@@ -159,7 +169,7 @@ export default function InquiryPage({ onClose }: InquiryPageProps) {
               color: '#1A1A1A',
               marginBottom: '1rem',
             }}>
-              {t('inquiry.success.title') || '感谢您的咨询'}
+              {t('inquiry.success.title')}
             </div>
             <p style={{
               fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
@@ -168,8 +178,14 @@ export default function InquiryPage({ onClose }: InquiryPageProps) {
               lineHeight: 1.8,
               marginBottom: '2.5rem',
             }}>
-              {t('inquiry.success.desc') || '我们已收到您的需求，将在 1-2 个工作日内与您联系。'}
+              {t('inquiry.success.desc')}
             </p>
+            <a
+              href="mailto:zylen@samplewear.com"
+              style={{ display: 'inline-block', color: '#8B7355', marginBottom: '2rem' }}
+            >
+              zylen@samplewear.com
+            </a>
             <button
               onClick={onClose}
               style={{

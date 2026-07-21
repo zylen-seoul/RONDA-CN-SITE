@@ -1,0 +1,364 @@
+{
+  "siteUrl": "https://www.samplewear.com",
+  "organization": {
+    "name": "杭州绒达科技有限公司",
+    "englishName": "Hangzhou Rongda Technology Co., Ltd.",
+    "alternateNames": ["绒达科技", "RONDA", "Samplewear", "Sample & Simple"],
+    "email": "zylen@samplewear.com",
+    "telephone": "+86-571-88012309",
+    "address": {
+      "streetAddress": "西湖区瑞博国际B座1707",
+      "addressLocality": "杭州市",
+      "addressRegion": "浙江省",
+      "addressCountry": "CN"
+    }
+  },
+  "pages": [
+    {
+      "key": "home",
+      "path": "/",
+      "index": true,
+      "title": {
+        "zh": "杭州绒达科技｜Samplewear 冬装服装供应链",
+        "en": "Hangzhou Rongda Technology | Samplewear Winter Apparel Supply Chain",
+        "ko": "항저우 룽다 테크놀로지 | Samplewear 겨울 의류 공급망"
+      },
+      "description": {
+        "zh": "Samplewear 是杭州绒达科技有限公司（RONDA）的官方网站，介绍冬装设计打样、柔性生产、面料采购、质量控制与交付等供应链服务。",
+        "en": "Samplewear is the official website of Hangzhou Rongda Technology Co., Ltd., covering winter-apparel sampling, sourcing, manufacturing, quality control and delivery.",
+        "ko": "Samplewear는 항저우 룽다 테크놀로지 유한공사의 공식 웹사이트로, 겨울 의류 샘플링, 소재 조달, 생산, 품질 관리 및 납품 서비스를 소개합니다."
+      },
+      "h1": {
+        "zh": "杭州绒达科技的冬装柔性供应链",
+        "en": "Winter Apparel Supply Chain by Hangzhou Rongda Technology",
+        "ko": "항저우 룽다 테크놀로지의 겨울 의류 공급망"
+      },
+      "intro": {
+        "zh": "Samplewear（网站展示名 Sample & Simple）是杭州绒达科技有限公司运营的服装供应链官方网站。RONDA 对应杭州业务，ATLY 对应首尔办公室。",
+        "en": "Samplewear, presented as Sample & Simple, is the official apparel supply-chain website operated by Hangzhou Rongda Technology Co., Ltd. RONDA identifies the Hangzhou operation and ATLY the Seoul office.",
+        "ko": "Samplewear(Sample & Simple)는 항저우 룽다 테크놀로지 유한공사가 운영하는 의류 공급망 공식 웹사이트입니다. RONDA는 항저우 사업을, ATLY는 서울 오피스를 나타냅니다."
+      },
+      "summary": {
+        "zh": "了解绒达如何连接杭州供应链与首尔时尚资源。",
+        "en": "See how Rongda connects Hangzhou supply-chain capabilities with Seoul fashion resources.",
+        "ko": "룽다가 항저우 공급망과 서울 패션 자원을 연결하는 방식을 확인하세요."
+      },
+      "staticSections": [
+        {
+          "heading": "Samplewear 与杭州绒达科技",
+          "paragraphs": [
+            "Samplewear（Sample & Simple）是杭州绒达科技有限公司面向全球品牌客户展示服装供应链能力的网站入口。公司以 RONDA 展示杭州业务，并通过 ATLY 首尔办公室连接设计与品牌资源。",
+            "网站内容围绕冬装产品开发，从设计打样、面料采购、生产协作、质量控制到交付，帮助品牌清晰了解合作流程与可用服务。"
+          ]
+        },
+        {
+          "heading": "网站内容导航",
+          "paragraphs": [
+            "产品页面介绍羽绒服与户外系列、双面大衣、皮草与皮毛一体、羽绒寝具等开发方向；服务页面介绍设计打样、面料采购、柔性生产、质量控制与物流协作；关于与全球布局页面进一步说明绒达、RONDA、Samplewear 与 ATLY 的关系。"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "products",
+      "path": "/products/",
+      "index": true,
+      "title": {
+        "zh": "冬装定制产品｜杭州绒达科技 Samplewear",
+        "en": "Winter Apparel Products | Samplewear by Hangzhou Rongda",
+        "ko": "겨울 의류 제품 | 항저우 룽다 Samplewear"
+      },
+      "description": {
+        "zh": "杭州绒达科技通过 Samplewear 展示羽绒服与户外系列、双面大衣、皮草与皮毛一体、羽绒寝具等冬装产品开发方向。",
+        "en": "Explore down jackets and outdoor apparel, double-faced coats, fur and shearling, and down bedding offered through Samplewear.",
+        "ko": "Samplewear를 통해 다운 재킷과 아웃도어 의류, 더블페이스 코트, 퍼와 시어링, 다운 침구 개발 방향을 살펴보세요."
+      },
+      "h1": {
+        "zh": "杭州绒达科技的冬装产品与开发方向",
+        "en": "Winter Apparel Products by Hangzhou Rongda Technology",
+        "ko": "항저우 룽다 테크놀로지의 겨울 의류 제품"
+      },
+      "intro": {
+        "zh": "绒达科技通过 Samplewear 展示四类冬装产品开发方向，并将产品需求与设计打样、面辅料协作、生产及质量控制流程连接起来。",
+        "en": "Rongda presents four winter-apparel development categories through Samplewear and connects product requirements with sampling, material sourcing, manufacturing and quality control.",
+        "ko": "룽다는 Samplewear를 통해 네 가지 겨울 의류 개발 분야를 소개하고 샘플링, 소재 조달, 생산 및 품질 관리와 연결합니다."
+      },
+      "summary": {
+        "zh": "浏览羽绒服、双面大衣、皮草与羽绒寝具开发方向。",
+        "en": "Explore down jackets, double-faced coats, fur and down bedding.",
+        "ko": "다운 재킷, 더블페이스 코트, 퍼 및 다운 침구를 살펴보세요."
+      },
+      "staticSections": [
+        {
+          "heading": "羽绒服与户外系列",
+          "paragraphs": ["面向品牌客户的羽绒服、滑雪服与功能性外衣开发，覆盖设计沟通、样衣制作、面辅料协作与生产衔接。"]
+        },
+        {
+          "heading": "双面大衣",
+          "paragraphs": ["围绕版型沟通、面料打样、工艺协作与柔性生产衔接，支持品牌推进双面大衣产品开发。"]
+        },
+        {
+          "heading": "皮草与皮毛一体",
+          "paragraphs": ["提供原料搜源、设计开发、打样与生产协作等环节的信息与服务对接。"]
+        },
+        {
+          "heading": "羽绒寝具",
+          "paragraphs": ["围绕填充材料选择、样件开发、面料方案与定制协作介绍羽绒寝具开发方向。"]
+        }
+      ]
+    },
+    {
+      "key": "services",
+      "path": "/services/",
+      "index": true,
+      "title": {
+        "zh": "服装供应链服务｜杭州绒达科技 Samplewear",
+        "en": "Apparel Supply Chain Services | Samplewear by Hangzhou Rongda",
+        "ko": "의류 공급망 서비스 | 항저우 룽다 Samplewear"
+      },
+      "description": {
+        "zh": "杭州绒达科技通过 Samplewear 介绍设计打样、品牌孵化、柔性生产、面料采购、质量控制及物流配送等供应链服务。",
+        "en": "Explore design and sampling, brand incubation, flexible manufacturing, fabric sourcing, quality control and logistics services.",
+        "ko": "디자인 및 샘플링, 브랜드 인큐베이션, 유연 생산, 원단 조달, 품질 관리와 물류 서비스를 확인하세요."
+      },
+      "h1": {
+        "zh": "从设计到交付的服装供应链服务",
+        "en": "Apparel Supply Chain Services from Design to Delivery",
+        "ko": "디자인부터 납품까지의 의류 공급망 서비스"
+      },
+      "intro": {
+        "zh": "Samplewear 将杭州绒达科技的产品开发与供应链协作内容按服务环节整理，帮助品牌了解从创意沟通到成品交付的合作路径。",
+        "en": "Samplewear organizes Hangzhou Rongda's development and supply-chain capabilities by service stage, giving brands a clear path from concept discussion to delivery.",
+        "ko": "Samplewear는 항저우 룽다의 개발 및 공급망 역량을 단계별로 정리해 콘셉트 논의부터 납품까지의 협업 경로를 제시합니다."
+      },
+      "summary": {
+        "zh": "查看设计打样、采购、生产、质控和交付服务。",
+        "en": "View sampling, sourcing, manufacturing, quality and delivery services.",
+        "ko": "샘플링, 조달, 생산, 품질 및 납품 서비스를 확인하세요."
+      },
+      "staticSections": [
+        {
+          "heading": "设计打样",
+          "paragraphs": ["围绕设计需求、版型与工艺进行沟通，并衔接数字化样衣与实物样衣开发。"]
+        },
+        {
+          "heading": "品牌与产品规划",
+          "paragraphs": ["协助品牌梳理产品方向、视觉表达与产品线规划，并与后续开发和供应链环节衔接。"]
+        },
+        {
+          "heading": "柔性生产",
+          "paragraphs": ["根据产品类别、数量、交期与工艺要求匹配生产协作资源，并持续同步关键进度。"]
+        },
+        {
+          "heading": "面料采购",
+          "paragraphs": ["根据设计与品质要求开展面辅料搜寻、打样、开发及检测协作。"]
+        },
+        {
+          "heading": "质量控制",
+          "paragraphs": ["围绕来料、生产过程与成品交付设置质量检查节点，帮助项目形成可追踪的质量记录。"]
+        },
+        {
+          "heading": "物流配送",
+          "paragraphs": ["根据目的地、时效与订单安排协调运输及交付信息，让品牌了解货物进度。"]
+        }
+      ]
+    },
+    {
+      "key": "digital",
+      "path": "/digital-platform/",
+      "index": true,
+      "title": {
+        "zh": "Sample App 数字化供应链平台｜杭州绒达科技",
+        "en": "Sample App Digital Supply Chain Platform | Hangzhou Rongda",
+        "ko": "Sample App 디지털 공급망 플랫폼 | 항저우 룽다"
+      },
+      "description": {
+        "zh": "了解 Sample App 如何支持样衣方案、订单管理、生产进度与物流信息查看，连接品牌需求与服装供应链协作。",
+        "en": "See how the Sample App supports sample planning, order management, production updates and logistics information.",
+        "ko": "Sample App이 샘플 기획, 주문 관리, 생산 업데이트 및 물류 정보 확인을 지원하는 방식을 알아보세요."
+      },
+      "h1": {
+        "zh": "Sample App 数字化供应链平台",
+        "en": "Sample App Digital Supply Chain Platform",
+        "ko": "Sample App 디지털 공급망 플랫폼"
+      },
+      "intro": {
+        "zh": "杭州绒达科技通过 Sample App 整理样衣方案、订单与进度信息，让品牌与供应链团队在同一流程中协作。",
+        "en": "Hangzhou Rongda uses the Sample App to organize sample plans, orders and progress information so brands and supply-chain teams can collaborate in one flow.",
+        "ko": "항저우 룽다는 Sample App을 통해 샘플 계획, 주문 및 진행 정보를 정리해 브랜드와 공급망 팀의 협업을 지원합니다."
+      },
+      "summary": {
+        "zh": "了解样衣、订单、进度与物流信息的数字化协作。",
+        "en": "Explore digital collaboration for samples, orders, progress and logistics.",
+        "ko": "샘플, 주문, 진행 및 물류를 위한 디지털 협업을 확인하세요."
+      },
+      "staticSections": [
+        {
+          "heading": "样衣方案与在线需求",
+          "paragraphs": ["通过结构化信息整理款式、面辅料、数量与修改需求，方便项目团队确认样衣方向。"]
+        },
+        {
+          "heading": "订单与进度信息",
+          "paragraphs": ["集中查看样衣和批量订单的关键节点、生产更新与交付信息，减少跨团队沟通遗漏。"]
+        },
+        {
+          "heading": "供应链协作入口",
+          "paragraphs": ["Sample App 与 samplewear.com 共同构成杭州绒达科技面向品牌客户的数字化服务入口。"]
+        }
+      ]
+    },
+    {
+      "key": "about",
+      "path": "/about/",
+      "index": true,
+      "title": {
+        "zh": "关于杭州绒达科技｜RONDA 与 Samplewear",
+        "en": "About Hangzhou Rongda Technology | RONDA & Samplewear",
+        "ko": "항저우 룽다 테크놀로지 소개 | RONDA & Samplewear"
+      },
+      "description": {
+        "zh": "了解杭州绒达科技有限公司、RONDA 杭州业务、Samplewear（Sample & Simple）网站与 ATLY 首尔办公室之间的关系。",
+        "en": "Learn how Hangzhou Rongda Technology Co., Ltd., RONDA, Samplewear and the ATLY Seoul office are connected.",
+        "ko": "항저우 룽다 테크놀로지 유한공사, RONDA, Samplewear 및 ATLY 서울 오피스의 관계를 알아보세요."
+      },
+      "h1": {
+        "zh": "杭州绒达科技有限公司：Samplewear 背后的运营主体",
+        "en": "Hangzhou Rongda Technology: The Company Behind Samplewear",
+        "ko": "Samplewear를 운영하는 항저우 룽다 테크놀로지"
+      },
+      "intro": {
+        "zh": "Samplewear（Sample & Simple）由杭州绒达科技有限公司运营。RONDA 用于呈现杭州供应链业务，ATLY 对应首尔办公室与当地品牌资源连接。",
+        "en": "Samplewear, presented as Sample & Simple, is operated by Hangzhou Rongda Technology Co., Ltd. RONDA represents the Hangzhou supply-chain operation and ATLY the Seoul office.",
+        "ko": "Samplewear(Sample & Simple)는 항저우 룽다 테크놀로지 유한공사가 운영합니다. RONDA는 항저우 공급망 사업을, ATLY는 서울 오피스를 나타냅니다."
+      },
+      "summary": {
+        "zh": "了解 Samplewear、RONDA、ATLY 与绒达科技的关系。",
+        "en": "Learn how Samplewear, RONDA, ATLY and Rongda are connected.",
+        "ko": "Samplewear, RONDA, ATLY와 룽다의 관계를 알아보세요."
+      },
+      "staticSections": [
+        {
+          "heading": "公司与网站",
+          "paragraphs": [
+            "杭州绒达科技有限公司是 samplewear.com 的运营主体。Samplewear 是网站名称，页面中同时使用 Sample & Simple 作为展示名称。",
+            "为了让客户与搜索引擎清楚识别品牌关系，全站统一使用“杭州绒达科技有限公司（绒达科技 / RONDA）”与“Samplewear（Sample & Simple）”的命名方式。"
+          ]
+        },
+        {
+          "heading": "杭州与首尔",
+          "paragraphs": ["RONDA 对应杭州供应链业务，ATLY 对应首尔办公室。两地团队围绕产品开发、设计与品牌需求开展跨区域协作。"]
+        }
+      ]
+    },
+    {
+      "key": "global",
+      "path": "/global/",
+      "index": true,
+      "title": {
+        "zh": "杭州与首尔业务布局｜RONDA · ATLY",
+        "en": "Hangzhou & Seoul Operations | RONDA · ATLY",
+        "ko": "항저우 및 서울 사업 거점 | RONDA · ATLY"
+      },
+      "description": {
+        "zh": "杭州绒达科技以 RONDA 展示杭州供应链业务，并通过 ATLY 首尔办公室连接设计与品牌资源。",
+        "en": "Hangzhou Rongda Technology presents its Hangzhou supply-chain operation as RONDA and connects with design and brand resources through the ATLY Seoul office.",
+        "ko": "항저우 룽다 테크놀로지는 RONDA로 항저우 공급망 사업을 소개하고 ATLY 서울 오피스를 통해 디자인 및 브랜드 자원을 연결합니다."
+      },
+      "h1": {
+        "zh": "RONDA 杭州与 ATLY 首尔",
+        "en": "RONDA Hangzhou and ATLY Seoul",
+        "ko": "RONDA 항저우와 ATLY 서울"
+      },
+      "intro": {
+        "zh": "杭州绒达科技以杭州为供应链协作中心，通过 ATLY 首尔办公室连接当地设计、品牌与市场沟通资源。",
+        "en": "Hangzhou Rongda Technology coordinates supply-chain work from Hangzhou and connects with Seoul-based design, brand and market resources through the ATLY office.",
+        "ko": "항저우 룽다 테크놀로지는 항저우에서 공급망 협업을 조정하고 ATLY 서울 오피스를 통해 디자인, 브랜드 및 시장 자원을 연결합니다."
+      },
+      "summary": {
+        "zh": "查看 RONDA 杭州与 ATLY 首尔的业务协作。",
+        "en": "View the RONDA Hangzhou and ATLY Seoul collaboration.",
+        "ko": "RONDA 항저우와 ATLY 서울의 협업을 확인하세요."
+      },
+      "staticSections": [
+        {
+          "heading": "RONDA · 杭州",
+          "paragraphs": ["杭州绒达科技通过 RONDA 组织产品开发、供应链资源与项目交付协作。"]
+        },
+        {
+          "heading": "ATLY · 首尔",
+          "paragraphs": ["ATLY 首尔办公室连接韩国当地设计、品牌与市场沟通资源，并与杭州团队协同推进项目。"]
+        }
+      ]
+    },
+    {
+      "key": "contact",
+      "path": "/contact/",
+      "index": true,
+      "title": {
+        "zh": "联系杭州绒达科技｜Samplewear",
+        "en": "Contact Hangzhou Rongda Technology | Samplewear",
+        "ko": "항저우 룽다 테크놀로지 문의 | Samplewear"
+      },
+      "description": {
+        "zh": "查看杭州绒达科技有限公司及首尔 ATLY 办公室的联系信息，或提交冬装产品开发与供应链合作需求。",
+        "en": "Find contact details for Hangzhou Rongda Technology and the ATLY Seoul office, or submit a winter-apparel supply-chain inquiry.",
+        "ko": "항저우 룽다 테크놀로지와 ATLY 서울 오피스의 연락처를 확인하고 겨울 의류 공급망 문의를 제출하세요."
+      },
+      "h1": {
+        "zh": "联系杭州绒达科技与 Samplewear",
+        "en": "Contact Hangzhou Rongda Technology and Samplewear",
+        "ko": "항저우 룽다 테크놀로지 및 Samplewear 문의"
+      },
+      "intro": {
+        "zh": "欢迎联系杭州绒达科技有限公司，咨询冬装产品开发、设计打样、面辅料、生产协作与交付需求。",
+        "en": "Contact Hangzhou Rongda Technology Co., Ltd. to discuss winter-apparel development, sampling, materials, manufacturing coordination and delivery.",
+        "ko": "겨울 의류 개발, 샘플링, 소재, 생산 협업 및 납품에 관해 항저우 룽다 테크놀로지 유한공사에 문의하세요."
+      },
+      "summary": {
+        "zh": "查看杭州与首尔办公室信息并提交合作需求。",
+        "en": "Find Hangzhou and Seoul office details and submit an inquiry.",
+        "ko": "항저우 및 서울 오피스 정보를 확인하고 문의하세요."
+      },
+      "staticSections": [
+        {
+          "heading": "杭州 · RONDA",
+          "paragraphs": ["杭州绒达科技有限公司", "电话：0571-88012309", "邮箱：zylen@samplewear.com", "地址：杭州市西湖区瑞博国际B座1707"]
+        },
+        {
+          "heading": "首尔 · ATLY",
+          "paragraphs": ["电话：02 6956 9855", "邮箱：marketing@atly.co.kr", "地址：5F, Jeongha Building, 174 Donggyo-dong, Mapo-gu, Seoul"]
+        }
+      ]
+    },
+    {
+      "key": "inquiry",
+      "path": "/inquiry/",
+      "index": false,
+      "title": {
+        "zh": "项目咨询｜杭州绒达科技 Samplewear",
+        "en": "Project Inquiry | Hangzhou Rongda Technology Samplewear",
+        "ko": "프로젝트 문의 | 항저우 룽다 Samplewear"
+      },
+      "description": {
+        "zh": "向杭州绒达科技提交冬装产品开发与供应链合作需求。",
+        "en": "Submit a winter-apparel development or supply-chain inquiry to Hangzhou Rongda Technology.",
+        "ko": "항저우 룽다 테크놀로지에 겨울 의류 개발 또는 공급망 문의를 제출하세요."
+      },
+      "h1": {"zh": "样品与订单咨询", "en": "Sample & Order Inquiry", "ko": "샘플 및 주문 문의"},
+      "intro": {"zh": "请填写项目需求，绒达团队将根据您提供的信息与您联系。", "en": "Share your project requirements and the Rongda team will follow up.", "ko": "프로젝트 요구사항을 남겨주시면 룽다 팀이 연락드리겠습니다."},
+      "summary": {"zh": "提交项目需求。", "en": "Submit a project inquiry.", "ko": "프로젝트 문의를 제출하세요."},
+      "staticSections": []
+    },
+    {
+      "key": "terms",
+      "path": "/terms/",
+      "index": false,
+      "title": {"zh": "服务条款｜杭州绒达科技", "en": "Terms of Service | Hangzhou Rongda Technology", "ko": "서비스 약관 | 항저우 룽다"},
+      "description": {"zh": "杭州绒达科技 Samplewear 网站服务条款。", "en": "Terms of service for the Hangzhou Rongda Technology Samplewear website.", "ko": "항저우 룽다 테크놀로지 Samplewear 웹사이트 서비스 약관입니다."},
+      "h1": {"zh": "服务条款", "en": "Terms of Service", "ko": "서비스 약관"},
+      "intro": {"zh": "请阅读 Samplewear 网站服务条款。", "en": "Please review the Samplewear website terms of service.", "ko": "Samplewear 웹사이트 서비스 약관을 확인하세요."},
+      "summary": {"zh": "网站服务条款。", "en": "Website terms of service.", "ko": "웹사이트 서비스 약관입니다."},
+      "staticSections": []
+    }
+  ]
+}

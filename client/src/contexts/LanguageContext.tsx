@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 
 export type Language = 'zh' | 'en' | 'ko';
 
@@ -19,11 +19,11 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': '联系我们',
 
     // Hero
-    'hero.label': '国际化服装供应链',
-    'hero.line1': '从创意到成品',
-    'hero.line2': '一站式柔性供应链',
-    'hero.text': '专注冬装外套，整合全球优质资源，让每一个设计创意高效落地',
-    'hero.sub': '专注冬装外套，整合全球优质资源，让每一个设计创意高效落地',
+    'hero.label': 'Samplewear · 杭州绒达科技',
+    'hero.line1': '杭州绒达科技',
+    'hero.line2': '冬装柔性供应链',
+    'hero.text': 'Samplewear 连接杭州供应链与首尔设计资源，让冬装创意从打样、生产到交付清晰落地',
+    'hero.sub': 'Samplewear 连接杭州供应链与首尔设计资源，让冬装创意从打样、生产到交付清晰落地',
     'hero.cta1': '探索产品',
     'hero.cta2': '联系我们',
 
@@ -140,9 +140,6 @@ const translations: Record<Language, Record<string, string>> = {
     'services.logistics.tag2': '实时可视追踪',
 
     // Global Presence
-    'global.label': '全球布局',
-    'global.title': '立足杭州\n首尔为首个海外分部',
-    'global.subtitle': '国际化运营，本地化服务',
     'global.hq': '中国',
     'global.branch': '海外',
     'global.label': '全球布局',
@@ -173,8 +170,8 @@ const translations: Record<Language, Record<string, string>> = {
     'about.label': '关于我们',
     'about.title': '我们是谁',
     'about.subtitle': '国际化服装供应链的创新者',
-    'about.story.title': '重新定义服装供应链：SAMPLE & SIMPLE',
-    'about.story.text': '我们诞生于对时尚与卓越制造的极致追求。为了打破传统供应链对设计的局限，我们构建了一个连接创意与生产的全球化柔性平台，致力于将供应链的灵活性转化为品牌的差异化核心价值。\n\n平台深度整合首尔的时尚策源能力与杭州供应链的制造实力，专注于羽绒服、双面呢大衣及高端皮草的全案服务。通过连接中日韩顶级面辅料资源，我们实现了100件起订的友好量产模式，以极致的"小单快反"最大程度降低品牌的库存与销售压力。\n\n从精准打样到规模量产，我们全程严控品质标准，为全球中高端品牌提供一站式 JDM 解决方案。我们以极强的跨国响应能力，助力每一个品牌将灵感完美落地，实现卓越成长。',
+    'about.story.title': '杭州绒达科技与 SAMPLE & SIMPLE',
+    'about.story.text': 'Samplewear（网站展示名 Sample & Simple）由杭州绒达科技有限公司运营。RONDA 对应杭州供应链业务，ATLY 对应首尔办公室。\n\n我们构建连接创意与生产的柔性供应链协作平台，整合首尔的设计与品牌资源以及杭州供应链的制造能力，围绕羽绒服、双面大衣、皮草与羽绒寝具开展产品开发。\n\n从设计沟通、打样和面辅料协作，到生产、质量控制与交付，绒达科技通过 Samplewear 为品牌客户提供清晰的一站式项目协作入口。',
     'about.brand.hz': 'RONDA — 杭州',
     'about.brand.kr': 'ATLY — 首尔',
     'about.digital': '数字化驱动',
@@ -300,7 +297,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Inquiry Form
     'inquiry.title': 'INQUIRY',
     'inquiry.heading': '样品 & 订单咨询',
-    'inquiry.subheading': '请填写以下信息，我们将在 1-2 个工作日内与您联系。',
+    'inquiry.subheading': '请填写以下信息，系统将为您生成发送给杭州绒达科技的咨询邮件。',
     'inquiry.back': '返回首页',
     'inquiry.sampleType': '样衣类型',
     'inquiry.hasSample': '是否有参考样品',
@@ -321,10 +318,10 @@ const translations: Record<Language, Record<string, string>> = {
     'inquiry.brandPlaceholder': '例：您的品牌名称或个人设计师',
     'inquiry.contactPlaceholder': '例：+86 138 0000 0000 或 email@example.com',
     'inquiry.messagePlaceholder': '请描述您的具体需求、面料偏好或其他特殊要求…',
-    'inquiry.submit': '发送咨询',
+    'inquiry.submit': '生成咨询邮件',
     'inquiry.sending': '发送中…',
-    'inquiry.success.title': '感谢您的咨询',
-    'inquiry.success.desc': '我们已收到您的需求，将在 1-2 个工作日内与您联系。',
+    'inquiry.success.title': '咨询邮件已准备',
+    'inquiry.success.desc': '请在您的邮件应用中确认发送给 zylen@samplewear.com。',
     'inquiry.error': '提交失败，请稍后重试。',
   },
 
@@ -338,12 +335,11 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Contact',
 
     // Hero
-    'hero.label': 'Global Apparel Supply Chain',
-    'hero.line1': 'From Concept to Creation',
-    'hero.line2': 'Flexible Supply Chain',
-    'hero.text': '专注冬装外套，整合全球优质资源，让每一个设计创意高效落地',
-    'hero.text': 'Specializing in winter outerwear — integrating global premium resources to bring every design vision to life',
-    'hero.sub': 'Specializing in winter outerwear — integrating global premium resources to bring every design vision to life',
+    'hero.label': 'Samplewear · Hangzhou Rongda',
+    'hero.line1': 'Hangzhou Rongda',
+    'hero.line2': 'Winter Apparel Supply Chain',
+    'hero.text': 'Samplewear connects Hangzhou supply-chain capabilities with Seoul design resources from sampling and production through delivery',
+    'hero.sub': 'Samplewear connects Hangzhou supply-chain capabilities with Seoul design resources from sampling and production through delivery',
     'hero.cta1': 'Explore Products',
     'hero.cta2': 'Contact Us',
 
@@ -465,9 +461,6 @@ const translations: Record<Language, Record<string, string>> = {
     'global.subtitle': 'International operations, localized service',
     'global.hq': 'China',
     'global.branch': 'International',
-    'global.label': '全球布局',
-    'global.title': '立足杭州 首尔为首个海外分部',
-    'global.subtitle': '国际化运营，本地化服务',
     'global.hangzhou': '杭州',
     'global.seoul': '首尔',
     'global.hz.status': '中国',
@@ -493,8 +486,8 @@ const translations: Record<Language, Record<string, string>> = {
     'about.label': 'About Us',
     'about.title': 'Who We Are',
     'about.subtitle': 'Innovators in global apparel supply chain',
-    'about.story.title': 'Redefining the Apparel Supply Chain: SAMPLE & SIMPLE',
-    'about.story.text': 'We were born from an uncompromising pursuit of fashion and manufacturing excellence. To break the constraints that traditional supply chains impose on design, we built a global flexible platform connecting creativity with production — dedicated to transforming supply chain agility into a brand\'s core differentiator.\n\nThe platform deeply integrates the fashion-sourcing capabilities of our Seoul office with the manufacturing strength of our Hangzhou supply chain headquarters, specializing in full-service solutions for down jackets, double-faced wool coats, and premium shearling. By connecting top-tier fabric and accessory resources across China, Japan, and Korea, we enable a friendly MOQ of 100 pieces — maximizing the "small-batch, fast-response" model to minimize inventory and sales pressure for brands.\n\nFrom precision sampling to scaled production, we maintain rigorous quality standards throughout, delivering one-stop JDM solutions for premium and luxury brands worldwide. With exceptional cross-border responsiveness, we help every brand bring their vision to life — and achieve outstanding growth.',
+    'about.story.title': 'Hangzhou Rongda Technology & SAMPLE & SIMPLE',
+    'about.story.text': 'Samplewear, presented on the site as Sample & Simple, is operated by Hangzhou Rongda Technology Co., Ltd. RONDA identifies the Hangzhou supply-chain operation and ATLY the Seoul office.\n\nWe connect Seoul-based design and brand resources with Hangzhou supply-chain capabilities, supporting winter-apparel development across down jackets, double-faced coats, fur and down bedding.\n\nFrom design discussion, sampling and material coordination through manufacturing, quality control and delivery, Samplewear gives brand clients one clear place to understand and begin working with Rongda.',
     'about.brand.hz': 'RONDA — Hangzhou',
     'about.brand.kr': 'ATLY — Seoul',
     'about.digital': 'Digital-First',
@@ -619,7 +612,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Inquiry Form
     'inquiry.title': 'INQUIRY',
     'inquiry.heading': 'Sample & Order Inquiry',
-    'inquiry.subheading': 'Fill in the details below and we will get back to you within 1-2 business days.',
+    'inquiry.subheading': 'Complete the details below to prepare an inquiry email for Hangzhou Rongda Technology.',
     'inquiry.back': 'Back to Home',
     'inquiry.sampleType': 'Sample Type',
     'inquiry.hasSample': 'Do you have a reference sample?',
@@ -640,10 +633,10 @@ const translations: Record<Language, Record<string, string>> = {
     'inquiry.brandPlaceholder': 'e.g. Your brand name or independent designer',
     'inquiry.contactPlaceholder': 'e.g. +1 555 000 0000 or email@example.com',
     'inquiry.messagePlaceholder': 'Please describe your specific requirements, fabric preferences, or special requests…',
-    'inquiry.submit': 'Send Inquiry',
+    'inquiry.submit': 'Prepare Inquiry Email',
     'inquiry.sending': 'Sending…',
-    'inquiry.success.title': 'Thank You for Your Inquiry',
-    'inquiry.success.desc': 'We have received your request and will contact you within 1-2 business days.',
+    'inquiry.success.title': 'Your Inquiry Email Is Ready',
+    'inquiry.success.desc': 'Please confirm sending it to zylen@samplewear.com in your email app.',
     'inquiry.error': 'Submission failed. Please try again later.',
 
   },
@@ -658,12 +651,11 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contact': '문의하기',
 
     // Hero
-    'hero.label': '글로벌 패션 공급망',
-    'hero.line1': '아이디어에서 완성품까지',
-    'hero.line2': '유연한 공급망 솔루션',
-    'hero.text': '专注冬装外套，整合全球优质资源，让每一个设计创意高效落地',
-    'hero.text': '겨울 아우터웨어 전문 — 글로벌 프리미엄 자원을 통합하여 모든 디자인을 현실로',
-    'hero.sub': '겨울 아우터웨어 전문 — 글로벌 프리미엄 자원을 통합하여 모든 디자인을 현실로',
+    'hero.label': 'Samplewear · 항저우 룽다',
+    'hero.line1': '항저우 룽다',
+    'hero.line2': '겨울 의류 공급망',
+    'hero.text': 'Samplewear는 항저우 공급망과 서울 디자인 자원을 샘플링, 생산 및 납품 과정으로 연결합니다',
+    'hero.sub': 'Samplewear는 항저우 공급망과 서울 디자인 자원을 샘플링, 생산 및 납품 과정으로 연결합니다',
     'hero.cta1': '제품 보기',
     'hero.cta2': '문의하기',
 
@@ -785,9 +777,6 @@ const translations: Record<Language, Record<string, string>> = {
     'global.subtitle': '국제적 운영, 현지화 서비스',
     'global.hq': '중국',
     'global.branch': '세계적인',
-    'global.label': '글로벌 발자취',
-    'global.title': '항저우를 공급망 허브로 삼아, 서울의 패션 자원과 연계하여 글로벌 브랜드 고객들에게 서비스를 제공합니다。',
-    'global.subtitle': '国际化运营，本地化服务',
     'global.hangzhou': '杭州',
     'global.seoul': '首尔',
     'global.hz.status': '中国',
@@ -813,8 +802,8 @@ const translations: Record<Language, Record<string, string>> = {
     'about.label': '회사소개',
     'about.title': '우리는 누구인가',
     'about.subtitle': '글로벌 패션 공급망의 혁신자',
-    'about.story.title': '패션 공급망을 재정의하다: SAMPLE & SIMPLE',
-    'about.story.text': '저희는 패션과 탁월한 제조에 대한 끊임없는 추구에서 탄생했습니다. 전통적인 공급망이 디자인에 가하는 제약을 타파하기 위해, 창의성과 생산을 연결하는 글로벌 유연 플랫폼을 구축했습니다. 공급망의 유연성을 브랜드의 핵심 차별화 가치로 전환하는 데 전념합니다.\n\n플랫폼은 서울 지사의 패션 소싱 역량과 항저우 공급망 본사의 제조 역량을 깊이 통합하여, 다운 재킷, 더블 페이스 울 코트, 프리미엄 쉬어링의 풀서비스 솔루션에 특화되어 있습니다. 한중일 최고급 원부자재 자원을 연결하여 최소 주문량 100개의 친화적인 대량 생산 모드를 실현하고, 브랜드의 재고 및 판매 압박을 최소화합니다.\n\n정밀 샘플링부터 대규모 생산까지 전 과정에 걸쳐 엄격한 품질 기준을 유지하며, 전 세계 프리미엄 및 럭셔리 브랜드에 원스톱 JDM 솔루션을 제공합니다. 탁월한 국경 간 대응 능력으로 모든 브랜드가 영감을 완벽하게 실현하고 탁월한 성장을 달성할 수 있도록 지원합니다.',
+    'about.story.title': '항저우 룽다 테크놀로지와 SAMPLE & SIMPLE',
+    'about.story.text': 'Samplewear(Sample & Simple)는 항저우 룽다 테크놀로지 유한공사가 운영합니다. RONDA는 항저우 공급망 사업을, ATLY는 서울 오피스를 나타냅니다.\n\n서울의 디자인 및 브랜드 자원과 항저우 공급망 역량을 연결해 다운 재킷, 더블페이스 코트, 퍼 및 다운 침구 개발을 지원합니다.\n\n디자인 논의와 샘플링, 소재 협업부터 생산, 품질 관리 및 납품까지 Samplewear를 통해 룽다와의 협업을 시작할 수 있습니다.',
     'about.brand.hz': 'RONDA — 항저우',
     'about.brand.kr': 'ATLY — 서울',
     'about.digital': '디지털 우선',
@@ -939,7 +928,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Inquiry Form
     'inquiry.title': 'INQUIRY',
     'inquiry.heading': '샘플 & 주문 문의',
-    'inquiry.subheading': '아래 정보를 입력해 주시면 1-2 영업일 내에 연락드리겠습니다.',
+    'inquiry.subheading': '아래 정보를 입력하면 항저우 룽다 테크놀로지에 보낼 문의 이메일이 준비됩니다.',
     'inquiry.back': '홈으로 돌아가기',
     'inquiry.sampleType': '샘플 유형',
     'inquiry.hasSample': '참고 샘플이 있으신가요?',
@@ -960,10 +949,10 @@ const translations: Record<Language, Record<string, string>> = {
     'inquiry.brandPlaceholder': '예: 브랜드명 또는 개인 디자이너',
     'inquiry.contactPlaceholder': '예: +82 10 0000 0000 또는 email@example.com',
     'inquiry.messagePlaceholder': '구체적인 요구사항, 원단 선호도 또는 특별 요청사항을 설명해 주세요…',
-    'inquiry.submit': '문의 보내기',
+    'inquiry.submit': '문의 이메일 준비',
     'inquiry.sending': '전송 중…',
-    'inquiry.success.title': '문의해 주셔서 감사합니다',
-    'inquiry.success.desc': '요청을 받았으며 1-2 영업일 내에 연락드리겠습니다.',
+    'inquiry.success.title': '문의 이메일이 준비되었습니다',
+    'inquiry.success.desc': '이메일 앱에서 zylen@samplewear.com으로 보내기를 확인해 주세요.',
     'inquiry.error': '제출에 실패했습니다. 나중에 다시 시도해 주세요.',
 
   },
@@ -972,7 +961,23 @@ const translations: Record<Language, Record<string, string>> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Language>('zh');
+  const [lang, setLang] = useState<Language>(() => {
+    try {
+      const saved = window.localStorage.getItem('samplewear-language');
+      return saved === 'en' || saved === 'ko' || saved === 'zh' ? saved : 'zh';
+    } catch {
+      return 'zh';
+    }
+  });
+
+  useEffect(() => {
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+    try {
+      window.localStorage.setItem('samplewear-language', lang);
+    } catch {
+      // Browsing modes that block storage should still allow language switching.
+    }
+  }, [lang]);
 
   const t = (key: string): string => {
     return translations[lang][key] || translations['zh'][key] || key;

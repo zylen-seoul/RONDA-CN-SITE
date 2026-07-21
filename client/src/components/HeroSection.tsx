@@ -11,7 +11,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const HERO_BG = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/SsFUjHEjxUzuZYiG.jpg';
 
-export default function HeroSection({ onInquiryOpen }: { onInquiryOpen?: () => void }) {
+export default function HeroSection() {
   const { t } = useLanguage();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -92,12 +92,14 @@ export default function HeroSection({ onInquiryOpen }: { onInquiryOpen?: () => v
             }}
           >
             {t('hero.line1')}
+            <span className="sr-only"> {t('hero.line2')}</span>
           </motion.h1>
         </div>
 
         {/* Headline line 2 — italic camel */}
         <div style={{ overflow: 'visible', marginBottom: '2.5rem' }}>
-          <motion.h1
+          <motion.div
+            aria-hidden="true"
             initial={{ y: '105%' }}
             animate={{ y: 0 }}
             transition={{ duration: 1.1, delay: 0.68, ease: [0.16, 1, 0.3, 1] }}
@@ -114,7 +116,7 @@ export default function HeroSection({ onInquiryOpen }: { onInquiryOpen?: () => v
             }}
           >
             {t('hero.line2')}
-          </motion.h1>
+          </motion.div>
         </div>
 
         {/* Divider */}
@@ -149,8 +151,8 @@ export default function HeroSection({ onInquiryOpen }: { onInquiryOpen?: () => v
           transition={{ duration: 0.7, delay: 1.15 }}
           style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}
         >
-          <button
-            onClick={() => document.querySelector('#products')?.scrollIntoView({ behavior: 'smooth' })}
+          <a
+            href="/products/"
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '0.68rem',
@@ -162,27 +164,28 @@ export default function HeroSection({ onInquiryOpen }: { onInquiryOpen?: () => v
               border: 'none',
               padding: '0.85rem 2rem',
               cursor: 'pointer',
+              textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
               gap: '0.5rem',
               transition: 'background 0.3s ease, transform 0.2s ease',
             }}
             onMouseEnter={e => {
-              (e.currentTarget as HTMLButtonElement).style.background = '#8B7355';
-              (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(-1px)';
+              e.currentTarget.style.background = '#8B7355';
+              e.currentTarget.style.transform = 'translateY(-1px)';
             }}
             onMouseLeave={e => {
-              (e.currentTarget as HTMLButtonElement).style.background = '#1C1F24';
-              (e.currentTarget as HTMLButtonElement).style.transform = 'translateY(0)';
+              e.currentTarget.style.background = '#1C1F24';
+              e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
             {t('hero.cta1')}
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
-          </button>
-          <button
-            onClick={() => onInquiryOpen?.()}
+          </a>
+          <a
+            href="/contact/"
             style={{
               fontFamily: "'DM Sans', sans-serif",
               fontSize: '0.68rem',
@@ -194,19 +197,20 @@ export default function HeroSection({ onInquiryOpen }: { onInquiryOpen?: () => v
               border: '1px solid #E2DDD8',
               padding: '0.85rem 2rem',
               cursor: 'pointer',
+              textDecoration: 'none',
               transition: 'border-color 0.3s ease, color 0.3s ease',
             }}
             onMouseEnter={e => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor = '#8B7355';
-              (e.currentTarget as HTMLButtonElement).style.color = '#8B7355';
+              e.currentTarget.style.borderColor = '#8B7355';
+              e.currentTarget.style.color = '#8B7355';
             }}
             onMouseLeave={e => {
-              (e.currentTarget as HTMLButtonElement).style.borderColor = '#E2DDD8';
-              (e.currentTarget as HTMLButtonElement).style.color = '#4A4A4A';
+              e.currentTarget.style.borderColor = '#E2DDD8';
+              e.currentTarget.style.color = '#4A4A4A';
             }}
           >
             {t('hero.cta2')}
-          </button>
+          </a>
         </motion.div>
 
         {/* Bottom: brand + coords */}
@@ -299,8 +303,8 @@ export default function HeroSection({ onInquiryOpen }: { onInquiryOpen?: () => v
       </div>
 
       {/* Scroll indicator */}
-      <motion.button
-        onClick={() => document.querySelector('#products')?.scrollIntoView({ behavior: 'smooth' })}
+      <motion.a
+        href="/products/"
         style={{
           position: 'absolute',
           bottom: '2rem',
@@ -309,6 +313,7 @@ export default function HeroSection({ onInquiryOpen }: { onInquiryOpen?: () => v
           background: 'none',
           border: 'none',
           cursor: 'pointer',
+          textDecoration: 'none',
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
@@ -331,7 +336,7 @@ export default function HeroSection({ onInquiryOpen }: { onInquiryOpen?: () => v
             />
           </svg>
         </motion.div>
-      </motion.button>
+      </motion.a>
     </section>
   );
 }
