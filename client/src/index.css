@@ -48,6 +48,1388 @@
 }
 
 /* ============================================================
+   RONDA platform homepage — ATLY content architecture translated
+   into the existing warm Samplewear visual system.
+   ============================================================ */
+
+.ronda-home {
+  --ronda-chalk: #F7F5F2;
+  --ronda-stone: #EDEAE5;
+  --ronda-ink: #1C1F24;
+  --ronda-camel: #8B7355;
+  --ronda-camel-text: #745D43;
+  --ronda-camel-soft: #C4A882;
+  --ronda-border: #D8D1C8;
+  --ronda-copy: #5F5A55;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: clip;
+  background: var(--ronda-chalk);
+  color: #1A1A1A;
+}
+
+.ronda-home img {
+  display: block;
+  max-width: 100%;
+}
+
+.ronda-kicker {
+  margin: 0 0 1.25rem;
+  color: var(--ronda-camel-text);
+  font-family: 'DM Sans', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.ronda-title,
+.ronda-hero h1 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-weight: 400;
+  letter-spacing: -0.032em;
+  line-height: 1.04;
+  white-space: nowrap;
+}
+
+.ronda-title {
+  font-size: clamp(1.9rem, 2.5vw, 2.35rem);
+}
+
+.ronda-home[data-lang='en'] .ronda-title {
+  font-size: clamp(1.7rem, 2.25vw, 2.15rem);
+}
+
+.ronda-home[data-lang='ko'] .ronda-title {
+  font-size: clamp(1.75rem, 2.35vw, 2.2rem);
+}
+
+.ronda-arrow-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.8rem;
+  padding: 0.4rem 0 0.55rem;
+  border-bottom: 1px solid var(--ronda-camel);
+  color: #1A1A1A;
+  font-family: 'DM Sans', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: gap 180ms ease, color 180ms ease;
+}
+
+.ronda-arrow-link:hover {
+  gap: 2.25rem;
+  color: var(--ronda-camel-text);
+}
+
+.ronda-arrow-link.is-light {
+  color: var(--ronda-chalk);
+}
+
+.ronda-primary-link {
+  display: inline-flex;
+  min-height: 3.35rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 0.85rem 1.45rem;
+  background: var(--ronda-ink);
+  color: var(--ronda-chalk);
+  font-family: 'DM Sans', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+  font-size: 0.67rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 180ms ease;
+}
+
+.ronda-primary-link:hover {
+  background: var(--ronda-camel);
+}
+
+.ronda-hero {
+  position: relative;
+  min-height: min(820px, 92svh);
+  overflow: hidden;
+  background: #E6DED3;
+}
+
+.ronda-hero-image,
+.ronda-hero-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ronda-hero-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.ronda-hero-shade {
+  background: linear-gradient(90deg, rgba(247, 245, 242, 0.94) 0%, rgba(247, 245, 242, 0.76) 34%, rgba(247, 245, 242, 0.04) 68%);
+}
+
+.ronda-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: min(820px, 92svh);
+  width: min(100%, 1320px);
+  flex-direction: column;
+  justify-content: center;
+  padding: 9rem clamp(2rem, 6vw, 6rem) 8rem;
+}
+
+.ronda-hero h1 {
+  max-width: 850px;
+  font-size: clamp(3.1rem, 5.45vw, 5.35rem);
+}
+
+.ronda-home[data-lang='en'] .ronda-hero h1 {
+  font-size: clamp(2.55rem, 4.4vw, 4.4rem);
+}
+
+.ronda-home[data-lang='ko'] .ronda-hero h1 {
+  font-size: clamp(2.65rem, 4.7vw, 4.65rem);
+}
+
+.ronda-hero-body {
+  max-width: 35rem;
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(139, 115, 85, 0.45);
+  color: #504B46;
+  font-family: 'DM Sans', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+  font-size: clamp(0.88rem, 1vw, 1rem);
+  line-height: 1.95;
+}
+
+.ronda-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2.4rem;
+}
+
+.ronda-hero-index {
+  position: absolute;
+  right: 2rem;
+  bottom: 5.25rem;
+  color: rgba(28, 31, 36, 0.65);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.ronda-proof-wrap {
+  position: relative;
+  z-index: 3;
+  width: calc(100% - clamp(2rem, 6vw, 6rem));
+  max-width: 1320px;
+  margin: -4.3rem auto 0;
+}
+
+.ronda-proof-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: var(--ronda-ink);
+  color: var(--ronda-chalk);
+}
+
+.ronda-proof-item {
+  min-height: 8.1rem;
+  padding: 1.65rem 2rem;
+  border-right: 1px solid rgba(247, 245, 242, 0.12);
+}
+
+.ronda-proof-item:last-child {
+  border-right: 0;
+}
+
+.ronda-proof-item span {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--ronda-camel-soft);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.21em;
+}
+
+.ronda-proof-item strong {
+  font-family: 'DM Sans', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+  font-size: clamp(1rem, 1.55vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.ronda-proof-wrap > p {
+  margin: 0;
+  padding: 0.85rem 1rem 0;
+  color: #746E68;
+  font-size: 0.67rem;
+  line-height: 1.7;
+}
+
+.ronda-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: end;
+  margin-bottom: clamp(3.5rem, 6vw, 6rem);
+}
+
+.ronda-section-heading > p,
+.ronda-section-heading > div:last-child > p,
+.ronda-bridge-copy > p:not(.ronda-kicker),
+.ronda-project-cta > div > p {
+  margin: 0;
+  color: var(--ronda-copy);
+  font-family: 'DM Sans', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+  font-size: clamp(0.84rem, 0.95vw, 0.96rem);
+  line-height: 1.9;
+}
+
+.ronda-section-heading > div:last-child > .ronda-arrow-link {
+  margin-top: 1.6rem;
+}
+
+.ronda-section-heading.is-dark .ronda-title {
+  color: var(--ronda-chalk);
+}
+
+.ronda-section-heading.is-dark > p {
+  color: rgba(247, 245, 242, 0.64);
+}
+
+.ronda-platform {
+  margin-top: 5.5rem;
+  padding: clamp(6rem, 9vw, 9rem) clamp(2rem, 6vw, 6rem) clamp(5rem, 8vw, 8rem);
+  background: var(--ronda-ink);
+  color: var(--ronda-chalk);
+}
+
+.ronda-platform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid rgba(247, 245, 242, 0.15);
+}
+
+.ronda-platform-grid article {
+  min-height: 260px;
+  padding: 2rem;
+  border-right: 1px solid rgba(247, 245, 242, 0.15);
+}
+
+.ronda-platform-grid article:last-child {
+  border-right: 0;
+}
+
+.ronda-platform-grid article > span {
+  color: var(--ronda-camel-soft);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.ronda-platform-grid h3 {
+  margin: 5rem 0 1rem;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: clamp(1.3rem, 1.8vw, 1.75rem);
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.ronda-platform-grid p {
+  max-width: 21rem;
+  margin: 0;
+  color: rgba(247, 245, 242, 0.58);
+  font-size: 0.8rem;
+  line-height: 1.85;
+}
+
+.ronda-platform-signature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 2.5rem;
+}
+
+.ronda-platform-signature > div {
+  width: 14rem;
+  padding: 0.85rem 1rem;
+  background: var(--ronda-chalk);
+}
+
+.ronda-platform-signature p {
+  margin: 0;
+  color: rgba(247, 245, 242, 0.38);
+  font-size: 0.57rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ronda-bridge {
+  display: grid;
+  grid-template-columns: minmax(380px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: center;
+  padding: clamp(6rem, 10vw, 10rem) clamp(2rem, 6vw, 6rem);
+  background: var(--ronda-ink);
+  color: var(--ronda-chalk);
+}
+
+.ronda-bridge-copy .ronda-title {
+  color: var(--ronda-chalk);
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
+}
+
+.ronda-home[data-lang='en'] .ronda-bridge-copy .ronda-title {
+  font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+}
+
+.ronda-bridge-copy > p:not(.ronda-kicker) {
+  margin-top: 2rem;
+  color: rgba(247, 245, 242, 0.62);
+}
+
+.ronda-bridge-copy .ronda-arrow-link {
+  margin-top: 2.25rem;
+  color: var(--ronda-chalk);
+}
+
+.ronda-bridge-scenes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.ronda-bridge-scenes article {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  background: #35383D;
+}
+
+.ronda-bridge-scenes article:nth-child(2) {
+  margin-top: 4.5rem;
+}
+
+.ronda-bridge-scenes img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  filter: saturate(0.76) contrast(0.94);
+  transition: transform 600ms ease;
+}
+
+.ronda-bridge-scenes article:hover img {
+  transform: scale(1.025);
+}
+
+.ronda-bridge-scenes article::after {
+  position: absolute;
+  inset: 50% 0 0;
+  background: linear-gradient(transparent, rgba(20, 22, 25, 0.9));
+  content: '';
+}
+
+.ronda-bridge-scenes article > div {
+  position: absolute;
+  z-index: 1;
+  right: 1.2rem;
+  bottom: 1.25rem;
+  left: 1.2rem;
+}
+
+.ronda-bridge-scenes span {
+  color: var(--ronda-camel-soft);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+}
+
+.ronda-bridge-scenes h3 {
+  margin: 0.55rem 0 0;
+  color: var(--ronda-chalk);
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.ronda-products,
+.ronda-craft,
+.ronda-cities,
+.ronda-faq {
+  padding: clamp(6rem, 10vw, 10rem) clamp(2rem, 6vw, 6rem);
+}
+
+.ronda-products {
+  background: var(--ronda-stone);
+}
+
+.ronda-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--ronda-border);
+  border: 1px solid var(--ronda-border);
+}
+
+.ronda-product-grid article {
+  min-width: 0;
+  background: var(--ronda-chalk);
+}
+
+.ronda-product-media {
+  position: relative;
+  aspect-ratio: 1.18 / 1;
+  overflow: hidden;
+  background: #F2F0EC;
+}
+
+.ronda-product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  transition: transform 500ms ease;
+}
+
+.ronda-product-grid article:hover .ronda-product-media img {
+  transform: scale(1.02);
+}
+
+.ronda-product-media > span {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: var(--ronda-camel-text);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.ronda-product-copy {
+  min-height: 210px;
+  padding: 1.65rem;
+}
+
+.ronda-product-copy > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.ronda-product-copy h3 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.ronda-product-copy > div > span {
+  flex: 0 0 auto;
+  color: var(--ronda-camel-text);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.ronda-product-copy p {
+  margin: 2.2rem 0 0;
+  color: var(--ronda-copy);
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.ronda-section-note,
+.ronda-network-note {
+  margin: 1rem 0 0;
+  color: #746E68;
+  font-size: 0.67rem;
+  line-height: 1.7;
+}
+
+.ronda-flow {
+  padding: clamp(6rem, 9vw, 9rem) clamp(2rem, 4.5vw, 4.5rem);
+  background: var(--ronda-ink);
+  color: var(--ronda-chalk);
+}
+
+.ronda-flow-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  border-top: 1px solid rgba(247, 245, 242, 0.15);
+  border-bottom: 1px solid rgba(247, 245, 242, 0.15);
+}
+
+.ronda-flow-track button {
+  position: relative;
+  min-width: 0;
+  min-height: 154px;
+  padding: 1.35rem 0.9rem;
+  border: 0;
+  border-right: 1px solid rgba(247, 245, 242, 0.12);
+  background: transparent;
+  color: var(--ronda-chalk);
+  text-align: left;
+  transition: background-color 180ms ease;
+}
+
+.ronda-flow-track button:last-child {
+  border-right: 0;
+}
+
+.ronda-flow-track button:hover,
+.ronda-flow-track button.is-active {
+  background: rgba(196, 168, 130, 0.12);
+}
+
+.ronda-flow-track button.is-sample::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: var(--ronda-camel-soft);
+  content: '';
+}
+
+.ronda-flow-track button > span {
+  display: block;
+  color: var(--ronda-camel-soft);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.ronda-flow-track button > strong {
+  display: block;
+  margin-top: 2rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+
+.ronda-flow-track button > small {
+  display: block;
+  margin-top: 0.65rem;
+  color: rgba(247, 245, 242, 0.48);
+  font-size: 0.58rem;
+  line-height: 1.4;
+}
+
+.ronda-flow-detail {
+  display: grid;
+  grid-template-columns: 110px minmax(140px, 0.6fr) minmax(140px, 0.4fr) minmax(280px, 1fr);
+  gap: 2rem;
+  align-items: center;
+  min-height: 190px;
+  padding: 2.25rem;
+  background: #24272C;
+}
+
+.ronda-flow-detail.is-sample {
+  background: #302A24;
+  box-shadow: inset 4px 0 0 var(--ronda-camel-soft);
+}
+
+.ronda-flow-detail > div > span {
+  display: block;
+  color: rgba(247, 245, 242, 0.24);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.2rem;
+  line-height: 0.8;
+}
+
+.ronda-flow-detail em {
+  display: block;
+  margin-top: 1rem;
+  color: var(--ronda-camel-soft);
+  font-size: 0.56rem;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.ronda-flow-detail h3 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: clamp(1.4rem, 2.2vw, 2.15rem);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.ronda-flow-detail > strong {
+  color: var(--ronda-camel-soft);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.ronda-flow-detail > p {
+  margin: 0;
+  color: rgba(247, 245, 242, 0.62);
+  font-size: 0.8rem;
+  line-height: 1.85;
+}
+
+.ronda-flow-note {
+  margin: 1rem 0 0;
+  color: rgba(247, 245, 242, 0.42);
+  font-size: 0.65rem;
+  line-height: 1.75;
+}
+
+.ronda-network {
+  padding: clamp(6rem, 10vw, 10rem) clamp(2rem, 6vw, 6rem);
+  background: var(--ronda-ink);
+  color: var(--ronda-chalk);
+  border-top: 1px solid rgba(247, 245, 242, 0.08);
+}
+
+.ronda-logo-panel {
+  margin-top: 1.25rem;
+  padding: 2rem;
+  background: var(--ronda-chalk);
+  color: #1A1A1A;
+}
+
+.ronda-logo-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--ronda-border);
+}
+
+.ronda-logo-panel-heading h3 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ronda-logo-panel-heading span {
+  color: var(--ronda-camel-text);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.ronda-brand-grid,
+.ronda-supplier-grid {
+  display: grid;
+  gap: 1px;
+  margin-top: 1px;
+  background: var(--ronda-border);
+}
+
+.ronda-brand-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ronda-supplier-grid {
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+.ronda-brand-grid > div,
+.ronda-supplier-grid > div {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+}
+
+.ronda-brand-grid > div {
+  min-height: 112px;
+  padding: 1.4rem;
+}
+
+.ronda-supplier-grid > div {
+  min-height: 82px;
+  padding: 1rem;
+}
+
+.ronda-brand-grid img,
+.ronda-supplier-grid img {
+  width: 100%;
+  height: 42px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.78;
+  transition: filter 180ms ease, opacity 180ms ease;
+}
+
+.ronda-brand-grid > div:hover img,
+.ronda-supplier-grid > div:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+.ronda-network-note {
+  color: rgba(247, 245, 242, 0.44);
+}
+
+.ronda-craft {
+  background: var(--ronda-chalk);
+}
+
+.ronda-craft-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ronda-craft-grid article {
+  overflow: hidden;
+  background: var(--ronda-ink);
+  color: var(--ronda-chalk);
+}
+
+.ronda-craft-grid article > img {
+  width: 100%;
+  aspect-ratio: 1 / 0.8;
+  object-fit: cover;
+  filter: saturate(0.78);
+  transition: transform 500ms ease;
+}
+
+.ronda-craft-grid article:hover > img {
+  transform: scale(1.02);
+}
+
+.ronda-craft-grid article > div {
+  min-height: 230px;
+  padding: 1.7rem;
+}
+
+.ronda-craft-grid span {
+  color: var(--ronda-camel-soft);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.ronda-craft-grid h3 {
+  margin: 1.6rem 0 0;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: clamp(1.3rem, 2vw, 1.9rem);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.ronda-craft-grid p {
+  margin: 1rem 0 0;
+  color: rgba(247, 245, 242, 0.58);
+  font-size: 0.78rem;
+  line-height: 1.8;
+}
+
+.ronda-cities {
+  background: var(--ronda-stone);
+}
+
+.ronda-city-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--ronda-border);
+  border: 1px solid var(--ronda-border);
+}
+
+.ronda-city-grid article {
+  background: var(--ronda-chalk);
+}
+
+.ronda-city-grid img {
+  width: 100%;
+  height: clamp(320px, 38vw, 520px);
+  object-fit: cover;
+}
+
+.ronda-city-grid .ronda-seoul-image {
+  object-position: left center;
+}
+
+.ronda-bridge-scenes:focus-visible,
+.ronda-product-grid:focus-visible,
+.ronda-craft-grid:focus-visible {
+  outline: 2px solid var(--ronda-camel-text);
+  outline-offset: 4px;
+}
+
+.ronda-city-grid article > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.45rem 1.6rem;
+}
+
+.ronda-city-grid h3 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: 1.35rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ronda-city-grid p {
+  margin: 0;
+  color: var(--ronda-copy);
+  font-size: 0.68rem;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.ronda-faq {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.42fr) minmax(0, 0.58fr);
+  gap: clamp(4rem, 10vw, 10rem);
+  background: var(--ronda-chalk);
+}
+
+.ronda-faq-heading {
+  align-self: start;
+  position: sticky;
+  top: 8rem;
+}
+
+.ronda-faq-heading .ronda-title {
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+}
+
+.ronda-faq-heading .ronda-arrow-link {
+  margin-top: 2.5rem;
+}
+
+.ronda-faq-list {
+  border-top: 1px solid var(--ronda-border);
+}
+
+.ronda-faq-list details {
+  border-bottom: 1px solid var(--ronda-border);
+}
+
+.ronda-faq-list summary {
+  display: grid;
+  grid-template-columns: 42px 1fr 24px;
+  gap: 1rem;
+  align-items: center;
+  min-height: 94px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.ronda-faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.ronda-faq-list summary > span {
+  color: var(--ronda-camel-text);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.ronda-faq-list summary > strong {
+  font-family: 'DM Sans', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.ronda-faq-list summary svg {
+  transition: transform 180ms ease;
+}
+
+.ronda-faq-list details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.ronda-faq-list details > p {
+  margin: -0.25rem 2.5rem 0 3.65rem;
+  padding: 0 0 2rem;
+  color: var(--ronda-copy);
+  font-size: 0.8rem;
+  line-height: 1.85;
+}
+
+.ronda-project-cta {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr auto;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: end;
+  padding: clamp(5rem, 8vw, 8rem) clamp(2rem, 6vw, 6rem);
+  background: var(--ronda-stone);
+  border-top: 1px solid var(--ronda-border);
+}
+
+.ronda-project-cta > div > p {
+  max-width: 42rem;
+  margin-top: 1.5rem;
+}
+
+.ronda-project-cta .ronda-title {
+  font-size: clamp(2rem, 3.8vw, 3.7rem);
+}
+
+@media (max-width: 1120px) {
+  .ronda-title {
+    font-size: clamp(1.8rem, 3.2vw, 2.2rem);
+  }
+
+  .ronda-hero h1 {
+    font-size: clamp(2.8rem, 5.4vw, 4.2rem);
+  }
+
+  .ronda-supplier-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .ronda-flow-track {
+    display: flex;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: thin;
+  }
+
+  .ronda-flow-track button {
+    flex: 0 0 155px;
+  }
+
+  .ronda-flow-detail {
+    grid-template-columns: 90px 0.6fr 0.4fr 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .ronda-section-heading,
+  .ronda-bridge,
+  .ronda-faq,
+  .ronda-project-cta {
+    grid-template-columns: 1fr;
+  }
+
+  .ronda-section-heading {
+    gap: 2rem;
+  }
+
+  .ronda-section-heading > p,
+  .ronda-section-heading > div:last-child {
+    max-width: 42rem;
+  }
+
+  .ronda-platform-grid,
+  .ronda-product-grid,
+  .ronda-craft-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ronda-platform-grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .ronda-platform-grid article:last-child {
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(247, 245, 242, 0.15);
+  }
+
+  .ronda-bridge-copy {
+    max-width: 36rem;
+  }
+
+  .ronda-bridge-scenes {
+    margin-top: 2rem;
+  }
+
+  .ronda-flow-detail {
+    grid-template-columns: 74px 1fr auto;
+  }
+
+  .ronda-flow-detail > p {
+    grid-column: 2 / -1;
+  }
+
+  .ronda-project-cta {
+    align-items: start;
+  }
+
+  .ronda-project-cta .ronda-primary-link {
+    width: fit-content;
+  }
+
+  .ronda-faq-heading {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .ronda-title,
+  .ronda-home[data-lang='en'] .ronda-title,
+  .ronda-home[data-lang='ko'] .ronda-title {
+    font-size: clamp(1.45rem, 7vw, 1.85rem);
+  }
+
+  .ronda-home[data-lang='en'] .ronda-title {
+    font-size: clamp(1.2rem, 5.75vw, 1.5rem);
+  }
+
+  .ronda-hero {
+    min-height: 700px;
+  }
+
+  .ronda-hero-image {
+    object-position: 61% center;
+  }
+
+  .ronda-hero-shade {
+    background: linear-gradient(180deg, rgba(247, 245, 242, 0.95) 0%, rgba(247, 245, 242, 0.75) 56%, rgba(247, 245, 242, 0.2) 100%);
+  }
+
+  .ronda-hero-content {
+    min-height: 700px;
+    justify-content: flex-start;
+    padding: 8.5rem 1rem 9rem;
+  }
+
+  .ronda-hero h1,
+  .ronda-home[data-lang='ko'] .ronda-hero h1 {
+    font-size: clamp(1.72rem, 8vw, 2.12rem);
+  }
+
+  .ronda-home[data-lang='en'] .ronda-hero h1 {
+    font-size: clamp(1.16rem, 5.35vw, 1.45rem);
+  }
+
+  .ronda-hero-body {
+    max-width: 25rem;
+    margin-top: 1.4rem;
+    font-size: 0.78rem;
+    line-height: 1.8;
+  }
+
+  .ronda-hero-actions {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 1.6rem;
+  }
+
+  .ronda-hero-index {
+    right: 1rem;
+    bottom: 5.2rem;
+    left: 1rem;
+    font-size: 0.48rem;
+  }
+
+  .ronda-proof-wrap {
+    width: calc(100% - 2rem);
+    margin-top: -3.4rem;
+  }
+
+  .ronda-proof-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .ronda-proof-item {
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: 1rem;
+    align-items: center;
+    min-height: 0;
+    padding: 1rem 1.15rem;
+    border-right: 0;
+    border-bottom: 1px solid rgba(247, 245, 242, 0.12);
+  }
+
+  .ronda-proof-item:last-child {
+    border-bottom: 0;
+  }
+
+  .ronda-proof-item span {
+    margin: 0;
+    font-size: 0.5rem;
+  }
+
+  .ronda-proof-item strong {
+    font-size: 0.82rem;
+  }
+
+  .ronda-proof-wrap > p {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 0.6rem;
+  }
+
+  .ronda-platform {
+    margin-top: 3rem;
+    padding: 5rem 1rem;
+  }
+
+  .ronda-platform-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ronda-platform-grid article,
+  .ronda-platform-grid article:nth-child(2),
+  .ronda-platform-grid article:last-child {
+    grid-column: auto;
+    min-height: 210px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(247, 245, 242, 0.15);
+    border-top: 0;
+  }
+
+  .ronda-platform-grid article:last-child {
+    border-bottom: 0;
+  }
+
+  .ronda-platform-grid h3 {
+    margin-top: 3.5rem;
+    font-size: 1.22rem;
+  }
+
+  .ronda-home[data-lang='en'] .ronda-platform-grid h3,
+  .ronda-home[data-lang='ko'] .ronda-platform-grid h3 {
+    font-size: 1rem;
+  }
+
+  .ronda-platform-signature {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ronda-platform-signature > div {
+    width: 11rem;
+  }
+
+  .ronda-bridge,
+  .ronda-products,
+  .ronda-craft,
+  .ronda-cities,
+  .ronda-faq {
+    padding: 5rem 1rem;
+  }
+
+  .ronda-bridge-copy .ronda-title,
+  .ronda-home[data-lang='en'] .ronda-bridge-copy .ronda-title {
+    font-size: clamp(1.3rem, 6.5vw, 1.6rem);
+  }
+
+  .ronda-home[data-lang='en'] .ronda-bridge-copy .ronda-title {
+    font-size: 1.08rem;
+  }
+
+  .ronda-bridge-scenes {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .ronda-bridge-scenes article,
+  .ronda-bridge-scenes article:nth-child(2) {
+    flex: 0 0 78vw;
+    min-height: 410px;
+    margin-top: 0;
+    scroll-snap-align: start;
+  }
+
+  .ronda-bridge-scenes h3 {
+    font-size: 1.05rem;
+  }
+
+  .ronda-product-grid,
+  .ronda-craft-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.8rem;
+    background: transparent;
+    border: 0;
+    scroll-snap-type: x mandatory;
+  }
+
+  .ronda-product-grid article,
+  .ronda-craft-grid article {
+    flex: 0 0 82vw;
+    scroll-snap-align: start;
+  }
+
+  .ronda-product-copy {
+    min-height: 190px;
+    padding: 1.35rem;
+  }
+
+  .ronda-product-copy > div {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .ronda-product-copy h3 {
+    font-size: 1.35rem;
+  }
+
+  .ronda-product-copy p {
+    margin-top: 1.6rem;
+  }
+
+  .ronda-flow {
+    padding: 5rem 1rem;
+  }
+
+  .ronda-flow-detail {
+    grid-template-columns: 58px 1fr;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .ronda-flow-detail > div > span {
+    font-size: 3rem;
+  }
+
+  .ronda-flow-detail > strong {
+    grid-column: 2;
+  }
+
+  .ronda-flow-detail > p {
+    grid-column: 1 / -1;
+  }
+
+  .ronda-network {
+    padding: 5rem 1rem;
+  }
+
+  .ronda-logo-panel {
+    padding: 1rem;
+  }
+
+  .ronda-logo-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .ronda-brand-grid,
+  .ronda-supplier-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ronda-brand-grid > div {
+    min-height: 88px;
+    padding: 1rem;
+  }
+
+  .ronda-supplier-grid > div {
+    min-height: 72px;
+  }
+
+  .ronda-craft-grid article > div {
+    min-height: 210px;
+  }
+
+  .ronda-city-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ronda-city-grid img {
+    height: 320px;
+  }
+
+  .ronda-city-grid article > div {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .ronda-city-grid p {
+    text-align: left;
+  }
+
+  .ronda-faq-heading .ronda-title {
+    font-size: 1.75rem;
+  }
+
+  .ronda-faq-list summary {
+    grid-template-columns: 30px 1fr 20px;
+    min-height: 88px;
+  }
+
+  .ronda-faq-list summary > strong {
+    font-size: 0.8rem;
+  }
+
+  .ronda-faq-list details > p {
+    margin-right: 1rem;
+    margin-left: 2.9rem;
+    font-size: 0.75rem;
+  }
+
+  .ronda-project-cta {
+    gap: 2rem;
+    padding: 4.5rem 1rem;
+  }
+
+  .ronda-project-cta .ronda-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .ronda-title,
+  .ronda-home[data-lang='ko'] .ronda-title {
+    font-size: 1.08rem;
+  }
+
+  .ronda-home[data-lang='en'] .ronda-title {
+    font-size: 0.98rem;
+  }
+
+  .ronda-hero h1,
+  .ronda-home[data-lang='ko'] .ronda-hero h1 {
+    font-size: 1.42rem;
+  }
+
+  .ronda-home[data-lang='en'] .ronda-hero h1 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ronda-home img,
+  .ronda-arrow-link,
+  .ronda-primary-link,
+  .ronda-faq-list summary svg {
+    transition: none;
+  }
+}
+
+/* ============================================================
    Homepage — RONDA editorial direction
    Warm palette retained; sharp magazine grid inspired by ATLY.
    ============================================================ */
@@ -845,5 +2227,465 @@
     .related-links-grid {
       grid-template-columns: 1fr !important;
     }
+  }
+}
+
+/* Product and service route extensions for the six-category RONDA offer. */
+.ronda-product-page,
+.ronda-services-page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 9rem) clamp(1.5rem, 6vw, 6rem);
+  background: #F7F5F2;
+}
+
+.ronda-product-page-heading,
+.ronda-services-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+  gap: clamp(3rem, 8vw, 8rem);
+  align-items: end;
+  margin-bottom: clamp(3rem, 6vw, 6rem);
+}
+
+.ronda-product-page-heading > div > p,
+.ronda-services-heading > div > p {
+  margin: 0 0 1.15rem;
+  color: #745D43;
+  font-size: 0.61rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.ronda-product-page-heading h2,
+.ronda-services-heading h2 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: clamp(2.2rem, 4.4vw, 4.2rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+  white-space: nowrap;
+}
+
+.ronda-product-page-heading > p,
+.ronda-services-heading > p {
+  margin: 0;
+  color: #5F5A55;
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+
+.ronda-product-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: #D8D1C8;
+  border: 1px solid #D8D1C8;
+}
+
+.ronda-product-page-grid article {
+  display: grid;
+  grid-template-columns: minmax(0, 0.52fr) minmax(0, 0.48fr);
+  min-height: 420px;
+  background: #FFFFFF;
+}
+
+.ronda-product-page-image {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  background: #F0EEEA;
+}
+
+.ronda-product-page-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  transition: transform 450ms ease;
+}
+
+.ronda-product-page-grid article:hover .ronda-product-page-image img {
+  transform: scale(1.02);
+}
+
+.ronda-product-page-image > span {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #745D43;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.ronda-product-page-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.ronda-product-page-copy > div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.ronda-product-page-copy h3 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 500;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.ronda-product-page-copy strong {
+  flex: 0 0 auto;
+  color: #745D43;
+  font-size: 0.55rem;
+  letter-spacing: 0.06em;
+}
+
+.ronda-product-page-copy > p {
+  margin: 2rem 0 0;
+  color: #5F5A55;
+  font-size: 0.77rem;
+  line-height: 1.8;
+}
+
+.ronda-product-page-copy ul {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ronda-product-page-copy li {
+  padding: 0.55rem 0;
+  border-top: 1px solid #E2DDD8;
+  color: #746E68;
+  font-size: 0.67rem;
+}
+
+.ronda-product-page-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  background: #1C1F24;
+  color: #F7F5F2;
+}
+
+.ronda-product-page-cta p {
+  margin: 0;
+  color: rgba(247, 245, 242, 0.62);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+.ronda-product-page-cta a {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 1.2rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid #C4A882;
+  color: #F7F5F2;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.ronda-services-page {
+  background: #EDEAE5;
+}
+
+.ronda-services-linear {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+
+.ronda-services-linear::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  width: 1px;
+  background: #C8BEB3;
+  content: '';
+}
+
+.ronda-services-linear article {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1.5rem;
+}
+
+.ronda-services-node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #B8ADA2;
+  background: #EDEAE5;
+  color: #745D43;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.ronda-services-card {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.5fr) minmax(140px, 0.28fr) minmax(260px, 1fr);
+  gap: 2rem;
+  align-items: center;
+  min-height: 140px;
+  padding: 1.7rem 2rem;
+  background: #F7F5F2;
+  border: 1px solid #D8D1C8;
+}
+
+.ronda-services-card small {
+  grid-column: 1 / -1;
+  margin-bottom: -1.1rem;
+  color: #745D43;
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.ronda-services-card h3 {
+  margin: 0;
+  font-family: 'Cormorant Garamond', 'Noto Serif SC', 'Noto Serif KR', serif;
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.ronda-services-card > strong {
+  color: #745D43;
+  font-size: 0.72rem;
+  white-space: nowrap;
+}
+
+.ronda-services-card > p {
+  margin: 0;
+  color: #5F5A55;
+  font-size: 0.76rem;
+  line-height: 1.8;
+}
+
+.ronda-services-linear article.is-sample .ronda-services-node {
+  border-color: #8B7355;
+  background: #8B7355;
+  color: #FFFFFF;
+}
+
+.ronda-services-linear article.is-sample .ronda-services-card {
+  border-color: #C4A882;
+  background: #F2ECE4;
+  box-shadow: inset 4px 0 0 #8B7355;
+}
+
+.ronda-services-note {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 2rem;
+  margin: 2rem 0 0 5.5rem;
+  padding: 1.6rem 2rem;
+  background: #DED8D1;
+}
+
+.ronda-services-note strong {
+  color: #745D43;
+  font-size: 0.66rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.ronda-services-note p {
+  margin: 0;
+  color: #5F5A55;
+  font-size: 0.72rem;
+  line-height: 1.8;
+}
+
+.ronda-services-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+  align-items: stretch;
+  margin: 1rem 0 0 5.5rem;
+  background: #1C1F24;
+  color: #F7F5F2;
+}
+
+.ronda-services-actions > div {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 1.7rem 2rem;
+  border-right: 1px solid rgba(247, 245, 242, 0.12);
+}
+
+.ronda-services-actions span {
+  color: #C4A882;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+}
+
+.ronda-services-actions p {
+  margin: 0;
+  color: rgba(247, 245, 242, 0.6);
+  font-size: 0.65rem;
+}
+
+.ronda-services-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 2rem;
+  background: #8B7355;
+  color: #FFFFFF;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1000px) {
+  .ronda-product-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ronda-services-card {
+    grid-template-columns: minmax(150px, 0.5fr) minmax(140px, 0.3fr) minmax(220px, 1fr);
+  }
+
+  .ronda-services-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ronda-services-actions a {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .page-hero-title {
+    font-size: 1.15rem !important;
+  }
+
+  .page-hero-grid > p {
+    margin-left: 0 !important;
+  }
+
+  .ronda-product-page,
+  .ronda-services-page {
+    padding: 4.5rem 1rem;
+  }
+
+  .ronda-product-page-heading,
+  .ronda-services-heading {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .ronda-product-page-heading h2,
+  .ronda-services-heading h2 {
+    font-size: clamp(1.45rem, 7vw, 1.8rem);
+  }
+
+  .ronda-product-page-grid article {
+    grid-template-columns: 1fr;
+  }
+
+  .ronda-product-page-image {
+    min-height: 0;
+    aspect-ratio: 1.2 / 1;
+  }
+
+  .ronda-product-page-copy {
+    min-height: 300px;
+    padding: 1.5rem;
+  }
+
+  .ronda-product-page-copy > div {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .ronda-product-page-cta {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ronda-services-linear::before {
+    left: 1.35rem;
+  }
+
+  .ronda-services-linear article {
+    grid-template-columns: 2.7rem 1fr;
+    gap: 0.8rem;
+  }
+
+  .ronda-services-node {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
+
+  .ronda-services-card {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.35rem;
+  }
+
+  .ronda-services-card small {
+    grid-column: auto;
+    margin-bottom: 0.25rem;
+  }
+
+  .ronda-services-card > p {
+    margin-top: 0.5rem;
+  }
+
+  .ronda-services-note,
+  .ronda-services-actions {
+    margin-left: 3.5rem;
+  }
+
+  .ronda-services-note {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding: 1.35rem;
+  }
+
+  .ronda-services-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .ronda-services-actions a {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .page-hero-title,
+  .ronda-product-page-heading h2,
+  .ronda-services-heading h2 {
+    font-size: 1rem !important;
   }
 }

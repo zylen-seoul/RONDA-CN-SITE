@@ -19,43 +19,58 @@
       "path": "/",
       "index": true,
       "title": {
-        "zh": "杭州绒达科技｜Samplewear 冬装服装供应链",
-        "en": "Hangzhou Rongda Technology | Samplewear Winter Apparel Supply Chain",
-        "ko": "항저우 룽다 테크놀로지 | Samplewear 겨울 의류 공급망"
+        "zh": "杭州绒达科技｜100件起订冬装供应链｜Samplewear",
+        "en": "Hangzhou Rongda | Winterwear from 100 Pieces | Samplewear",
+        "ko": "항저우 룽다｜100장부터 시작하는 겨울 의류｜Samplewear"
       },
       "description": {
-        "zh": "Samplewear 是杭州绒达科技有限公司（RONDA）的官方网站，介绍冬装设计打样、柔性生产、面料采购、质量控制与交付等供应链服务。",
-        "en": "Samplewear is the official website of Hangzhou Rongda Technology Co., Ltd., covering winter-apparel sampling, sourcing, manufacturing, quality control and delivery.",
-        "ko": "Samplewear는 항저우 룽다 테크놀로지 유한공사의 공식 웹사이트로, 겨울 의류 샘플링, 소재 조달, 생산, 품질 관리 및 납품 서비스를 소개합니다."
+        "zh": "Samplewear 是杭州绒达科技有限公司（RONDA）的官方网站，围绕常规100件起订，提供羽绒服、冲锋衣、滑雪服等冬装的设计打样、面辅料协作、生产、质检与交付服务。",
+        "en": "Samplewear is Hangzhou Rongda Technology's official website for winterwear development from a standard 100-piece MOQ, covering sampling, sourcing, production, quality checks and delivery.",
+        "ko": "Samplewear는 항저우 룽다 테크놀로지의 공식 웹사이트로 일반 100장부터 겨울 의류 샘플, 원부자재, 생산, 품질 검사와 납품 서비스를 제공합니다."
       },
       "h1": {
-        "zh": "杭州绒达科技 · 冬装柔性供应链",
-        "en": "Hangzhou Rongda · Winter Apparel Supply Chain",
-        "ko": "항저우 룽다 · 겨울 의류 공급망"
+        "zh": "100件起订，冬装清晰落地",
+        "en": "Winterwear from 100 Pieces",
+        "ko": "100장부터 시작하는 겨울 의류"
       },
       "intro": {
-        "zh": "Samplewear（网站展示名 Sample & Simple）是杭州绒达科技有限公司运营的服装供应链官方网站。RONDA 对应杭州业务，ATLY 对应首尔办公室。",
-        "en": "Samplewear, presented as Sample & Simple, is the official apparel supply-chain website operated by Hangzhou Rongda Technology Co., Ltd. RONDA identifies the Hangzhou operation and ATLY the Seoul office.",
-        "ko": "Samplewear(Sample & Simple)는 항저우 룽다 테크놀로지 유한공사가 운영하는 의류 공급망 공식 웹사이트입니다. RONDA는 항저우 사업을, ATLY는 서울 오피스를 나타냅니다."
+        "zh": "Samplewear（Sample & Simple）由杭州绒达科技有限公司运营。绒达科技围绕品牌冬装需求，统筹设计打样、面辅料匹配、生产协作、质量检查与交付；常规订单建议从100件起。",
+        "en": "Samplewear is operated by Hangzhou Rongda Technology. Rongda coordinates winterwear sampling, materials, production, quality checks and delivery, with standard orders recommended from 100 pieces.",
+        "ko": "Samplewear는 항저우 룽다 테크놀로지가 운영합니다. 룽다는 겨울 의류 샘플, 원부자재, 생산, 품질 검사와 납품을 조율하며 일반 주문은 100장부터 권장합니다."
       },
       "summary": {
-        "zh": "了解绒达如何连接杭州供应链与首尔时尚资源。",
-        "en": "See how Rongda connects Hangzhou supply-chain capabilities with Seoul fashion resources.",
-        "ko": "룽다가 항저우 공급망과 서울 패션 자원을 연결하는 방식을 확인하세요."
+        "zh": "了解绒达科技如何从100件起订推进冬装样衣、量产与交付。",
+        "en": "See how Rongda moves winterwear from sampling to production and delivery from 100 pieces.",
+        "ko": "룽다가 100장부터 샘플, 양산과 납품을 진행하는 방식을 확인하세요."
       },
       "staticSections": [
         {
-          "heading": "Samplewear 与杭州绒达科技",
+          "heading": "100件起订的冬装开发标准",
           "paragraphs": [
-            "Samplewear（Sample & Simple）是杭州绒达科技有限公司面向全球品牌客户展示服装供应链能力的网站入口。公司以 RONDA 展示杭州业务，并通过 ATLY 首尔办公室连接设计与品牌资源。",
-            "网站内容围绕冬装产品开发，从设计打样、面料采购、生产协作、质量控制到交付，帮助品牌清晰了解合作流程与可用服务。"
+            "杭州绒达科技以常规100件起订为核心标准，帮助品牌以较小批量推进冬装产品验证与生产协作。实际起订量根据品类、面辅料最低订量、颜色数量、工艺及生产条件评估。",
+            "常规样衣开发参考周期为7至15个工作日，常规大货生产参考周期为15至30个工作日。复杂结构、定制或进口材料、特殊工艺及多轮修改可能延长，最终以项目排期为准。"
           ]
         },
         {
-          "heading": "冬装产品与供应链服务",
+          "heading": "羽绒服、冲锋衣与滑雪服等六大品类",
           "paragraphs": [
-            "绒达围绕羽绒服与户外系列、双面大衣、皮草与皮毛一体、羽绒寝具开展产品开发，并提供设计打样、面辅料协作、生产、质量控制与交付服务。",
-            "RONDA 杭州业务连接供应链能力，ATLY 首尔办公室连接当地设计与品牌资源，两地团队围绕冬装项目开展协作。"
+            "绒达科技通过Samplewear展示羽绒服、冲锋衣、滑雪服、双面大衣、皮草与皮毛一体、羽绒寝具六类冬装开发方向。",
+            "服务覆盖需求确认、设计与工艺整理、面辅料匹配、首版样衣、样衣修订、产前确认、常规量产、终检与发运。"
+          ]
+        },
+        {
+          "heading": "案例客户与面辅料资源",
+          "paragraphs": [
+            "官网集中展示部分品牌案例，并介绍冬装开发中常用的功能面料、填充材料、拉链、扣具、里料与缝线等供应资源。具体项目组合以产品需求与供方确认结果为准。",
+            "展示的面辅料与辅件资源包括三星羽绒、TORAY、Bemberg、SHINDO、YKK、IDEAL、3M、柳桥羽绒、TEIJIN、COATS、NIFCO、NIKKE TEXTILE、STYLEM、SAB、CONSINEE与DURAFLEX等。"
+          ]
+        },
+        {
+          "heading": "杭州绒达科技冬装合作常见问题",
+          "paragraphs": [
+            "绒达科技的常规订单建议从100件起，最终数量根据品类、面辅料最低订量、颜色数量、工艺与生产条件评估。",
+            "常规样衣开发参考周期为7至15个工作日；冲锋衣和滑雪服可围绕防水面料、压胶、拉链、功能辅料、保暖填充、耐磨与运动版型推进开发。",
+            "开始项目前建议准备款式参考、尺寸或样衣、预计数量、颜色、目标成本、面辅料偏好、目标市场与交期；资料不完整也可以先与杭州绒达科技沟通。"
           ]
         }
       ]
@@ -65,46 +80,54 @@
       "path": "/products/",
       "index": true,
       "title": {
-        "zh": "冬装定制产品｜杭州绒达科技 Samplewear",
-        "en": "Winter Apparel Products | Samplewear by Hangzhou Rongda",
-        "ko": "겨울 의류 제품 | 항저우 룽다 Samplewear"
+        "zh": "100件起订冬装产品｜羽绒服·冲锋衣·滑雪服｜绒达科技",
+        "en": "Winterwear from 100 Pieces | Shells & Skiwear | Hangzhou Rongda",
+        "ko": "100장부터 겨울 의류｜기능성 셸·스키웨어｜항저우 룽다"
       },
       "description": {
-        "zh": "杭州绒达科技通过 Samplewear 展示羽绒服与户外系列、双面大衣、皮草与皮毛一体、羽绒寝具等冬装产品开发方向。",
-        "en": "Explore down jackets and outdoor apparel, double-faced coats, fur and shearling, and down bedding offered through Samplewear.",
-        "ko": "Samplewear를 통해 다운 재킷과 아웃도어 의류, 더블페이스 코트, 퍼와 시어링, 다운 침구 개발 방향을 살펴보세요."
+        "zh": "杭州绒达科技通过Samplewear展示常规100件起订的羽绒服、冲锋衣、滑雪服、双面大衣、皮草与皮毛一体及羽绒寝具开发服务。",
+        "en": "Explore six standard 100-piece winterwear categories: down jackets, technical shells, skiwear, double-faced coats, fur and shearling, and down bedding.",
+        "ko": "일반 100장 기준의 다운 재킷, 기능성 셸, 스키웨어, 더블페이스 코트, 퍼·시어링과 다운 침구 6개 품목을 소개합니다."
       },
       "h1": {
-        "zh": "杭州绒达科技的冬装产品与开发方向",
-        "en": "Winter Apparel Products by Hangzhou Rongda Technology",
-        "ko": "항저우 룽다 테크놀로지의 겨울 의류 제품"
+        "zh": "常规100件起订的六大冬装品类",
+        "en": "Six Winterwear Categories",
+        "ko": "100장부터 시작하는 겨울 의류 6대 품목"
       },
       "intro": {
-        "zh": "绒达科技通过 Samplewear 展示四类冬装产品开发方向，并将产品需求与设计打样、面辅料协作、生产及质量控制流程连接起来。",
-        "en": "Rongda presents four winter-apparel development categories through Samplewear and connects product requirements with sampling, material sourcing, manufacturing and quality control.",
-        "ko": "룽다는 Samplewear를 통해 네 가지 겨울 의류 개발 분야를 소개하고 샘플링, 소재 조달, 생산 및 품질 관리와 연결합니다."
+        "zh": "绒达科技通过Samplewear展示六类冬装开发方向，将产品需求与设计打样、面辅料协作、生产及质量检查连接起来；常规订单建议从100件起。",
+        "en": "Rongda presents six winterwear development categories through Samplewear and connects each brief with sampling, material sourcing, production and quality checks. Standard orders are recommended from 100 pieces.",
+        "ko": "룽다는 Samplewear를 통해 6개 겨울 의류 개발 품목을 소개하고 샘플, 원부자재, 생산과 품질 검사를 연결합니다. 일반 주문은 100장부터 권장합니다."
       },
       "summary": {
-        "zh": "浏览羽绒服、双面大衣、皮草与羽绒寝具开发方向。",
-        "en": "Explore down jackets, double-faced coats, fur and down bedding.",
-        "ko": "다운 재킷, 더블페이스 코트, 퍼 및 다운 침구를 살펴보세요."
+        "zh": "浏览羽绒服、冲锋衣、滑雪服、双面大衣、皮草与羽绒寝具。",
+        "en": "Explore down, shells, skiwear, coats, fur and down bedding.",
+        "ko": "다운, 기능성 셸, 스키웨어, 코트, 퍼와 다운 침구를 확인하세요."
       },
       "staticSections": [
         {
-          "heading": "羽绒服与户外系列",
-          "paragraphs": ["面向品牌客户的羽绒服、滑雪服与功能性外衣开发，覆盖设计沟通、样衣制作、面辅料协作与生产衔接。"]
+          "heading": "羽绒服",
+          "paragraphs": ["围绕版型、面料、充绒克重与防钻绒结构推进样衣、生产协作和质量检查，常规订单建议从100件起。"]
+        },
+        {
+          "heading": "冲锋衣",
+          "paragraphs": ["围绕防水面料、压胶工艺、拉链与功能辅件进行方案协作，并结合版型与使用场景推进样衣和生产。"]
+        },
+        {
+          "heading": "滑雪服",
+          "paragraphs": ["围绕保暖、防水、耐磨与运动版型梳理工艺需求，协同拼色、填充与功能配件方案。"]
         },
         {
           "heading": "双面大衣",
-          "paragraphs": ["围绕版型沟通、面料打样、工艺协作与柔性生产衔接，支持品牌推进双面大衣产品开发。"]
+          "paragraphs": ["围绕面料垂感、版型比例与缝制工艺推进样衣开发及生产协作。"]
         },
         {
           "heading": "皮草与皮毛一体",
-          "paragraphs": ["提供原料搜源、设计开发、打样与生产协作等环节的信息与服务对接。"]
+          "paragraphs": ["根据材质、厚度、毛向与缝制路径推进版型和工艺协作。"]
         },
         {
           "heading": "羽绒寝具",
-          "paragraphs": ["围绕填充材料选择、样件开发、面料方案与定制协作介绍羽绒寝具开发方向。"]
+          "paragraphs": ["围绕填充材料、充绒量、绗缝结构、面料与包装需求开展产品开发。"]
         }
       ]
     },
@@ -113,54 +136,62 @@
       "path": "/services/",
       "index": true,
       "title": {
-        "zh": "服装供应链服务｜杭州绒达科技 Samplewear",
-        "en": "Apparel Supply Chain Services | Samplewear by Hangzhou Rongda",
-        "ko": "의류 공급망 서비스 | 항저우 룽다 Samplewear"
+        "zh": "冬装打样与生产流程｜7–15天样衣｜杭州绒达科技",
+        "en": "Winterwear Sampling Timeline | 7–15 Day Samples | Hangzhou Rongda",
+        "ko": "겨울 의류 샘플 일정｜7–15일 샘플｜항저우 룽다"
       },
       "description": {
-        "zh": "杭州绒达科技通过 Samplewear 介绍设计打样、品牌孵化、柔性生产、面料采购、质量控制及物流配送等供应链服务。",
-        "en": "Explore design and sampling, brand incubation, flexible manufacturing, fabric sourcing, quality control and logistics services.",
-        "ko": "디자인 및 샘플링, 브랜드 인큐베이션, 유연 생산, 원단 조달, 품질 관리와 물류 서비스를 확인하세요."
+        "zh": "查看杭州绒达科技从需求确认、面辅料匹配、7–15天常规样衣到15–30天常规量产、终检与发运的冬装服务流程。",
+        "en": "See Rongda's winterwear flow from brief and material matching through 7–15 day standard sampling, 15–30 day standard production, final QC and shipping.",
+        "ko": "요구 확인, 원부자재 매칭, 7–15일 일반 샘플, 15–30일 일반 양산, 최종 검사와 출고까지 룽다의 프로세스를 확인하세요."
       },
       "h1": {
-        "zh": "从设计到交付的服装供应链服务",
-        "en": "Apparel Supply Chain Services from Design to Delivery",
-        "ko": "디자인부터 납품까지의 의류 공급망 서비스"
+        "zh": "从需求到交付的冬装服务时间线",
+        "en": "Winterwear Service Timeline",
+        "ko": "요구부터 납품까지 겨울 의류 일정"
       },
       "intro": {
-        "zh": "Samplewear 将杭州绒达科技的产品开发与供应链协作内容按服务环节整理，帮助品牌了解从创意沟通到成品交付的合作路径。",
-        "en": "Samplewear organizes Hangzhou Rongda's development and supply-chain capabilities by service stage, giving brands a clear path from concept discussion to delivery.",
-        "ko": "Samplewear는 항저우 룽다의 개발 및 공급망 역량을 단계별로 정리해 콘셉트 논의부터 납품까지의 협업 경로를 제시합니다."
+        "zh": "Samplewear按工作日展示杭州绒达科技的常规项目路径，帮助品牌看清需求、设计、材料、样衣、产前确认、量产、质检与发运所需的参考时间。",
+        "en": "Samplewear shows the reference business days for Rongda's standard path across brief, design, materials, sampling, approval, production, QC and shipping.",
+        "ko": "Samplewear는 요구, 디자인, 소재, 샘플, 승인, 생산, 품질 검사와 출고 단계의 참고 영업일을 안내합니다."
       },
       "summary": {
-        "zh": "查看设计打样、采购、生产、质控和交付服务。",
-        "en": "View sampling, sourcing, manufacturing, quality and delivery services.",
-        "ko": "샘플링, 조달, 생산, 품질 및 납품 서비스를 확인하세요."
+        "zh": "查看每个服务步骤的参考工作日，重点了解7–15天常规样衣阶段。",
+        "en": "View reference time for every stage, with a clear 7–15 day sampling focus.",
+        "ko": "각 단계의 참고 일정과 7–15일 샘플 핵심 구간을 확인하세요."
       },
       "staticSections": [
         {
-          "heading": "设计打样",
-          "paragraphs": ["围绕设计需求、版型与工艺进行沟通，并衔接数字化样衣与实物样衣开发。"]
+          "heading": "需求确认：1至2个工作日",
+          "paragraphs": ["确认产品品类、目标数量、预算区间、目标市场与期望交期。"]
         },
         {
-          "heading": "品牌与产品规划",
-          "paragraphs": ["协助品牌梳理产品方向、视觉表达与产品线规划，并与后续开发和供应链环节衔接。"]
+          "heading": "设计与工艺整理：2至3个工作日",
+          "paragraphs": ["整理款式资料、尺寸、结构、工艺要求与待确认问题。"]
         },
         {
-          "heading": "柔性生产",
-          "paragraphs": ["根据产品类别、数量、交期与工艺要求匹配生产协作资源，并持续同步关键进度。"]
+          "heading": "面辅料匹配：3至7个工作日",
+          "paragraphs": ["根据手感、功能、颜色与最低订量确认面料、填充材料和辅件方案。"]
         },
         {
-          "heading": "面料采购",
-          "paragraphs": ["根据设计与品质要求开展面辅料搜寻、打样、开发及检测协作。"]
+          "heading": "首版样衣：7至15个工作日",
+          "paragraphs": ["版师、样衣与项目团队推进打版、试制和内部检查，完成后提交客户确认；复杂结构、特殊工艺或进口材料可能延长。"]
         },
         {
-          "heading": "质量控制",
-          "paragraphs": ["围绕来料、生产过程与成品交付设置质量检查节点，帮助项目形成可追踪的质量记录。"]
+          "heading": "样衣修订：3至7个工作日",
+          "paragraphs": ["按试穿反馈调整版型、工艺、颜色或辅件，并记录确认结果。"]
         },
         {
-          "heading": "物流配送",
-          "paragraphs": ["根据目的地、时效与订单安排协调运输及交付信息，让品牌了解货物进度。"]
+          "heading": "产前确认：2至5个工作日",
+          "paragraphs": ["锁定尺寸、材料、工艺、包装与质量检查标准后进入排产。"]
+        },
+        {
+          "heading": "常规量产：15至30个工作日",
+          "paragraphs": ["按确认标准推进采购、裁剪、缝制、后整与关键节点进度沟通。"]
+        },
+        {
+          "heading": "终检与发运：2至5个工作日",
+          "paragraphs": ["完成成品检查、包装核对与出货资料整理，再按目的地安排运输；以上为参考周期，最终以项目排期为准。"]
         }
       ]
     },
@@ -223,9 +254,9 @@
         "ko": "항저우 룽다 테크놀로지 유한공사, RONDA, Samplewear 및 ATLY 서울 오피스의 관계를 알아보세요."
       },
       "h1": {
-        "zh": "杭州绒达科技有限公司：Samplewear 背后的运营主体",
-        "en": "Hangzhou Rongda Technology: The Company Behind Samplewear",
-        "ko": "Samplewear를 운영하는 항저우 룽다 테크놀로지"
+        "zh": "杭州绒达科技 · Samplewear",
+        "en": "Hangzhou Rongda · Samplewear",
+        "ko": "항저우 룽다 · Samplewear"
       },
       "intro": {
         "zh": "Samplewear（Sample & Simple）由杭州绒达科技有限公司运营。RONDA 用于呈现杭州供应链业务，ATLY 对应首尔办公室与当地品牌资源连接。",

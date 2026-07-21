@@ -1,517 +1,123 @@
-/**
- * ProductsSection — International Standard v4
- * Design philosophy: Sticky left panel + scrolling right images
- * - Left panel: sticky text that updates as user scrolls through products
- * - Right panel: full-height product images that scroll vertically
- * - Mobile: stacked MobileCard components (hooks-safe)
- * Inspired by Loro Piana / Hermès product storytelling
- */
-import { useRef, useState, useEffect } from 'react';
-import { motion, useInView, AnimatePresence } from 'framer-motion';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { ArrowUpRight } from "lucide-react";
+import { useLanguage, type Language } from "@/contexts/LanguageContext";
 
-const PRODUCTS = [
+type Localized = Record<Language, string>;
+
+const text = (value: Localized, lang: Language) => value[lang] || value.zh;
+
+const products: Array<{
+  image: string;
+  title: Localized;
+  intro: Localized;
+  points: Array<Localized>;
+}> = [
   {
-    key: 'products.down',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663578556874/PykNo9z94x68gsxLjEHmf5/product_down_jacket_v2-C28aTj77bjh3DrRgssWnET.webp',
-    number: '01',
-    accent: '#8B7355',
+    image: "/ronda-platform/product-down.webp",
+    title: { zh: "羽绒服", en: "Down Jackets", ko: "다운 재킷" },
+    intro: { zh: "围绕品牌版型、面料、充绒克重与防钻绒结构推进开发。", en: "Development around brand fit, shell fabric, fill weight and down-proof construction.", ko: "브랜드 패턴, 겉감, 충전량과 다운프루프 구조를 중심으로 개발합니다." },
+    points: [
+      { zh: "版型与分区结构", en: "Fit and chamber layout", ko: "패턴과 구획 구조" },
+      { zh: "面料与填充材料", en: "Shell and fill materials", ko: "겉감과 충전재" },
+      { zh: "充绒与成品检查", en: "Filling and final review", ko: "충전과 완제품 검사" },
+    ],
   },
   {
-    key: 'products.coat',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663578556874/PykNo9z94x68gsxLjEHmf5/product_wool_coat_v2-ZC6afyE7amnvS2ibnyeWZq.webp',
-    number: '02',
-    accent: '#6B7280',
+    image: "/ronda-platform/product-shell.webp",
+    title: { zh: "冲锋衣", en: "Technical Shells", ko: "테크니컬 셸" },
+    intro: { zh: "把防水面料、压胶、拉链与功能辅件作为完整产品系统协作。", en: "Waterproof fabrics, seam sealing, zippers and functional trims developed as one system.", ko: "방수 소재, 심실링, 지퍼와 기능성 부자재를 하나의 시스템으로 개발합니다." },
+    points: [
+      { zh: "防水面料与结构", en: "Waterproof fabric and build", ko: "방수 소재와 구조" },
+      { zh: "压胶与缝位确认", en: "Seam-sealing review", ko: "심실링과 봉제선 확인" },
+      { zh: "功能拉链与扣具", en: "Technical zippers and hardware", ko: "기능성 지퍼와 하드웨어" },
+    ],
   },
   {
-    key: 'products.fur',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663578556874/PykNo9z94x68gsxLjEHmf5/product_shearling_v2-koikyMmjkFu3RzUrFdNVLk.webp',
-    number: '03',
-    accent: '#8B7355',
+    image: "/ronda-platform/product-ski.webp",
+    title: { zh: "滑雪服", en: "Skiwear", ko: "스키웨어" },
+    intro: { zh: "围绕保暖、防水、耐磨与运动版型协调拼色、填充与功能配件。", en: "Insulation, protection, durability and movement-led fit with functional details.", ko: "보온, 방수, 내마모성과 움직임을 고려한 패턴 및 기능 부속을 개발합니다." },
+    points: [
+      { zh: "运动版型与活动量", en: "Movement-led fit", ko: "움직임을 고려한 패턴" },
+      { zh: "保暖与耐磨方案", en: "Insulation and durability", ko: "보온과 내마모 설계" },
+      { zh: "拼色与功能配件", en: "Color blocking and details", ko: "컬러 블로킹과 기능 부속" },
+    ],
   },
   {
-    key: 'products.duvet',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663578556874/PykNo9z94x68gsxLjEHmf5/product_duvet_v2-i9Eti2XbCk4wTyrnkfri8A.webp',
-    number: '04',
-    accent: '#8B7355',
+    image: "/ronda-platform/product-wool.webp",
+    title: { zh: "双面大衣", en: "Double-Faced Coats", ko: "더블페이스 코트" },
+    intro: { zh: "围绕面料垂感、版型比例与缝制工艺推进精品样衣和量产。", en: "Premium sampling and production around drape, proportion and refined construction.", ko: "소재의 드레이프, 비율과 섬세한 봉제를 중심으로 개발합니다." },
+    points: [
+      { zh: "面料垂感与手感", en: "Drape and handfeel", ko: "드레이프와 촉감" },
+      { zh: "版型比例与结构", en: "Proportion and construction", ko: "비율과 구조" },
+      { zh: "缝制与细节检查", en: "Sewing and detail review", ko: "봉제와 디테일 검사" },
+    ],
+  },
+  {
+    image: "/ronda-platform/product-fur.webp",
+    title: { zh: "皮草与皮毛一体", en: "Fur and Shearling", ko: "퍼와 시어링" },
+    intro: { zh: "根据材质、厚度、毛向与缝制路径推进版型和工艺协作。", en: "Pattern and construction coordination based on material, thickness and nap direction.", ko: "소재, 두께, 모 방향과 봉제 경로에 맞춰 패턴과 공정을 개발합니다." },
+    points: [
+      { zh: "材质与厚度评估", en: "Material and thickness", ko: "소재와 두께 평가" },
+      { zh: "毛向与拼接方案", en: "Nap and panel planning", ko: "모 방향과 패널 구성" },
+      { zh: "廓形与缝制路径", en: "Silhouette and sewing path", ko: "실루엣과 봉제 경로" },
+    ],
+  },
+  {
+    image: "/ronda-platform/product-duvet.webp",
+    title: { zh: "羽绒寝具", en: "Down Bedding", ko: "다운 침구" },
+    intro: { zh: "围绕填充材料、充绒量、绗缝结构、面料与包装需求开展开发。", en: "Development around fill material, weight, quilting, shell fabric and packaging.", ko: "충전재, 충전량, 퀼팅, 원단과 패키지 요구에 맞춰 개발합니다." },
+    points: [
+      { zh: "填充材料与充绒量", en: "Fill material and weight", ko: "충전재와 충전량" },
+      { zh: "绗缝与分区结构", en: "Quilting and chamber layout", ko: "퀼팅과 구획 구조" },
+      { zh: "面料、标识与包装", en: "Fabric, branding and pack", ko: "원단, 라벨과 패키지" },
+    ],
   },
 ];
 
-// Mobile card — separate component so hooks are called at top level
-function MobileCard({ product, index }: { product: typeof PRODUCTS[0]; index: number }) {
-  const { t } = useLanguage();
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={inView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.8, delay: index * 0.1 }}
-      style={{
-        position: 'relative',
-        minHeight: '85vw',
-        overflow: 'hidden',
-        borderBottom: '1px solid rgba(139,115,85,0.1)',
-      }}
-    >
-      <img
-        src={product.image}
-        alt={t(product.key + '.title')}
-        style={{
-          position: 'absolute',
-          inset: 0,
-          width: '100%',
-          height: '100%',
-          objectFit: 'cover',
-          filter: 'brightness(0.85) saturate(0.9)',
-        }}
-      />
-      <div
-        style={{
-          position: 'relative',
-          zIndex: 2,
-          padding: '3rem 1.5rem',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-end',
-          minHeight: '85vw',
-        }}
-      >
-        <span
-          style={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontSize: '5rem',
-            fontWeight: 300,
-            lineHeight: 0.85,
-            color: 'rgba(139,115,85,0.12)',
-            display: 'block',
-            marginBottom: '0.5rem',
-          }}
-        >
-          {product.number}
-        </span>
-        <h3
-          style={{
-            fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif",
-            fontSize: '1.8rem',
-            fontWeight: 300,
-            color: '#F7F5F2',
-            margin: '0 0 0.5rem',
-            lineHeight: 1.2,
-          }}
-        >
-          {t(product.key + '.title')}
-        </h3>
-        <p
-          style={{
-            fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
-            fontSize: '0.75rem',
-            color: 'rgba(247,245,242,0.8)',
-            lineHeight: 1.7,
-            margin: 0,
-          }}
-        >
-          {t(product.key + '.desc')}
-        </p>
-      </div>
-    </motion.div>
-  );
-}
+const header = {
+  eyebrow: { zh: "PRODUCT DEVELOPMENT · 100 PIECES", en: "PRODUCT DEVELOPMENT · 100 PIECES", ko: "PRODUCT DEVELOPMENT · 100 PIECES" },
+  title: { zh: "六大冬装开发品类", en: "Six Winterwear Categories", ko: "겨울 의류 6대 품목" },
+  body: {
+    zh: "常规订单建议从 100 件起。绒达科技根据产品结构、面辅料最低订量、颜色与工艺条件确认最终方案。",
+    en: "Standard orders are recommended from 100 pieces. Rongda confirms the final plan against construction, material minimums, colors and techniques.",
+    ko: "일반 주문은 100장부터 권장합니다. 제품 구조, 원부자재 최소 수량, 색상과 공정 조건에 따라 최종안을 확정합니다.",
+  },
+};
 
 export default function ProductsSection() {
-  const { t } = useLanguage();
-  const headerRef = useRef<HTMLDivElement>(null);
-  const headerInView = useInView(headerRef, { once: true, margin: '-100px' });
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
-    const panels = container.querySelectorAll<HTMLDivElement>('[data-panel]');
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const idx = Number((entry.target as HTMLElement).dataset.panel);
-            setActiveIndex(idx);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-    panels.forEach((p) => observer.observe(p));
-    return () => observer.disconnect();
-  }, []);
-
-  const active = PRODUCTS[activeIndex];
+  const { lang } = useLanguage();
 
   return (
-    <section id="products" style={{ background: '#F7F5F2' }}>
-      {/* ── Section header ── */}
-      <div
-        ref={headerRef}
-        style={{
-          maxWidth: '1600px',
-          margin: '0 auto',
-          padding: 'clamp(5rem, 10vw, 10rem) clamp(1.5rem, 5vw, 5rem) clamp(3rem, 5vw, 5rem)',
-        }}
-      >
-        {/* Label row */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={headerInView ? { opacity: 1, x: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}
-        >
-          <span style={{ display: 'block', width: '2.5rem', height: '1px', background: '#8B7355' }} />
-          <span
-            style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '0.65rem',
-              fontWeight: 500,
-              letterSpacing: '0.25em',
-              textTransform: 'uppercase',
-              color: '#8B7355',
-            }}
-          >
-            {t('products.label')}
-          </span>
-        </motion.div>
-
-        {/* Title — single line, no wrap */}
-        <div style={{ overflow: 'hidden', marginBottom: '2.5rem' }}>
-          <motion.h2
-            initial={{ y: '100%' }}
-            animate={headerInView ? { y: 0 } : {}}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif",
-              fontSize: 'clamp(1.8rem, 3.8vw, 3.8rem)',
-              fontWeight: 300,
-              color: '#1A1A1A',
-              lineHeight: 1.1,
-              letterSpacing: '-0.02em',
-              whiteSpace: 'nowrap',
-              margin: 0,
-            }}
-          >
-            {t('products.title')}
-          </motion.h2>
+    <section className="ronda-product-page" aria-labelledby="product-grid-title">
+      <div className="ronda-product-page-heading">
+        <div>
+          <p>{text(header.eyebrow, lang)}</p>
+          <h2 id="product-grid-title">{text(header.title, lang)}</h2>
         </div>
-
-        {/* Subtitle + category pills row */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column' as const,
-            gap: '2rem',
-          }}
-        >
-          <motion.p
-            initial={{ opacity: 0, y: 16 }}
-            animate={headerInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            style={{
-              fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
-              fontSize: '0.85rem',
-              color: '#6B7280',
-              lineHeight: 1.85,
-              margin: 0,
-              maxWidth: '480px',
-            }}
-          >
-            {t('products.subtitle')}
-          </motion.p>
-
-          {/* Four category preview cards */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '1px',
-              background: 'rgba(139,115,85,0.15)',
-              border: '1px solid rgba(139,115,85,0.15)',
-            }}
-          >
-            {PRODUCTS.map((p, i) => (
-              <motion.div
-                key={p.key}
-                initial={{ opacity: 0, y: 12 }}
-                animate={headerInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.35 + i * 0.08 }}
-                style={{
-                  background: '#F7F5F2',
-                  padding: '1.25rem 1.2rem',
-                  display: 'flex',
-                  flexDirection: 'column' as const,
-                  gap: '0.5rem',
-                  cursor: 'default',
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: '0.7rem',
-                    fontWeight: 400,
-                    letterSpacing: '0.18em',
-                    color: '#8B7355',
-                  }}
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </span>
-                <span
-                  style={{
-                    fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif",
-                    fontSize: 'clamp(0.78rem, 1.1vw, 1rem)',
-                    fontWeight: 400,
-                    color: '#1A1A1A',
-                    lineHeight: 1.3,
-                    letterSpacing: '0.01em',
-                  }}
-                >
-                  {t(p.key + '.title')}
-                </span>
-                <span
-                  style={{
-                    display: 'block',
-                    width: '1.5rem',
-                    height: '1px',
-                    background: 'rgba(139,115,85,0.4)',
-                    marginTop: '0.25rem',
-                  }}
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        <p>{text(header.body, lang)}</p>
       </div>
 
-      {/* ── Desktop: Sticky left + scrolling right ── */}
-      <div className="hidden lg:flex" style={{ position: 'relative' }}>
-        {/* Sticky left panel */}
-        <div
-          style={{
-            position: 'sticky',
-            top: 0,
-            height: '100vh',
-            width: '50%',
-            flexShrink: 0,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            padding: '0 clamp(1rem, 2vw, 2rem) 0 clamp(3rem, 7vw, 7rem)',
-            background: '#F7F5F2',
-            zIndex: 10,
-            overflow: 'hidden',
-          }}
-        >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeIndex}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            >
-              {/* Big ghost number */}
-              <span
-                style={{
-                  fontFamily: "'Cormorant Garamond', serif",
-                  fontSize: 'clamp(7rem, 14vw, 13rem)',
-                  fontWeight: 300,
-                  lineHeight: 0.85,
-                  color: 'rgba(139,115,85,0.06)',
-                  display: 'block',
-                  marginBottom: '1.5rem',
-                  letterSpacing: '-0.03em',
-                }}
-              >
-                {active.number}
-              </span>
-
-              {/* Product title */}
-              <h3
-                style={{
-                  fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif",
-                  fontSize: 'clamp(2.2rem, 3.5vw, 3.5rem)',
-                  fontWeight: 300,
-                  color: '#1A1A1A',
-                  lineHeight: 1.15,
-                  letterSpacing: '-0.01em',
-                  margin: '0 0 1.25rem',
-                }}
-              >
-                {t(active.key + '.title')}
-              </h3>
-
-              {/* Gold accent line */}
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                style={{
-                  width: '3rem',
-                  height: '1px',
-                  background: active.accent,
-                  transformOrigin: 'left',
-                  marginBottom: '1.25rem',
-                }}
-              />
-              {/* Keyword tag */}
-              <div style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '0.62rem',
-                letterSpacing: '0.18em',
-                color: active.accent,
-                marginBottom: '1.5rem',
-                textTransform: 'uppercase' as const,
-              }}>
-                {t(active.key + '.keyword')}
-              </div>
-              {/* Three detail points */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '1.5rem' }}>
-                {(['point1', 'point2', 'point3'] as const).map((pt) => (
-                  <div key={pt} style={{ borderLeft: `2px solid ${active.accent}40`, paddingLeft: '0.75rem' }}>
-                    <div style={{
-                      fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
-                      fontSize: '0.82rem',
-                      fontWeight: 600,
-                      color: '#1A1A1A',
-                      marginBottom: '0.25rem',
-                      letterSpacing: '0.05em',
-                    }}>
-                      {t(active.key + '.' + pt + '.title')}
-                    </div>
-                    <div style={{
-                      fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
-                      fontSize: '0.88rem',
-                      color: '#6B7280',
-                      lineHeight: 1.7,
-                    }}>
-                      {t(active.key + '.' + pt + '.desc')}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              {/* Tags */}
-              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                {[active.key + '.tag1', active.key + '.tag2'].map(tag => (
-                  <span
-                    key={tag}
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '0.58rem',
-                      letterSpacing: '0.18em',
-                      textTransform: 'uppercase' as const,
-                      color: active.accent,
-                      border: `1px solid ${active.accent}40`,
-                      padding: '4px 12px',
-                    }}
-                  >
-                    {t(tag)}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          </AnimatePresence>
-          {/* Progress indicator */}
-          <div
-            style={{
-              position: 'absolute',
-              bottom: '3rem',
-              left: 'clamp(2rem, 4vw, 5rem)',
-              display: 'flex',
-              gap: '0.5rem',
-              alignItems: 'center',
-            }}
-          >
-            {PRODUCTS.map((_, i) => (
-              <div
-                key={i}
-                style={{
-                  width: i === activeIndex ? '2rem' : '0.4rem',
-                  height: '1px',
-                  background: i === activeIndex ? '#8B7355' : 'rgba(139,115,85,0.2)',
-                  transition: 'width 0.4s ease, background 0.4s ease',
-                }}
-              />
-            ))}
-          </div>
-        </div>
-        {/* Scrolling right panel */}
-        <div ref={scrollRef} style={{ flex: 1, minWidth: 0, padding: '2.5rem 2.5rem 2.5rem 0', background: '#F7F5F2' }}>
-          {PRODUCTS.map((product, i) => (
-            <div
-              key={product.key}
-              data-panel={i}
-              style={{
-                height: '85vh',
-                position: 'relative',
-                overflow: 'hidden',
-                borderRadius: '4px',
-                marginBottom: '2.5rem',
-              }}
-            >
-              <img
-                src={product.image}
-                alt={t(product.key + '.title')}
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  objectPosition: 'center',
-                  filter: 'brightness(0.82) saturate(0.9)',
-                  transition: 'filter 0.6s ease',
-                }}
-              />
-              {/* Left gradient blending with sticky panel */}
-              <div
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  background: 'linear-gradient(to right, rgba(247,245,242,0.6) 0%, transparent 35%)',
-                  pointerEvents: 'none',
-                }}
-              />
-              {/* Bottom gradient */}
-              <div
-                style={{
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  height: '25%',
-                  background: 'linear-gradient(to top, rgba(247,245,242,0.3) 0%, transparent 100%)',
-                  pointerEvents: 'none',
-                }}
-              />
-              {/* Divider */}
-              {i < PRODUCTS.length - 1 && (
-                <div
-                  style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    height: '1px',
-                    background: 'rgba(139,115,85,0.1)',
-                  }}
-                />
-              )}
+      <div className="ronda-product-page-grid">
+        {products.map((product, index) => (
+          <article key={product.title.en}>
+            <div className="ronda-product-page-image">
+              <img src={product.image} alt={text(product.title, lang)} loading="lazy" />
+              <span>{String(index + 1).padStart(2, "0")}</span>
             </div>
-          ))}
-        </div>
-      </div>
-      {/* ── Mobile: vertical stacked cards ── */}
-      <div className="lg:hidden">
-        {PRODUCTS.map((product, i) => (
-          <MobileCard key={product.key} product={product} index={i} />
+            <div className="ronda-product-page-copy">
+              <div>
+                <h3>{text(product.title, lang)}</h3>
+                <strong>{lang === "zh" ? "常规 100 件起" : lang === "ko" ? "일반 100장부터" : "Standard MOQ 100"}</strong>
+              </div>
+              <p>{text(product.intro, lang)}</p>
+              <ul>{product.points.map((point) => <li key={point.en}>{text(point, lang)}</li>)}</ul>
+            </div>
+          </article>
         ))}
+      </div>
+
+      <div className="ronda-product-page-cta">
+        <p>{lang === "zh" ? "产品方向明确后，我们会从材料与样衣阶段开始评估。" : lang === "ko" ? "제품 방향이 정해지면 소재와 샘플 단계부터 검토합니다." : "Once the direction is clear, we begin with materials and sampling."}</p>
+        <a href="/inquiry/">{lang === "zh" ? "提交产品需求" : lang === "ko" ? "제품 문의" : "Submit a product brief"}<ArrowUpRight aria-hidden="true" size={15} /></a>
       </div>
     </section>
   );
