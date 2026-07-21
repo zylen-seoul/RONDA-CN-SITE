@@ -5,6 +5,7 @@
  */
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import { useLanguage, Language } from '@/contexts/LanguageContext';
 
 const NAV_ITEMS = [
@@ -49,33 +50,9 @@ export default function Navbar() {
         <div className="container">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a
-              href="/"
-              className="flex flex-col leading-none group"
-              style={{ textDecoration: 'none' }}
-            >
-              <span
-                style={{
-                  fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif",
-                  fontWeight: 400,
-                  fontSize: '1.25rem',
-                  letterSpacing: '0.05em',
-                  color: '#1A1A1A',
-                  transition: 'color 0.3s',
-                }}
-              >
-                Sample <span style={{ color: '#8B7355' }}>&amp;</span> Simple
-              </span>
-              <span style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '0.55rem',
-                letterSpacing: '0.3em',
-                textTransform: 'uppercase' as const,
-                color: '#8B7355',
-                marginTop: '2px',
-              }}>
-                {lang === 'zh' ? '杭州绒达科技 · RONDA' : 'RONGDA · HANGZHOU'}
-              </span>
+            <a href="/" className="site-brand-link" aria-label="RONDA · 杭州绒达科技">
+              <img className="site-brand-logo" src="/ronda-logo.png" alt="RONDA 绒达" />
+              <span>{lang === 'zh' ? '杭州绒达科技' : 'HANGZHOU RONGDA'}</span>
             </a>
 
             {/* Desktop nav */}
@@ -150,9 +127,7 @@ export default function Navbar() {
                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.opacity = '1'}
               >
                 {t('nav.contact')}
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
+                <ArrowRight aria-hidden="true" size={12} strokeWidth={2.2} />
               </a>
 
               {/* Mobile hamburger */}

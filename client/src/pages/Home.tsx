@@ -1,14 +1,10 @@
 import SiteShell from "@/components/SiteShell";
-import HeroSection from "@/components/HeroSection";
-import MarqueeStrip from "@/components/MarqueeStrip";
-import HomeOverview from "@/components/HomeOverview";
+import HomeEditorial from "@/components/HomeEditorial";
 
 export default function Home() {
   return (
     <SiteShell pageKey="home">
-      <HeroSection />
-      <MarqueeStrip />
-      <HomeOverview />
+      <HomeEditorial />
     </SiteShell>
   );
 }
