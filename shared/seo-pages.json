@@ -34,9 +34,9 @@
         "ko": "100장부터 시작하는 겨울 의류"
       },
       "intro": {
-        "zh": "杭州绒达科技有限公司（RONDA）围绕冬装开发连接设计、打样、面辅料、生产、质检与交付。samplewear.com 是绒达面向全球客户的官方网站与数字化服务入口。",
-        "en": "Hangzhou Rongda Technology Co., Ltd. (RONDA) connects design, sampling, materials, production, quality checks and delivery for winterwear. samplewear.com is RONDA's official website and digital service gateway.",
-        "ko": "항저우 룽다 테크놀로지(RONDA)는 겨울 의류의 디자인, 샘플, 원부자재, 생산, 품질 검사와 납품을 연결합니다. samplewear.com은 RONDA의 공식 웹사이트이자 디지털 서비스 창구입니다."
+        "zh": "杭州绒达科技有限公司（RONDA）围绕冬装开发连接设计、打样、面辅料、生产、质检与交付。samplewear.com 是绒达面向全球客户的官方网站与数字化服务入口，官方 Sample App 可在各大应用市场搜索下载。",
+        "en": "Hangzhou Rongda Technology Co., Ltd. (RONDA) connects design, sampling, materials, production, quality checks and delivery for winterwear. samplewear.com is RONDA's official digital service gateway, and the official Sample app is available through major app marketplaces.",
+        "ko": "항저우 룽다 테크놀로지(RONDA)는 겨울 의류의 디자인, 샘플, 원부자재, 생산, 품질 검사와 납품을 연결합니다. samplewear.com은 RONDA의 공식 디지털 서비스 창구이며 공식 Sample 앱은 주요 앱 마켓에서 다운로드할 수 있습니다."
       },
       "summary": {
         "zh": "认识绒达的六大冬装品类、开发流程与跨区域协作方式。",
@@ -78,6 +78,18 @@
             "zh": ["杭州承担供应链组织与项目推进，首尔协作触点支持当地设计、品牌与市场沟通。两地围绕同一项目资料协同。"],
             "en": ["Hangzhou coordinates supply-chain execution, while the Seoul touchpoint supports local design, brand and market communication. Both locations work from shared project information."],
             "ko": ["항저우는 공급망 운영과 프로젝트 진행을 담당하고 서울 협업 거점은 현지 디자인, 브랜드와 시장 소통을 지원합니다. 두 지역은 동일한 프로젝트 정보를 기반으로 협업합니다."]
+          }
+        },
+        {
+          "heading": {
+            "zh": "Sample 数字化协作",
+            "en": "Sample Digital Collaboration",
+            "ko": "Sample 디지털 협업"
+          },
+          "paragraphs": {
+            "zh": ["Samplewear 将需求资料、样衣版本与批注、材料确认、生产节点、质量记录和交付文件集中于同一项目空间。官方 Sample App 可在各大应用市场搜索下载，具体功能与账号权限以项目配置为准。"],
+            "en": ["Samplewear brings briefs, sample versions and annotations, material approvals, production milestones, quality records and delivery files into one project workspace. The official Sample app is available through major app marketplaces; features and account permissions depend on project configuration."],
+            "ko": ["Samplewear는 요구 자료, 샘플 버전과 코멘트, 소재 승인, 생산 단계, 품질 기록과 납품 문서를 하나의 프로젝트 공간에 통합합니다. 공식 Sample 앱은 주요 앱 마켓에서 다운로드할 수 있으며 기능과 계정 권한은 프로젝트 설정에 따라 달라집니다."]
           }
         }
       ]
@@ -468,15 +480,15 @@
         "ko": "Samplewear 디지털 플랫폼 | RONDA"
       },
       "description": {
-        "zh": "了解杭州绒达的Samplewear数字平台如何支持需求、样衣、订单、生产进度与交付信息协作。",
-        "en": "See how RONDA's Samplewear digital platform supports briefs, samples, orders, production progress and delivery information.",
-        "ko": "RONDA의 Samplewear 디지털 플랫폼이 요구, 샘플, 주문, 생산 진행과 납품 정보 협업을 지원하는 방식을 확인하세요."
+        "zh": "了解杭州绒达的Samplewear数字平台如何统一需求、样衣、订单、质检与交付信息，以及官方Sample App的下载方式。",
+        "en": "See how RONDA's Samplewear platform connects briefs, samples, orders, quality and delivery, with the official Sample app available in major app marketplaces.",
+        "ko": "RONDA의 Samplewear 플랫폼이 요구, 샘플, 주문, 품질과 납품 정보를 연결하고 공식 Sample 앱을 제공하는 방식을 확인하세요."
       },
       "h1": { "zh": "Samplewear数字平台", "en": "Samplewear Digital Platform", "ko": "Samplewear 디지털 플랫폼" },
       "intro": {
-        "zh": "Samplewear是杭州绒达科技用于整理项目需求、样衣记录、订单节点、生产更新与交付信息的数字化协作平台。",
-        "en": "Samplewear is RONDA's digital collaboration platform for organizing project briefs, sample records, order milestones, production updates and delivery information.",
-        "ko": "Samplewear는 프로젝트 요구, 샘플 기록, 주문 단계, 생산 업데이트와 납품 정보를 정리하는 RONDA의 디지털 협업 플랫폼입니다."
+        "zh": "Samplewear是杭州绒达科技面向冬装项目的数字化协作平台，统一管理需求资料、样衣版本、材料确认、生产节点、质量记录与交付文件。官方Sample App可在各大应用市场搜索下载。",
+        "en": "Samplewear is RONDA's digital collaboration platform for winterwear projects, connecting briefs, sample versions, material approvals, production milestones, quality records and delivery files. The official Sample app is available through major app marketplaces.",
+        "ko": "Samplewear는 겨울 의류 프로젝트의 요구 자료, 샘플 버전, 소재 승인, 생산 단계, 품질 기록과 납품 문서를 통합 관리하는 RONDA의 디지털 협업 플랫폼입니다. 공식 Sample 앱은 주요 앱 마켓에서 다운로드할 수 있습니다."
       },
       "summary": { "zh": "查看冬装项目的信息如何在同一流程中连接。", "en": "See how winterwear project information connects in one flow.", "ko": "겨울 의류 프로젝트 정보가 하나의 과정에서 연결되는 방식을 확인하세요." },
       "staticSections": [

@@ -12,7 +12,8 @@ type Localized = Record<Language, string>;
 const ASSET_ROOT = "/ronda-platform";
 const HANGZHOU_IMAGE =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/VEnkGmmicAmbbpjx.jpg";
-const SEOUL_IMAGE = "/ronda-v2/global/seoul-showroom-real.jpg";
+const SEOUL_IMAGE =
+  "https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/mtPiHFXgDZRAQlWl.jpg";
 
 const localize = (value: Localized, lang: Language) => value[lang] || value.zh;
 
@@ -84,7 +85,7 @@ const copy: Record<
     processLabel: "PROCESS & TIMELINE",
     processTitle: "每一步，都有时间坐标",
     processBody:
-      "从资料确认到交付，关键阶段以可检查的项目节点推进；部分环节可并行。",
+      "从需求基线、材料方案、样衣验证到量产交付，每一阶段均对应明确的工作内容、确认结果与参考周期；具备条件的环节可并行推进。",
     sampleFocus: "常规样衣最快7天，具体按款式/面料/工艺评估",
     processNote:
       "所示为常规项目参考工作日，不构成交期承诺；定制或进口材料、复杂结构、多轮修改及旺季排期可能延长。",
@@ -99,7 +100,7 @@ const copy: Record<
     platformLabel: "SAMPLEWEAR DIGITAL PLATFORM",
     platformTitle: "数字化项目协作",
     platformBody:
-      "Samplewear是杭州绒达科技的数字化协作平台，用于承接需求、样衣反馈、生产节点与交付信息。",
+      "Samplewear是杭州绒达科技面向冬装项目的数字化协作平台，将需求资料、样衣批注、版本确认、生产节点、质量记录与交付文件集中于同一项目空间，帮助品牌与项目团队及时掌握进度及待确认事项。官方Sample App可在各大应用市场搜索下载；具体功能、账号权限与开放范围以项目配置为准。",
     globalLabel: "GLOBAL COORDINATION",
     globalTitle: "杭州与首尔",
     globalBody:
@@ -136,7 +137,7 @@ const copy: Record<
     processLabel: "PROCESS & TIMELINE",
     processTitle: "A Time Marker for Every Step",
     processBody:
-      "From file review to delivery, each project advances through visible checkpoints; selected stages may run in parallel.",
+      "From project briefing and material planning through sample validation, production and delivery, every stage has defined work, approval outputs and reference timing; eligible activities may run in parallel.",
     sampleFocus:
       "Standard samples can be ready in as little as 7 days; actual timing depends on style, materials and construction",
     processNote:
@@ -152,7 +153,7 @@ const copy: Record<
     platformLabel: "SAMPLEWEAR DIGITAL PLATFORM",
     platformTitle: "Digital Project Collaboration",
     platformBody:
-      "Samplewear is Hangzhou Rongda's digital collaboration platform for requirements, sample feedback, production milestones and delivery information.",
+      "Samplewear is Hangzhou Rongda’s digital collaboration platform for winterwear projects. It brings briefs, annotated sample feedback, version approvals, production milestones, quality records and delivery files into one project workspace, giving brands and project teams a clear view of progress and pending decisions. The official Sample app can be searched and downloaded from major app marketplaces; features, account permissions and access depend on project configuration.",
     globalLabel: "GLOBAL COORDINATION",
     globalTitle: "Hangzhou and Seoul",
     globalBody:
@@ -189,7 +190,7 @@ const copy: Record<
     processLabel: "PROCESS & TIMELINE",
     processTitle: "모든 단계에 명확한 일정",
     processBody:
-      "자료 확인부터 납품까지 주요 단계를 확인 가능한 프로젝트 지점으로 관리하며 일부 단계는 병행할 수 있습니다.",
+      "요구 기준과 소재안부터 샘플 검증, 양산과 납품까지 각 단계의 업무, 승인 결과와 참고 일정을 명확히 관리하며 가능한 업무는 병행합니다.",
     sampleFocus:
       "일반 샘플은 최단 7일, 실제 일정은 스타일·소재·공정에 따라 평가",
     processNote:
@@ -205,7 +206,7 @@ const copy: Record<
     platformLabel: "SAMPLEWEAR DIGITAL PLATFORM",
     platformTitle: "디지털 프로젝트 협업",
     platformBody:
-      "Samplewear는 요구사항, 샘플 피드백, 생산 단계와 납품 정보를 연결하는 항저우 룽다의 디지털 협업 플랫폼입니다.",
+      "Samplewear는 항저우 룽다가 겨울 의류 프로젝트를 위해 운영하는 디지털 협업 플랫폼입니다. 요구 자료, 샘플 코멘트, 버전 승인, 생산 단계, 품질 기록과 납품 문서를 하나의 프로젝트 공간에서 관리해 브랜드와 프로젝트 팀이 진행 상황과 확인 대기 항목을 명확히 파악할 수 있도록 합니다. 공식 Sample 앱은 주요 앱 마켓에서 검색해 다운로드할 수 있으며, 기능·계정 권한·이용 범위는 프로젝트 설정에 따라 달라집니다.",
     globalLabel: "GLOBAL COORDINATION",
     globalTitle: "항저우와 서울",
     globalBody:
@@ -353,32 +354,32 @@ const processSteps: Array<{
 }> = [
   {
     number: "01",
-    title: { zh: "需求确认", en: "Brief Review", ko: "요구 확인" },
-    time: { zh: "1–2工作日", en: "1–2 days", ko: "1–2영업일" },
+    title: { zh: "项目需求确认", en: "Project Brief", ko: "프로젝트 요구 확인" },
+    time: { zh: "1–2工作日", en: "1–2 business days", ko: "1–2영업일" },
     body: {
-      zh: "确认品类、数量、市场、预算与目标交期。",
-      en: "Align category, quantity, market, budget and target delivery.",
-      ko: "품목, 수량, 시장, 예산과 목표 납기를 확인합니다.",
+      zh: "明确产品定位、目标市场、数量与颜色拆分、预算、质量要求及期望交期，建立项目执行基线。",
+      en: "Define product positioning, target market, quantity and color split, budget, quality targets and requested delivery window.",
+      ko: "제품 포지셔닝, 목표 시장, 수량·컬러 구성, 예산, 품질 기준과 희망 납기를 정해 프로젝트 기준선을 수립합니다.",
     },
   },
   {
     number: "02",
-    title: { zh: "资料与材料", en: "Files & Materials", ko: "자료와 소재" },
-    time: { zh: "3–7工作日", en: "3–7 days", ko: "3–7영업일" },
+    title: { zh: "技术资料与材料", en: "Technical Files & Materials", ko: "기술 자료와 소재" },
+    time: { zh: "3–7工作日", en: "3–7 business days", ko: "3–7영업일" },
     body: {
-      zh: "整理款式资料并匹配面料、填充与辅件。",
-      en: "Review style files and match fabrics, fill and trims.",
-      ko: "스타일 자료를 검토하고 원단, 충전재와 부자재를 매칭합니다.",
+      zh: "审核款式图、尺寸表与工艺要求，核对面料、填充及辅件的最低订量、交期和适用性，确认样衣材料方案。",
+      en: "Review tech packs, measurements and construction requirements; confirm fabrics, insulation and trims against MOQ, lead time and suitability.",
+      ko: "테크팩, 치수표와 공정 요구를 검토하고 원단, 충전재, 부자재의 MOQ·납기·적합성을 확인해 샘플 소재안을 확정합니다.",
     },
   },
   {
     number: "03",
-    title: { zh: "样衣开发", en: "Sample Development", ko: "샘플 개발" },
-    time: { zh: "最快7天", en: "From 7 days", ko: "최단 7일" },
+    title: { zh: "样衣开发验证", en: "Sample Development", ko: "샘플 개발 검증" },
+    time: { zh: "最快7工作日", en: "From 7 business days", ko: "최단 7영업일" },
     body: {
-      zh: "完成打版、试制与内部工艺检查后提交确认。",
-      en: "Pattern, prototype and internal technical review before submission.",
-      ko: "패턴, 샘플 제작과 내부 공정 검토 후 확인용으로 전달합니다.",
+      zh: "完成版型与首件试制，对合体度、结构可行性、保暖或功能表现及外观进行内部评审后提交确认。",
+      en: "Build the pattern and first sample; internally review fit, construction feasibility, thermal or functional performance and appearance before submission.",
+      ko: "패턴과 1차 샘플을 제작하고 핏, 구조 가능성, 보온·기능성과 외관을 내부 검토한 뒤 확인용 샘플을 제출합니다.",
     },
     sample: true,
   },
@@ -386,24 +387,24 @@ const processSteps: Array<{
     number: "04",
     title: {
       zh: "修订与产前确认",
-      en: "Revision & Approval",
-      ko: "수정과 생산 승인",
+      en: "Revision & Pre-Production",
+      ko: "수정과 생산 전 승인",
     },
-    time: { zh: "3–7工作日", en: "3–7 days", ko: "3–7영업일" },
+    time: { zh: "3–7工作日", en: "3–7 business days", ko: "3–7영업일" },
     body: {
-      zh: "按反馈调整，并锁定尺寸、材料、工艺与质量标准。",
-      en: "Revise from feedback and lock size, materials, construction and QC.",
-      ko: "피드백을 반영하고 사이즈, 소재, 공정과 품질 기준을 확정합니다.",
+      zh: "依据反馈修订样衣，锁定尺寸、颜色、材料、辅件、缝制工艺与质量标准，完成产前样确认。",
+      en: "Apply feedback, then lock measurements, colors, materials, trims, construction and QC criteria through pre-production approval.",
+      ko: "피드백을 반영해 치수, 색상, 소재, 부자재, 봉제 공정과 품질 기준을 확정하고 생산 전 기준 샘플을 승인합니다.",
     },
   },
   {
     number: "05",
-    title: { zh: "柔性生产", en: "Flexible Production", ko: "유연 생산" },
-    time: { zh: "按项目排期", en: "Project schedule", ko: "프로젝트 일정" },
+    title: { zh: "柔性量产", en: "Flexible Production", ko: "유연 양산" },
+    time: { zh: "15–30工作日", en: "15–30 business days", ko: "15–30영업일" },
     body: {
-      zh: "按确认标准推进采购、裁剪、缝制与后整。",
-      en: "Source, cut, sew and finish to the approved standard.",
-      ko: "확정 기준에 따라 구매, 재단, 봉제와 후가공을 진행합니다.",
+      zh: "依据确认样和生产标准推进材料采购与来料检查、裁剪、缝制、后整及充绒或压胶等品类专项工序，并执行节点质检。",
+      en: "Source and inspect materials, then cut, sew, finish and complete category-specific processes to the approved sample, with milestone QC.",
+      ko: "승인 샘플과 생산 기준에 따라 소재 조달, 입고 검사, 재단, 봉제, 후가공과 품목별 전문 공정을 진행하며 주요 단계별 품질을 확인합니다.",
     },
   },
   {
@@ -413,11 +414,11 @@ const processSteps: Array<{
       en: "Final QC & Delivery",
       ko: "최종 검사와 납품",
     },
-    time: { zh: "2–5工作日", en: "2–5 days", ko: "2–5영업일" },
+    time: { zh: "2–5工作日", en: "2–5 business days", ko: "2–5영업일" },
     body: {
-      zh: "核对成品、包装与出货资料后安排运输。",
-      en: "Check finished goods, packing and shipping files before dispatch.",
-      ko: "완제품, 포장과 출고 자료를 확인한 후 운송을 준비합니다.",
+      zh: "完成外观、尺寸、工艺、功能、数量与包装终检，整理装箱及出货资料，并衔接运输和交付信息。",
+      en: "Complete final checks for appearance, measurements, workmanship, function, quantity and packing, then prepare dispatch records and delivery tracking.",
+      ko: "외관, 치수, 공정, 기능, 수량과 포장을 최종 확인하고 출고 자료를 정리한 뒤 운송 및 납품 정보를 연결합니다.",
     },
   },
 ];
@@ -548,9 +549,9 @@ const cityCards: Array<{
       ko: "서울 현지의 디자인과 시장 커뮤니케이션을 연결해 다양한 시장의 프로젝트를 지원합니다.",
     },
     alt: {
-      zh: "首尔冬装样衣与产品协作空间",
-      en: "Seoul winterwear sample and product collaboration showroom",
-      ko: "서울 겨울 의류 샘플 및 제품 협업 쇼룸",
+      zh: "首尔城市景观",
+      en: "Seoul city view",
+      ko: "서울 도시 전경",
     },
   },
 ];
