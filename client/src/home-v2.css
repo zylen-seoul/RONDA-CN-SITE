@@ -249,11 +249,11 @@
 
 .home-v2__about-lead {
   color: var(--rl-ink) !important;
-  font-size: clamp(1.15rem, 2.2vw, 1.8rem) !important;
+  font-size: clamp(1rem, 1.35vw, 1.2rem) !important;
   font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.45 !important;
-  margin: 2rem 0 1.2rem !important;
+  letter-spacing: -0.012em;
+  line-height: 1.72 !important;
+  margin: 1.8rem 0 1.2rem !important;
 }
 
 .home-v2__about-copy > p:not(.home-v2__eyebrow):not(.home-v2__about-lead) {
@@ -273,7 +273,7 @@
   border-bottom: 1px solid var(--rl-line);
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: 6rem 1fr;
+  grid-template-columns: minmax(7.5rem, 0.8fr) minmax(0, 1fr);
   padding: 1.6rem 0 1.6rem 1.8rem;
 }
 
@@ -517,49 +517,91 @@
   letter-spacing: 0.14em;
 }
 
-.home-v2__brand-grid,
-.home-v2__supplier-grid {
-  display: grid;
+.home-v2__logo-marquee {
+  cursor: grab;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-color: rgba(75, 98, 108, 0.38) transparent;
+  scrollbar-width: thin;
+  touch-action: pan-x;
+}
+
+.home-v2__logo-marquee:active {
+  cursor: grabbing;
+}
+
+.home-v2__logo-marquee:focus-visible {
+  outline: 2px solid var(--rl-orange);
+  outline-offset: 3px;
+}
+
+.home-v2__logo-track {
+  animation: home-v2-logo-marquee 32s linear infinite;
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.home-v2__logo-track.is-supplier {
+  animation-duration: 52s;
+}
+
+.home-v2__logo-marquee:hover .home-v2__logo-track,
+.home-v2__logo-marquee:focus .home-v2__logo-track,
+.home-v2__logo-marquee:focus-within .home-v2__logo-track,
+.home-v2__logo-marquee:active .home-v2__logo-track {
+  animation-play-state: paused;
+}
+
+.home-v2__logo-set {
+  display: flex;
+  flex: none;
   gap: 1px;
+  padding-right: 1px;
 }
 
-.home-v2__brand-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.home-v2__supplier-grid {
-  grid-template-columns: repeat(8, minmax(0, 1fr));
-}
-
-.home-v2__brand-grid > div,
-.home-v2__supplier-grid > div {
+.home-v2__logo-card {
   align-items: center;
   background: var(--rl-paper);
   display: flex;
+  flex: 0 0 15rem;
   justify-content: center;
 }
 
-.home-v2__brand-grid > div {
+.home-v2__logo-card.is-brand {
   min-height: 8rem;
   padding: 1.8rem;
 }
 
-.home-v2__supplier-grid > div {
+.home-v2__logo-card.is-supplier {
+  flex-basis: 10rem;
   min-height: 5.5rem;
   padding: 1rem;
 }
 
-.home-v2__brand-grid img,
-.home-v2__supplier-grid img {
-  filter: grayscale(1);
+.home-v2__logo-card img {
+  display: block;
+  image-rendering: auto;
   max-height: 2.8rem;
   max-width: 82%;
   object-fit: contain;
-  opacity: 0.72;
+  opacity: 1;
 }
 
-.home-v2__supplier-grid img {
+.home-v2__logo-card.is-supplier img {
   max-height: 2rem;
+}
+
+@keyframes home-v2-logo-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-v2__logo-track {
+    animation: none;
+  }
 }
 
 .home-v2__network-note {
@@ -715,10 +757,6 @@
     width: min(760px, 75vw);
   }
 
-  .home-v2__supplier-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .home-v2__process-track {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -844,13 +882,14 @@
     margin-bottom: 1.5rem;
   }
 
-  .home-v2__brand-grid,
-  .home-v2__supplier-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .home-v2__logo-card.is-brand {
+    flex-basis: 11.5rem;
+    min-height: 6.5rem;
+    padding: 1.35rem;
   }
 
-  .home-v2__brand-grid > div {
-    min-height: 6.5rem;
+  .home-v2__logo-card.is-supplier {
+    flex-basis: 8.5rem;
   }
 
   .home-v2__platform-intro {

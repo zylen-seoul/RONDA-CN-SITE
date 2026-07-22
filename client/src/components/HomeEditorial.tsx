@@ -12,8 +12,7 @@ type Localized = Record<Language, string>;
 const ASSET_ROOT = "/ronda-platform";
 const HANGZHOU_IMAGE =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/VEnkGmmicAmbbpjx.jpg";
-const SEOUL_IMAGE =
-  "https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/mtPiHFXgDZRAQlWl.jpg";
+const SEOUL_IMAGE = "/ronda-v2/global/seoul-showroom-real.jpg";
 
 const localize = (value: Localized, lang: Language) => value[lang] || value.zh;
 
@@ -70,9 +69,10 @@ const copy: Record<
       "常规订单建议100件起；实际起订量与周期按款式、材料、工艺及排期评估。",
     aboutLabel: "ABOUT RONDA",
     aboutTitle: "杭州绒达科技",
-    aboutLead: "一家聚焦冬装研发与小批量快速响应的供应链协作公司。",
+    aboutLead:
+      "杭州绒达科技有限公司与首尔（ATLY）构建同构双核矩阵，深度融通中韩前沿时尚与智造产能。公司坚定深耕高品质冬装市场，专注高端羽绒服、冲锋衣及双面呢大衣，以匠心工艺筑牢核心产品壁垒。",
     aboutBody:
-      "我们以杭州为供应链协作中心，通过首尔协作触点承接设计与市场沟通。项目团队围绕产品资料、版型、材料、功能工艺、生产节点和质量要求建立统一标准；Samplewear仅作为数字化协作平台与线上项目入口。",
+      "依托独特的“首尔协作”机制，企业将国际设计前沿与国内优势集群无缝对接。在此基础上全面融入数字化概念，通过可视化跟单与系统化协同提升全链路透明度。凭借业内领先的“小单快反”柔性供应链体系，实现100件起订、15-20天极速交付，大幅降低客户资金风险，为全球服装品牌提供高效、敏捷的跨国供应链全面解决方案。",
     aboutLink: "了解公司",
     categoryLabel: "WINTERWEAR CATEGORIES",
     categoryTitle: "六大冬装品类",
@@ -122,9 +122,9 @@ const copy: Record<
     aboutLabel: "ABOUT RONDA",
     aboutTitle: "Hangzhou Rongda Technology",
     aboutLead:
-      "A supply-chain partner focused on winterwear development and responsive small-batch production.",
+      "Hangzhou Rongda Technology Co., Ltd. and Seoul-based ATLY form a structurally aligned dual-core network that deeply integrates Korea and China’s leading fashion perspectives with intelligent manufacturing capacity. The company is firmly rooted in the premium winterwear market, specializing in high-end down jackets, technical shell jackets and double-faced wool coats, while building durable product advantages through meticulous craftsmanship.",
     aboutBody:
-      "Hangzhou is our supply-chain coordination center, supported by a Seoul collaboration touchpoint for design and market communication. One project standard aligns product files, fit, materials, technical construction, production milestones and quality requirements. Samplewear serves only as our digital collaboration platform and online project entry.",
+      "Through its distinctive ‘Seoul collaboration’ model, the company seamlessly connects international design insights with China’s strong production clusters. It also embeds digital practices throughout the operation, improving end-to-end transparency through visual order tracking and systematic coordination. Backed by an industry-leading flexible supply chain for small-batch, rapid-response production, it supports orders from 100 pieces and accelerated delivery in 15–20 days, substantially reducing clients’ capital exposure and providing global fashion brands with efficient, agile, end-to-end cross-border supply-chain solutions.",
     aboutLink: "About the company",
     categoryLabel: "WINTERWEAR CATEGORIES",
     categoryTitle: "Six Winterwear Categories",
@@ -175,9 +175,9 @@ const copy: Record<
     aboutLabel: "ABOUT RONDA",
     aboutTitle: "항저우 룽다 테크놀로지",
     aboutLead:
-      "겨울 의류 개발과 소량 신속 생산에 집중하는 공급망 협업 회사입니다.",
+      "항저우 룽다 테크놀로지 유한회사와 서울의 ATLY는 동형의 듀얼 코어 매트릭스를 구축해 한중 양국의 최전선 패션 감각과 스마트 제조 역량을 깊이 융합합니다. 회사는 고품질 겨울 의류 시장을 꾸준히 개척하며 프리미엄 다운 재킷, 기능성 셸 재킷 및 더블페이스 울 코트에 집중하고, 장인정신을 바탕으로 핵심 제품 경쟁력을 견고히 다지고 있습니다.",
     aboutBody:
-      "항저우를 공급망 협업 중심으로 삼고 서울 협업 접점을 통해 디자인과 시장 커뮤니케이션을 연결합니다. 제품 자료, 패턴, 소재, 기능 공정, 생산 단계와 품질 요구를 하나의 프로젝트 기준으로 관리합니다. Samplewear는 디지털 협업 플랫폼과 온라인 프로젝트 창구로만 운영됩니다.",
+      "독자적인 ‘서울 협업’ 체계를 기반으로 국제 디자인 트렌드와 중국 내 우수 생산 클러스터를 유기적으로 연결합니다. 이를 토대로 디지털 개념을 전 과정에 도입하고, 시각화된 오더 추적과 체계적인 협업을 통해 공급망 전체의 투명성을 높입니다. 업계 선도 수준의 ‘소량·신속 대응’ 유연 공급망으로 100장부터 주문을 지원하고 15–20일의 빠른 납품을 실현해 고객의 자금 리스크를 크게 낮추며, 글로벌 패션 브랜드에 효율적이고 민첩한 종합 크로스보더 공급망 솔루션을 제공합니다.",
     aboutLink: "회사 소개",
     categoryLabel: "WINTERWEAR CATEGORIES",
     categoryTitle: "겨울 의류 6대 품목",
@@ -218,8 +218,14 @@ const copy: Record<
   },
 };
 
-const metrics: Array<{ value: string; label: Localized }> = [
+const metrics: Array<{
+  id: string;
+  value: string;
+  suffix?: string;
+  label: Localized;
+}> = [
   {
+    id: "moq",
     value: "100",
     label: {
       zh: "件 · 常规建议起订量",
@@ -228,6 +234,26 @@ const metrics: Array<{ value: string; label: Localized }> = [
     },
   },
   {
+    id: "factory-network",
+    value: "100",
+    suffix: "+",
+    label: {
+      zh: "精品加工厂联盟",
+      en: "specialist factory alliance",
+      ko: "우수 전문 생산 공장 네트워크",
+    },
+  },
+  {
+    id: "bulk-production",
+    value: "15–30",
+    label: {
+      zh: "天 · 大货生产周期",
+      en: "days · bulk production lead time",
+      ko: "일 · 본생산 소요 기간",
+    },
+  },
+  {
+    id: "sample",
     value: "7",
     label: {
       zh: "天 · 常规样衣最快参考",
@@ -236,6 +262,7 @@ const metrics: Array<{ value: string; label: Localized }> = [
     },
   },
   {
+    id: "categories",
     value: "6",
     label: {
       zh: "大冬装服务品类",
@@ -253,7 +280,7 @@ const categories: Array<{
 }> = [
   {
     slug: "down-jackets",
-    image: `${ASSET_ROOT}/product-down.webp`,
+    image: "/ronda-v2/categories/down-jackets.jpg",
     title: { zh: "羽绒服", en: "Down Jackets", ko: "다운 재킷" },
     detail: {
       zh: "版型、分区、充绒克重与防钻绒结构",
@@ -263,7 +290,7 @@ const categories: Array<{
   },
   {
     slug: "technical-shells",
-    image: `${ASSET_ROOT}/product-shell.webp`,
+    image: "/ronda-v2/categories/technical-shells.jpg",
     title: { zh: "冲锋衣", en: "Technical Shells", ko: "기능성 셸" },
     detail: {
       zh: "防水面料、压胶、功能口袋与专业辅件",
@@ -273,7 +300,7 @@ const categories: Array<{
   },
   {
     slug: "skiwear",
-    image: `${ASSET_ROOT}/product-ski.webp`,
+    image: "/ronda-v2/categories/skiwear.jpg",
     title: { zh: "滑雪服", en: "Skiwear", ko: "스키웨어" },
     detail: {
       zh: "保暖、防护、活动量与雪地功能细节",
@@ -283,7 +310,7 @@ const categories: Array<{
   },
   {
     slug: "double-faced-coats",
-    image: `${ASSET_ROOT}/product-wool.webp`,
+    image: "/ronda-v2/categories/double-faced-coats.jpg",
     title: {
       zh: "双面大衣",
       en: "Double-Faced Wool",
@@ -297,7 +324,7 @@ const categories: Array<{
   },
   {
     slug: "fur-shearling",
-    image: `${ASSET_ROOT}/product-fur.webp`,
+    image: "/ronda-v2/categories/fur-shearling.jpg",
     title: { zh: "皮草与皮毛一体", en: "Fur & Shearling", ko: "퍼·시어링" },
     detail: {
       zh: "材料匹配、拼接方向、轻量化与成衣平衡",
@@ -307,7 +334,7 @@ const categories: Array<{
   },
   {
     slug: "down-bedding",
-    image: `${ASSET_ROOT}/product-duvet.webp`,
+    image: "/ronda-v2/categories/down-bedding.jpg",
     title: { zh: "羽绒寝具", en: "Down Bedding", ko: "다운 침구" },
     detail: {
       zh: "填充方案、绗缝结构、面料与成品检验",
@@ -520,7 +547,11 @@ const cityCards: Array<{
       en: "Supports local design and market communication in Seoul for cross-market projects.",
       ko: "서울 현지의 디자인과 시장 커뮤니케이션을 연결해 다양한 시장의 프로젝트를 지원합니다.",
     },
-    alt: { zh: "首尔城市景观", en: "Seoul city view", ko: "서울 도시 전경" },
+    alt: {
+      zh: "首尔冬装样衣与产品协作空间",
+      en: "Seoul winterwear sample and product collaboration showroom",
+      ko: "서울 겨울 의류 샘플 및 제품 협업 쇼룸",
+    },
   },
 ];
 
@@ -555,12 +586,12 @@ export default function HomeEditorial() {
       <section className="home-v2__hero" aria-labelledby="home-v2-title">
         <img
           className="home-v2__hero-image"
-          src={`${ASSET_ROOT}/studio-direction.webp`}
+          src="/ronda-v2/hero/pattern-room-real.jpg"
           alt={localize(
             {
-              zh: "杭州绒达科技团队讨论冬装设计与材料方案",
-              en: "Hangzhou Rongda team reviewing winterwear design and material directions",
-              ko: "항저우 룽다 팀의 겨울 의류 디자인과 소재 검토",
+              zh: "杭州绒达科技冬装版房与样衣开发空间",
+              en: "Hangzhou Rongda winterwear pattern and sample development studio",
+              ko: "항저우 룽다 겨울 의류 패턴 및 샘플 개발 스튜디오",
             },
             lang,
           )}
@@ -619,10 +650,10 @@ export default function HomeEditorial() {
         </div>
         <dl className="home-v2__metrics">
           {metrics.map((metric) => (
-            <div key={metric.value}>
+            <div key={metric.id}>
               <dt>
                 {metric.value}
-                <sup>{metric.value === "100" ? "+" : ""}</sup>
+                {metric.suffix ? <sup>{metric.suffix}</sup> : null}
               </dt>
               <dd>{localize(metric.label, lang)}</dd>
             </div>
@@ -728,16 +759,32 @@ export default function HomeEditorial() {
             <h3>{c.brandTitle}</h3>
             <span>ARCHIVE / 01</span>
           </div>
-          <div className="home-v2__brand-grid">
-            {brands.map(([file, name]) => (
-              <div key={file}>
-                <img
-                  src={`${ASSET_ROOT}/logos/brands/${file}.webp`}
-                  alt={`${name} logo`}
-                  loading="lazy"
-                />
-              </div>
-            ))}
+          <div
+            className="home-v2__logo-marquee home-v2__brand-grid"
+            role="region"
+            aria-label={c.brandTitle}
+            tabIndex={0}
+          >
+            <div className="home-v2__logo-track">
+              {[false, true].map((duplicate) => (
+                <div
+                  className="home-v2__logo-set"
+                  aria-hidden={duplicate || undefined}
+                  key={duplicate ? "brand-copy" : "brand-primary"}
+                >
+                  {brands.map(([file, name]) => (
+                    <div className="home-v2__logo-card is-brand" key={file}>
+                      <img
+                        src={`${ASSET_ROOT}/logos/brands/${file}.webp`}
+                        alt={duplicate ? "" : `${name} logo`}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="home-v2__logo-group">
@@ -745,16 +792,32 @@ export default function HomeEditorial() {
             <h3>{c.supplierTitle}</h3>
             <span>RESOURCE / 02</span>
           </div>
-          <div className="home-v2__supplier-grid">
-            {suppliers.map(([file, name]) => (
-              <div key={file}>
-                <img
-                  src={`${ASSET_ROOT}/logos/suppliers/${file}.webp`}
-                  alt={`${name} logo`}
-                  loading="lazy"
-                />
-              </div>
-            ))}
+          <div
+            className="home-v2__logo-marquee home-v2__supplier-grid"
+            role="region"
+            aria-label={c.supplierTitle}
+            tabIndex={0}
+          >
+            <div className="home-v2__logo-track is-supplier">
+              {[false, true].map((duplicate) => (
+                <div
+                  className="home-v2__logo-set"
+                  aria-hidden={duplicate || undefined}
+                  key={duplicate ? "supplier-copy" : "supplier-primary"}
+                >
+                  {suppliers.map(([file, name]) => (
+                    <div className="home-v2__logo-card is-supplier" key={file}>
+                      <img
+                        src={`${ASSET_ROOT}/logos/suppliers/${file}.webp`}
+                        alt={duplicate ? "" : `${name} logo`}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <p className="home-v2__network-note">{c.networkNote}</p>

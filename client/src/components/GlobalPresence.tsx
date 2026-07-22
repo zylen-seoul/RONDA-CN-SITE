@@ -11,7 +11,7 @@ import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function GlobalPresence() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -19,6 +19,11 @@ export default function GlobalPresence() {
     {
       key: 'hangzhou',
       city: t('global.hangzhou.city'),
+      imageAlt: {
+        zh: '杭州城市景观',
+        en: 'Hangzhou city landscape',
+        ko: '항저우 도시 풍경',
+      }[lang],
       tag: t('global.hq'),
       desc: t('global.hz.desc'),
       imagePlaceholder: false,
@@ -29,11 +34,16 @@ export default function GlobalPresence() {
     {
       key: 'seoul',
       city: t('global.seoul.city'),
+      imageAlt: {
+        zh: '首尔冬装样衣与产品协作空间',
+        en: 'Seoul winterwear sample and product collaboration showroom',
+        ko: '서울 겨울 의류 샘플 및 제품 협업 쇼룸',
+      }[lang],
       tag: t('global.branch'),
       desc: t('global.kr.desc'),
       imagePlaceholder: false,
-      imageUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/mtPiHFXgDZRAQlWl.jpg',
-      imagePosition: 'left center',
+      imageUrl: '/ronda-v2/global/seoul-showroom-real.jpg',
+      imagePosition: 'center center',
       imageWidth: 600,
       imageHeight: 800,
     },
@@ -157,7 +167,9 @@ export default function GlobalPresence() {
               ) : (
                 <img
                   src={city.imageUrl}
-                  alt={city.city}
+                  alt={city.imageAlt}
+                  loading="lazy"
+                  decoding="async"
                   style={{
                     width: '100%',
                     aspectRatio: '16 / 9',

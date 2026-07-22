@@ -43,7 +43,7 @@ export const winterProductDetails: ProductDetailData[] = [
       en: "Translate silhouette, chamber construction, filling and down-proof details into a sample-ready production plan.",
       ko: "실루엣, 구획 구조, 충전과 다운프루프 디테일을 샘플 제작이 가능한 생산안으로 전환합니다.",
     },
-    image: "/ronda-platform/product-down.webp",
+    image: "/ronda-v2/categories/down-jackets.jpg",
     imageAlt: { zh: "羽绒服产品开发参考", en: "Down jacket development reference", ko: "다운 재킷 개발 참고" },
     focus: [
       { zh: "版型比例与活动量", en: "Fit, proportion and mobility", ko: "패턴 비율과 활동성" },
@@ -71,7 +71,7 @@ export const winterProductDetails: ProductDetailData[] = [
       en: "Evaluate fabric, seam-sealing routes, technical zippers and body movement as one construction system.",
       ko: "원단, 심실링 경로, 기능성 지퍼와 활동성을 하나의 공정 시스템으로 검토합니다.",
     },
-    image: "/ronda-platform/product-shell.webp",
+    image: "/ronda-v2/categories/technical-shells.jpg",
     imageAlt: { zh: "冲锋衣功能结构参考", en: "Technical shell construction reference", ko: "테크니컬 셸 구조 참고" },
     focus: [
       { zh: "防护场景与版型活动量", en: "Protection scenario and mobility", ko: "보호 환경과 활동성" },
@@ -99,7 +99,7 @@ export const winterProductDetails: ProductDetailData[] = [
       en: "Coordinate fit, insulation, color blocking and technical components around warmth, protection and movement.",
       ko: "보온, 보호, 내마모성과 동작을 중심으로 패턴, 충전, 배색과 기능 부속을 조율합니다.",
     },
-    image: "/ronda-platform/product-ski.webp",
+    image: "/ronda-v2/categories/skiwear.jpg",
     imageAlt: { zh: "滑雪服运动版型参考", en: "Skiwear movement-fit reference", ko: "스키웨어 활동 패턴 참고" },
     focus: [
       { zh: "滑行动作与层搭空间", en: "Ski movement and layering room", ko: "스키 동작과 레이어링 공간" },
@@ -127,7 +127,7 @@ export const winterProductDetails: ProductDetailData[] = [
       en: "Build a precise construction plan around drape, proportion and double-faced sewing routes.",
       ko: "소재의 드레이프, 실루엣 비율과 더블페이스 봉제 경로를 중심으로 공정안을 만듭니다.",
     },
-    image: "/ronda-platform/product-wool.webp",
+    image: "/ronda-v2/categories/double-faced-coats.jpg",
     imageAlt: { zh: "双面大衣廓形参考", en: "Double-faced coat silhouette reference", ko: "더블페이스 코트 실루엣 참고" },
     focus: [
       { zh: "廓形比例与肩部结构", en: "Proportion and shoulder structure", ko: "실루엣 비율과 어깨 구조" },
@@ -155,7 +155,7 @@ export const winterProductDetails: ProductDetailData[] = [
       en: "Assess material thickness, nap direction, panel efficiency and silhouette before sampling.",
       ko: "소재 두께, 모 방향, 패널 효율과 실루엣을 기준으로 샘플 전 공정 가능성을 검토합니다.",
     },
-    image: "/ronda-platform/product-fur.webp",
+    image: "/ronda-v2/categories/fur-shearling.jpg",
     imageAlt: { zh: "皮草与皮毛一体材质参考", en: "Fur and shearling material reference", ko: "퍼·시어링 소재 참고" },
     focus: [
       { zh: "材质厚度与廓形匹配", en: "Material thickness and silhouette", ko: "소재 두께와 실루엣" },
@@ -183,7 +183,7 @@ export const winterProductDetails: ProductDetailData[] = [
       en: "Define fill specification, quilting, handfeel, labeling and packaging around the intended use.",
       ko: "사용 환경을 기준으로 충전 사양, 퀼팅, 촉감, 라벨과 포장 요구를 확정합니다.",
     },
-    image: "/ronda-platform/product-duvet.webp",
+    image: "/ronda-v2/categories/down-bedding.jpg",
     imageAlt: { zh: "羽绒寝具绗缝结构参考", en: "Down bedding quilting reference", ko: "다운 침구 퀼팅 구조 참고" },
     focus: [
       { zh: "尺寸、重量与使用场景", en: "Size, weight and intended use", ko: "사이즈, 중량과 사용 환경" },

@@ -508,32 +508,32 @@
         "ko": "항저우 룽다 테크놀로지 소개"
       },
       "description": {
-        "zh": "了解杭州绒达科技有限公司的冬装供应链定位、六大品类、杭州与首尔协作以及数字化服务方式。",
-        "en": "Learn about Hangzhou Rongda Technology's winterwear focus, six categories, Hangzhou-Seoul collaboration and digital service approach.",
-        "ko": "항저우 룽다 테크놀로지의 겨울 의류 중심, 6개 품목, 항저우-서울 협업과 디지털 서비스 방식을 알아보세요."
+        "zh": "了解杭州绒达科技有限公司与首尔ATLY的双核协作、100件起订、100+精品加工厂联盟及15–30天大货生产参考周期。",
+        "en": "Hangzhou Rongda Technology and Seoul-based ATLY: dual-core winterwear, 100-piece MOQ, 100+ specialist factories and 15–30-day bulk production.",
+        "ko": "항저우 룽다 테크놀로지와 서울 ATLY의 듀얼 코어 협업, 100장 MOQ, 100+ 우수 전문 생산 공장 네트워크와 본생산 15–30일 참고 기간을 알아보세요."
       },
       "h1": { "zh": "关于绒达", "en": "About RONDA", "ko": "RONDA 소개" },
       "intro": {
-        "zh": "杭州绒达科技有限公司（RONDA）聚焦冬装供应链协作，以六大品类为产品边界，通过杭州供应链与首尔协作触点服务品牌项目。",
-        "en": "Hangzhou Rongda Technology Co., Ltd. (RONDA) focuses on winterwear supply-chain collaboration across six categories, connecting Hangzhou execution with a Seoul collaboration touchpoint.",
-        "ko": "항저우 룽다 테크놀로지(RONDA)는 6개 겨울 의류 품목의 공급망 협업에 집중하며 항저우의 실행 역량과 서울 협업 거점을 연결합니다."
+        "zh": "杭州绒达科技有限公司（RONDA）与首尔（ATLY）构建同构双核矩阵，连接中韩前沿时尚、杭州智造产能与数字化项目协作。",
+        "en": "Hangzhou Rongda Technology Co., Ltd. (RONDA) and Seoul-based ATLY form a dual-core network connecting Korean and Chinese fashion insight, Hangzhou manufacturing capacity and digital project collaboration.",
+        "ko": "항저우 룽다 테크놀로지(RONDA)와 서울 ATLY는 한중 패션 인사이트, 항저우의 제조 역량과 디지털 프로젝트 협업을 연결하는 듀얼 코어 네트워크를 구축합니다."
       },
-      "summary": { "zh": "认识绒达的公司定位、服务边界与协作方式。", "en": "Understand RONDA's positioning, service scope and collaboration model.", "ko": "RONDA의 회사 포지셔닝, 서비스 범위와 협업 방식을 알아보세요." },
+      "summary": { "zh": "认识绒达的双核协作、柔性供应链标准与数字化服务方式。", "en": "Understand RONDA's dual-core model, flexible supply-chain standards and digital service approach.", "ko": "RONDA의 듀얼 코어 협업, 유연 공급망 기준과 디지털 서비스 방식을 알아보세요." },
       "staticSections": [
         {
-          "heading": { "zh": "公司定位", "en": "Company Focus", "ko": "회사 방향" },
+          "heading": { "zh": "双核冬装协作", "en": "Dual-Core Winterwear Collaboration", "ko": "듀얼 코어 겨울 의류 협업" },
           "paragraphs": {
-            "zh": ["绒达围绕品牌冬装需求，组织设计沟通、样衣、面辅料、生产、质量检查与交付。常规订单以100件作为起订评估基准，实际条件按项目确认。"],
-            "en": ["RONDA coordinates design communication, samples, materials, production, quality checks and delivery for brand winterwear. Standard orders use 100 pieces as the MOQ assessment baseline; actual conditions are confirmed per project."],
-            "ko": ["RONDA는 브랜드 겨울 의류의 디자인 소통, 샘플, 원부자재, 생산, 품질 검사와 납품을 조율합니다. 일반 주문은 100장을 MOQ 검토 기준으로 삼으며 실제 조건은 프로젝트별로 확정합니다."]
+            "zh": ["杭州绒达科技有限公司与首尔（ATLY）构建同构双核矩阵，深度融通中韩前沿时尚与智造产能。公司坚定深耕高品质冬装市场，专注高端羽绒服、冲锋衣及双面呢大衣，以匠心工艺筑牢核心产品壁垒。", "依托独特的“首尔协作”机制，企业将国际设计前沿与国内优势集群无缝对接，并通过可视化跟单与系统化协同提升全链路透明度，为全球服装品牌提供高效、敏捷的跨国供应链解决方案。"],
+            "en": ["Hangzhou Rongda Technology Co., Ltd. and Seoul-based ATLY form a structurally aligned dual-core network integrating Korean and Chinese fashion insight with intelligent manufacturing capacity. The company focuses on premium winterwear, especially high-end down jackets, technical shells and double-faced wool coats, supported by meticulous craftsmanship.", "Through its distinctive Seoul collaboration model, the company connects international design insights with China's strong production clusters and improves end-to-end transparency through visual order tracking and systematic coordination, providing global apparel brands with efficient, agile cross-border supply-chain solutions."],
+            "ko": ["항저우 룽다 테크놀로지 유한회사와 서울의 ATLY는 한중 패션 인사이트와 스마트 제조 역량을 융합하는 듀얼 코어 네트워크를 구축합니다. 회사는 프리미엄 겨울 의류 시장에 집중하며 고급 다운 재킷, 기능성 셸과 더블페이스 울 코트를 정교한 공정으로 개발합니다.", "독자적인 서울 협업 체계를 통해 국제 디자인 인사이트와 중국 내 우수 생산 클러스터를 연결하고, 시각화된 오더 추적과 체계적인 협업으로 전 과정의 투명성을 높여 글로벌 패션 브랜드에 효율적이고 민첩한 크로스보더 공급망 솔루션을 제공합니다."]
           }
         },
         {
-          "heading": { "zh": "服务边界", "en": "Service Scope", "ko": "서비스 범위" },
+          "heading": { "zh": "柔性供应链标准", "en": "Flexible Supply-Chain Standards", "ko": "유연 공급망 기준" },
           "paragraphs": {
-            "zh": ["绒达不以未经确认的客户数量、供应商数量、产能或行业排名作为承诺。方案、报价、周期和质量标准均以具体项目文件为准。"],
-            "en": ["RONDA does not make promises based on unverified client counts, supplier counts, capacity or market rankings. Scope, quotations, timing and quality standards follow project documentation."],
-            "ko": ["RONDA는 확인되지 않은 고객 수, 공급자 수, 생산 능력 또는 업계 순위를 약속으로 사용하지 않습니다. 범위, 견적, 일정과 품질 기준은 프로젝트 문서를 따릅니다."]
+            "zh": ["绒达以100件作为常规起订基础，连接100+精品加工厂联盟，并以15–30天作为常规大货生产参考周期。具体工厂匹配、最终起订量和周期按款式、面辅料、工艺复杂度、数量与产能排期确认。"],
+            "en": ["RONDA uses 100 pieces as its standard MOQ basis, connects a 100+ specialist factory alliance and uses 15–30 days as the reference lead time for standard bulk production. Factory matching, final MOQ and timing are confirmed by style, materials, complexity, quantity and capacity schedule."],
+            "ko": ["RONDA는 100장을 일반 MOQ 기준으로 삼고 100+ 우수 전문 생산 공장 네트워크를 연결하며 일반 본생산 기간은 15–30일을 참고 기준으로 제시합니다. 실제 공장 매칭, 최종 MOQ와 일정은 스타일, 원부자재, 공정 난이도, 수량과 생산 일정에 따라 확정합니다."]
           }
         }
       ]
