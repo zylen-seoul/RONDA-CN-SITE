@@ -10,10 +10,6 @@ import "@/home-v2.css";
 type Localized = Record<Language, string>;
 
 const ASSET_ROOT = "/ronda-platform";
-const HANGZHOU_IMAGE =
-  "https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/VEnkGmmicAmbbpjx.jpg";
-const SEOUL_IMAGE =
-  "https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/mtPiHFXgDZRAQlWl.jpg";
 
 const localize = (value: Localized, lang: Language) => value[lang] || value.zh;
 
@@ -50,13 +46,6 @@ const copy: Record<
     platformLabel: string;
     platformTitle: string;
     platformBody: string;
-    globalLabel: string;
-    globalTitle: string;
-    globalBody: string;
-    advantageLabel: string;
-    advantageTitle: string;
-    advantageBody: string;
-    inquiry: string;
   }
 > = {
   zh: {
@@ -101,15 +90,6 @@ const copy: Record<
     platformTitle: "数字化项目协作",
     platformBody:
       "Samplewear是杭州绒达科技面向冬装项目的数字化协作平台，将需求资料、样衣批注、版本确认、生产节点、质量记录与交付文件集中于同一项目空间，帮助品牌与项目团队及时掌握进度及待确认事项。官方Sample App可在各大应用市场搜索下载；具体功能、账号权限与开放范围以项目配置为准。",
-    globalLabel: "GLOBAL COORDINATION",
-    globalTitle: "杭州与首尔",
-    globalBody:
-      "杭州负责供应链协作与项目交付，首尔作为设计与市场沟通的协作触点。",
-    advantageLabel: "WHY RONDA",
-    advantageTitle: "为冬装项目建立确定性",
-    advantageBody:
-      "核心能力不靠口号，而由品类经验、项目标准与关键节点共同组成。",
-    inquiry: "开始冬装项目",
   },
   en: {
     heroLabel: "HANGZHOU RONGDA · WINTERWEAR DEVELOPMENT",
@@ -154,15 +134,6 @@ const copy: Record<
     platformTitle: "Digital Project Collaboration",
     platformBody:
       "Samplewear is Hangzhou Rongda’s digital collaboration platform for winterwear projects. It brings briefs, annotated sample feedback, version approvals, production milestones, quality records and delivery files into one project workspace, giving brands and project teams a clear view of progress and pending decisions. The official Sample app can be searched and downloaded from major app marketplaces; features, account permissions and access depend on project configuration.",
-    globalLabel: "GLOBAL COORDINATION",
-    globalTitle: "Hangzhou and Seoul",
-    globalBody:
-      "Hangzhou coordinates supply-chain delivery while Seoul serves as a collaboration touchpoint for design and market communication.",
-    advantageLabel: "WHY RONDA",
-    advantageTitle: "More Certainty for Winterwear",
-    advantageBody:
-      "Our value comes from category knowledge, shared project standards and visible checkpoints—not slogans.",
-    inquiry: "Start a winterwear project",
   },
   ko: {
     heroLabel: "항저우 룽다 · 겨울 의류 개발과 유연 생산",
@@ -207,15 +178,6 @@ const copy: Record<
     platformTitle: "디지털 프로젝트 협업",
     platformBody:
       "Samplewear는 항저우 룽다가 겨울 의류 프로젝트를 위해 운영하는 디지털 협업 플랫폼입니다. 요구 자료, 샘플 코멘트, 버전 승인, 생산 단계, 품질 기록과 납품 문서를 하나의 프로젝트 공간에서 관리해 브랜드와 프로젝트 팀이 진행 상황과 확인 대기 항목을 명확히 파악할 수 있도록 합니다. 공식 Sample 앱은 주요 앱 마켓에서 검색해 다운로드할 수 있으며, 기능·계정 권한·이용 범위는 프로젝트 설정에 따라 달라집니다.",
-    globalLabel: "GLOBAL COORDINATION",
-    globalTitle: "항저우와 서울",
-    globalBody:
-      "항저우는 공급망과 납품을 조율하고 서울은 디자인과 시장 커뮤니케이션을 위한 협업 접점으로 운영됩니다.",
-    advantageLabel: "WHY RONDA",
-    advantageTitle: "겨울 의류 프로젝트의 확실성",
-    advantageBody:
-      "룽다의 핵심은 구호가 아니라 품목 경험, 프로젝트 기준과 확인 가능한 단계입니다.",
-    inquiry: "겨울 의류 프로젝트 시작",
   },
 };
 
@@ -354,7 +316,11 @@ const processSteps: Array<{
 }> = [
   {
     number: "01",
-    title: { zh: "项目需求确认", en: "Project Brief", ko: "프로젝트 요구 확인" },
+    title: {
+      zh: "项目需求确认",
+      en: "Project Brief",
+      ko: "프로젝트 요구 확인",
+    },
     time: { zh: "1–2工作日", en: "1–2 business days", ko: "1–2영업일" },
     body: {
       zh: "明确产品定位、目标市场、数量与颜色拆分、预算、质量要求及期望交期，建立项目执行基线。",
@@ -364,7 +330,11 @@ const processSteps: Array<{
   },
   {
     number: "02",
-    title: { zh: "技术资料与材料", en: "Technical Files & Materials", ko: "기술 자료와 소재" },
+    title: {
+      zh: "技术资料与材料",
+      en: "Technical Files & Materials",
+      ko: "기술 자료와 소재",
+    },
     time: { zh: "3–7工作日", en: "3–7 business days", ko: "3–7영업일" },
     body: {
       zh: "审核款式图、尺寸表与工艺要求，核对面料、填充及辅件的最低订量、交期和适用性，确认样衣材料方案。",
@@ -374,7 +344,11 @@ const processSteps: Array<{
   },
   {
     number: "03",
-    title: { zh: "样衣开发验证", en: "Sample Development", ko: "샘플 개발 검증" },
+    title: {
+      zh: "样衣开发验证",
+      en: "Sample Development",
+      ko: "샘플 개발 검증",
+    },
     time: { zh: "最快7工作日", en: "From 7 business days", ko: "최단 7영업일" },
     body: {
       zh: "完成版型与首件试制，对合体度、结构可行性、保暖或功能表现及外观进行内部评审后提交确认。",
@@ -453,108 +427,38 @@ const suppliers = [
   ["duraflex", "DURAFLEX"],
 ] as const;
 
-const advantages: Array<{ number: string; title: Localized; body: Localized }> =
-  [
-    {
-      number: "01",
-      title: {
-        zh: "冬装专项能力",
-        en: "Winterwear Focus",
-        ko: "겨울 의류 전문성",
-      },
-      body: {
-        zh: "围绕保暖结构、功能面料、压胶、充绒与厚重材料建立品类化开发逻辑。",
-        en: "Category-led development across insulation, technical fabrics, seam sealing, down filling and substantial materials.",
-        ko: "보온 구조, 기능성 원단, 심실링, 다운 충전과 중량 소재를 품목별로 개발합니다.",
-      },
-    },
-    {
-      number: "02",
-      title: {
-        zh: "100件柔性起点",
-        en: "100-Piece Starting Point",
-        ko: "100장 유연 생산",
-      },
-      body: {
-        zh: "为品牌试单和小批量开发提供常规建议起点，并根据材料与工艺确认实际条件。",
-        en: "A practical standard starting point for trials and small runs, subject to material and technical confirmation.",
-        ko: "테스트 주문과 소량 개발의 일반 권장 시작점으로, 실제 조건은 소재와 공정에 따라 확인합니다.",
-      },
-    },
-    {
-      number: "03",
-      title: {
-        zh: "关键节点透明",
-        en: "Visible Checkpoints",
-        ko: "투명한 주요 단계",
-      },
-      body: {
-        zh: "样衣反馈、产前确认、生产进度与质量检查均以明确节点沟通。",
-        en: "Sample feedback, pre-production approval, progress and quality checks are communicated as clear milestones.",
-        ko: "샘플 피드백, 생산 전 승인, 진행 상황과 품질 검사를 명확한 단계로 소통합니다.",
-      },
-    },
-    {
-      number: "04",
-      title: {
-        zh: "双城资源协同",
-        en: "Two-City Coordination",
-        ko: "두 도시 협업",
-      },
-      body: {
-        zh: "杭州供应链执行与首尔协作触点的设计、市场沟通形成互补，服务不同市场的冬装项目。",
-        en: "Hangzhou supply execution and the Seoul touchpoint for design and market communication support winterwear projects across markets.",
-        ko: "항저우 공급망 실행과 서울 협업 접점의 디자인·시장 소통을 연결해 다양한 시장의 프로젝트를 지원합니다.",
-      },
-    },
-  ];
-
-const cityCards: Array<{
-  image: string;
-  tag: string;
-  title: Localized;
-  body: Localized;
-  alt: Localized;
-}> = [
-  {
-    image: HANGZHOU_IMAGE,
-    tag: "SUPPLY CHAIN",
-    title: {
-      zh: "杭州 · 供应链协作中心",
-      en: "Hangzhou · Supply Coordination",
-      ko: "항저우 · 공급망 협업 중심",
-    },
-    body: {
-      zh: "统筹产品标准、资源匹配、生产节点、质量检查与项目交付。",
-      en: "Coordinates product standards, resource matching, production milestones, quality checks and delivery.",
-      ko: "제품 기준, 자원 매칭, 생산 단계, 품질 검사와 프로젝트 납품을 조율합니다.",
-    },
-    alt: {
-      zh: "杭州城市景观",
-      en: "Hangzhou city view",
-      ko: "항저우 도시 전경",
-    },
-  },
-  {
-    image: SEOUL_IMAGE,
-    tag: "DESIGN & MARKET",
-    title: {
-      zh: "首尔 · 协作触点",
-      en: "Seoul · Collaboration Touchpoint",
-      ko: "서울 · 협업 접점",
-    },
-    body: {
-      zh: "承接首尔当地的设计与市场沟通，为跨市场项目提供协同支持。",
-      en: "Supports local design and market communication in Seoul for cross-market projects.",
-      ko: "서울 현지의 디자인과 시장 커뮤니케이션을 연결해 다양한 시장의 프로젝트를 지원합니다.",
-    },
-    alt: {
-      zh: "首尔城市景观",
-      en: "Seoul city view",
-      ko: "서울 도시 전경",
-    },
-  },
-];
+const atelierTicker: Record<Language, string[]> = {
+  zh: [
+    "100件起订",
+    "纸样开发",
+    "样衣最快7天",
+    "柔性生产",
+    "可视化跟单",
+    "15–30天大货",
+    "全链路质量检查",
+    "杭州 × 首尔",
+  ],
+  en: [
+    "100-PC MOQ",
+    "PATTERN DEVELOPMENT",
+    "SAMPLE FROM 7 DAYS",
+    "FLEXIBLE PRODUCTION",
+    "VISUAL ORDER TRACKING",
+    "15–30 DAY BULK PRODUCTION",
+    "END-TO-END QUALITY CONTROL",
+    "HANGZHOU × SEOUL",
+  ],
+  ko: [
+    "100장부터",
+    "패턴 개발",
+    "최단 7일 샘플",
+    "유연 생산",
+    "진행 상황 시각화",
+    "15–30일 본생산",
+    "전 과정 품질 관리",
+    "항저우 × 서울",
+  ],
+};
 
 function SectionHeading({
   label,
@@ -662,6 +566,33 @@ export default function HomeEditorial() {
         </dl>
       </section>
 
+      <div
+        className="home-v2__atelier-marquee"
+        role="region"
+        aria-label={
+          lang === "zh"
+            ? "绒达冬装研发能力"
+            : lang === "ko"
+              ? "룽다 겨울 의류 개발 역량"
+              : "RONDA winterwear development capabilities"
+        }
+        tabIndex={0}
+      >
+        <div className="home-v2__atelier-track">
+          {[false, true].map((duplicate) => (
+            <div
+              className="home-v2__atelier-set"
+              aria-hidden={duplicate || undefined}
+              key={duplicate ? "atelier-copy" : "atelier-primary"}
+            >
+              {atelierTicker[lang].map((item) => (
+                <span key={item}>{item}</span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
       <section
         id="winterwear-categories"
         className="home-v2__categories"
@@ -706,44 +637,54 @@ export default function HomeEditorial() {
         className="home-v2__process"
         aria-labelledby="home-v2-process-title"
       >
-        <SectionHeading
-          label={c.processLabel}
-          title={c.processTitle}
-          body={c.processBody}
-          dark
+        <img
+          className="home-v2__process-pattern"
+          src="/ronda-v2/editorial/pattern-making-soft-1000.png"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
         />
-        <p className="home-v2__sample-callout">
-          <span>SAMPLE / 03</span>
-          {c.sampleFocus}
-        </p>
-        <ol className="home-v2__process-track">
-          {processSteps.map((step) => (
-            <li
-              className={step.sample ? "is-sample" : undefined}
-              key={step.number}
-            >
-              <div className="home-v2__process-index">
-                <span>{step.number}</span>
-                <i aria-hidden="true" />
-              </div>
-              <h3>{localize(step.title, lang)}</h3>
-              <strong>{localize(step.time, lang)}</strong>
-              <p>{localize(step.body, lang)}</p>
-            </li>
-          ))}
-        </ol>
-        <p className="home-v2__note is-dark">{c.processNote}</p>
-        <a
-          className="home-v2__text-link is-light"
-          href={localizedPath("/services/", lang)}
-        >
-          {lang === "zh"
-            ? "查看完整服务流程"
-            : lang === "ko"
-              ? "전체 서비스 절차 보기"
-              : "View the full service process"}
-          <ArrowUpRight aria-hidden="true" size={15} />
-        </a>
+        <div className="home-v2__process-inner">
+          <SectionHeading
+            label={c.processLabel}
+            title={c.processTitle}
+            body={c.processBody}
+            dark
+          />
+          <p className="home-v2__sample-callout">
+            <span>SAMPLE / 03</span>
+            {c.sampleFocus}
+          </p>
+          <ol className="home-v2__process-track">
+            {processSteps.map((step) => (
+              <li
+                className={step.sample ? "is-sample" : undefined}
+                key={step.number}
+              >
+                <div className="home-v2__process-index">
+                  <span>{step.number}</span>
+                  <i aria-hidden="true" />
+                </div>
+                <h3>{localize(step.title, lang)}</h3>
+                <strong>{localize(step.time, lang)}</strong>
+                <p>{localize(step.body, lang)}</p>
+              </li>
+            ))}
+          </ol>
+          <p className="home-v2__note is-dark">{c.processNote}</p>
+          <a
+            className="home-v2__text-link is-light"
+            href={localizedPath("/services/", lang)}
+          >
+            {lang === "zh"
+              ? "查看完整服务流程"
+              : lang === "ko"
+                ? "전체 서비스 절차 보기"
+                : "View the full service process"}
+            <ArrowUpRight aria-hidden="true" size={15} />
+          </a>
+        </div>
       </section>
 
       <section
@@ -835,100 +776,34 @@ export default function HomeEditorial() {
         </a>
       </section>
 
-      <section
-        className="home-v2__platform-intro"
-        aria-labelledby="home-v2-platform-title"
-      >
-        <div>
-          <p className="home-v2__eyebrow">{c.platformLabel}</p>
-          <h2 id="home-v2-platform-title" className="home-v2__title">
-            {c.platformTitle}
-          </h2>
-        </div>
-        <p>{c.platformBody}</p>
-        <a
-          className="home-v2__text-link is-light"
-          href={localizedPath("/digital-platform/", lang)}
+      <div className="home-v2__platform">
+        <section
+          className="home-v2__platform-intro"
+          aria-labelledby="home-v2-platform-title"
         >
-          {lang === "zh"
-            ? "了解数字化平台"
-            : lang === "ko"
-              ? "디지털 플랫폼 보기"
-              : "Explore the digital platform"}
-          <ArrowUpRight aria-hidden="true" size={15} />
-        </a>
-      </section>
-      <div className="home-v2__sample-app">
-        <SampleAppSection />
+          <div>
+            <p className="home-v2__eyebrow">{c.platformLabel}</p>
+            <h2 id="home-v2-platform-title" className="home-v2__title">
+              {c.platformTitle}
+            </h2>
+          </div>
+          <p>{c.platformBody}</p>
+          <a
+            className="home-v2__text-link is-light"
+            href={localizedPath("/digital-platform/", lang)}
+          >
+            {lang === "zh"
+              ? "了解数字化平台"
+              : lang === "ko"
+                ? "디지털 플랫폼 보기"
+                : "Explore the digital platform"}
+            <ArrowUpRight aria-hidden="true" size={15} />
+          </a>
+        </section>
+        <div className="home-v2__sample-app">
+          <SampleAppSection embedded />
+        </div>
       </div>
-
-      <section
-        className="home-v2__global-intro"
-        aria-labelledby="home-v2-global-title"
-      >
-        <SectionHeading
-          label={c.globalLabel}
-          title={c.globalTitle}
-          body={c.globalBody}
-        />
-      </section>
-      <section className="home-v2__global" aria-label={c.globalTitle}>
-        <div className="home-v2__city-grid">
-          {cityCards.map((city) => (
-            <article key={city.tag}>
-              <img
-                src={city.image}
-                alt={localize(city.alt, lang)}
-                loading="lazy"
-              />
-              <div>
-                <span>{city.tag}</span>
-                <h3>{localize(city.title, lang)}</h3>
-                <p>{localize(city.body, lang)}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-        <a
-          className="home-v2__text-link"
-          href={localizedPath("/global/", lang)}
-        >
-          {lang === "zh"
-            ? "了解全球协作"
-            : lang === "ko"
-              ? "글로벌 협업 보기"
-              : "Explore global coordination"}
-          <ArrowUpRight aria-hidden="true" size={15} />
-        </a>
-      </section>
-
-      <section
-        className="home-v2__advantages"
-        aria-labelledby="home-v2-advantages-title"
-      >
-        <SectionHeading
-          label={c.advantageLabel}
-          title={c.advantageTitle}
-          body={c.advantageBody}
-          dark
-        />
-        <div className="home-v2__advantage-grid">
-          {advantages.map((advantage) => (
-            <article key={advantage.number}>
-              <span>{advantage.number}</span>
-              <h3>{localize(advantage.title, lang)}</h3>
-              <p>{localize(advantage.body, lang)}</p>
-            </article>
-          ))}
-        </div>
-        <a
-          className="home-v2__button is-accent"
-          href={localizedPath("/inquiry/", lang)}
-        >
-          {c.inquiry}
-          <ArrowRight aria-hidden="true" size={16} />
-        </a>
-      </section>
     </div>
   );
 }

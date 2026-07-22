@@ -12,7 +12,7 @@ export default function SiteShell({ pageKey, children }: { pageKey: PageKey; chi
       <Seo pageKey={pageKey} />
       <Navbar />
       <main>{children}</main>
-      <ContactSection />
+      <ContactSection showCityMedia={pageKey === "home"} />
       <Footer />
       <ScrollToTop />
     </div>
