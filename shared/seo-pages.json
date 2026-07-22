@@ -3,7 +3,7 @@
   "organization": {
     "name": "杭州绒达科技有限公司",
     "englishName": "Hangzhou Rongda Technology Co., Ltd.",
-    "alternateNames": ["绒达科技", "RONDA", "Samplewear", "Sample & Simple"],
+    "alternateNames": ["绒达科技", "杭州绒达", "RONDA"],
     "email": "zylen@samplewear.com",
     "telephone": "+86-571-88012309",
     "address": {
@@ -19,59 +19,66 @@
       "path": "/",
       "index": true,
       "title": {
-        "zh": "杭州绒达科技｜100件起订冬装供应链｜Samplewear",
-        "en": "Hangzhou Rongda | Winterwear from 100 Pieces | Samplewear",
-        "ko": "항저우 룽다｜100장부터 시작하는 겨울 의류｜Samplewear"
+        "zh": "杭州绒达｜100件起订冬装供应链",
+        "en": "RONDA | Winterwear from 100 Pieces",
+        "ko": "RONDA | 100장부터 시작하는 겨울 의류"
       },
       "description": {
-        "zh": "Samplewear 是杭州绒达科技有限公司（RONDA）的官方网站，围绕常规100件起订，提供羽绒服、冲锋衣、滑雪服等冬装的设计打样、面辅料协作、生产、质检与交付服务。",
-        "en": "Samplewear is Hangzhou Rongda Technology's official website for winterwear development from a standard 100-piece MOQ, covering sampling, sourcing, production, quality checks and delivery.",
-        "ko": "Samplewear는 항저우 룽다 테크놀로지의 공식 웹사이트로 일반 100장부터 겨울 의류 샘플, 원부자재, 생산, 품질 검사와 납품 서비스를 제공합니다."
+        "zh": "杭州绒达科技为品牌提供六大冬装品类的开发与生产协作，常规100件起订。常规样衣最快7天，具体按款式、面料、工艺评估。",
+        "en": "Hangzhou Rongda supports six winterwear categories with a standard 100-piece MOQ and standard samples from 7 days, subject to style, materials and construction.",
+        "ko": "항저우 룽다는 겨울 의류 6개 품목을 지원합니다. 일반 MOQ는 100장이며 일반 샘플은 최단 7일부터 가능하고 스타일, 소재와 공정에 따라 달라집니다."
       },
       "h1": {
-        "zh": "100件起订，冬装清晰落地",
+        "zh": "100件起订的冬装供应链",
         "en": "Winterwear from 100 Pieces",
         "ko": "100장부터 시작하는 겨울 의류"
       },
       "intro": {
-        "zh": "Samplewear（Sample & Simple）由杭州绒达科技有限公司运营。绒达科技围绕品牌冬装需求，统筹设计打样、面辅料匹配、生产协作、质量检查与交付；常规订单建议从100件起。",
-        "en": "Samplewear is operated by Hangzhou Rongda Technology. Rongda coordinates winterwear sampling, materials, production, quality checks and delivery, with standard orders recommended from 100 pieces.",
-        "ko": "Samplewear는 항저우 룽다 테크놀로지가 운영합니다. 룽다는 겨울 의류 샘플, 원부자재, 생산, 품질 검사와 납품을 조율하며 일반 주문은 100장부터 권장합니다."
+        "zh": "杭州绒达科技有限公司（RONDA）围绕冬装开发连接设计、打样、面辅料、生产、质检与交付。samplewear.com 是绒达面向全球客户的官方网站与数字化服务入口。",
+        "en": "Hangzhou Rongda Technology Co., Ltd. (RONDA) connects design, sampling, materials, production, quality checks and delivery for winterwear. samplewear.com is RONDA's official website and digital service gateway.",
+        "ko": "항저우 룽다 테크놀로지(RONDA)는 겨울 의류의 디자인, 샘플, 원부자재, 생산, 품질 검사와 납품을 연결합니다. samplewear.com은 RONDA의 공식 웹사이트이자 디지털 서비스 창구입니다."
       },
       "summary": {
-        "zh": "了解绒达科技如何从100件起订推进冬装样衣、量产与交付。",
-        "en": "See how Rongda moves winterwear from sampling to production and delivery from 100 pieces.",
-        "ko": "룽다가 100장부터 샘플, 양산과 납품을 진행하는 방식을 확인하세요."
+        "zh": "认识绒达的六大冬装品类、开发流程与跨区域协作方式。",
+        "en": "Discover RONDA's six winterwear categories, development flow and regional collaboration.",
+        "ko": "RONDA의 겨울 의류 6개 품목, 개발 과정과 지역 협업 방식을 확인하세요."
       },
       "staticSections": [
         {
-          "heading": "100件起订的冬装开发标准",
-          "paragraphs": [
-            "杭州绒达科技以常规100件起订为核心标准，帮助品牌以较小批量推进冬装产品验证与生产协作。实际起订量根据品类、面辅料最低订量、颜色数量、工艺及生产条件评估。",
-            "常规样衣开发参考周期为7至15个工作日，常规大货生产参考周期为15至30个工作日。复杂结构、定制或进口材料、特殊工艺及多轮修改可能延长，最终以项目排期为准。"
-          ]
+          "heading": {
+            "zh": "六大冬装品类",
+            "en": "Six Winterwear Categories",
+            "ko": "겨울 의류 6개 품목"
+          },
+          "paragraphs": {
+            "zh": ["绒达聚焦羽绒服、冲锋衣、滑雪服、双面大衣、皮草与皮毛一体、羽绒寝具。每个品类均有独立页面说明开发重点。"],
+            "en": ["RONDA focuses on down jackets, technical shells, skiwear, double-faced coats, fur and shearling, and down bedding. Each category has a dedicated page explaining its development priorities."],
+            "ko": ["RONDA는 다운 재킷, 기능성 셸, 스키웨어, 더블페이스 코트, 퍼와 시어링, 다운 침구에 집중합니다. 각 품목별 페이지에서 개발 핵심을 설명합니다."]
+          }
         },
         {
-          "heading": "羽绒服、冲锋衣与滑雪服等六大品类",
-          "paragraphs": [
-            "绒达科技通过Samplewear展示羽绒服、冲锋衣、滑雪服、双面大衣、皮草与皮毛一体、羽绒寝具六类冬装开发方向。",
-            "服务覆盖需求确认、设计与工艺整理、面辅料匹配、首版样衣、样衣修订、产前确认、常规量产、终检与发运。"
-          ]
+          "heading": {
+            "zh": "从样衣到交付",
+            "en": "From Sample to Delivery",
+            "ko": "샘플부터 납품까지"
+          },
+          "paragraphs": {
+            "zh": ["常规订单以100件起订作为评估基准，最终起订量取决于品类、面辅料最低订量、颜色、工艺和生产条件。", "常规样衣最快7天，具体按款式、面料、工艺评估。"],
+            "en": ["Standard projects use 100 pieces as the MOQ assessment baseline. The final quantity depends on category, material minimums, colors, construction and production conditions.", "Standard samples can be ready from 7 days. Timing depends on style structure, material readiness, construction complexity and approval rounds."],
+            "ko": ["일반 프로젝트는 100장을 MOQ 검토 기준으로 삼습니다. 최종 수량은 품목, 원부자재 최소 주문량, 색상, 공정과 생산 조건에 따라 달라집니다.", "일반 샘플은 최단 7일부터 가능합니다. 실제 일정은 스타일 구조, 소재 준비, 공정 난이도와 확인 횟수에 따라 달라집니다."]
+          }
         },
         {
-          "heading": "案例客户与面辅料资源",
-          "paragraphs": [
-            "官网集中展示部分品牌案例，并介绍冬装开发中常用的功能面料、填充材料、拉链、扣具、里料与缝线等供应资源。具体项目组合以产品需求与供方确认结果为准。",
-            "展示的面辅料与辅件资源包括三星羽绒、TORAY、Bemberg、SHINDO、YKK、IDEAL、3M、柳桥羽绒、TEIJIN、COATS、NIFCO、NIKKE TEXTILE、STYLEM、SAB、CONSINEE与DURAFLEX等。"
-          ]
-        },
-        {
-          "heading": "杭州绒达科技冬装合作常见问题",
-          "paragraphs": [
-            "绒达科技的常规订单建议从100件起，最终数量根据品类、面辅料最低订量、颜色数量、工艺与生产条件评估。",
-            "常规样衣开发参考周期为7至15个工作日；冲锋衣和滑雪服可围绕防水面料、压胶、拉链、功能辅料、保暖填充、耐磨与运动版型推进开发。",
-            "开始项目前建议准备款式参考、尺寸或样衣、预计数量、颜色、目标成本、面辅料偏好、目标市场与交期；资料不完整也可以先与杭州绒达科技沟通。"
-          ]
+          "heading": {
+            "zh": "杭州与首尔协作",
+            "en": "Hangzhou and Seoul Collaboration",
+            "ko": "항저우와 서울 협업"
+          },
+          "paragraphs": {
+            "zh": ["杭州承担供应链组织与项目推进，首尔协作触点支持当地设计、品牌与市场沟通。两地围绕同一项目资料协同。"],
+            "en": ["Hangzhou coordinates supply-chain execution, while the Seoul touchpoint supports local design, brand and market communication. Both locations work from shared project information."],
+            "ko": ["항저우는 공급망 운영과 프로젝트 진행을 담당하고 서울 협업 거점은 현지 디자인, 브랜드와 시장 소통을 지원합니다. 두 지역은 동일한 프로젝트 정보를 기반으로 협업합니다."]
+          }
         }
       ]
     },
@@ -80,54 +87,286 @@
       "path": "/products/",
       "index": true,
       "title": {
-        "zh": "100件起订冬装产品｜羽绒服·冲锋衣·滑雪服｜绒达科技",
-        "en": "Winterwear from 100 Pieces | Shells & Skiwear | Hangzhou Rongda",
-        "ko": "100장부터 겨울 의류｜기능성 셸·스키웨어｜항저우 룽다"
+        "zh": "六大冬装品类｜杭州绒达",
+        "en": "Six Winterwear Categories | RONDA",
+        "ko": "겨울 의류 6개 품목 | RONDA"
       },
       "description": {
-        "zh": "杭州绒达科技通过Samplewear展示常规100件起订的羽绒服、冲锋衣、滑雪服、双面大衣、皮草与皮毛一体及羽绒寝具开发服务。",
-        "en": "Explore six standard 100-piece winterwear categories: down jackets, technical shells, skiwear, double-faced coats, fur and shearling, and down bedding.",
-        "ko": "일반 100장 기준의 다운 재킷, 기능성 셸, 스키웨어, 더블페이스 코트, 퍼·시어링과 다운 침구 6개 품목을 소개합니다."
+        "zh": "查看杭州绒达的羽绒服、冲锋衣、滑雪服、双面大衣、皮草与皮毛一体、羽绒寝具开发服务。",
+        "en": "Explore RONDA's development services for down jackets, technical shells, skiwear, double-faced coats, fur and shearling, and down bedding.",
+        "ko": "RONDA의 다운 재킷, 기능성 셸, 스키웨어, 더블페이스 코트, 퍼와 시어링, 다운 침구 개발 서비스를 확인하세요."
       },
       "h1": {
-        "zh": "常规100件起订的六大冬装品类",
+        "zh": "六大冬装品类",
         "en": "Six Winterwear Categories",
-        "ko": "100장부터 시작하는 겨울 의류 6대 품목"
+        "ko": "겨울 의류 6개 품목"
       },
       "intro": {
-        "zh": "绒达科技通过Samplewear展示六类冬装开发方向，将产品需求与设计打样、面辅料协作、生产及质量检查连接起来；常规订单建议从100件起。",
-        "en": "Rongda presents six winterwear development categories through Samplewear and connects each brief with sampling, material sourcing, production and quality checks. Standard orders are recommended from 100 pieces.",
-        "ko": "룽다는 Samplewear를 통해 6개 겨울 의류 개발 품목을 소개하고 샘플, 원부자재, 생산과 품질 검사를 연결합니다. 일반 주문은 100장부터 권장합니다."
+        "zh": "绒达以六个独立品类页面说明产品结构、材料、样衣和生产协作重点，帮助品牌快速找到对应的冬装开发路径。",
+        "en": "RONDA uses six dedicated category pages to explain product structure, materials, sampling and production priorities so brands can identify the right development path.",
+        "ko": "RONDA는 6개 독립 품목 페이지에서 제품 구조, 소재, 샘플과 생산 협업의 핵심을 설명해 브랜드가 적합한 개발 경로를 찾도록 돕습니다."
       },
       "summary": {
-        "zh": "浏览羽绒服、冲锋衣、滑雪服、双面大衣、皮草与羽绒寝具。",
-        "en": "Explore down, shells, skiwear, coats, fur and down bedding.",
-        "ko": "다운, 기능성 셸, 스키웨어, 코트, 퍼와 다운 침구를 확인하세요."
+        "zh": "选择品类，查看对应的开发重点与合作准备。",
+        "en": "Choose a category to review development priorities and project preparation.",
+        "ko": "품목을 선택해 개발 핵심과 프로젝트 준비 사항을 확인하세요."
       },
       "staticSections": [
         {
-          "heading": "羽绒服",
-          "paragraphs": ["围绕版型、面料、充绒克重与防钻绒结构推进样衣、生产协作和质量检查，常规订单建议从100件起。"]
+          "heading": { "zh": "服装品类", "en": "Apparel Categories", "ko": "의류 품목" },
+          "paragraphs": {
+            "zh": ["羽绒服重视保暖结构与充绒控制；冲锋衣重视面料性能与压胶；滑雪服兼顾保暖、防护和运动结构；双面大衣重视廓形与双面工艺；皮草与皮毛一体重视材料特性与拼接。"],
+            "en": ["Down jackets prioritize thermal structure and fill control; shells focus on fabric performance and seam sealing; skiwear balances warmth, protection and movement; double-faced coats focus on silhouette and clean construction; fur and shearling require material-specific cutting and joining."],
+            "ko": ["다운 재킷은 보온 구조와 충전 제어, 셸은 원단 성능과 심실링, 스키웨어는 보온·보호·활동성, 더블페이스 코트는 실루엣과 양면 봉제, 퍼와 시어링은 소재 특성과 연결 공정이 중요합니다."]
+          }
         },
         {
-          "heading": "冲锋衣",
-          "paragraphs": ["围绕防水面料、压胶工艺、拉链与功能辅件进行方案协作，并结合版型与使用场景推进样衣和生产。"]
+          "heading": { "zh": "家居品类", "en": "Home Category", "ko": "홈 품목" },
+          "paragraphs": {
+            "zh": ["羽绒寝具围绕填充材料、填充量、绗缝结构、面料触感与包装要求推进开发。"],
+            "en": ["Down bedding development covers fill material, fill weight, quilting structure, shell fabric hand feel and packaging requirements."],
+            "ko": ["다운 침구 개발은 충전재, 충전량, 퀼팅 구조, 겉감 촉감과 포장 요구를 중심으로 진행됩니다."]
+          }
+        }
+      ]
+    },
+    {
+      "key": "downJackets",
+      "path": "/products/down-jackets/",
+      "index": true,
+      "title": {
+        "zh": "羽绒服开发｜杭州绒达",
+        "en": "Down Jacket Development | RONDA",
+        "ko": "다운 재킷 개발 | RONDA"
+      },
+      "description": {
+        "zh": "杭州绒达提供羽绒服版型、面料、填充、样衣与生产协作，常规100件起订，实际按项目评估。",
+        "en": "RONDA supports down jacket pattern, fabric, fill, sampling and production, with a standard 100-piece MOQ subject to project assessment.",
+        "ko": "RONDA는 다운 재킷 패턴, 원단, 충전재, 샘플과 생산을 지원하며 일반 MOQ 100장은 프로젝트별 검토가 필요합니다."
+      },
+      "h1": { "zh": "羽绒服开发", "en": "Down Jacket Development", "ko": "다운 재킷 개발" },
+      "intro": {
+        "zh": "从廓形和功能目标出发，绒达协同面料、填充材料、充绒量、分仓结构、防钻绒方案与样衣确认。",
+        "en": "Starting from silhouette and performance goals, RONDA coordinates shell fabric, insulation, fill weight, baffle structure, down-proofing and sample approval.",
+        "ko": "실루엣과 기능 목표를 바탕으로 RONDA는 겉감, 충전재, 충전량, 다운 칸 구조, 다운프루프 설계와 샘플 확인을 조율합니다."
+      },
+      "summary": { "zh": "了解羽绒服从结构确认到量产的重点。", "en": "Review priorities from down jacket structure to production.", "ko": "다운 재킷 구조 확인부터 생산까지의 핵심을 확인하세요." },
+      "staticSections": [
+        {
+          "heading": { "zh": "开发重点", "en": "Development Priorities", "ko": "개발 핵심" },
+          "paragraphs": {
+            "zh": ["项目会结合目标温度、穿着场景和廓形，确认面料手感、防钻绒要求、填充类型、充绒量、分仓与关键辅件。"],
+            "en": ["Each project aligns target climate, use case and silhouette with fabric hand feel, down-proofing, fill type, fill weight, baffles and key trims."],
+            "ko": ["목표 기온, 착용 환경과 실루엣에 맞춰 원단 촉감, 다운프루프, 충전재 종류와 양, 다운 칸과 주요 부자재를 확인합니다."]
+          }
         },
         {
-          "heading": "滑雪服",
-          "paragraphs": ["围绕保暖、防水、耐磨与运动版型梳理工艺需求，协同拼色、填充与功能配件方案。"]
+          "heading": { "zh": "合作准备", "en": "Project Preparation", "ko": "프로젝트 준비" },
+          "paragraphs": {
+            "zh": ["建议提供款式图或参考样、尺寸、预计数量、颜色、目标市场与交期。常规100件起订，最终数量及周期根据材料和工艺评估。"],
+            "en": ["Prepare a sketch or reference sample, measurements, quantity, colors, target market and delivery window. Standard MOQ is 100 pieces; final quantity and timing depend on materials and construction."],
+            "ko": ["스타일 도면 또는 참고 샘플, 치수, 수량, 색상, 목표 시장과 납기를 준비해 주세요. 일반 MOQ는 100장이며 최종 수량과 일정은 소재와 공정에 따라 달라집니다."]
+          }
+        }
+      ]
+    },
+    {
+      "key": "technicalShells",
+      "path": "/products/technical-shells/",
+      "index": true,
+      "title": {
+        "zh": "冲锋衣开发｜杭州绒达",
+        "en": "Technical Shell Development | RONDA",
+        "ko": "기능성 셸 개발 | RONDA"
+      },
+      "description": {
+        "zh": "杭州绒达协作冲锋衣功能面料、压胶、拉链、版型与样衣开发，常规100件起订，实际按项目评估。",
+        "en": "RONDA coordinates performance fabric, seam sealing, zippers, patterns and samples for technical shells, with a standard 100-piece MOQ subject to assessment.",
+        "ko": "RONDA는 기능성 셸의 원단, 심실링, 지퍼, 패턴과 샘플을 조율하며 일반 MOQ 100장은 프로젝트별 검토가 필요합니다."
+      },
+      "h1": { "zh": "冲锋衣开发", "en": "Technical Shell Development", "ko": "기능성 셸 개발" },
+      "intro": {
+        "zh": "绒达根据使用场景梳理防护目标，并协调功能面料、接缝压胶、开口结构、拉链、调节系统与运动版型。",
+        "en": "RONDA translates intended use into protection goals and coordinates performance fabrics, seam sealing, openings, zippers, adjustment systems and movement-focused patterns.",
+        "ko": "RONDA는 사용 환경에 맞춰 보호 목표를 정리하고 기능성 원단, 심실링, 개구부, 지퍼, 조절 시스템과 활동 패턴을 조율합니다."
+      },
+      "summary": { "zh": "了解冲锋衣功能结构与样衣确认重点。", "en": "Review shell construction and sample approval priorities.", "ko": "기능성 셸 구조와 샘플 확인 핵심을 살펴보세요." },
+      "staticSections": [
+        {
+          "heading": { "zh": "功能方案", "en": "Performance Plan", "ko": "기능 설계" },
+          "paragraphs": {
+            "zh": ["防水、透湿、耐磨等目标需结合面料资料、结构与使用场景确认；压胶宽度、转角、袋位和帽型会在样衣阶段检查。"],
+            "en": ["Water protection, breathability and abrasion goals must be confirmed against fabric data, construction and use case. Tape width, corners, pocket placement and hood shape are reviewed during sampling."],
+            "ko": ["방수, 투습과 내마모 목표는 원단 자료, 구조와 사용 환경을 함께 검토해야 합니다. 테이프 폭, 모서리, 포켓 위치와 후드 형태는 샘플 단계에서 확인합니다."]
+          }
         },
         {
-          "heading": "双面大衣",
-          "paragraphs": ["围绕面料垂感、版型比例与缝制工艺推进样衣开发及生产协作。"]
+          "heading": { "zh": "样衣验证", "en": "Sample Validation", "ko": "샘플 검증" },
+          "paragraphs": {
+            "zh": ["常规样衣最快7天，具体按款式、面料、工艺评估。功能辅件准备、压胶结构和修改轮次也会影响排期。"],
+            "en": ["Standard samples can be ready from 7 days, depending on performance fabric and trim readiness, seam-sealed construction, complexity and revision rounds."],
+            "ko": ["일반 샘플은 최단 7일부터 가능하며 기능성 원단과 부자재 준비, 심실링 구조, 공정 난이도와 수정 횟수에 따라 달라집니다."]
+          }
+        }
+      ]
+    },
+    {
+      "key": "skiwear",
+      "path": "/products/skiwear/",
+      "index": true,
+      "title": {
+        "zh": "滑雪服开发｜杭州绒达",
+        "en": "Skiwear Development | RONDA",
+        "ko": "스키웨어 개발 | RONDA"
+      },
+      "description": {
+        "zh": "杭州绒达提供滑雪服保暖、防护、运动结构、样衣与生产协作，常规100件起订，实际按项目评估。",
+        "en": "RONDA supports skiwear warmth, protection, movement, sampling and production with a standard 100-piece MOQ subject to project assessment.",
+        "ko": "RONDA는 스키웨어의 보온, 보호, 활동 구조, 샘플과 생산을 지원하며 일반 MOQ 100장은 프로젝트별 검토가 필요합니다."
+      },
+      "h1": { "zh": "滑雪服开发", "en": "Skiwear Development", "ko": "스키웨어 개발" },
+      "intro": {
+        "zh": "滑雪服开发同时考虑保暖、防风防雪、活动量、穿搭层次与关键功能细节，绒达将这些要求转化为可确认的样衣方案。",
+        "en": "Skiwear development balances insulation, wind and snow protection, mobility, layering and functional details. RONDA turns these requirements into an approvable sample plan.",
+        "ko": "스키웨어 개발은 보온, 방풍·방설, 활동성, 레이어링과 기능 디테일을 함께 고려합니다. RONDA는 이를 확인 가능한 샘플 계획으로 전환합니다."
+      },
+      "summary": { "zh": "了解滑雪服保暖、防护与运动结构。", "en": "Explore warmth, protection and mobility for skiwear.", "ko": "스키웨어의 보온, 보호와 활동 구조를 확인하세요." },
+      "staticSections": [
+        {
+          "heading": { "zh": "结构重点", "en": "Construction Priorities", "ko": "구조 핵심" },
+          "paragraphs": {
+            "zh": ["可根据使用级别讨论面料、填充、压胶、雪裙、通风、口袋、帽型、袖口与裤脚结构，具体性能以材料和检测条件为准。"],
+            "en": ["Depending on intended use, projects may cover fabric, insulation, seam sealing, powder skirts, ventilation, pockets, hoods, cuffs and hems. Performance depends on material data and testing conditions."],
+            "ko": ["사용 수준에 따라 원단, 충전, 심실링, 스노 스커트, 통풍, 포켓, 후드, 소매와 밑단 구조를 검토합니다. 성능은 소재 자료와 시험 조건에 따라 달라집니다."]
+          }
         },
         {
-          "heading": "皮草与皮毛一体",
-          "paragraphs": ["根据材质、厚度、毛向与缝制路径推进版型和工艺协作。"]
+          "heading": { "zh": "版型确认", "en": "Fit Approval", "ko": "핏 확인" },
+          "paragraphs": {
+            "zh": ["样衣阶段重点检查叠穿空间、抬臂与屈膝活动量、帽领配合及功能件位置，再按反馈修订。"],
+            "en": ["Sampling reviews layering room, arm and knee movement, hood-to-collar fit and functional component placement before revisions are made."],
+            "ko": ["샘플 단계에서 레이어링 공간, 팔과 무릎의 움직임, 후드와 칼라의 연결, 기능 부품 위치를 확인한 뒤 수정합니다."]
+          }
+        }
+      ]
+    },
+    {
+      "key": "doubleFacedCoats",
+      "path": "/products/double-faced-coats/",
+      "index": true,
+      "title": {
+        "zh": "双面大衣开发｜杭州绒达",
+        "en": "Double-Faced Coat Development | RONDA",
+        "ko": "더블페이스 코트 개발 | RONDA"
+      },
+      "description": {
+        "zh": "杭州绒达协作双面大衣面料、廓形、手工结构、样衣与生产，常规100件起订，实际按项目评估。",
+        "en": "RONDA coordinates fabric, silhouette, clean double-faced construction, samples and production for coats, with a standard 100-piece MOQ subject to assessment.",
+        "ko": "RONDA는 더블페이스 코트의 원단, 실루엣, 양면 구조, 샘플과 생산을 조율하며 일반 MOQ 100장은 프로젝트별 검토가 필요합니다."
+      },
+      "h1": { "zh": "双面大衣开发", "en": "Double-Faced Coat Development", "ko": "더블페이스 코트 개발" },
+      "intro": {
+        "zh": "绒达围绕面料垂感、厚度、回弹、廓形比例与双面缝制路径推进大衣样衣和生产协作。",
+        "en": "RONDA develops double-faced coats around fabric drape, thickness, recovery, silhouette proportion and clean construction paths.",
+        "ko": "RONDA는 원단의 드레이프, 두께, 복원력, 실루엣 비율과 양면 봉제 경로를 중심으로 코트 샘플과 생산을 진행합니다."
+      },
+      "summary": { "zh": "了解双面大衣面料、廓形与工艺重点。", "en": "Review fabric, silhouette and construction priorities.", "ko": "더블페이스 코트의 원단, 실루엣과 공정 핵심을 확인하세요." },
+      "staticSections": [
+        {
+          "heading": { "zh": "面料与廓形", "en": "Fabric and Silhouette", "ko": "원단과 실루엣" },
+          "paragraphs": {
+            "zh": ["面料克重、挺垂感、厚度和颜色会影响廓形与缝制方法，样衣需结合人体比例和穿着层次确认。"],
+            "en": ["Fabric weight, body, drape, thickness and color influence silhouette and construction. Samples are reviewed against body proportion and intended layering."],
+            "ko": ["원단 중량, 탄탄함과 드레이프, 두께와 색상은 실루엣과 봉제 방식에 영향을 줍니다. 샘플은 인체 비율과 레이어링을 함께 확인합니다."]
+          }
         },
         {
-          "heading": "羽绒寝具",
-          "paragraphs": ["围绕填充材料、充绒量、绗缝结构、面料与包装需求开展产品开发。"]
+          "heading": { "zh": "工艺确认", "en": "Construction Approval", "ko": "공정 확인" },
+          "paragraphs": {
+            "zh": ["领部、门襟、口袋、下摆和开衩等部位需确认双面处理方式，最终方案按设计、材料与成本共同评估。"],
+            "en": ["Collars, fronts, pockets, hems and vents require an agreed double-faced finishing method. The final approach balances design, material and cost."],
+            "ko": ["칼라, 앞여밈, 포켓, 밑단과 트임은 양면 마감 방식을 확인해야 합니다. 최종 방식은 디자인, 소재와 비용을 함께 검토합니다."]
+          }
+        }
+      ]
+    },
+    {
+      "key": "furShearling",
+      "path": "/products/fur-shearling/",
+      "index": true,
+      "title": {
+        "zh": "皮草与皮毛一体开发｜杭州绒达",
+        "en": "Fur and Shearling Development | RONDA",
+        "ko": "퍼와 시어링 개발 | RONDA"
+      },
+      "description": {
+        "zh": "杭州绒达协作皮草与皮毛一体的选材、排料、拼接、样衣与生产，项目按材料、工艺和合规要求评估。",
+        "en": "RONDA coordinates material selection, layout, joining, sampling and production for fur and shearling, subject to material, construction and compliance review.",
+        "ko": "RONDA는 퍼와 시어링의 소재 선택, 재단 배치, 연결, 샘플과 생산을 조율하며 소재, 공정과 규정 요건을 검토합니다."
+      },
+      "h1": { "zh": "皮草与皮毛一体开发", "en": "Fur and Shearling Development", "ko": "퍼와 시어링 개발" },
+      "intro": {
+        "zh": "皮草与皮毛一体需依据具体材质、厚度、毛向、色差和利用率制定版型与拼接方案，并在样衣阶段核对成衣重量和活动量。",
+        "en": "Fur and shearling patterns and joining plans depend on material type, thickness, hair direction, shade variation and yield. Garment weight and mobility are checked during sampling.",
+        "ko": "퍼와 시어링의 패턴과 연결 방식은 소재 종류, 두께, 털 방향, 색차와 사용 효율에 따라 정합니다. 샘플 단계에서 완성품 무게와 활동성을 확인합니다."
+      },
+      "summary": { "zh": "了解皮草与皮毛一体的材料和拼接重点。", "en": "Review material and joining priorities for fur and shearling.", "ko": "퍼와 시어링의 소재와 연결 핵심을 확인하세요." },
+      "staticSections": [
+        {
+          "heading": { "zh": "材料评估", "en": "Material Assessment", "ko": "소재 검토" },
+          "paragraphs": {
+            "zh": ["项目开始前需确认材质来源、规格、颜色、数量及目标市场要求；可用材料和合规资料以实际供方文件为准。"],
+            "en": ["Before development, confirm material source, specification, color, quantity and target-market requirements. Availability and compliance documentation depend on actual supplier records."],
+            "ko": ["개발 전에 소재 출처, 규격, 색상, 수량과 목표 시장 요건을 확인합니다. 사용 가능 소재와 규정 문서는 실제 공급자 자료를 기준으로 합니다."]
+          }
+        },
+        {
+          "heading": { "zh": "版型与拼接", "en": "Pattern and Joining", "ko": "패턴과 연결" },
+          "paragraphs": {
+            "zh": ["版型需考虑材料厚度、接缝体积、毛向连续性与活动空间，拼接效果通过材料确认和样衣共同验证。"],
+            "en": ["Patterns account for material thickness, seam bulk, hair-direction continuity and movement. Joining is validated through material review and physical samples."],
+            "ko": ["패턴은 소재 두께, 솔기 부피, 털 방향의 연속성과 활동 공간을 고려합니다. 연결 효과는 소재 검토와 실물 샘플로 확인합니다."]
+          }
+        }
+      ]
+    },
+    {
+      "key": "downBedding",
+      "path": "/products/down-bedding/",
+      "index": true,
+      "title": {
+        "zh": "羽绒寝具开发｜杭州绒达",
+        "en": "Down Bedding Development | RONDA",
+        "ko": "다운 침구 개발 | RONDA"
+      },
+      "description": {
+        "zh": "杭州绒达协作羽绒寝具的填充、面料、绗缝、尺寸、样品与生产，起订量和周期按项目评估。",
+        "en": "RONDA coordinates fill, shell fabric, quilting, dimensions, samples and production for down bedding, with quantity and timing assessed by project.",
+        "ko": "RONDA는 다운 침구의 충전재, 겉감, 퀼팅, 치수, 샘플과 생산을 조율하며 수량과 일정은 프로젝트별로 검토합니다."
+      },
+      "h1": { "zh": "羽绒寝具开发", "en": "Down Bedding Development", "ko": "다운 침구 개발" },
+      "intro": {
+        "zh": "绒达根据产品定位协调填充材料、填充量、面料触感、防钻绒结构、绗缝分区、尺寸与包装方案。",
+        "en": "RONDA aligns fill material, fill weight, shell hand feel, down-proofing, quilting zones, dimensions and packaging with the product brief.",
+        "ko": "RONDA는 제품 기획에 맞춰 충전재, 충전량, 겉감 촉감, 다운프루프 구조, 퀼팅 구획, 치수와 포장을 조율합니다."
+      },
+      "summary": { "zh": "了解羽绒寝具填充、绗缝与包装重点。", "en": "Review fill, quilting and packaging priorities for down bedding.", "ko": "다운 침구의 충전, 퀼팅과 포장 핵심을 확인하세요." },
+      "staticSections": [
+        {
+          "heading": { "zh": "产品参数", "en": "Product Parameters", "ko": "제품 사양" },
+          "paragraphs": {
+            "zh": ["建议明确产品尺寸、目标重量或保暖需求、填充偏好、面料手感、绗缝结构、标签与包装要求。"],
+            "en": ["Define product dimensions, target weight or warmth, fill preference, shell hand feel, quilting structure, labels and packaging requirements."],
+            "ko": ["제품 치수, 목표 무게 또는 보온성, 충전재 선호, 겉감 촉감, 퀼팅 구조, 라벨과 포장 요건을 정합니다."]
+          }
+        },
+        {
+          "heading": { "zh": "样品确认", "en": "Sample Approval", "ko": "샘플 확인" },
+          "paragraphs": {
+            "zh": ["样品用于核对尺寸、重量、蓬松表现、绗缝均匀度、触感和包装，最终标准在生产前书面确认。"],
+            "en": ["Samples verify size, weight, loft, quilting consistency, hand feel and packaging. Final standards are documented before production."],
+            "ko": ["샘플로 크기, 무게, 복원력, 퀼팅 균일성, 촉감과 포장을 확인하며 최종 기준은 생산 전에 문서로 확정합니다."]
+          }
         }
       ]
     },
@@ -136,62 +375,86 @@
       "path": "/services/",
       "index": true,
       "title": {
-        "zh": "冬装打样与生产流程｜7–15天样衣｜杭州绒达科技",
-        "en": "Winterwear Sampling Timeline | 7–15 Day Samples | Hangzhou Rongda",
-        "ko": "겨울 의류 샘플 일정｜7–15일 샘플｜항저우 룽다"
+        "zh": "冬装服务流程｜杭州绒达",
+        "en": "Winterwear Service Flow | RONDA",
+        "ko": "겨울 의류 서비스 과정 | RONDA"
       },
       "description": {
-        "zh": "查看杭州绒达科技从需求确认、面辅料匹配、7–15天常规样衣到15–30天常规量产、终检与发运的冬装服务流程。",
-        "en": "See Rongda's winterwear flow from brief and material matching through 7–15 day standard sampling, 15–30 day standard production, final QC and shipping.",
-        "ko": "요구 확인, 원부자재 매칭, 7–15일 일반 샘플, 15–30일 일반 양산, 최종 검사와 출고까지 룽다의 프로세스를 확인하세요."
+        "zh": "查看杭州绒达从需求、材料、样衣到生产、质检与交付的冬装服务流程。常规样衣最快7天，具体按款式、面料、工艺评估。",
+        "en": "See RONDA's winterwear flow from brief and materials to sampling, production, quality checks and delivery. Standard samples start from 7 days.",
+        "ko": "요구와 소재부터 샘플, 생산, 품질 검사와 납품까지 RONDA의 겨울 의류 과정을 확인하세요. 일반 샘플은 최단 7일부터 가능합니다."
       },
-      "h1": {
-        "zh": "从需求到交付的冬装服务时间线",
-        "en": "Winterwear Service Timeline",
-        "ko": "요구부터 납품까지 겨울 의류 일정"
-      },
+      "h1": { "zh": "冬装服务流程", "en": "Winterwear Service Flow", "ko": "겨울 의류 서비스 과정" },
       "intro": {
-        "zh": "Samplewear按工作日展示杭州绒达科技的常规项目路径，帮助品牌看清需求、设计、材料、样衣、产前确认、量产、质检与发运所需的参考时间。",
-        "en": "Samplewear shows the reference business days for Rongda's standard path across brief, design, materials, sampling, approval, production, QC and shipping.",
-        "ko": "Samplewear는 요구, 디자인, 소재, 샘플, 승인, 생산, 품질 검사와 출고 단계의 참고 영업일을 안내합니다."
+        "zh": "每个项目按明确节点推进：需求确认、款式与工艺整理、面辅料确认、样衣开发、产前确认、生产、质量检查和交付。",
+        "en": "Each project follows defined stages: brief, style and construction review, material approval, sampling, pre-production approval, production, quality checks and delivery.",
+        "ko": "모든 프로젝트는 요구 확인, 스타일과 공정 정리, 원부자재 승인, 샘플, 생산 전 승인, 생산, 품질 검사와 납품 단계로 진행됩니다."
       },
-      "summary": {
-        "zh": "查看每个服务步骤的参考工作日，重点了解7–15天常规样衣阶段。",
-        "en": "View reference time for every stage, with a clear 7–15 day sampling focus.",
-        "ko": "각 단계의 참고 일정과 7–15일 샘플 핵심 구간을 확인하세요."
-      },
+      "summary": { "zh": "查看各阶段任务、时间条件与确认结果。", "en": "Review tasks, timing conditions and approvals at every stage.", "ko": "각 단계의 업무, 일정 조건과 확인 결과를 살펴보세요." },
       "staticSections": [
         {
-          "heading": "需求确认：1至2个工作日",
-          "paragraphs": ["确认产品品类、目标数量、预算区间、目标市场与期望交期。"]
+          "heading": { "zh": "需求与材料", "en": "Brief and Materials", "ko": "요구와 소재" },
+          "paragraphs": {
+            "zh": ["先确认品类、款式、尺寸、数量、颜色、目标成本、市场和交期，再根据设计与最低订量匹配面辅料。资料完整度和材料准备会直接影响排期。"],
+            "en": ["First confirm category, style, measurements, quantity, colors, target cost, market and delivery window. Materials are then matched against design needs and supplier minimums. Information and material readiness directly affect timing."],
+            "ko": ["먼저 품목, 스타일, 치수, 수량, 색상, 목표 원가, 시장과 납기를 확인합니다. 이후 디자인 요건과 공급자 최소 주문량에 맞춰 원부자재를 정합니다. 자료와 소재 준비 상태가 일정에 직접 영향을 줍니다."]
+          }
         },
         {
-          "heading": "设计与工艺整理：2至3个工作日",
-          "paragraphs": ["整理款式资料、尺寸、结构、工艺要求与待确认问题。"]
+          "heading": { "zh": "样衣阶段", "en": "Sampling Stage", "ko": "샘플 단계" },
+          "paragraphs": {
+            "zh": ["常规样衣最快7天，具体按款式、面料、工艺评估。试穿反馈和修改轮次也会影响排期；复杂功能款或特殊材料需另行确认。"],
+            "en": ["Standard samples can be ready from 7 days. Actual timing depends on structure, material arrival, construction complexity, fitting feedback and revision rounds. Complex performance styles or special materials require a separate schedule."],
+            "ko": ["일반 샘플은 최단 7일부터 가능합니다. 실제 일정은 구조, 소재 입고, 공정 난이도, 피팅 의견과 수정 횟수에 따라 달라지며 복잡한 기능성 스타일이나 특수 소재는 별도 일정을 정합니다."]
+          }
         },
         {
-          "heading": "面辅料匹配：3至7个工作日",
-          "paragraphs": ["根据手感、功能、颜色与最低订量确认面料、填充材料和辅件方案。"]
+          "heading": { "zh": "生产与交付", "en": "Production and Delivery", "ko": "생산과 납품" },
+          "paragraphs": {
+            "zh": ["产前确认锁定尺寸、材料、颜色、工艺、包装和质量要求后进入生产。进度、检查结果和发运安排按项目沟通，最终周期以确认排期为准。"],
+            "en": ["Production begins after measurements, materials, colors, construction, packaging and quality requirements are approved. Progress, inspection results and shipping arrangements are communicated by project; final timing follows the confirmed schedule."],
+            "ko": ["치수, 소재, 색상, 공정, 포장과 품질 요건을 생산 전에 승인한 뒤 생산을 시작합니다. 진행 상황, 검사 결과와 출고 계획은 프로젝트별로 공유하며 최종 일정은 확정된 계획을 따릅니다."]
+          }
+        }
+      ]
+    },
+    {
+      "key": "partners",
+      "path": "/partners/",
+      "index": true,
+      "title": {
+        "zh": "合作资源｜杭州绒达",
+        "en": "Collaboration Resources | RONDA",
+        "ko": "협업 자원 | RONDA"
+      },
+      "description": {
+        "zh": "了解杭州绒达如何围绕冬装项目协调品牌需求、面料、填充、拉链、扣具、里料与生产资源。",
+        "en": "See how RONDA coordinates brand requirements with fabric, insulation, zippers, hardware, linings and production resources for winterwear.",
+        "ko": "RONDA가 겨울 의류 프로젝트에서 브랜드 요구와 원단, 충전재, 지퍼, 부자재, 안감과 생산 자원을 조율하는 방식을 확인하세요."
+      },
+      "h1": { "zh": "合作资源", "en": "Collaboration Resources", "ko": "협업 자원" },
+      "intro": {
+        "zh": "绒达根据具体款式与项目条件协调面辅料和生产资源。网站展示用于说明资源类型，不代表未经确认的客户、代理、授权或固定供货关系。",
+        "en": "RONDA coordinates material and production resources according to each style and project. Website displays explain resource types and do not imply unconfirmed clients, representation, authorization or fixed supply relationships.",
+        "ko": "RONDA는 스타일과 프로젝트 조건에 맞춰 원부자재와 생산 자원을 조율합니다. 웹사이트 표시는 자원 유형을 설명하며 확인되지 않은 고객, 대리, 승인 또는 고정 공급 관계를 의미하지 않습니다."
+      },
+      "summary": { "zh": "了解冬装项目中的面辅料与协作资源。", "en": "Explore material and collaboration resources for winterwear projects.", "ko": "겨울 의류 프로젝트의 원부자재와 협업 자원을 확인하세요." },
+      "staticSections": [
+        {
+          "heading": { "zh": "面辅料资源", "en": "Material Resources", "ko": "원부자재 자원" },
+          "paragraphs": {
+            "zh": ["资源范围可包括梭织和针织面料、功能膜材、羽绒及其他保暖填充、里料、缝线、拉链、扣具和包装。具体品牌、规格、库存、最低订量与交期以项目询价和供方确认为准。"],
+            "en": ["Resources may include woven and knitted fabrics, functional membranes, down and other insulation, linings, thread, zippers, hardware and packaging. Brands, specifications, stock, minimums and lead times depend on project quotations and supplier confirmation."],
+            "ko": ["직물과 니트 원단, 기능성 멤브레인, 다운과 기타 보온재, 안감, 봉제사, 지퍼, 부자재와 포장 등을 검토할 수 있습니다. 브랜드, 규격, 재고, 최소 주문량과 납기는 프로젝트 견적과 공급자 확인을 기준으로 합니다."]
+          }
         },
         {
-          "heading": "首版样衣：7至15个工作日",
-          "paragraphs": ["版师、样衣与项目团队推进打版、试制和内部检查，完成后提交客户确认；复杂结构、特殊工艺或进口材料可能延长。"]
-        },
-        {
-          "heading": "样衣修订：3至7个工作日",
-          "paragraphs": ["按试穿反馈调整版型、工艺、颜色或辅件，并记录确认结果。"]
-        },
-        {
-          "heading": "产前确认：2至5个工作日",
-          "paragraphs": ["锁定尺寸、材料、工艺、包装与质量检查标准后进入排产。"]
-        },
-        {
-          "heading": "常规量产：15至30个工作日",
-          "paragraphs": ["按确认标准推进采购、裁剪、缝制、后整与关键节点进度沟通。"]
-        },
-        {
-          "heading": "终检与发运：2至5个工作日",
-          "paragraphs": ["完成成品检查、包装核对与出货资料整理，再按目的地安排运输；以上为参考周期，最终以项目排期为准。"]
+          "heading": { "zh": "合作展示原则", "en": "Display Principles", "ko": "표시 원칙" },
+          "paragraphs": {
+            "zh": ["品牌或供应商名称仅在具备真实项目依据或展示许可时使用。项目可用资源会随市场、地区、数量和交期变化，需逐单确认。"],
+            "en": ["Brand or supplier names are used only with real project evidence or display permission. Available resources change with market, region, quantity and timing and must be confirmed order by order."],
+            "ko": ["브랜드 또는 공급자 명칭은 실제 프로젝트 근거 또는 표시 허가가 있을 때만 사용합니다. 사용 가능한 자원은 시장, 지역, 수량과 일정에 따라 달라지므로 주문별 확인이 필요합니다."]
+          }
         }
       ]
     },
@@ -200,42 +463,38 @@
       "path": "/digital-platform/",
       "index": true,
       "title": {
-        "zh": "Sample App 数字化供应链平台｜杭州绒达科技",
-        "en": "Sample App Digital Supply Chain Platform | Hangzhou Rongda",
-        "ko": "Sample App 디지털 공급망 플랫폼 | 항저우 룽다"
+        "zh": "Samplewear数字平台｜杭州绒达",
+        "en": "Samplewear Digital Platform | RONDA",
+        "ko": "Samplewear 디지털 플랫폼 | RONDA"
       },
       "description": {
-        "zh": "了解 Sample App 如何支持样衣方案、订单管理、生产进度与物流信息查看，连接品牌需求与服装供应链协作。",
-        "en": "See how the Sample App supports sample planning, order management, production updates and logistics information.",
-        "ko": "Sample App이 샘플 기획, 주문 관리, 생산 업데이트 및 물류 정보 확인을 지원하는 방식을 알아보세요."
+        "zh": "了解杭州绒达的Samplewear数字平台如何支持需求、样衣、订单、生产进度与交付信息协作。",
+        "en": "See how RONDA's Samplewear digital platform supports briefs, samples, orders, production progress and delivery information.",
+        "ko": "RONDA의 Samplewear 디지털 플랫폼이 요구, 샘플, 주문, 생산 진행과 납품 정보 협업을 지원하는 방식을 확인하세요."
       },
-      "h1": {
-        "zh": "Sample App 数字化供应链平台",
-        "en": "Sample App Digital Supply Chain Platform",
-        "ko": "Sample App 디지털 공급망 플랫폼"
-      },
+      "h1": { "zh": "Samplewear数字平台", "en": "Samplewear Digital Platform", "ko": "Samplewear 디지털 플랫폼" },
       "intro": {
-        "zh": "杭州绒达科技通过 Sample App 整理样衣方案、订单与进度信息，让品牌与供应链团队在同一流程中协作。",
-        "en": "Hangzhou Rongda uses the Sample App to organize sample plans, orders and progress information so brands and supply-chain teams can collaborate in one flow.",
-        "ko": "항저우 룽다는 Sample App을 통해 샘플 계획, 주문 및 진행 정보를 정리해 브랜드와 공급망 팀의 협업을 지원합니다."
+        "zh": "Samplewear是杭州绒达科技用于整理项目需求、样衣记录、订单节点、生产更新与交付信息的数字化协作平台。",
+        "en": "Samplewear is RONDA's digital collaboration platform for organizing project briefs, sample records, order milestones, production updates and delivery information.",
+        "ko": "Samplewear는 프로젝트 요구, 샘플 기록, 주문 단계, 생산 업데이트와 납품 정보를 정리하는 RONDA의 디지털 협업 플랫폼입니다."
       },
-      "summary": {
-        "zh": "了解样衣、订单、进度与物流信息的数字化协作。",
-        "en": "Explore digital collaboration for samples, orders, progress and logistics.",
-        "ko": "샘플, 주문, 진행 및 물류를 위한 디지털 협업을 확인하세요."
-      },
+      "summary": { "zh": "查看冬装项目的信息如何在同一流程中连接。", "en": "See how winterwear project information connects in one flow.", "ko": "겨울 의류 프로젝트 정보가 하나의 과정에서 연결되는 방식을 확인하세요." },
       "staticSections": [
         {
-          "heading": "样衣方案与在线需求",
-          "paragraphs": ["通过结构化信息整理款式、面辅料、数量与修改需求，方便项目团队确认样衣方向。"]
+          "heading": { "zh": "项目与样衣", "en": "Projects and Samples", "ko": "프로젝트와 샘플" },
+          "paragraphs": {
+            "zh": ["平台可用于集中整理款式资料、尺寸、材料选择、修改意见和样衣确认记录，减少不同沟通渠道之间的信息遗漏。"],
+            "en": ["The platform can centralize style files, measurements, material choices, revision notes and sample approvals to reduce information loss across communication channels."],
+            "ko": ["플랫폼에서 스타일 자료, 치수, 소재 선택, 수정 의견과 샘플 승인 기록을 정리해 여러 소통 채널 사이의 정보 누락을 줄일 수 있습니다."]
+          }
         },
         {
-          "heading": "订单与进度信息",
-          "paragraphs": ["集中查看样衣和批量订单的关键节点、生产更新与交付信息，减少跨团队沟通遗漏。"]
-        },
-        {
-          "heading": "供应链协作入口",
-          "paragraphs": ["Sample App 与 samplewear.com 共同构成杭州绒达科技面向品牌客户的数字化服务入口。"]
+          "heading": { "zh": "订单与进度", "en": "Orders and Progress", "ko": "주문과 진행" },
+          "paragraphs": {
+            "zh": ["订单阶段可围绕关键节点、生产更新、检查结果和交付信息开展协作。具体可见内容以账号权限和项目配置为准。"],
+            "en": ["During orders, teams can collaborate around milestones, production updates, inspection results and delivery information. Visible information depends on account permissions and project configuration."],
+            "ko": ["주문 단계에서는 주요 일정, 생산 업데이트, 검사 결과와 납품 정보를 중심으로 협업할 수 있습니다. 표시 정보는 계정 권한과 프로젝트 설정에 따라 달라집니다."]
+          }
         }
       ]
     },
@@ -244,41 +503,38 @@
       "path": "/about/",
       "index": true,
       "title": {
-        "zh": "关于杭州绒达科技｜RONDA 与 Samplewear",
-        "en": "About Hangzhou Rongda Technology | RONDA & Samplewear",
-        "ko": "항저우 룽다 테크놀로지 소개 | RONDA & Samplewear"
+        "zh": "关于杭州绒达科技",
+        "en": "About Hangzhou Rongda Technology",
+        "ko": "항저우 룽다 테크놀로지 소개"
       },
       "description": {
-        "zh": "了解杭州绒达科技有限公司、RONDA 杭州业务、Samplewear（Sample & Simple）网站与 ATLY 首尔办公室之间的关系。",
-        "en": "Learn how Hangzhou Rongda Technology Co., Ltd., RONDA, Samplewear and the ATLY Seoul office are connected.",
-        "ko": "항저우 룽다 테크놀로지 유한공사, RONDA, Samplewear 및 ATLY 서울 오피스의 관계를 알아보세요."
+        "zh": "了解杭州绒达科技有限公司的冬装供应链定位、六大品类、杭州与首尔协作以及数字化服务方式。",
+        "en": "Learn about Hangzhou Rongda Technology's winterwear focus, six categories, Hangzhou-Seoul collaboration and digital service approach.",
+        "ko": "항저우 룽다 테크놀로지의 겨울 의류 중심, 6개 품목, 항저우-서울 협업과 디지털 서비스 방식을 알아보세요."
       },
-      "h1": {
-        "zh": "杭州绒达科技 · Samplewear",
-        "en": "Hangzhou Rongda · Samplewear",
-        "ko": "항저우 룽다 · Samplewear"
-      },
+      "h1": { "zh": "关于绒达", "en": "About RONDA", "ko": "RONDA 소개" },
       "intro": {
-        "zh": "Samplewear（Sample & Simple）由杭州绒达科技有限公司运营。RONDA 用于呈现杭州供应链业务，ATLY 对应首尔办公室与当地品牌资源连接。",
-        "en": "Samplewear, presented as Sample & Simple, is operated by Hangzhou Rongda Technology Co., Ltd. RONDA represents the Hangzhou supply-chain operation and ATLY the Seoul office.",
-        "ko": "Samplewear(Sample & Simple)는 항저우 룽다 테크놀로지 유한공사가 운영합니다. RONDA는 항저우 공급망 사업을, ATLY는 서울 오피스를 나타냅니다."
+        "zh": "杭州绒达科技有限公司（RONDA）聚焦冬装供应链协作，以六大品类为产品边界，通过杭州供应链与首尔协作触点服务品牌项目。",
+        "en": "Hangzhou Rongda Technology Co., Ltd. (RONDA) focuses on winterwear supply-chain collaboration across six categories, connecting Hangzhou execution with a Seoul collaboration touchpoint.",
+        "ko": "항저우 룽다 테크놀로지(RONDA)는 6개 겨울 의류 품목의 공급망 협업에 집중하며 항저우의 실행 역량과 서울 협업 거점을 연결합니다."
       },
-      "summary": {
-        "zh": "了解 Samplewear、RONDA、ATLY 与绒达科技的关系。",
-        "en": "Learn how Samplewear, RONDA, ATLY and Rongda are connected.",
-        "ko": "Samplewear, RONDA, ATLY와 룽다의 관계를 알아보세요."
-      },
+      "summary": { "zh": "认识绒达的公司定位、服务边界与协作方式。", "en": "Understand RONDA's positioning, service scope and collaboration model.", "ko": "RONDA의 회사 포지셔닝, 서비스 범위와 협업 방식을 알아보세요." },
       "staticSections": [
         {
-          "heading": "公司与网站",
-          "paragraphs": [
-            "杭州绒达科技有限公司是 samplewear.com 的运营主体。Samplewear 是网站名称，页面中同时使用 Sample & Simple 作为展示名称。",
-            "为了让客户与搜索引擎清楚识别品牌关系，全站统一使用“杭州绒达科技有限公司（绒达科技 / RONDA）”与“Samplewear（Sample & Simple）”的命名方式。"
-          ]
+          "heading": { "zh": "公司定位", "en": "Company Focus", "ko": "회사 방향" },
+          "paragraphs": {
+            "zh": ["绒达围绕品牌冬装需求，组织设计沟通、样衣、面辅料、生产、质量检查与交付。常规订单以100件作为起订评估基准，实际条件按项目确认。"],
+            "en": ["RONDA coordinates design communication, samples, materials, production, quality checks and delivery for brand winterwear. Standard orders use 100 pieces as the MOQ assessment baseline; actual conditions are confirmed per project."],
+            "ko": ["RONDA는 브랜드 겨울 의류의 디자인 소통, 샘플, 원부자재, 생산, 품질 검사와 납품을 조율합니다. 일반 주문은 100장을 MOQ 검토 기준으로 삼으며 실제 조건은 프로젝트별로 확정합니다."]
+          }
         },
         {
-          "heading": "杭州与首尔",
-          "paragraphs": ["RONDA 对应杭州供应链业务，ATLY 对应首尔办公室。两地团队围绕产品开发、设计与品牌需求开展跨区域协作。"]
+          "heading": { "zh": "服务边界", "en": "Service Scope", "ko": "서비스 범위" },
+          "paragraphs": {
+            "zh": ["绒达不以未经确认的客户数量、供应商数量、产能或行业排名作为承诺。方案、报价、周期和质量标准均以具体项目文件为准。"],
+            "en": ["RONDA does not make promises based on unverified client counts, supplier counts, capacity or market rankings. Scope, quotations, timing and quality standards follow project documentation."],
+            "ko": ["RONDA는 확인되지 않은 고객 수, 공급자 수, 생산 능력 또는 업계 순위를 약속으로 사용하지 않습니다. 범위, 견적, 일정과 품질 기준은 프로젝트 문서를 따릅니다."]
+          }
         }
       ]
     },
@@ -287,38 +543,38 @@
       "path": "/global/",
       "index": true,
       "title": {
-        "zh": "杭州与首尔业务布局｜RONDA · ATLY",
-        "en": "Hangzhou & Seoul Operations | RONDA · ATLY",
-        "ko": "항저우 및 서울 사업 거점 | RONDA · ATLY"
+        "zh": "杭州与首尔协作｜绒达",
+        "en": "Hangzhou and Seoul | RONDA",
+        "ko": "항저우와 서울 | RONDA"
       },
       "description": {
-        "zh": "杭州绒达科技以 RONDA 展示杭州供应链业务，并通过 ATLY 首尔办公室连接设计与品牌资源。",
-        "en": "Hangzhou Rongda Technology presents its Hangzhou supply-chain operation as RONDA and connects with design and brand resources through the ATLY Seoul office.",
-        "ko": "항저우 룽다 테크놀로지는 RONDA로 항저우 공급망 사업을 소개하고 ATLY 서울 오피스를 통해 디자인 및 브랜드 자원을 연결합니다."
+        "zh": "杭州绒达以杭州组织供应链与项目交付，通过首尔协作触点支持设计、品牌和市场沟通。",
+        "en": "RONDA coordinates supply-chain execution in Hangzhou and supports design, brand and market communication through its Seoul collaboration touchpoint.",
+        "ko": "RONDA는 항저우에서 공급망과 프로젝트 납품을 조율하고 서울 협업 거점을 통해 디자인, 브랜드와 시장 소통을 지원합니다."
       },
-      "h1": {
-        "zh": "RONDA 杭州与 ATLY 首尔",
-        "en": "RONDA Hangzhou and ATLY Seoul",
-        "ko": "RONDA 항저우와 ATLY 서울"
-      },
+      "h1": { "zh": "杭州与首尔", "en": "Hangzhou and Seoul", "ko": "항저우와 서울" },
       "intro": {
-        "zh": "杭州绒达科技以杭州为供应链协作中心，通过 ATLY 首尔办公室连接当地设计、品牌与市场沟通资源。",
-        "en": "Hangzhou Rongda Technology coordinates supply-chain work from Hangzhou and connects with Seoul-based design, brand and market resources through the ATLY office.",
-        "ko": "항저우 룽다 테크놀로지는 항저우에서 공급망 협업을 조정하고 ATLY 서울 오피스를 통해 디자인, 브랜드 및 시장 자원을 연결합니다."
+        "zh": "绒达以杭州为供应链协作中心，并设置首尔协作触点。两地分别承担不同沟通与执行任务，共享项目目标与确认记录。",
+        "en": "RONDA uses Hangzhou as its supply-chain coordination center and maintains a Seoul collaboration touchpoint. The two locations handle distinct communication and execution tasks while sharing project goals and approvals.",
+        "ko": "RONDA는 항저우를 공급망 협업 중심으로 삼고 서울 협업 거점을 운영합니다. 두 지역은 서로 다른 소통과 실행 업무를 담당하며 프로젝트 목표와 승인 기록을 공유합니다."
       },
-      "summary": {
-        "zh": "查看 RONDA 杭州与 ATLY 首尔的业务协作。",
-        "en": "View the RONDA Hangzhou and ATLY Seoul collaboration.",
-        "ko": "RONDA 항저우와 ATLY 서울의 협업을 확인하세요."
-      },
+      "summary": { "zh": "了解杭州供应链与首尔市场沟通的协作关系。", "en": "Understand how Hangzhou execution and Seoul market communication connect.", "ko": "항저우 실행과 서울 시장 소통이 연결되는 방식을 확인하세요." },
       "staticSections": [
         {
-          "heading": "RONDA · 杭州",
-          "paragraphs": ["杭州绒达科技通过 RONDA 组织产品开发、供应链资源与项目交付协作。"]
+          "heading": { "zh": "杭州供应链中心", "en": "Hangzhou Supply-Chain Center", "ko": "항저우 공급망 센터" },
+          "paragraphs": {
+            "zh": ["杭州团队负责项目资料整理、产品开发、面辅料和生产协作、质量节点沟通及交付推进。"],
+            "en": ["The Hangzhou team coordinates project files, product development, materials, production, quality milestones and delivery."],
+            "ko": ["항저우 팀은 프로젝트 자료, 제품 개발, 원부자재와 생산 협업, 품질 단계 소통과 납품을 조율합니다."]
+          }
         },
         {
-          "heading": "ATLY · 首尔",
-          "paragraphs": ["ATLY 首尔办公室连接韩国当地设计、品牌与市场沟通资源，并与杭州团队协同推进项目。"]
+          "heading": { "zh": "首尔协作触点", "en": "Seoul Collaboration Touchpoint", "ko": "서울 협업 거점" },
+          "paragraphs": {
+            "zh": ["首尔触点支持当地设计与品牌需求沟通，并将市场与产品信息同步至杭州项目团队。具体服务范围以项目约定为准。"],
+            "en": ["The Seoul touchpoint supports local design and brand communication and shares market and product information with the Hangzhou project team. Scope depends on each project agreement."],
+            "ko": ["서울 거점은 현지 디자인과 브랜드 요구 소통을 지원하고 시장과 제품 정보를 항저우 프로젝트 팀과 공유합니다. 구체적 범위는 프로젝트 합의에 따릅니다."]
+          }
         }
       ]
     },
@@ -327,38 +583,38 @@
       "path": "/contact/",
       "index": true,
       "title": {
-        "zh": "联系杭州绒达科技｜Samplewear",
-        "en": "Contact Hangzhou Rongda Technology | Samplewear",
-        "ko": "항저우 룽다 테크놀로지 문의 | Samplewear"
+        "zh": "联系杭州绒达科技",
+        "en": "Contact Hangzhou Rongda Technology",
+        "ko": "항저우 룽다 테크놀로지 문의"
       },
       "description": {
-        "zh": "查看杭州绒达科技有限公司及首尔 ATLY 办公室的联系信息，或提交冬装产品开发与供应链合作需求。",
-        "en": "Find contact details for Hangzhou Rongda Technology and the ATLY Seoul office, or submit a winter-apparel supply-chain inquiry.",
-        "ko": "항저우 룽다 테크놀로지와 ATLY 서울 오피스의 연락처를 확인하고 겨울 의류 공급망 문의를 제출하세요."
+        "zh": "联系杭州绒达科技，咨询六大冬装品类的设计、样衣、面辅料、生产与交付。",
+        "en": "Contact RONDA about design, samples, materials, production and delivery across six winterwear categories.",
+        "ko": "겨울 의류 6개 품목의 디자인, 샘플, 원부자재, 생산과 납품에 관해 RONDA에 문의하세요."
       },
-      "h1": {
-        "zh": "联系杭州绒达科技与 Samplewear",
-        "en": "Contact Hangzhou Rongda Technology and Samplewear",
-        "ko": "항저우 룽다 테크놀로지 및 Samplewear 문의"
-      },
+      "h1": { "zh": "联系我们", "en": "Contact Us", "ko": "문의하기" },
       "intro": {
-        "zh": "欢迎联系杭州绒达科技有限公司，咨询冬装产品开发、设计打样、面辅料、生产协作与交付需求。",
-        "en": "Contact Hangzhou Rongda Technology Co., Ltd. to discuss winter-apparel development, sampling, materials, manufacturing coordination and delivery.",
-        "ko": "겨울 의류 개발, 샘플링, 소재, 생산 협업 및 납품에 관해 항저우 룽다 테크놀로지 유한공사에 문의하세요."
+        "zh": "欢迎联系杭州绒达科技有限公司，说明品类、款式、数量、目标市场与期望交期。",
+        "en": "Contact Hangzhou Rongda Technology Co., Ltd. with your category, style, quantity, target market and preferred delivery window.",
+        "ko": "품목, 스타일, 수량, 목표 시장과 희망 납기를 기재해 항저우 룽다 테크놀로지에 문의해 주세요."
       },
-      "summary": {
-        "zh": "查看杭州与首尔办公室信息并提交合作需求。",
-        "en": "Find Hangzhou and Seoul office details and submit an inquiry.",
-        "ko": "항저우 및 서울 오피스 정보를 확인하고 문의하세요."
-      },
+      "summary": { "zh": "提交冬装开发与生产合作需求。", "en": "Submit a winterwear development and production inquiry.", "ko": "겨울 의류 개발과 생산 협업 문의를 남겨주세요." },
       "staticSections": [
         {
-          "heading": "杭州 · RONDA",
-          "paragraphs": ["杭州绒达科技有限公司", "电话：0571-88012309", "邮箱：zylen@samplewear.com", "地址：杭州市西湖区瑞博国际B座1707"]
+          "heading": { "zh": "杭州 · RONDA", "en": "Hangzhou · RONDA", "ko": "항저우 · RONDA" },
+          "paragraphs": {
+            "zh": ["杭州绒达科技有限公司", "电话：0571-88012309", "邮箱：zylen@samplewear.com", "地址：杭州市西湖区瑞博国际B座1707"],
+            "en": ["Hangzhou Rongda Technology Co., Ltd.", "Tel: +86 571 8801 2309", "Email: zylen@samplewear.com", "Address: Room 1707, Building B, Ruibo International, Xihu District, Hangzhou"],
+            "ko": ["항저우 룽다 테크놀로지 유한공사", "전화: +86 571 8801 2309", "이메일: zylen@samplewear.com", "주소: 중국 항저우시 시후구 루이보 인터내셔널 B동 1707호"]
+          }
         },
         {
-          "heading": "首尔 · ATLY",
-          "paragraphs": ["电话：02 6956 9855", "邮箱：marketing@atly.co.kr", "地址：5F, Jeongha Building, 174 Donggyo-dong, Mapo-gu, Seoul"]
+          "heading": { "zh": "项目资料", "en": "Project Information", "ko": "프로젝트 정보" },
+          "paragraphs": {
+            "zh": ["如有款式图、参考样、尺寸、材料偏好、预计数量、颜色、目标成本和交期，请在咨询时一并提供；资料不完整也可以先沟通。"],
+            "en": ["If available, include sketches, reference samples, measurements, material preferences, estimated quantity, colors, target cost and timing. You can also contact us before all information is complete."],
+            "ko": ["가능하다면 스타일 도면, 참고 샘플, 치수, 소재 선호, 예상 수량, 색상, 목표 원가와 일정을 함께 보내 주세요. 자료가 완전하지 않아도 먼저 문의할 수 있습니다."]
+          }
         }
       ]
     },
@@ -366,30 +622,57 @@
       "key": "inquiry",
       "path": "/inquiry/",
       "index": false,
-      "title": {
-        "zh": "项目咨询｜杭州绒达科技 Samplewear",
-        "en": "Project Inquiry | Hangzhou Rongda Technology Samplewear",
-        "ko": "프로젝트 문의 | 항저우 룽다 Samplewear"
-      },
+      "title": { "zh": "项目咨询｜杭州绒达", "en": "Project Inquiry | RONDA", "ko": "프로젝트 문의 | RONDA" },
       "description": {
-        "zh": "向杭州绒达科技提交冬装产品开发与供应链合作需求。",
-        "en": "Submit a winter-apparel development or supply-chain inquiry to Hangzhou Rongda Technology.",
-        "ko": "항저우 룽다 테크놀로지에 겨울 의류 개발 또는 공급망 문의를 제출하세요."
+        "zh": "向杭州绒达提交冬装开发与生产协作需求。",
+        "en": "Submit a winterwear development and production inquiry to RONDA.",
+        "ko": "RONDA에 겨울 의류 개발과 생산 협업 문의를 제출하세요."
       },
-      "h1": {"zh": "样品与订单咨询", "en": "Sample & Order Inquiry", "ko": "샘플 및 주문 문의"},
-      "intro": {"zh": "请填写项目需求，绒达团队将根据您提供的信息与您联系。", "en": "Share your project requirements and the Rongda team will follow up.", "ko": "프로젝트 요구사항을 남겨주시면 룽다 팀이 연락드리겠습니다."},
-      "summary": {"zh": "提交项目需求。", "en": "Submit a project inquiry.", "ko": "프로젝트 문의를 제출하세요."},
+      "h1": { "zh": "项目咨询", "en": "Project Inquiry", "ko": "프로젝트 문의" },
+      "intro": {
+        "zh": "请填写项目需求，绒达团队将根据所提供的信息进行初步评估。",
+        "en": "Share your project requirements and the RONDA team will make an initial assessment.",
+        "ko": "프로젝트 요구사항을 남겨주시면 RONDA 팀이 제공된 정보를 바탕으로 1차 검토합니다."
+      },
+      "summary": { "zh": "提交项目信息。", "en": "Submit project information.", "ko": "프로젝트 정보를 제출하세요." },
+      "staticSections": []
+    },
+    {
+      "key": "privacy",
+      "path": "/privacy/",
+      "index": false,
+      "title": { "zh": "隐私政策｜杭州绒达", "en": "Privacy Policy | RONDA", "ko": "개인정보 처리방침 | RONDA" },
+      "description": {
+        "zh": "杭州绒达科技官方网站隐私政策。",
+        "en": "Privacy policy for the official RONDA website.",
+        "ko": "RONDA 공식 웹사이트 개인정보 처리방침입니다."
+      },
+      "h1": { "zh": "隐私政策", "en": "Privacy Policy", "ko": "개인정보 처리방침" },
+      "intro": {
+        "zh": "了解杭州绒达科技如何处理官网访问与项目咨询过程中提供的信息。",
+        "en": "Learn how RONDA handles information provided while visiting the website or making a project inquiry.",
+        "ko": "RONDA가 웹사이트 방문 및 프로젝트 문의 과정에서 제공된 정보를 처리하는 방식을 확인하세요."
+      },
+      "summary": { "zh": "网站隐私政策。", "en": "Website privacy policy.", "ko": "웹사이트 개인정보 처리방침입니다." },
       "staticSections": []
     },
     {
       "key": "terms",
       "path": "/terms/",
       "index": false,
-      "title": {"zh": "服务条款｜杭州绒达科技", "en": "Terms of Service | Hangzhou Rongda Technology", "ko": "서비스 약관 | 항저우 룽다"},
-      "description": {"zh": "杭州绒达科技 Samplewear 网站服务条款。", "en": "Terms of service for the Hangzhou Rongda Technology Samplewear website.", "ko": "항저우 룽다 테크놀로지 Samplewear 웹사이트 서비스 약관입니다."},
-      "h1": {"zh": "服务条款", "en": "Terms of Service", "ko": "서비스 약관"},
-      "intro": {"zh": "请阅读 Samplewear 网站服务条款。", "en": "Please review the Samplewear website terms of service.", "ko": "Samplewear 웹사이트 서비스 약관을 확인하세요."},
-      "summary": {"zh": "网站服务条款。", "en": "Website terms of service.", "ko": "웹사이트 서비스 약관입니다."},
+      "title": { "zh": "服务条款｜杭州绒达", "en": "Terms of Service | RONDA", "ko": "서비스 약관 | RONDA" },
+      "description": {
+        "zh": "杭州绒达科技官方网站服务条款。",
+        "en": "Terms of service for the official RONDA website.",
+        "ko": "RONDA 공식 웹사이트 서비스 약관입니다."
+      },
+      "h1": { "zh": "服务条款", "en": "Terms of Service", "ko": "서비스 약관" },
+      "intro": {
+        "zh": "请阅读杭州绒达科技官方网站服务条款。",
+        "en": "Please review the terms of service for the official RONDA website.",
+        "ko": "RONDA 공식 웹사이트 서비스 약관을 확인하세요."
+      },
+      "summary": { "zh": "网站服务条款。", "en": "Website terms of service.", "ko": "웹사이트 서비스 약관입니다." },
       "staticSections": []
     }
   ]

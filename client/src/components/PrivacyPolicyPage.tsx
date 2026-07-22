@@ -309,7 +309,7 @@ const TERMS_CONTENT = {
         body: `本公司通过本网站提供以下服务：
 
 1. **企业信息展示**：展示本公司的品牌介绍、业务范围、全球布局及核心优势等信息。
-2. **产品与服务咨询**：提供羽绒服、双面羊绒大衣、皮草与皮毛一体、羽绒寝具等产品的定制咨询服务。
+2. **产品与服务咨询**：提供羽绒服、冲锋衣、滑雪服、双面大衣、皮草与皮毛一体、羽绒寝具等产品的开发与生产咨询服务。
 3. **商业询盘**：通过在线表单接收客户的样衣定制、供应链合作等商业合作请求。
 4. **全链路供应链服务**：包括设计打样、品牌孵化、柔性生产、面料采购、质量控制及物流配送等服务的信息展示与初步对接。
 
@@ -338,7 +338,7 @@ const TERMS_CONTENT = {
 
 未经本公司书面许可，任何单位或个人不得以任何形式复制、转载、传播、修改或使用本网站的任何内容。对于侵犯本公司知识产权的行为，本公司将依法追究法律责任。
 
-"RONDA"、"ATLY"、"Sample & Simple"及相关标志为本公司的商业标识，未经授权不得使用。`,
+"RONDA"及相关标志为本公司的商业标识，未经授权不得使用。`,
       },
       {
         heading: '五、免责声明',
@@ -400,7 +400,7 @@ The Company reserves the right to modify these Terms at any time. Modified Terms
         body: `The Company provides the following services through this website:
 
 1. **Corporate Information Display**: Showcasing the Company's brand introduction, business scope, global presence, and core competencies.
-2. **Product and Service Consultation**: Providing customization consultation services for down jackets, double-faced cashmere coats, fur and fur-integrated garments, down bedding, and other products.
+2. **Product and Service Consultation**: Providing development and production consultation for down jackets, technical shells, skiwear, double-faced coats, fur and shearling, and down bedding.
 3. **Business Inquiries**: Receiving customer requests for sample garment customization, supply chain cooperation, and other business collaboration through online forms.
 4. **Full-Chain Supply Chain Services**: Information display and preliminary connection for services including design sampling, brand incubation, flexible production, fabric sourcing, quality control, and logistics distribution.
 
@@ -429,7 +429,7 @@ You must not engage in the following activities:
 
 Without the written permission of the Company, no entity or individual may reproduce, repost, distribute, modify, or use any content from this website in any form. The Company will pursue legal liability for any infringement of its intellectual property rights.
 
-"RONDA", "ATLY", "Sample & Simple", and related marks are commercial identifiers of the Company and may not be used without authorization.`,
+"RONDA" and related marks are commercial identifiers of the Company and may not be used without authorization.`,
       },
       {
         heading: '5. Disclaimer',
@@ -491,7 +491,7 @@ Any disputes arising from the use of this website or these Terms shall first be 
         body: `당사는 본 웹사이트를 통해 다음 서비스를 제공합니다:
 
 1. **기업 정보 제공**: 당사의 브랜드 소개, 사업 범위, 글로벌 현황 및 핵심 역량 정보 제공.
-2. **제품 및 서비스 상담**: 다운 재킷, 더블페이스 캐시미어 코트, 모피 및 모피 일체형 의류, 다운 침구 등 제품의 맞춤 제작 상담 서비스 제공.
+2. **제품 및 서비스 상담**: 다운 재킷, 기능성 셸, 스키웨어, 더블페이스 코트, 퍼와 시어링, 다운 침구의 개발 및 생산 상담 제공.
 3. **비즈니스 문의**: 온라인 양식을 통해 샘플 의류 맞춤 제작, 공급망 협력 등 비즈니스 협력 요청 접수.
 4. **풀체인 공급망 서비스**: 디자인 샘플링, 브랜드 인큐베이션, 유연 생산, 원단 조달, 품질 관리 및 물류 배송 등 서비스 정보 제공 및 초기 연결.
 
@@ -520,7 +520,7 @@ Any disputes arising from the use of this website or these Terms shall first be 
 
 당사의 서면 허가 없이 어떠한 단체나 개인도 어떠한 형태로든 웹사이트의 콘텐츠를 복제, 재게시, 배포, 수정 또는 사용할 수 없습니다.
 
-"RONDA", "ATLY", "Sample & Simple" 및 관련 마크는 당사의 상업적 식별자이며 무단 사용이 금지됩니다.`,
+"RONDA" 및 관련 마크는 당사의 상업적 식별자이며 무단 사용이 금지됩니다.`,
       },
       {
         heading: '5. 면책 조항',
@@ -638,7 +638,7 @@ export default function LegalPage({ type, onBack }: LegalPageProps) {
             textTransform: 'uppercase' as const,
             color: '#8B7355',
           }}>
-            RONDA · ATLY
+            RONDA · HANGZHOU
           </span>
         </div>
       </div>
@@ -663,12 +663,13 @@ export default function LegalPage({ type, onBack }: LegalPageProps) {
             {content.company}
           </span>
           <h1 style={{
-            fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif",
-            fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-            fontWeight: 300,
+            fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
+            fontSize: 'clamp(1.4rem, 3.5vw, 2.4rem)',
+            fontWeight: 550,
             color: '#1A1A1A',
             lineHeight: 1.15,
             letterSpacing: '-0.02em',
+            whiteSpace: 'nowrap',
             margin: '0 0 1rem',
           }}>
             {content.title}

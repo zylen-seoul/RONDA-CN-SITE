@@ -4,12 +4,20 @@ import type { Language } from "@/contexts/LanguageContext";
 export type PageKey =
   | "home"
   | "products"
+  | "downJackets"
+  | "technicalShells"
+  | "skiwear"
+  | "doubleFacedCoats"
+  | "furShearling"
+  | "downBedding"
   | "services"
+  | "partners"
   | "digital"
   | "about"
   | "global"
   | "contact"
   | "inquiry"
+  | "privacy"
   | "terms";
 
 export interface LocalizedText {
@@ -19,8 +27,8 @@ export interface LocalizedText {
 }
 
 export interface StaticSection {
-  heading: string;
-  paragraphs: string[];
+  heading: LocalizedText;
+  paragraphs: Record<Language, string[]>;
 }
 
 export interface SitePageDefinition {
@@ -65,15 +73,30 @@ export function localize(text: LocalizedText, lang: Language): string {
   return text[lang] || text.zh;
 }
 
+export function localizeList(text: Record<Language, string[]>, lang: Language): string[] {
+  return text[lang] || text.zh;
+}
+
+const LANGUAGE_PREFIX = /^\/(en|ko)(?=\/|$)/;
+
+export function localizedPagePath(path: string, lang: Language): string {
+  const withLeadingSlash = path.startsWith("/") ? path : `/${path}`;
+  const base = withLeadingSlash === "/" ? "/" : `${withLeadingSlash.replace(/\/+$/, "")}/`;
+  if (lang === "zh") return base;
+  return base === "/" ? `/${lang}/` : `/${lang}${base}`;
+}
+
 export function normalizeRoute(path: string): string {
   const withoutQuery = path.split(/[?#]/, 1)[0] || "/";
-  if (withoutQuery === "/") return "/";
-  return withoutQuery.replace(/\/+$/, "") || "/";
+  const withoutLanguage = withoutQuery.replace(LANGUAGE_PREFIX, "") || "/";
+  if (withoutLanguage === "/") return "/";
+  return withoutLanguage.replace(/\/+$/, "") || "/";
 }
 
 export const primaryPageKeys: PageKey[] = [
   "products",
   "services",
+  "partners",
   "digital",
   "about",
   "global",

@@ -18,7 +18,7 @@ export default function GlobalPresence() {
   const cities = [
     {
       key: 'hangzhou',
-      city: t('contact.hangzhou'),
+      city: t('global.hangzhou.city'),
       tag: t('global.hq'),
       desc: t('global.hz.desc'),
       imagePlaceholder: false,
@@ -28,7 +28,7 @@ export default function GlobalPresence() {
     },
     {
       key: 'seoul',
-      city: t('contact.seoul'),
+      city: t('global.seoul.city'),
       tag: t('global.branch'),
       desc: t('global.kr.desc'),
       imagePlaceholder: false,
@@ -37,12 +37,6 @@ export default function GlobalPresence() {
       imageWidth: 600,
       imageHeight: 800,
     },
-  ];
-
-  const upcoming = [
-    { city: t('global.milan'), icon: '🇮🇹' },
-    { city: t('global.tokyo'), icon: '🇯🇵' },
-    { city: t('global.newyork'), icon: '🇺🇸' },
   ];
 
   return (
@@ -79,13 +73,13 @@ export default function GlobalPresence() {
           </div>
           <h2 style={{
             fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif",
-            fontSize: 'clamp(1.8rem, 3.5vw, 3rem)',
-            fontWeight: 300,
+            fontSize: 'clamp(1.3rem, 3vw, 2.6rem)',
+            fontWeight: 500,
             color: '#1A1A1A',
             lineHeight: 1.15,
             letterSpacing: '-0.01em',
             margin: 0,
-            whiteSpace: 'pre-line',
+            whiteSpace: 'nowrap',
           }}>
             {t('global.title')}
           </h2>
@@ -94,7 +88,7 @@ export default function GlobalPresence() {
         {/* ── Two city cards: left/right equal columns ── */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
           gap: '1.5rem',
           marginBottom: '1.5rem',
         }}>
@@ -221,64 +215,6 @@ export default function GlobalPresence() {
             </motion.div>
           ))}
         </div>
-
-        {/* ── Upcoming cities ── */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, delay: 0.5 }}
-        >
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '1rem',
-            marginBottom: '1rem',
-          }}>
-            <span style={{ display: 'block', width: '1.5rem', height: '1px', background: 'rgba(139,115,85,0.4)' }} />
-            <span style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '0.6rem',
-              fontWeight: 500,
-              letterSpacing: '0.22em',
-              textTransform: 'uppercase' as const,
-              color: 'rgba(139,115,85,0.65)',
-            }}>
-              {t('global.upcoming')}
-            </span>
-          </div>
-
-          <div style={{
-            display: 'flex',
-            gap: '0.8rem',
-            flexWrap: 'wrap' as const,
-            alignItems: 'center',
-          }}>
-            {upcoming.map(({ city, icon }) => (
-              <div
-                key={city}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.5rem',
-                  padding: '0.5rem 1.2rem',
-                  background: 'rgba(139,115,85,0.04)',
-                  border: '1px dashed rgba(139,115,85,0.22)',
-                }}
-              >
-                <span style={{ fontSize: '0.9rem' }}>{icon}</span>
-                <span style={{
-                  fontFamily: "'Cormorant Garamond', 'Noto Serif SC', serif",
-                  fontSize: '0.95rem',
-                  fontWeight: 400,
-                  color: '#6B6560',
-                  lineHeight: 1.2,
-                }}>
-                  {city}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
 
       </div>
     </section>

@@ -6,15 +6,16 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { useLanguage, Language } from '@/contexts/LanguageContext';
+import { localizedPath, useLanguage, Language } from '@/contexts/LanguageContext';
 
 const NAV_ITEMS = [
   { key: 'nav.home', href: '/' },
   { key: 'nav.products', href: '/products/' },
   { key: 'nav.services', href: '/services/' },
+  { key: 'nav.partners', href: '/partners/' },
+  { key: 'nav.digital', href: '/digital-platform/' },
   { key: 'nav.global', href: '/global/' },
   { key: 'nav.about', href: '/about/' },
-  { key: 'nav.contact', href: '/contact/' },
 ];
 
 const LANGS: { code: Language; label: string; full: string }[] = [
@@ -50,17 +51,17 @@ export default function Navbar() {
         <div className="container">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <a href="/" className="site-brand-link" aria-label="RONDA · 杭州绒达科技">
+            <a href={localizedPath('/', lang)} className="site-brand-link" aria-label="RONDA · 杭州绒达科技">
               <img className="site-brand-logo" src="/ronda-logo.png" alt="RONDA 绒达" />
               <span>{lang === 'zh' ? '杭州绒达科技' : 'HANGZHOU RONGDA'}</span>
             </a>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-7">
+            <nav className="hidden lg:flex items-center gap-5">
               {NAV_ITEMS.map(({ key, href }) => (
                 <a
                   key={key}
-                  href={href}
+                  href={localizedPath(href, lang)}
                   className="relative group"
                   style={{
                     fontFamily: "'DM Sans', sans-serif",
@@ -75,7 +76,7 @@ export default function Navbar() {
                   onMouseLeave={e => (e.currentTarget.style.color = '#4A4A4A')}
                 >
                   {t(key)}
-                  <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-[#8B7355] group-hover:w-full transition-all duration-300" />
+                  <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-[#4B626C] group-hover:w-full transition-all duration-300" />
                 </a>
               ))}
             </nav>
@@ -98,20 +99,20 @@ export default function Navbar() {
                         border: 'none',
                         cursor: 'pointer',
                         transition: 'color 0.2s',
-                        color: lang === code ? '#8B7355' : '#6B7280',
+                        color: lang === code ? '#4B626C' : '#6B7280',
                         fontWeight: lang === code ? 600 : 400,
                       }}
                     >
                       {label}
                     </button>
-                    {i < 2 && <span style={{ color: '#C4B8A8', fontSize: '0.7rem' }}>/</span>}
+                    {i < 2 && <span style={{ color: '#C9D7DB', fontSize: '0.7rem' }}>/</span>}
                   </span>
                 ))}
               </div>
 
               {/* CTA */}
               <a
-                href="/contact/"
+                href={localizedPath('/contact/', lang)}
                 className="hidden md:inline-flex items-center gap-2"
                 style={{
                   backgroundColor: '#1C1F24',
@@ -175,17 +176,17 @@ export default function Navbar() {
               {NAV_ITEMS.map(({ key, href }, i) => (
                 <motion.a
                   key={key}
-                  href={href}
+                  href={localizedPath(href, lang)}
                   onClick={() => setMobileOpen(false)}
                   style={{
-                    fontFamily: "'Cormorant Garamond', serif",
-                    fontSize: '2.5rem',
-                    fontWeight: 300,
+                    fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
+                    fontSize: 'clamp(1.25rem, 6vw, 1.75rem)',
+                    fontWeight: 500,
                     color: '#1A1A1A',
                     textDecoration: 'none',
                     transition: 'color 0.3s',
                   }}
-                  onMouseEnter={e => (e.currentTarget.style.color = '#8B7355')}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#4B626C')}
                   onMouseLeave={e => (e.currentTarget.style.color = '#1A1A1A')}
                   initial={{ opacity: 0, x: -30 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -212,7 +213,7 @@ export default function Navbar() {
                       background: 'none',
                       border: 'none',
                       cursor: 'pointer',
-                      color: lang === code ? '#8B7355' : '#6B7280',
+                      color: lang === code ? '#4B626C' : '#6B7280',
                       fontWeight: lang === code ? 500 : 400,
                     }}
                   >

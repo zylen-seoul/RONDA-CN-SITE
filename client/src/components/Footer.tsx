@@ -1,223 +1,45 @@
-/**
- * Footer — Light Design System v3
- * Clean, compact footer: Brand + Navigation + Legal + CTA Button
- * Light background, no dark overlays
- */
-import { useLanguage } from '@/contexts/LanguageContext';
+import { localizedPath, useLanguage } from '@/contexts/LanguageContext';
 
 export default function Footer() {
-  const { t } = useLanguage();
-
+  const { t, lang } = useLanguage();
   const navLinks = [
     { key: 'nav.home', href: '/' },
     { key: 'nav.products', href: '/products/' },
     { key: 'nav.services', href: '/services/' },
+    { key: 'nav.partners', href: '/partners/' },
+    { key: 'nav.digital', href: '/digital-platform/' },
     { key: 'nav.global', href: '/global/' },
     { key: 'nav.about', href: '/about/' },
   ];
 
   return (
-    <footer style={{
-      background: '#EDEAE5',
-      borderTop: '1px solid rgba(139,115,85,0.2)',
-    }}>
-      <div style={{
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: 'clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 5rem)',
-      }}>
-        {/* Main row */}
-        <div style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '2.5rem',
-          justifyContent: 'space-between',
-          alignItems: 'flex-start',
-          marginBottom: '2rem',
-        }}>
-          {/* Brand */}
-          <div style={{ minWidth: '200px', flex: '1 1 200px', maxWidth: '320px' }}>
-            <span style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '0.55rem',
-              letterSpacing: '0.3em',
-              textTransform: 'uppercase' as const,
-              color: '#8B7355',
-              display: 'block',
-              marginBottom: '0.4rem',
-            }}>
-              RONDA · ATLY · 杭州绒达科技
-            </span>
-            <span style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: '1.4rem',
-              fontWeight: 300,
-              color: '#1A1A1A',
-              letterSpacing: '0.05em',
-              display: 'block',
-              marginBottom: '0.8rem',
-            }}>
-              Sample &amp; Simple
-            </span>
-            <p style={{
-              fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
-              fontSize: '0.72rem',
-              lineHeight: 1.7,
-              color: '#6B6560',
-              margin: '0 0 1.5rem',
-            }}>
-              {t('footer.tagline')}
-            </p>
-            {/* CTA Button */}
-            <a
-              href="/inquiry/"
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '0.62rem',
-                fontWeight: 600,
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase' as const,
-                color: '#F7F5F2',
-                background: '#1A1A1A',
-                border: 'none',
-                padding: '0.75rem 1.8rem',
-                cursor: 'pointer',
-                transition: 'background 0.3s',
-                textDecoration: 'none',
-                display: 'inline-block',
-              }}
-              onMouseEnter={e => (e.currentTarget.style.background = '#8B7355')}
-              onMouseLeave={e => (e.currentTarget.style.background = '#1A1A1A')}
-            >
-              {t('nav.contact')}
-            </a>
-          </div>
-
-          {/* Navigation */}
-          <div style={{ minWidth: '120px' }}>
-            <span style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '0.55rem',
-              letterSpacing: '0.25em',
-              textTransform: 'uppercase' as const,
-              color: '#8B7355',
-              display: 'block',
-              marginBottom: '1rem',
-            }}>
-              {t('footer.nav.label')}
-            </span>
-            <ul style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '0.55rem',
-              listStyle: 'none',
-              margin: 0,
-              padding: 0,
-            }}>
-              {navLinks.map(({ key, href }) => (
-                <li key={key}>
-                  <a
-                    href={href}
-                    style={{
-                      fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
-                      fontSize: '0.75rem',
-                      color: '#6B6560',
-                      textDecoration: 'none',
-                      transition: 'color 0.3s ease',
-                      display: 'inline-block',
-                    }}
-                    onMouseEnter={e => (e.currentTarget.style.color = '#8B7355')}
-                    onMouseLeave={e => (e.currentTarget.style.color = '#6B6560')}
-                  >
-                    {t(key)}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company info */}
-          <div style={{ minWidth: '160px' }}>
-            <span style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '0.55rem',
-              letterSpacing: '0.25em',
-              textTransform: 'uppercase' as const,
-              color: '#8B7355',
-              display: 'block',
-              marginBottom: '1rem',
-            }}>
-              {t('footer.company.label')}
-            </span>
-            <p style={{
-              fontFamily: "'DM Sans', 'Noto Sans SC', sans-serif",
-              fontSize: '0.72rem',
-              color: '#6B6560',
-              lineHeight: 1.8,
-              margin: 0,
-            }}>
-              {t('footer.company.name')}<br />
-              {t('footer.icp')}
-            </p>
-          </div>
+    <footer className="ronda-footer">
+      <div className="ronda-footer-main">
+        <div className="ronda-footer-brand">
+          <img src="/ronda-logo.png" alt="RONDA 绒达科技" />
+          <p>{t('footer.tagline')}</p>
+          <a className="ronda-footer-cta" href={localizedPath('/inquiry/', lang)}>{t('nav.contact')}</a>
         </div>
 
-        {/* Bottom bar */}
-        <div style={{
-          borderTop: '1px solid rgba(139,115,85,0.15)',
-          paddingTop: '1.2rem',
-          display: 'flex',
-          flexWrap: 'wrap',
-          gap: '0.75rem',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-        }}>
-          <span style={{
-            fontFamily: "'DM Sans', sans-serif",
-            fontSize: '0.65rem',
-            color: '#9A9590',
-          }}>
-            {t('footer.rights')}
-          </span>
-          <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
-            <a
-              href="/privacy/"
-              style={{
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '0.65rem',
-              color: '#9A9590',
-              textDecoration: 'none',
-              background: 'none',
-              border: 'none',
-              cursor: 'pointer',
-              padding: 0,
-              transition: 'color 0.3s',
-              }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#8B7355')}
-              onMouseLeave={e => (e.currentTarget.style.color = '#9A9590')}
-            >
-              {t('footer.privacy')}
-              </a>
-            <span style={{ color: 'rgba(139,115,85,0.3)', fontSize: '0.65rem' }}>|</span>
-            <a
-              href="/terms/"
-              style={{
-                fontFamily: "'DM Sans', sans-serif",
-                fontSize: '0.65rem',
-                color: '#9A9590',
-                textDecoration: 'none',
-                background: 'none',
-                border: 'none',
-                cursor: 'pointer',
-                padding: 0,
-                transition: 'color 0.3s',
-              }}
-              onMouseEnter={e => (e.currentTarget.style.color = '#8B7355')}
-              onMouseLeave={e => (e.currentTarget.style.color = '#9A9590')}
-            >
-              {t('footer.terms')}
-            </a>
-          </div>
+        <nav className="ronda-footer-nav" aria-label={t('footer.nav.label')}>
+          <span>{t('footer.nav.label')}</span>
+          {navLinks.map(({ key, href }) => (
+            <a key={key} href={localizedPath(href, lang)}>{t(key)}</a>
+          ))}
+        </nav>
+
+        <div className="ronda-footer-company">
+          <span>{t('footer.company.label')}</span>
+          <strong>{t('footer.company.name')}</strong>
+          <p>samplewear.com<br />{t('footer.icp')}</p>
+        </div>
+      </div>
+
+      <div className="ronda-footer-bottom">
+        <span>{t('footer.rights')}</span>
+        <div>
+          <a href={localizedPath('/privacy/', lang)}>{t('footer.privacy')}</a>
+          <a href={localizedPath('/terms/', lang)}>{t('footer.terms')}</a>
         </div>
       </div>
     </footer>

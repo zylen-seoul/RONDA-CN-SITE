@@ -2,6 +2,20 @@ import { createContext, useContext, useEffect, useState, ReactNode } from 'react
 
 export type Language = 'zh' | 'en' | 'ko';
 
+const LANGUAGE_PREFIX = /^\/(en|ko)(?=\/|$)/;
+
+export function languageFromPath(pathname: string): Language {
+  const match = pathname.match(LANGUAGE_PREFIX);
+  return match?.[1] === 'en' || match?.[1] === 'ko' ? match[1] : 'zh';
+}
+
+export function localizedPath(path: string, lang: Language): string {
+  const normalized = path.startsWith('/') ? path : `/${path}`;
+  const base = normalized.replace(LANGUAGE_PREFIX, '') || '/';
+  if (lang === 'zh') return base;
+  return base === '/' ? `/${lang}/` : `/${lang}${base}`;
+}
+
 interface LanguageContextType {
   lang: Language;
   setLang: (lang: Language) => void;
@@ -12,10 +26,12 @@ const translations: Record<Language, Record<string, string>> = {
   zh: {
     // Nav
     'nav.home': '首页',
-    'nav.services': '服务',
-    'nav.products': '产品',
+    'nav.services': '服务流程',
+    'nav.partners': '合作资源',
+    'nav.products': '六大品类',
+    'nav.digital': '数字平台',
     'nav.global': '全球布局',
-    'nav.about': '关于我们',
+    'nav.about': '关于绒达',
     'nav.contact': '联系我们',
 
     // Hero
@@ -140,21 +156,21 @@ const translations: Record<Language, Record<string, string>> = {
     'services.logistics.tag2': '实时可视追踪',
 
     // Global Presence
-    'global.hq': '中国',
-    'global.branch': '海外',
+    'global.hq': '供应链中枢',
+    'global.branch': '协作触点',
     'global.label': '全球布局',
-    'global.title': '以杭州为供应链中枢，连接首尔时尚资源，服务全球品牌客户。',
-    'global.subtitle': '国际化运营，本地化服务',
+    'global.title': '杭州供应链 × 首尔协作',
+    'global.subtitle': '跨区域项目协同',
     'global.hangzhou': '杭州',
     'global.seoul': '首尔',
     'global.hz.status': '中国',
     'global.kr.status': '韩国',
-    'global.hz.desc': '中国服装供应链核心枢纽，整合长三角优质制造资源',
-    'global.kr.desc': '韩国时尚之都，连接东亚顶级设计师与品牌资源',
+    'global.hz.desc': '杭州绒达科技统筹冬装开发、面辅料协同、生产跟进与项目交付。',
+    'global.kr.desc': '首尔协作触点支持当地设计、品牌需求与市场沟通，并与杭州团队共享项目资料。',
     'global.hangzhou.city': '杭州',
-    'global.hangzhou.desc': '中国服装供应链核心枢纽，整合长三角优质制造资源',
+    'global.hangzhou.desc': '杭州绒达科技统筹冬装开发、面辅料协同、生产跟进与项目交付。',
     'global.seoul.city': '首尔',
-    'global.seoul.desc': '韩国时尚之都，连接东亚顶级设计师与品牌资源',
+    'global.seoul.desc': '首尔协作触点支持当地设计、品牌需求与市场沟通，并与杭州团队共享项目资料。',
     'global.expanding': '即将进驻',
     'global.tokyo': '东京',
     'global.paris': '巴黎',
@@ -234,8 +250,8 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.click': '点击联系',
 
     // Footer
-    'footer.tagline': '国际化服装供应链平台',
-    'footer.rights': '© 2025 Sample & Simple. 保留所有权利.',
+    'footer.tagline': '专注冬装精品小单的成衣生产供应链',
+    'footer.rights': '© 2026 杭州绒达科技有限公司. 保留所有权利.',
     'footer.privacy': '隐私政策',
     'footer.nav.products': '产品',
     'footer.nav.services': '服务',
@@ -251,48 +267,48 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.icp': '浙ICP备2025188038号-1',
     // Sample App Section
     'sampleapp.label': '数字化平台',
-    'sampleapp.title': '全球领先的冬装数字化供应链平台',
+    'sampleapp.title': 'Samplewear 冬装数字化协作平台',
     'sampleapp.slogan': '更简单 · 更方便 · 更准确',
-    'sampleapp.availability': 'Sample App 目前已在中国区上架，全球版本即将陆续登陆各大应用商店',
-    'sampleapp.slide1.title': '我们的定位',
-    'sampleapp.slide1.subtitle': '连接全球创意与中国顶尖制造的数字化桥梁',
-    'sampleapp.slide1.desc': 'Sample 专注于中高端冬装（羽绒服、双面呢、皮草）的一站式定制服务，让独立设计师与品牌主跨越国界，在办公室即可完成从样衣开发到大货交付的全流程。',
-    'sampleapp.slide1.tag1': '100件起订',
-    'sampleapp.slide1.tag2': '全流程数字化',
-    'sampleapp.slide2.title': '全链路透明',
-    'sampleapp.slide2.subtitle': '数字化进度追踪，彻底告别沟通盲区',
-    'sampleapp.slide2.desc': '从样衣完成生产、物流信息上传到确认收货，每一个节点实时同步。跨境物流全程可视化，订单状态一目了然，让您足不出户掌控每一笔订单。',
-    'sampleapp.slide2.tag1': '实时追踪',
-    'sampleapp.slide2.tag2': '跨境物流同步',
-    'sampleapp.slide3.title': '汇报周期',
-    'sampleapp.slide3.subtitle': '生产进度实时汇报，透明可控',
-    'sampleapp.slide3.desc': '工厂按材料到齐、样衣制作、完成生产三大节点上传进度图片，每一步骤有据可查。引入第三方专业质检与订单保险系统，确保跨国贸易的安全与品质，让每一笔订单都有保障。',
-    'sampleapp.slide3.tag1': '质检保障',
-    'sampleapp.slide3.tag2': '订单保险',
-    'sampleapp.slide4.title': '在线定制',
-    'sampleapp.slide4.subtitle': '四步完成样衣定制，专业高效',
-    'sampleapp.slide4.desc': '款式类型、样衣正反、面料辅料、数量配置——四步引导式流程，让您轻松完成专业样衣定制。上传参考图片，填写改款需求，平台自动匹配最优工厂资源。',
-    'sampleapp.slide4.tag1': '四步定制',
-    'sampleapp.slide4.tag2': 'AI智能匹配',
-    'sampleapp.slide5.title': '个人工作台',
-    'sampleapp.slide5.subtitle': '样衣方案、订单管理、企业认证一站搞定',
-    'sampleapp.slide5.desc': '个人工作台集成样衣方案、样衣订单、批量订单三大模块，支持企业认证与发票管理。认证用户享有专属客服与优先排产权益，全面提升采购效率。',
-    'sampleapp.slide5.tag1': '企业认证',
-    'sampleapp.slide5.tag2': '专属客服',
+    'sampleapp.availability': '用于整理样衣、订单、生产节点与交付信息；具体开放范围以项目说明为准。',
+    'sampleapp.slide1.title': '项目入口',
+    'sampleapp.slide1.subtitle': '六大冬装品类的数字协作入口',
+    'sampleapp.slide1.desc': 'Samplewear 是杭州绒达科技的数字协作平台，用于集中整理产品需求、样衣反馈、生产节点与交付信息。实际开放范围与项目资料以双方确认结果为准。',
+    'sampleapp.slide1.tag1': '100件评估起点',
+    'sampleapp.slide1.tag2': '六大冬装品类',
+    'sampleapp.slide2.title': '项目记录',
+    'sampleapp.slide2.subtitle': '把关键资料与确认节点放在一起',
+    'sampleapp.slide2.desc': '从需求、面辅料、样衣修改到生产与交付资料，平台按项目实际进展整理记录，帮助相关人员明确当前状态与下一步确认事项。',
+    'sampleapp.slide2.tag1': '信息归档',
+    'sampleapp.slide2.tag2': '节点可见',
+    'sampleapp.slide3.title': '进度沟通',
+    'sampleapp.slide3.subtitle': '基于实际节点更新项目状态',
+    'sampleapp.slide3.desc': '项目团队按材料准备、样衣确认、生产与出货等实际阶段整理信息。质量检查的方式、范围与记录要求在项目开始前共同确认。',
+    'sampleapp.slide3.tag1': '节点检查',
+    'sampleapp.slide3.tag2': '记录可追溯',
+    'sampleapp.slide4.title': '在线需求',
+    'sampleapp.slide4.subtitle': '从一款产品的清晰资料开始',
+    'sampleapp.slide4.desc': '提交品类、款式参考、面辅料偏好、颜色与预计数量，绒达团队将结合材料最低订量与工艺条件进行人工评估，并列出下一步需要确认的信息。',
+    'sampleapp.slide4.tag1': '六大品类',
+    'sampleapp.slide4.tag2': '人工评估',
+    'sampleapp.slide5.title': '协作工作台',
+    'sampleapp.slide5.subtitle': '集中查看样衣、订单与项目资料',
+    'sampleapp.slide5.desc': '工作台用于组织样衣方案、反馈记录、订单资料与关键节点。具体功能与权限根据项目范围开放，不替代双方对材料、工艺、质量与交期的正式确认。',
+    'sampleapp.slide5.tag1': '项目资料',
+    'sampleapp.slide5.tag2': '权限管理',
     'sampleapp.feature1.icon': '⬡',
-    'sampleapp.feature1.title': '极简起订',
-    'sampleapp.feature1.desc': '100件起订，小单快反，零库存压力验证市场',
+    'sampleapp.feature1.title': '常规100件',
+    'sampleapp.feature1.desc': '100件作为常规评估起点，最终按材料与工艺条件确认',
     'sampleapp.feature2.icon': '◎',
-    'sampleapp.feature2.title': '全程追踪',
-    'sampleapp.feature2.desc': '数字化进度看板，每一节点实时可视',
+    'sampleapp.feature2.title': '节点记录',
+    'sampleapp.feature2.desc': '集中整理样衣反馈、生产节点和交付信息',
     'sampleapp.feature3.icon': '◈',
-    'sampleapp.feature3.title': '安全交付',
-    'sampleapp.feature3.desc': '第三方质检 + 订单保险，跨境无忧',
-    'sampleapp.ai.label': 'THE FUTURE IS AI',
-    'sampleapp.ai.title': 'AI 驱动的数字化蓝图',
-    'sampleapp.ai.point1': 'AI 辅助设计 — 即将推出 AI 趋势分析与设计生成工具，将创意转化为生产力',
-    'sampleapp.ai.point2': '3D 虚拟试穿 — 研发 AI 建模技术，实现高仿真线上试穿，极大缩减物理打样周期与成本',
-    'sampleapp.ai.point3': '全球协同 — 构建专属定制数据库，实现"设计在全球，制造在中国，服务于世界"的无界协作模式',
+    'sampleapp.feature3.title': '标准确认',
+    'sampleapp.feature3.desc': '关键材料、工艺与质量标准由项目双方确认',
+    'sampleapp.ai.label': 'DIGITAL ROADMAP',
+    'sampleapp.ai.title': '数字化能力路线',
+    'sampleapp.ai.point1': '资料辅助 — 探索用数字工具整理款式、材料与项目确认信息。',
+    'sampleapp.ai.point2': '可视化评审 — 逐步评估3D工具在版型沟通与样衣评审中的适用场景。',
+    'sampleapp.ai.point3': '项目数据库 — 按权限积累经确认的产品与协作资料，服务后续项目复盘。',
 
     // Inquiry Form
     'inquiry.title': 'INQUIRY',
@@ -328,8 +344,10 @@ const translations: Record<Language, Record<string, string>> = {
   en: {
     // Nav
     'nav.home': 'Home',
-    'nav.services': 'Services',
-    'nav.products': 'Products',
+    'nav.services': 'Process',
+    'nav.partners': 'Partners',
+    'nav.products': 'Categories',
+    'nav.digital': 'Digital Platform',
     'nav.global': 'Global',
     'nav.about': 'About',
     'nav.contact': 'Contact',
@@ -457,20 +475,20 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Global Presence
     'global.label': 'Global Presence',
-    'global.title': 'Rooted in Hangzhou\nSeoul as First International Branch',
-    'global.subtitle': 'International operations, localized service',
-    'global.hq': 'China',
-    'global.branch': 'International',
+    'global.title': 'Hangzhou × Seoul Collaboration',
+    'global.subtitle': 'Cross-regional project coordination',
+    'global.hq': 'Supply-chain hub',
+    'global.branch': 'Collaboration touchpoint',
     'global.hangzhou': '杭州',
     'global.seoul': '首尔',
     'global.hz.status': '中国',
     'global.kr.status': '韩国',
-    'global.hz.desc': '中国服装供应链核心枢纽，整合长三角优质制造资源',
-    'global.kr.desc': '韩国时尚之都，连接东亚顶级设计师与品牌资源',
+    'global.hz.desc': 'Hangzhou Rongda coordinates winterwear development, materials, production follow-up and project delivery.',
+    'global.kr.desc': 'The Seoul touchpoint supports local design, brand and market communication while sharing project information with Hangzhou.',
     'global.hangzhou.city': 'Hangzhou',
-    'global.hangzhou.desc': 'Core hub of China\'s apparel supply chain, integrating premium manufacturing resources across the Yangtze River Delta',
+    'global.hangzhou.desc': 'Hangzhou Rongda coordinates winterwear development, materials, production follow-up and project delivery.',
     'global.seoul.city': 'Seoul',
-    'global.seoul.desc': 'Fashion capital of Korea, connecting top East Asian designers and brand resources',
+    'global.seoul.desc': 'The Seoul touchpoint supports local design, brand and market communication while sharing project information with Hangzhou.',
     'global.expanding': 'Coming Soon',
     'global.tokyo': 'Tokyo',
     'global.paris': 'Paris',
@@ -550,8 +568,8 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.click': 'Click to Connect',
 
     // Footer
-    'footer.tagline': 'Global Apparel Supply Chain Platform',
-    'footer.rights': '© 2025 Sample & Simple. All rights reserved.',
+    'footer.tagline': 'A production supply chain for focused, small-batch winterwear',
+    'footer.rights': '© 2026 Hangzhou Rongda Technology Co., Ltd. All rights reserved.',
     'footer.privacy': 'Privacy Policy',
     'footer.nav.products': 'Products',
     'footer.nav.services': 'Services',
@@ -567,48 +585,48 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.icp': '浙ICP备2025188038号-1',
     // Sample App Section
     'sampleapp.label': 'Digital Platform',
-    'sampleapp.title': "The World's Leading Digital Supply Chain Platform for Winter Apparel",
+    'sampleapp.title': 'Samplewear Digital Winterwear Workspace',
     'sampleapp.slogan': 'Simpler · Smarter · More Accurate',
-    'sampleapp.availability': 'Sample App is now available in China. Global version coming soon to all major app stores.',
-    'sampleapp.slide1.title': 'Our Positioning',
-    'sampleapp.slide1.subtitle': "The digital bridge connecting global creativity with China's finest manufacturing",
-    'sampleapp.slide1.desc': 'Sample specializes in one-stop customization for premium winter apparel — down jackets, double-faced coats, and fur. Independent designers and brand owners can complete the entire process from sample development to bulk delivery, all from their office.',
-    'sampleapp.slide1.tag1': 'MOQ 100 pcs',
-    'sampleapp.slide1.tag2': 'End-to-End Digital',
-    'sampleapp.slide2.title': 'Full Transparency',
-    'sampleapp.slide2.subtitle': 'Digital progress tracking — no more communication blind spots',
-    'sampleapp.slide2.desc': 'From sample production completion and logistics upload to delivery confirmation, every milestone syncs in real time. Full visibility on cross-border logistics keeps you in control of every order, wherever you are.',
-    'sampleapp.slide2.tag1': 'Real-Time Tracking',
-    'sampleapp.slide2.tag2': 'Cross-Border Sync',
-    'sampleapp.slide3.title': 'Progress Reports',
-    'sampleapp.slide3.subtitle': 'Real-time production updates, transparent and accountable',
-    'sampleapp.slide3.desc': 'Factories upload progress photos at three key milestones: materials ready, sample production, and completion. Every step is documented. Third-party quality inspection and order insurance ensure the safety and quality of every cross-border transaction.',
-    'sampleapp.slide3.tag1': 'QC Guarantee',
-    'sampleapp.slide3.tag2': 'Order Insurance',
-    'sampleapp.slide4.title': 'Online Customization',
-    'sampleapp.slide4.subtitle': 'Four steps to complete sample customization, professional and efficient',
-    'sampleapp.slide4.desc': 'Style type, sample front/back, fabric & accessories, quantity — a guided four-step process that makes professional sample customization effortless. Upload reference images, specify modifications, and the platform automatically matches the best factory resources.',
-    'sampleapp.slide4.tag1': '4-Step Process',
-    'sampleapp.slide4.tag2': 'AI Smart Matching',
-    'sampleapp.slide5.title': 'Personal Dashboard',
-    'sampleapp.slide5.subtitle': 'Sample plans, order management, and business verification — all in one place',
-    'sampleapp.slide5.desc': 'The personal dashboard integrates three modules: sample plans, sample orders, and bulk orders, with support for business verification and invoice management. Verified users enjoy dedicated customer service and priority production scheduling.',
-    'sampleapp.slide5.tag1': 'Business Verified',
-    'sampleapp.slide5.tag2': 'Dedicated Support',
+    'sampleapp.availability': 'Organizes samples, orders, production milestones and delivery information. Access depends on the project scope.',
+    'sampleapp.slide1.title': 'Project Entry',
+    'sampleapp.slide1.subtitle': 'A digital workspace for six winterwear categories',
+    'sampleapp.slide1.desc': 'Samplewear is Hangzhou Rongda\'s digital collaboration platform for product briefs, sample feedback, production milestones and delivery information. Access and project records follow the scope confirmed by both parties.',
+    'sampleapp.slide1.tag1': '100-Piece Baseline',
+    'sampleapp.slide1.tag2': 'Six Categories',
+    'sampleapp.slide2.title': 'Project Record',
+    'sampleapp.slide2.subtitle': 'Keep critical files and approvals together',
+    'sampleapp.slide2.desc': 'The platform organizes actual project records from briefs and materials through sample revisions, production and delivery, helping everyone understand current status and the next approval.',
+    'sampleapp.slide2.tag1': 'File Archive',
+    'sampleapp.slide2.tag2': 'Visible Milestones',
+    'sampleapp.slide3.title': 'Progress Updates',
+    'sampleapp.slide3.subtitle': 'Update status from actual project milestones',
+    'sampleapp.slide3.desc': 'Project information is organized around material readiness, sample approval, production and dispatch. Quality-check methods, scope and records are agreed before the project begins.',
+    'sampleapp.slide3.tag1': 'Milestone Checks',
+    'sampleapp.slide3.tag2': 'Recorded Decisions',
+    'sampleapp.slide4.title': 'Online Brief',
+    'sampleapp.slide4.subtitle': 'Start with one clear product brief',
+    'sampleapp.slide4.desc': 'Submit category, style references, material preferences, colors and expected quantity. Rongda reviews material minimums and construction conditions and then lists the next information to confirm.',
+    'sampleapp.slide4.tag1': 'Six Categories',
+    'sampleapp.slide4.tag2': 'Human Review',
+    'sampleapp.slide5.title': 'Project Workspace',
+    'sampleapp.slide5.subtitle': 'Organize sample, order and project information',
+    'sampleapp.slide5.desc': 'The workspace organizes sample plans, feedback, order files and milestones. Functions and permissions follow the project scope and do not replace formal material, construction, quality or timing approvals.',
+    'sampleapp.slide5.tag1': 'Project Files',
+    'sampleapp.slide5.tag2': 'Access Control',
     'sampleapp.feature1.icon': '⬡',
-    'sampleapp.feature1.title': 'Low MOQ',
-    'sampleapp.feature1.desc': 'Start from 100 pcs, fast turnaround, zero inventory risk',
+    'sampleapp.feature1.title': 'Standard 100 Pieces',
+    'sampleapp.feature1.desc': '100 pieces is the standard assessment baseline; final conditions follow materials and construction',
     'sampleapp.feature2.icon': '◎',
-    'sampleapp.feature2.title': 'Full Tracking',
-    'sampleapp.feature2.desc': 'Digital dashboard with real-time visibility at every milestone',
+    'sampleapp.feature2.title': 'Milestone Records',
+    'sampleapp.feature2.desc': 'Organize sample feedback, production milestones and delivery information',
     'sampleapp.feature3.icon': '◈',
-    'sampleapp.feature3.title': 'Secure Delivery',
-    'sampleapp.feature3.desc': '3rd-party QC + order insurance for worry-free cross-border trade',
-    'sampleapp.ai.label': 'THE FUTURE IS AI',
-    'sampleapp.ai.title': 'Our AI-Driven Digital Vision',
-    'sampleapp.ai.point1': 'AI-Assisted Design — Launching AI trend analysis and design generation tools to turn creativity into production power',
-    'sampleapp.ai.point2': '3D Virtual Try-On — Developing AI modeling technology for high-fidelity online fitting, dramatically reducing physical sampling cycles and costs',
-    'sampleapp.ai.point3': 'Global Collaboration — Building a proprietary customization database to enable borderless collaboration: design globally, manufacture in China, serve the world',
+    'sampleapp.feature3.title': 'Approved Standards',
+    'sampleapp.feature3.desc': 'Critical materials, construction and quality standards are confirmed by both parties',
+    'sampleapp.ai.label': 'DIGITAL ROADMAP',
+    'sampleapp.ai.title': 'Digital Capability Roadmap',
+    'sampleapp.ai.point1': 'File Assistance — Exploring digital tools for organizing style, material and approval information.',
+    'sampleapp.ai.point2': 'Visual Review — Evaluating where 3D tools can support fit communication and sample review.',
+    'sampleapp.ai.point3': 'Project Database — Building permission-based records from confirmed product and collaboration information.',
     // Inquiry Form
     'inquiry.title': 'INQUIRY',
     'inquiry.heading': 'Sample & Order Inquiry',
@@ -644,8 +662,10 @@ const translations: Record<Language, Record<string, string>> = {
   ko: {
     // Nav
     'nav.home': '홈',
-    'nav.services': '서비스',
-    'nav.products': '제품',
+    'nav.services': '서비스 절차',
+    'nav.partners': '협력 자원',
+    'nav.products': '6대 품목',
+    'nav.digital': '디지털 플랫폼',
     'nav.global': '글로벌',
     'nav.about': '회사소개',
     'nav.contact': '문의하기',
@@ -773,20 +793,20 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Global Presence
     'global.label': '글로벌 네트워크',
-    'global.title': '항저우에서 시작하여\n서울 첫 해외 지사',
-    'global.subtitle': '국제적 운영, 현지화 서비스',
-    'global.hq': '중국',
-    'global.branch': '세계적인',
+    'global.title': '항저우 × 서울 협업',
+    'global.subtitle': '지역 간 프로젝트 협업',
+    'global.hq': '공급망 허브',
+    'global.branch': '협업 거점',
     'global.hangzhou': '杭州',
     'global.seoul': '首尔',
     'global.hz.status': '中国',
     'global.kr.status': '韩国',
-    'global.hz.desc': '양쯔강 삼각주의 고품질 제조 자원을 통합하는, 중국 의류 공급망의 핵심 허브입니다',
-    'global.kr.desc': '한국의 패션 수도: 동아시아 정상급 디자이너와 브랜드 자원을 연결하다',
+    'global.hz.desc': '항저우 룽다는 겨울 의류 개발, 원부자재 협업, 생산 진행과 프로젝트 납품을 조율합니다.',
+    'global.kr.desc': '서울 협업 거점은 현지 디자인, 브랜드와 시장 소통을 지원하며 항저우 팀과 프로젝트 정보를 공유합니다.',
     'global.hangzhou.city': '항저우',
-    'global.hangzhou.desc': '중국 의류 공급망의 핵심 허브, 양쯔강 삼각주 프리미엄 제조 자원 통합',
+    'global.hangzhou.desc': '항저우 룽다는 겨울 의류 개발, 원부자재 협업, 생산 진행과 프로젝트 납품을 조율합니다.',
     'global.seoul.city': '서울',
-    'global.seoul.desc': '한국 패션의 수도, 동아시아 최고의 디자이너 및 브랜드 자원 연결',
+    'global.seoul.desc': '서울 협업 거점은 현지 디자인, 브랜드와 시장 소통을 지원하며 항저우 팀과 프로젝트 정보를 공유합니다.',
     'global.expanding': '진출 예정',
     'global.tokyo': '도쿄',
     'global.paris': '파리',
@@ -866,8 +886,8 @@ const translations: Record<Language, Record<string, string>> = {
     'contact.click': '클릭하여 연결',
 
     // Footer
-    'footer.tagline': '글로벌 패션 공급망 플랫폼',
-    'footer.rights': '© 2025 Sample & Simple. All rights reserved.',
+    'footer.tagline': '고품질 소량 겨울 의류 생산 공급망',
+    'footer.rights': '© 2026 Hangzhou Rongda Technology Co., Ltd. All rights reserved.',
     'footer.privacy': '개인정보 처리방침',
     'footer.nav.products': '제품',
     'footer.nav.services': '서비스',
@@ -883,48 +903,48 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.icp': '浙ICP备2025188038号-1',
     // Sample App Section
     'sampleapp.label': '디지털 플랫폼',
-    'sampleapp.title': '세계 최고의 동복 디지털 공급망 플랫폼',
+    'sampleapp.title': 'Samplewear 겨울 의류 디지털 협업 플랫폼',
     'sampleapp.slogan': '더 간단하게 · 더 편리하게 · 더 정확하게',
-    'sampleapp.availability': 'Sample App은 현재 중국에서 출시되었으며, 글로벌 버전은 곧 주요 앱스토어에 출시될 예정입니다.',
-    'sampleapp.slide1.title': '우리의 포지셔닝',
-    'sampleapp.slide1.subtitle': '글로벌 창의성과 중국 최고 제조업을 연결하는 디지털 브릿지',
-    'sampleapp.slide1.desc': 'Sample은 프리미엄 동복(다운재킷, 더블페이스 코트, 모피)의 원스톱 맞춤 서비스를 전문으로 합니다. 독립 디자이너와 브랜드 오너가 국경을 넘어 사무실에서 샘플 개발부터 대량 납품까지 전 과정을 완료할 수 있습니다.',
-    'sampleapp.slide1.tag1': '최소 100개',
-    'sampleapp.slide1.tag2': '엔드투엔드 디지털',
-    'sampleapp.slide2.title': '완전한 투명성',
-    'sampleapp.slide2.subtitle': '디지털 진행 추적으로 소통 사각지대 완전 해소',
-    'sampleapp.slide2.desc': '샘플 생산 완료, 물류 정보 업로드, 수령 확인까지 모든 단계가 실시간으로 동기화됩니다. 국제 물류 전 과정 가시화로 어디서든 모든 주문을 완벽히 파악할 수 있습니다.',
-    'sampleapp.slide2.tag1': '실시간 추적',
-    'sampleapp.slide2.tag2': '국제 물류 동기화',
-    'sampleapp.slide3.title': '진행 보고',
-    'sampleapp.slide3.subtitle': '생산 진행 상황 실시간 보고, 투명하고 관리 가능',
-    'sampleapp.slide3.desc': '공장은 자재 준비, 샘플 제작, 생산 완료의 세 가지 주요 단계에서 진행 사진을 업로드합니다. 모든 단계가 기록됩니다. 제3자 전문 품질 검사와 주문 보험 시스템으로 국제 거래의 안전과 품질을 보장합니다.',
-    'sampleapp.slide3.tag1': '품질 보증',
-    'sampleapp.slide3.tag2': '주문 보험',
-    'sampleapp.slide4.title': '온라인 맞춤 제작',
-    'sampleapp.slide4.subtitle': '4단계로 완성하는 샘플 맞춤 제작, 전문적이고 효율적',
-    'sampleapp.slide4.desc': '스타일 유형, 샘플 앞뒤면, 원단 및 부자재, 수량 설정 — 4단계 가이드 프로세스로 전문 샘플 맞춤 제작을 손쉽게 완료합니다. 참고 이미지를 업로드하고 수정 요청을 입력하면 플랫폼이 최적의 공장 리소스를 자동으로 매칭합니다.',
-    'sampleapp.slide4.tag1': '4단계 프로세스',
-    'sampleapp.slide4.tag2': 'AI 스마트 매칭',
-    'sampleapp.slide5.title': '개인 대시보드',
-    'sampleapp.slide5.subtitle': '샘플 플랜, 주문 관리, 기업 인증을 한 곳에서',
-    'sampleapp.slide5.desc': '개인 대시보드는 샘플 플랜, 샘플 주문, 대량 주문의 세 가지 모듈을 통합하며 기업 인증 및 세금계산서 관리를 지원합니다. 인증 사용자는 전담 고객 서비스와 우선 생산 일정 배정 혜택을 누립니다.',
-    'sampleapp.slide5.tag1': '기업 인증',
-    'sampleapp.slide5.tag2': '전담 지원',
+    'sampleapp.availability': '샘플, 주문, 생산 단계와 납품 정보를 정리하며 이용 범위는 프로젝트 조건에 따라 안내됩니다.',
+    'sampleapp.slide1.title': '프로젝트 창구',
+    'sampleapp.slide1.subtitle': '겨울 의류 6대 품목의 디지털 협업 공간',
+    'sampleapp.slide1.desc': 'Samplewear는 항저우 룽다의 디지털 협업 플랫폼으로 제품 요구, 샘플 피드백, 생산 단계와 납품 정보를 정리합니다. 이용 범위와 프로젝트 기록은 양측이 확인한 조건을 따릅니다.',
+    'sampleapp.slide1.tag1': '100장 검토 기준',
+    'sampleapp.slide1.tag2': '6대 품목',
+    'sampleapp.slide2.title': '프로젝트 기록',
+    'sampleapp.slide2.subtitle': '핵심 자료와 승인 단계를 한곳에 정리',
+    'sampleapp.slide2.desc': '요구서와 원부자재부터 샘플 수정, 생산과 납품까지 실제 프로젝트 기록을 정리해 현재 상태와 다음 승인 사항을 명확히 합니다.',
+    'sampleapp.slide2.tag1': '자료 정리',
+    'sampleapp.slide2.tag2': '단계 확인',
+    'sampleapp.slide3.title': '진행 업데이트',
+    'sampleapp.slide3.subtitle': '실제 프로젝트 단계에 따라 상태 업데이트',
+    'sampleapp.slide3.desc': '소재 준비, 샘플 승인, 생산과 출고 단계에 따라 정보를 정리합니다. 품질 검사 방식, 범위와 기록 기준은 프로젝트 시작 전에 함께 확인합니다.',
+    'sampleapp.slide3.tag1': '단계별 검사',
+    'sampleapp.slide3.tag2': '결정 기록',
+    'sampleapp.slide4.title': '온라인 요구서',
+    'sampleapp.slide4.subtitle': '명확한 한 가지 제품 요구로 시작',
+    'sampleapp.slide4.desc': '품목, 스타일 참고, 원부자재 선호, 색상과 예상 수량을 보내면 룽다 팀이 소재 최소 수량과 공정 조건을 검토하고 다음 확인 정보를 안내합니다.',
+    'sampleapp.slide4.tag1': '6대 품목',
+    'sampleapp.slide4.tag2': '담당자 검토',
+    'sampleapp.slide5.title': '협업 워크스페이스',
+    'sampleapp.slide5.subtitle': '샘플, 주문과 프로젝트 자료를 한곳에',
+    'sampleapp.slide5.desc': '샘플안, 피드백, 주문 자료와 주요 단계를 정리합니다. 기능과 권한은 프로젝트 범위를 따르며 소재, 공정, 품질과 일정에 대한 공식 승인을 대체하지 않습니다.',
+    'sampleapp.slide5.tag1': '프로젝트 자료',
+    'sampleapp.slide5.tag2': '권한 관리',
     'sampleapp.feature1.icon': '⬡',
-    'sampleapp.feature1.title': '소량 주문',
-    'sampleapp.feature1.desc': '최소 100개부터, 빠른 회전, 재고 부담 없이 시장 검증',
+    'sampleapp.feature1.title': '일반 100장',
+    'sampleapp.feature1.desc': '100장을 일반 검토 기준으로 하며 최종 조건은 소재와 공정에 따라 확정',
     'sampleapp.feature2.icon': '◎',
-    'sampleapp.feature2.title': '전 과정 추적',
-    'sampleapp.feature2.desc': '디지털 대시보드로 모든 단계 실시간 가시화',
+    'sampleapp.feature2.title': '단계 기록',
+    'sampleapp.feature2.desc': '샘플 피드백, 생산 단계와 납품 정보를 한곳에 정리',
     'sampleapp.feature3.icon': '◈',
-    'sampleapp.feature3.title': '안전 납품',
-    'sampleapp.feature3.desc': '제3자 품질검사 + 주문 보험으로 국제 거래 걱정 없음',
-    'sampleapp.ai.label': 'THE FUTURE IS AI',
-    'sampleapp.ai.title': 'AI 기반 디지털 비전',
-    'sampleapp.ai.point1': 'AI 보조 디자인 — AI 트렌드 분석 및 디자인 생성 도구 출시 예정, 창의성을 생산력으로 전환',
-    'sampleapp.ai.point2': '3D 가상 피팅 — AI 모델링 기술 개발로 고품질 온라인 피팅 실현, 물리적 샘플링 주기와 비용 대폭 절감',
-    'sampleapp.ai.point3': '글로벌 협업 — 전용 맞춤 데이터베이스 구축으로 "글로벌 디자인, 중국 제조, 세계 서비스"의 무한 협업 모드 실현',
+    'sampleapp.feature3.title': '기준 확인',
+    'sampleapp.feature3.desc': '주요 소재, 공정과 품질 기준을 프로젝트 양측이 확인',
+    'sampleapp.ai.label': 'DIGITAL ROADMAP',
+    'sampleapp.ai.title': '디지털 역량 로드맵',
+    'sampleapp.ai.point1': '자료 지원 — 스타일, 소재와 승인 정보를 정리하는 디지털 도구를 검토합니다.',
+    'sampleapp.ai.point2': '시각 검토 — 패턴 소통과 샘플 검토에 3D 도구를 적용할 수 있는 범위를 평가합니다.',
+    'sampleapp.ai.point3': '프로젝트 데이터베이스 — 승인된 제품과 협업 정보를 권한에 따라 축적합니다.',
     // Inquiry Form
     'inquiry.title': 'INQUIRY',
     'inquiry.heading': '샘플 & 주문 문의',
@@ -961,14 +981,7 @@ const translations: Record<Language, Record<string, string>> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Language>(() => {
-    try {
-      const saved = window.localStorage.getItem('samplewear-language');
-      return saved === 'en' || saved === 'ko' || saved === 'zh' ? saved : 'zh';
-    } catch {
-      return 'zh';
-    }
-  });
+  const [lang, setLangState] = useState<Language>(() => languageFromPath(window.location.pathname));
 
   useEffect(() => {
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
@@ -978,6 +991,32 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       // Browsing modes that block storage should still allow language switching.
     }
   }, [lang]);
+
+  useEffect(() => {
+    if (lang === 'zh') return;
+
+    const preserveLanguageForInternalLinks = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const anchor = target.closest<HTMLAnchorElement>('a[href]');
+      if (!anchor || anchor.hasAttribute('download') || (anchor.target && anchor.target !== '_self')) return;
+      const href = anchor.getAttribute('href');
+      if (!href || !href.startsWith('/') || href.startsWith('//') || LANGUAGE_PREFIX.test(href)) return;
+
+      event.preventDefault();
+      window.location.assign(localizedPath(href, lang));
+    };
+
+    document.addEventListener('click', preserveLanguageForInternalLinks);
+    return () => document.removeEventListener('click', preserveLanguageForInternalLinks);
+  }, [lang]);
+
+  const setLang = (nextLang: Language) => {
+    setLangState(nextLang);
+    const nextPath = localizedPath(`${window.location.pathname}${window.location.search}${window.location.hash}`, nextLang);
+    window.location.assign(nextPath);
+  };
 
   const t = (key: string): string => {
     return translations[lang][key] || translations['zh'][key] || key;

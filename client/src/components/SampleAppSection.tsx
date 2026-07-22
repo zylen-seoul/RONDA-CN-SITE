@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
+import { ClipboardList, ListChecks, BadgeCheck } from 'lucide-react';
 
 // 5张独立手机图片 CDN URL（已套壳 iPhone 15 Pro 金色模型）
 const PHONE_IMAGES = [
@@ -11,9 +12,10 @@ const PHONE_IMAGES = [
 ];
 
 const SLIDE_KEYS = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];
+const FEATURE_ICONS = [ClipboardList, ListChecks, BadgeCheck];
 
 export default function SampleAppSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [activeSlide, setActiveSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -47,6 +49,7 @@ export default function SampleAppSection() {
   return (
     <section
       id="sampleapp"
+      className="sampleapp-module"
       style={{
         background: 'linear-gradient(160deg, #EAE6DF 0%, #DDD8D0 50%, #E8E4DC 100%)',
         padding: 'clamp(2.5rem, 5vw, 4rem) 0',
@@ -64,7 +67,7 @@ export default function SampleAppSection() {
       <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 clamp(1.5rem, 5vw, 5rem)' }}>
 
         {/* ── 顶部标题区（紧凑） ── */}
-        <div style={{ textAlign: 'center', marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
+        <div className="sampleapp-module__heading" style={{ textAlign: 'center', marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
           <p style={{
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: 'clamp(0.6rem, 0.9vw, 0.7rem)',
@@ -77,12 +80,13 @@ export default function SampleAppSection() {
           </p>
           <h2 style={{
             fontFamily: "'Cormorant Garamond', serif",
-            fontSize: 'clamp(1.6rem, 3vw, 2.6rem)',
+            fontSize: lang === 'en' ? 'clamp(0.92rem, 3.7vw, 2.3rem)' : 'clamp(1.15rem, 3vw, 2.6rem)',
             fontWeight: 400,
             color: '#1A1A1A',
             lineHeight: 1.2,
             marginBottom: '0.5rem',
             letterSpacing: '0.02em',
+            whiteSpace: 'nowrap',
           }}>
             {t('sampleapp.title')}
           </h2>
@@ -106,7 +110,7 @@ export default function SampleAppSection() {
         </div>
 
         {/* ── 三大核心优势图标（紧凑横排） ── */}
-        <div style={{
+        <div className="sampleapp-module__features" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
           gap: '1px',
@@ -120,13 +124,16 @@ export default function SampleAppSection() {
               padding: 'clamp(1rem, 2vw, 1.5rem) clamp(0.75rem, 1.5vw, 1.5rem)',
               textAlign: 'center',
             }}>
-              <div style={{
+              <div aria-hidden="true" style={{
                 fontSize: 'clamp(1.2rem, 2vw, 1.6rem)',
                 color: '#b8956a',
                 marginBottom: '0.4rem',
                 fontFamily: 'serif',
               }}>
-                {t(`sampleapp.feature${n}.icon`)}
+                {(() => {
+                  const Icon = FEATURE_ICONS[n - 1];
+                  return <Icon size={22} strokeWidth={1.5} />;
+                })()}
               </div>
               <h4 style={{
                 fontFamily: "'Cormorant Garamond', serif",
@@ -151,7 +158,7 @@ export default function SampleAppSection() {
         </div>
 
         {/* ── 主体：左侧导航 + 中间手机图 + 右侧文字 ── */}
-        <div style={{
+        <div className="sampleapp-module__body" style={{
           display: 'grid',
           gridTemplateColumns: '1fr 2fr 1.5fr',
           gap: 'clamp(1.5rem, 3vw, 3rem)',
@@ -160,7 +167,7 @@ export default function SampleAppSection() {
         }}>
 
           {/* 左侧：幻灯片导航 */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+          <div className="sampleapp-module__nav" style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
             {SLIDE_KEYS.map((sk_key, idx) => (
               <button
                 key={idx}
@@ -205,7 +212,7 @@ export default function SampleAppSection() {
           </div>
 
           {/* 中间：手机图片（每张独立，切换时淡入淡出） */}
-          <div style={{
+          <div className="sampleapp-module__phone" style={{
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
@@ -232,7 +239,7 @@ export default function SampleAppSection() {
           </div>
 
           {/* 右侧：当前幻灯片文字 */}
-          <div style={{
+          <div className="sampleapp-module__copy" style={{
             opacity: isAnimating ? 0 : 1,
             transform: isAnimating ? 'translateX(10px)' : 'translateX(0)',
             transition: 'opacity 0.4s ease, transform 0.4s ease',
@@ -255,6 +262,7 @@ export default function SampleAppSection() {
               lineHeight: 1.25,
               marginBottom: '0.4rem',
               letterSpacing: '0.02em',
+              whiteSpace: 'nowrap',
             }}>
               {t(`sampleapp.${sk}.title`)}
             </h3>
@@ -350,13 +358,14 @@ export default function SampleAppSection() {
               color: '#1A1A1A',
               lineHeight: 1.25,
               letterSpacing: '0.02em',
+              whiteSpace: 'nowrap',
             }}>
               {t('sampleapp.ai.title')}
             </h3>
           </div>
 
           {/* 三列并列 */}
-          <div style={{
+          <div className="sampleapp-module__ai-grid" style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
             gap: 'clamp(0.75rem, 1.5vw, 1.5rem)',
