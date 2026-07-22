@@ -219,6 +219,31 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
   const [activeQR, setActiveQR] = useState<{ name: string; qr: string } | null>(null);
+  const inquiryAction = (
+    <motion.div className="contact-section__inquiry" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.3 }} style={{ textAlign: 'center' }}>
+      <motion.a
+        href="/inquiry/"
+        whileHover={{ scale: 1.05 }}
+        style={{
+          padding: '1.2rem 2.5rem',
+          background: '#8B7355',
+          color: '#F7F5F2',
+          border: 'none',
+          fontFamily: "'DM Sans', sans-serif",
+          fontSize: '0.85rem',
+          fontWeight: 600,
+          letterSpacing: '0.1em',
+          textTransform: 'uppercase',
+          cursor: 'pointer',
+          textDecoration: 'none',
+          display: 'inline-block',
+          transition: 'all 0.3s ease',
+        }}
+      >
+        {t('contact.label')}
+      </motion.a>
+    </motion.div>
+  );
 
   return (
     <section id="contact" data-lang={lang} className={`contact-section py-10 md:py-16${showCityMedia ? ' is-home' : ''}`}>
@@ -508,6 +533,7 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
         {/* Social Media + IM in one row */}
         <div className="contact-section__channels mb-8">
           <div
+            className="contact-section__channel-grid"
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -590,33 +616,13 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
                 ))}
               </div>
             </div>
+
+            {showCityMedia && inquiryAction}
           </div>
         </div>
 
-        {/* Inquiry Button */}
-        <motion.div className="contact-section__inquiry" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.3 }} style={{ textAlign: 'center' }}>
-          <motion.a
-            href="/inquiry/"
-            whileHover={{ scale: 1.05 }}
-            style={{
-              padding: '1.2rem 2.5rem',
-              background: '#8B7355',
-              color: '#F7F5F2',
-              border: 'none',
-              fontFamily: "'DM Sans', sans-serif",
-              fontSize: '0.85rem',
-              fontWeight: 600,
-              letterSpacing: '0.1em',
-              textTransform: 'uppercase',
-              cursor: 'pointer',
-              textDecoration: 'none',
-              display: 'inline-block',
-              transition: 'all 0.3s ease',
-            }}
-          >
-            {t('contact.label')}
-          </motion.a>
-        </motion.div>
+        {/* Keep the standalone inquiry action on internal pages. */}
+        {!showCityMedia && inquiryAction}
       </div>
 
       {/* QR Modal */}
