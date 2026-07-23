@@ -260,11 +260,6 @@ export default function Partners() {
             en: "Materials and Brand Collaboration",
             ko: "원부자재 및 브랜드 협업",
           })}
-          intro={text({
-            zh: "绒达仅围绕冬装项目开展开发与生产协作，服务设计师品牌及中高端品牌。项目团队把产品方向、面辅料、常规100件评估起点与交期纳入同一套标准，并在样衣阶段完成关键材料核对。最终起订量与周期按款式、材料、工艺和产能确认。",
-            en: "RONDA works exclusively on winterwear development and production for designer and premium brands. Product direction, materials, the standard 100-piece evaluation starting point and timing are aligned in one project standard, with key materials validated at sampling. Final MOQ and lead time are confirmed by style, materials, construction and capacity.",
-            ko: "룽다는 디자이너 브랜드와 프리미엄 브랜드를 대상으로 겨울 의류 개발 및 생산 협업에만 집중합니다. 제품 방향, 원부자재, 일반 프로젝트의 100장 평가 기준과 일정을 하나의 기준으로 정리하고 샘플 단계에서 핵심 소재를 확인합니다. 최종 MOQ와 일정은 스타일, 소재, 공정 및 생산 능력에 따라 확정합니다.",
-          })}
           className="partners-network-section"
         >
           <div className="partners-network-feature">
@@ -289,9 +284,9 @@ export default function Partners() {
               </h3>
               <p>
                 {text({
-                  zh: "从设计意图和品牌定位出发，团队先确认品类、版型、功能、成本与交期边界，再筛选外层面料、填充、里料、拉链、扣具和包装，形成能够进入打样及生产的冬装材料方案。",
-                  en: "Starting from design intent and brand positioning, the team aligns category, fit, function, cost and timing before screening shell fabrics, insulation, linings, zippers, hardware and packaging into a winterwear material plan ready for sampling and production.",
-                  ko: "디자인 의도와 브랜드 포지셔닝을 바탕으로 품목, 패턴, 기능, 원가와 납기 범위를 먼저 확인한 뒤 겉감, 충전재, 안감, 지퍼, 하드웨어와 포장을 검토해 샘플 및 생산으로 이어질 수 있는 겨울 의류 소재안을 구성합니다.",
+                  zh: "绒达仅为设计师及中高端品牌提供冬装开发与生产协作。团队从设计意图与品牌定位出发，将品类、版型、功能、成本与交期纳入同一项目标准；常规项目以100件为评估起点，再匹配外层面料、填充、里料、拉链、扣具及包装，并在样衣阶段核对关键材料，使方案能够清晰进入生产。最终起订量与周期按款式、材料、工艺及产能确认。",
+                  en: "RONDA works exclusively on winterwear development and production for designer and premium brands. Starting from design intent and brand positioning, the team aligns category, fit, function, cost and timing in one project standard; standard projects are evaluated from a 100-piece starting point, then shell fabrics, insulation, linings, zippers, hardware and packaging are matched and key materials validated at sampling so the plan can move clearly into production. Final MOQ and lead time depend on style, materials, construction and capacity.",
+                  ko: "룽다는 디자이너 및 프리미엄 브랜드를 위한 겨울 의류 개발과 생산 협업에만 집중합니다. 디자인 의도와 브랜드 포지셔닝을 바탕으로 품목, 패턴, 기능, 원가와 일정을 하나의 프로젝트 기준으로 정리합니다. 일반 프로젝트는 100장을 평가 기준으로 시작하며, 겉감, 충전재, 안감, 지퍼, 하드웨어와 포장을 매칭하고 샘플 단계에서 핵심 소재를 확인해 생산으로 연결합니다. 최종 MOQ와 일정은 스타일, 소재, 공정 및 생산 능력에 따라 확정합니다.",
                 })}
               </p>
             </div>
