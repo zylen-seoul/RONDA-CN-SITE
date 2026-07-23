@@ -116,12 +116,12 @@
   padding-top: 2rem;
 }
 
-.contact-section.is-home .contact-section__channel-grid {
+.contact-section .contact-section__channel-grid {
   align-items: end;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto !important;
 }
 
-.contact-section.is-home .contact-section__inquiry {
+.contact-section .contact-section__inquiry {
   align-items: flex-end;
   border-top: 0;
   display: flex;
@@ -155,12 +155,12 @@
     font-size: clamp(0.98rem, 4.4vw, 1.2rem);
   }
 
-  .contact-section.is-home .contact-section__channel-grid {
+  .contact-section .contact-section__channel-grid {
     align-items: start;
     grid-template-columns: 1fr !important;
   }
 
-  .contact-section.is-home .contact-section__inquiry {
+  .contact-section .contact-section__inquiry {
     justify-content: flex-start;
   }
 }

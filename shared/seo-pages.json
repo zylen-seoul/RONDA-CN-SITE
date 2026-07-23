@@ -435,37 +435,37 @@
       "path": "/partners/",
       "index": true,
       "title": {
-        "zh": "合作资源｜杭州绒达",
-        "en": "Collaboration Resources | RONDA",
-        "ko": "협업 자원 | RONDA"
+        "zh": "合作资源与100+工厂联盟｜杭州绒达",
+        "en": "Materials, Brands & 100+ Factory Alliance | RONDA",
+        "ko": "원부자재·브랜드·100+ 공장 네트워크 | RONDA"
       },
       "description": {
-        "zh": "了解杭州绒达如何围绕冬装项目协调品牌需求、面料、填充、拉链、扣具、里料与生产资源。",
-        "en": "See how RONDA coordinates brand requirements with fabric, insulation, zippers, hardware, linings and production resources for winterwear.",
-        "ko": "RONDA가 겨울 의류 프로젝트에서 브랜드 요구와 원단, 충전재, 지퍼, 부자재, 안감과 생산 자원을 조율하는 방식을 확인하세요."
+        "zh": "了解杭州绒达如何通过面辅料与品牌合作资源、100+家独家签约工厂联盟，为羽绒服、皮草和冲锋衣项目协调生产调度与全环节质量监控。",
+        "en": "Explore how RONDA combines material and brand resources with a 100+ exclusively contracted factory alliance for scheduled winterwear production and end-to-end quality control.",
+        "ko": "RONDA가 원부자재 및 브랜드 자원과 100개 이상 독점 계약 공장 네트워크를 연결해 겨울 의류 생산 배정과 전 과정 품질 관리를 수행하는 방식을 확인하세요."
       },
       "h1": { "zh": "合作资源", "en": "Collaboration Resources", "ko": "협업 자원" },
       "intro": {
-        "zh": "绒达根据具体款式与项目条件协调面辅料和生产资源。网站展示用于说明资源类型，不代表未经确认的客户、代理、授权或固定供货关系。",
-        "en": "RONDA coordinates material and production resources according to each style and project. Website displays explain resource types and do not imply unconfirmed clients, representation, authorization or fixed supply relationships.",
-        "ko": "RONDA는 스타일과 프로젝트 조건에 맞춰 원부자재와 생산 자원을 조율합니다. 웹사이트 표시는 자원 유형을 설명하며 확인되지 않은 고객, 대리, 승인 또는 고정 공급 관계를 의미하지 않습니다."
+        "zh": "绒达把品牌目标、面辅料选择与100+家独家签约精品工厂纳入同一项目标准，根据客户交期、数量、材料与工艺复杂度匹配中高端定制化生产资源。",
+        "en": "RONDA brings brand objectives, material choices and a 100+ exclusively contracted premium factory base into one project standard, matching customized production to timing, volume, materials and construction complexity.",
+        "ko": "RONDA는 브랜드 목표, 원부자재 선택과 100개 이상 독점 계약 프리미엄 공장을 하나의 프로젝트 기준으로 연결하고 일정, 수량, 소재와 공정 난이도에 맞춰 중고급 맞춤 생산을 배정합니다."
       },
-      "summary": { "zh": "了解冬装项目中的面辅料与协作资源。", "en": "Explore material and collaboration resources for winterwear projects.", "ko": "겨울 의류 프로젝트의 원부자재와 협업 자원을 확인하세요." },
+      "summary": { "zh": "了解冬装项目中的面辅料、品牌案例与100+工厂联盟。", "en": "Explore winterwear materials, brand cases and RONDA's 100+ factory alliance.", "ko": "겨울 의류 원부자재, 브랜드 사례와 RONDA의 100개 이상 공장 네트워크를 확인하세요." },
       "staticSections": [
         {
-          "heading": { "zh": "面辅料资源", "en": "Material Resources", "ko": "원부자재 자원" },
+          "heading": { "zh": "面辅料与品牌合作", "en": "Materials and Brand Collaboration", "ko": "원부자재 및 브랜드 협업" },
           "paragraphs": {
-            "zh": ["资源范围可包括梭织和针织面料、功能膜材、羽绒及其他保暖填充、里料、缝线、拉链、扣具和包装。具体品牌、规格、库存、最低订量与交期以项目询价和供方确认为准。"],
-            "en": ["Resources may include woven and knitted fabrics, functional membranes, down and other insulation, linings, thread, zippers, hardware and packaging. Brands, specifications, stock, minimums and lead times depend on project quotations and supplier confirmation."],
-            "ko": ["직물과 니트 원단, 기능성 멤브레인, 다운과 기타 보온재, 안감, 봉제사, 지퍼, 부자재와 포장 등을 검토할 수 있습니다. 브랜드, 규격, 재고, 최소 주문량과 납기는 프로젝트 견적과 공급자 확인을 기준으로 합니다."]
+            "zh": ["绒达围绕品牌定位和产品结构协调外层面料、保暖填充、里料与衬料、拉链与闭合件、扣具与绳带、缝线与包装，并在样衣阶段完成关键材料核对。品牌和面辅料展示用于说明既有项目资料或可协同资源，具体规格、最低订量、价格与交期以逐单确认结果为准。"],
+            "en": ["RONDA coordinates shell fabrics, insulation, linings, support materials, zippers, closures, hardware, tapes, thread and packaging around brand positioning and product construction, validating key materials at sampling. Brand and material displays refer to existing project records or accessible resources; specifications, minimums, price and timing are confirmed case by case."],
+            "ko": ["RONDA는 브랜드 포지셔닝과 제품 구조를 기준으로 겉감, 충전재, 안감과 보강재, 지퍼와 여밈 부속, 하드웨어와 테이프, 봉제사와 포장을 조율하고 샘플 단계에서 핵심 소재를 확인합니다. 브랜드와 원부자재 표시는 기존 프로젝트 자료 또는 협업 가능한 자원을 설명하며 사양, 최소 수량, 가격과 일정은 프로젝트별로 확인합니다."]
           }
         },
         {
-          "heading": { "zh": "合作展示原则", "en": "Display Principles", "ko": "표시 원칙" },
+          "heading": { "zh": "100+家独家签约工厂联盟", "en": "100+ Exclusive Factory Alliance", "ko": "100개 이상 독점 계약 공장 네트워크" },
           "paragraphs": {
-            "zh": ["品牌或供应商名称仅在具备真实项目依据或展示许可时使用。项目可用资源会随市场、地区、数量和交期变化，需逐单确认。"],
-            "en": ["Brand or supplier names are used only with real project evidence or display permission. Available resources change with market, region, quantity and timing and must be confirmed order by order."],
-            "ko": ["브랜드 또는 공급자 명칭은 실제 프로젝트 근거 또는 표시 허가가 있을 때만 사용합니다. 사용 가능한 자원은 시장, 지역, 수량과 일정에 따라 달라지므로 주문별 확인이 필요합니다."]
+            "zh": ["绒达根据羽绒服、皮草、冲锋衣等品类专长、设备能力、当前排期与质量记录调度签约工厂，从生产投放、关键节点巡检到成衣终检实施全环节监控，以满足不同时间窗口和不同客户的中高端定制化生产需求。"],
+            "en": ["RONDA schedules contracted factories by expertise in down jackets, fur and shearling, technical shells and other categories, together with equipment, live capacity and quality records. Control spans production launch, milestone checks and final garment inspection to support premium customized requirements across different client timelines."],
+            "ko": ["RONDA는 다운 재킷, 퍼·시어링, 테크니컬 셸 등 품목 전문성, 설비 역량, 현재 일정과 품질 기록을 기준으로 계약 공장을 배정합니다. 생산 투입, 주요 단계 검사와 완제품 최종 검사까지 전 과정을 관리해 고객별 일정에 맞는 중고급 맞춤 생산 요구를 지원합니다."]
           }
         }
       ]

@@ -212,7 +212,6 @@ function QRModal({ name, qr, onClose }: { name: string; qr: string; onClose: () 
     </motion.div>
   );
 }
-
 export default function ContactSection({ showCityMedia = false }: { showCityMedia?: boolean }) {
   const { t, lang } = useLanguage();
   const cityMedia = CITY_MEDIA[lang];
@@ -617,12 +616,10 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
               </div>
             </div>
 
-            {showCityMedia && inquiryAction}
+            {inquiryAction}
           </div>
         </div>
 
-        {/* Keep the standalone inquiry action on internal pages. */}
-        {!showCityMedia && inquiryAction}
       </div>
 
       {/* QR Modal */}
