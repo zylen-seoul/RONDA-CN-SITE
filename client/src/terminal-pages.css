@@ -690,6 +690,12 @@
   color: var(--terminal-paper);
 }
 
+.terminal-site--about .terminal-identity__mark {
+  background:
+    linear-gradient(180deg, rgba(51, 70, 78, 0.24), rgba(38, 55, 62, 0.9)),
+    url("/ronda-v2/about/about-introduction-pattern-room-v1.jpg") center 56% / cover no-repeat;
+}
+
 .terminal-identity__mark img {
   width: min(13rem, 70%);
   filter: brightness(0) invert(1);
@@ -897,6 +903,123 @@
   line-height: 1.7;
 }
 
+.terminal-site--digital .digital-network-film .terminal-video-panel {
+  grid-template-columns: minmax(0, 1.16fr) minmax(22rem, 0.84fr);
+  min-height: 34rem;
+  background: #33464e;
+}
+
+.terminal-site--digital .digital-network-film .terminal-video-panel__poster img {
+  opacity: 0.9;
+}
+
+.terminal-site--digital .digital-network-film .terminal-video-panel__poster::after {
+  background: linear-gradient(180deg, rgba(36, 54, 61, 0.02) 40%, rgba(36, 54, 61, 0.82));
+}
+
+.digital-factory-evidence {
+  position: absolute;
+  right: clamp(1rem, 2.5vw, 2rem);
+  bottom: clamp(1rem, 2.5vw, 2rem);
+  left: clamp(1rem, 2.5vw, 2rem);
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(34, 51, 58, 0.76);
+  backdrop-filter: blur(8px);
+}
+
+.digital-factory-evidence > span {
+  display: flex;
+  min-height: 4.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.85rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f7f9fb;
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.digital-factory-evidence > span:nth-child(3) {
+  border-right: 0;
+}
+
+.digital-factory-evidence b {
+  color: #c9d7db;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+}
+
+.digital-factory-evidence > small {
+  grid-column: 1 / -1;
+  padding: 0.55rem 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #c9d7db;
+  font-size: 0.56rem;
+  letter-spacing: 0.08em;
+}
+
+.terminal-site--digital .digital-network-film .terminal-video-panel__status {
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.digital-factory-console > p {
+  max-width: 38rem;
+}
+
+.digital-factory-gates {
+  display: grid;
+  margin: 1.5rem 0 1.2rem;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  list-style: none;
+}
+
+.digital-factory-gates li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.72rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.digital-factory-gates li > span {
+  color: #d66e3a;
+  font-size: 0.58rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.digital-factory-gates b,
+.digital-factory-gates small {
+  display: block;
+}
+
+.digital-factory-gates b {
+  color: #f7f9fb;
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.digital-factory-gates small {
+  margin-top: 0.2rem;
+  color: #b8c4cc;
+  font-size: 0.58rem;
+  line-height: 1.45;
+}
+
+.digital-factory-disclaimer {
+  display: block;
+  color: #b8c4cc;
+  font-size: 0.58rem;
+  line-height: 1.6;
+}
+
 .terminal-site--digital .digital-chain-section {
   background:
     linear-gradient(135deg, rgba(201, 215, 219, 0.3), transparent 55%),
@@ -966,6 +1089,95 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.global-supporting-visuals figure:nth-child(2) img {
+  object-position: center 57%;
+}
+
+.terminal-site--about .about-capabilities-section {
+  --terminal-copy: #53666d;
+  background:
+    linear-gradient(110deg, rgba(43, 61, 68, 0.92), rgba(43, 61, 68, 0.74)),
+    url("/ronda-v2/editorial/pattern-making-soft-1000.png") center / cover no-repeat;
+}
+
+.terminal-site--about .about-capabilities-section .terminal-section__intro {
+  color: #dce4e6;
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  border: 0;
+  background: rgba(247, 249, 251, 0.24);
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(1rem, 2vw, 1.5rem);
+  min-height: 12rem;
+  border: 0;
+  background: rgba(247, 249, 251, 0.9);
+  color: #2f424a;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card::after {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 44%;
+  background: var(--capability-garment) center / cover no-repeat;
+  content: "";
+  filter: grayscale(1) contrast(0.8);
+  opacity: 0.13;
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card:nth-child(1) {
+  --capability-garment: url("/ronda-v2/categories/down-jackets.jpg");
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card:nth-child(2) {
+  --capability-garment: url("/ronda-v2/categories/technical-shells.jpg");
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card:nth-child(3) {
+  --capability-garment: url("/ronda-v2/categories/skiwear.jpg");
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card:nth-child(4) {
+  --capability-garment: url("/ronda-v2/categories/double-faced-coats.jpg");
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card > span {
+  grid-row: 1 / 3;
+  margin: 0;
+  padding-top: 0.15rem;
+  color: #d66e3a;
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card h3,
+.terminal-site--about .about-capabilities-section .terminal-evidence-card p {
+  grid-column: 2;
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card h3 {
+  margin: 0;
+  color: #2f424a;
+  font-size: clamp(0.88rem, 1.25vw, 1.05rem);
+  line-height: 1.35;
+}
+
+.terminal-site--about .about-capabilities-section .terminal-evidence-card p {
+  color: #53666d;
 }
 
 .global-supporting-visuals figcaption {
@@ -1556,6 +1768,23 @@
 
   .global-supporting-visuals {
     grid-template-columns: 1fr;
+  }
+
+  .terminal-site--about .about-capabilities-section .terminal-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal-site--digital .digital-network-film .terminal-video-panel__poster {
+    min-height: 0;
+    height: clamp(15rem, 72vw, 20rem);
+  }
+
+  .terminal-site--digital .digital-network-film .terminal-video-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .digital-factory-evidence {
+    display: none;
   }
 
   .partners-logo-grid {

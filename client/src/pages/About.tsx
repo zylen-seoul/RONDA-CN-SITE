@@ -119,6 +119,7 @@ export default function About() {
           title={text({ zh: "用可验证的能力建立合作", en: "Capabilities You Can Verify", ko: "검증 가능한 협업 역량" })}
           intro={text({ zh: "以下标准对应绒达当前服务体系；具体工厂匹配、最终起订条件与生产周期仍按款式、材料、工艺和项目排期确认。", en: "These standards reflect RONDA's current operating model; factory matching, final MOQ and production timing are confirmed by style, materials, construction and project schedule.", ko: "아래 기준은 RONDA의 현재 운영 체계를 반영하며 실제 공장 매칭, 최종 MOQ와 생산 일정은 스타일, 소재, 공정과 프로젝트 일정에 따라 확정합니다." })}
           tone="dark"
+          className="about-capabilities-section"
         >
           <div className="terminal-evidence-grid">
             {advantages.map((item, index) => (

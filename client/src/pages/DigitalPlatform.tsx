@@ -21,8 +21,8 @@ const informationFlow: Array<{ title: TerminalLocalized; body: TerminalLocalized
     body: { zh: "面辅料选择、色卡、规格、供方资料、可得性与确认结果按版本归档，以实际供方文件为准。", en: "Material selections, color cards, specifications, supplier files, availability and approvals are versioned against actual supplier documents.", ko: "원부자재 선택, 컬러 카드, 규격, 공급업체 자료, 수급 가능 여부와 승인 결과를 버전별로 기록하며 실제 공급업체 문서를 기준으로 합니다." },
   },
   {
-    title: { zh: "冬装工厂执行", en: "Winterwear Factory Execution", ko: "겨울 의류 공장 실행" },
-    body: { zh: "根据六大冬装品类、工艺能力、质量记录和排期，在自有工厂与精选签约工厂之间匹配生产节点。", en: "Production is allocated between RONDA's own factory and selected contracted factories according to category, construction capability, quality records and schedule.", ko: "6대 겨울 의류 품목, 공정 역량, 품질 기록과 일정에 따라 자체 공장 또는 엄선된 계약 공장에 생산 단계를 배정합니다." },
+    title: { zh: "工厂能力路由", en: "Factory Capability Routing", ko: "공장 역량 라우팅" },
+    body: { zh: "按品类、工艺与质量记录、产能和排期匹配自有或签约工厂，并记录候选、确认与调整原因。", en: "Route production to an in-house or contracted factory by category, process and quality records, capacity and schedule, while recording selection and change reasons.", ko: "품목, 공정 및 품질 기록, 생산 능력과 일정에 따라 자체 또는 계약 공장을 배정하고 선택과 변경 사유를 기록합니다." },
   },
   {
     title: { zh: "质检与交付闭环", en: "QC & Delivery Closeout", ko: "품질 검사와 납품 마감" },
@@ -36,12 +36,45 @@ const platformRoles: Array<{ title: TerminalLocalized; body: TerminalLocalized }
     body: { zh: "集中整理面辅料规格、色卡、供应商文件、最低订量与可得性；所有参数以供方资料和项目确认结果为准。", en: "Organizes material specifications, color cards, supplier files, minimums and availability, subject to supplier documents and project approval.", ko: "원부자재 사양, 컬러 카드, 공급업체 문서, 최소 주문 수량과 수급 가능 여부를 정리하며 모든 정보는 공급업체 자료와 프로젝트 승인 결과를 기준으로 합니다." },
   },
   {
-    title: { zh: "冬装生产层", en: "Winterwear Production Layer", ko: "겨울 의류 생산 계층" },
-    body: { zh: "根据六大冬装品类、工艺、质量记录与排期，协调自有工厂和100+精选签约工厂，并记录投产、首件与关键工序节点。", en: "Coordinates RONDA's own factory and 100+ selected partners by category, construction, quality records and schedule, recording launch, first-piece and key-process milestones.", ko: "6대 겨울 의류 품목, 공정, 품질 기록과 일정에 따라 자체 공장과 100개 이상의 엄선된 계약 공장을 조율하고 생산 투입, 초도품과 주요 공정 단계를 기록합니다." },
+    title: { zh: "生产控制层", en: "Production Control Layer", ko: "생산 관리 계층" },
+    body: { zh: "以项目编号记录自有工厂与100+精选签约工厂的能力匹配、产能确认、首件、关键工序和质检结果；排产变化保留责任人与版本。", en: "Uses the project ID to record capability matching, capacity confirmation, first-piece approval, key processes and QC across RONDA's own factory and 100+ selected partners, retaining owners and versions when schedules change.", ko: "프로젝트 ID로 자체 공장과 100개 이상의 엄선된 계약 공장의 역량 매칭, 생산 능력 확인, 초도품, 핵심 공정과 검사 결과를 기록하고 일정 변경 시 담당자와 버전을 남깁니다." },
   },
   {
     title: { zh: "品牌交付层", en: "Brand Delivery Layer", ko: "브랜드 납품 계층" },
     body: { zh: "品牌围绕样衣版本、材料确认、生产更新、检查结果、包装与出货资料完成项目核对。", en: "The brand reviews sample versions, material approvals, production updates, inspection results, packing and dispatch files in one record.", ko: "브랜드는 하나의 기록에서 샘플 버전, 소재 승인, 생산 업데이트, 검사 결과, 포장과 출고 자료를 확인합니다." },
+  },
+];
+
+const factoryEvidence: Array<TerminalLocalized> = [
+  { zh: "工厂能力路由", en: "Capability Routing", ko: "공장 역량 라우팅" },
+  { zh: "责任节点", en: "Accountable Gates", ko: "책임 단계" },
+  { zh: "版本证据", en: "Versioned Evidence", ko: "버전 기록" },
+];
+
+const factoryGates: Array<{ title: TerminalLocalized; meta: TerminalLocalized }> = [
+  {
+    title: { zh: "能力匹配", en: "Capability Match", ko: "역량 매칭" },
+    meta: { zh: "品类 · 工艺 · 排期", en: "Category · Process · Schedule", ko: "품목 · 공정 · 일정" },
+  },
+  {
+    title: { zh: "产能确认", en: "Capacity Confirmation", ko: "생산 능력 확인" },
+    meta: { zh: "工厂 · 数量 · 责任人", en: "Factory · Quantity · Owner", ko: "공장 · 수량 · 담당자" },
+  },
+  {
+    title: { zh: "首件放行", en: "First-Piece Release", ko: "초도품 승인" },
+    meta: { zh: "版型 · 材料 · 工艺点", en: "Fit · Material · Construction", ko: "패턴 · 소재 · 공정" },
+  },
+  {
+    title: { zh: "关键工序", en: "Key-Process Check", ko: "핵심 공정 검사" },
+    meta: { zh: "巡检 · 问题 · 关闭记录", en: "Inspection · Issue · Closure", ko: "검사 · 이슈 · 조치 기록" },
+  },
+  {
+    title: { zh: "终检确认", en: "Final QC", ko: "최종 검사" },
+    meta: { zh: "规格 · 数量 · 外观", en: "Specification · Quantity · Appearance", ko: "사양 · 수량 · 외관" },
+  },
+  {
+    title: { zh: "出货归档", en: "Dispatch Record", ko: "출고 기록" },
+    meta: { zh: "包装 · 文件 · 发运信息", en: "Packing · Files · Shipment", ko: "포장 · 문서 · 발송 정보" },
   },
 ];
 
@@ -81,21 +114,36 @@ export default function DigitalPlatform() {
 
         <TerminalSection
           id="platform-film"
-          eyebrow="FACTORY NETWORK OPERATIONS"
-          title={text({ zh: "联盟工厂的数字协作视图", en: "Factory Network Operating View", ko: "공장 네트워크 운영 뷰" })}
-          intro={text({ zh: "项目以真实生产节点为依据，将材料确认、工厂匹配、首件、关键工序、终检与出货资料接入同一协作记录。", en: "Each project follows real production milestones, bringing material approvals, factory allocation, first-piece checks, key processes, final inspection and dispatch files into one collaboration record.", ko: "실제 생산 단계를 기준으로 소재 승인, 공장 배정, 초도품 확인, 주요 공정, 최종 검사와 출고 자료를 하나의 협업 기록에 연결합니다." })}
+          eyebrow="FACTORY NETWORK CONTROL"
+          title={text({ zh: "联盟工厂，统一生产记录", en: "One Factory Network, One Record", ko: "공장 네트워크, 하나의 기록" })}
+          intro={text({ zh: "绒达不把数字化等同于设备自动联网。一个项目编号连接工厂匹配、产能确认、首件、关键工序、终检与出货资料，每一项状态由责任人依据真实记录更新。", en: "RONDA does not equate digital collaboration with fully connected machinery. One project ID links factory allocation, capacity confirmation, first-piece approval, key-process checks, final QC and dispatch files; accountable people update each status from actual records.", ko: "RONDA는 디지털 협업을 모든 설비의 자동 연결로 과장하지 않습니다. 하나의 프로젝트 ID로 공장 배정, 생산 능력 확인, 초도품 승인, 핵심 공정 검사, 최종 검사와 출고 자료를 연결하며 각 상태는 담당자가 실제 기록을 기준으로 업데이트합니다." })}
           tone="steel"
           className="digital-network-film"
         >
           <div className="terminal-video-panel">
             <div className="terminal-video-panel__poster">
-              <img src="/ronda-platform/partners/factory-shell-8f8ebe.jpg" alt={text({ zh: "冬装联盟工厂生产现场与项目节点协同", en: "Winterwear partner-factory production and project milestone coordination", ko: "겨울 의류 협력 공장 생산 현장과 프로젝트 단계 협업" })} loading="lazy" />
+              <img src="/ronda-platform/partners/factory-shell-8f8ebe.jpg" alt={text({ zh: "绒达签约冬装工厂生产现场及项目协作记录", en: "RONDA contracted winterwear factory floor and project collaboration records", ko: "RONDA 계약 겨울 의류 공장 현장과 프로젝트 협업 기록" })} loading="lazy" />
+              <div className="digital-factory-evidence" aria-label={text({ zh: "联盟工厂数字协作证据", en: "Factory network collaboration evidence", ko: "공장 네트워크 협업 기록" })}>
+                {factoryEvidence.map((item, index) => (
+                  <span key={item.en}><b>{String(index + 1).padStart(2, "0")}</b>{text(item)}</span>
+                ))}
+                <small>{text({ zh: "流程示意 · 非设备实时数据", en: "Workflow schema · not live machine data", ko: "프로세스 예시 · 설비 실시간 데이터 아님" })}</small>
+              </div>
             </div>
             <div className="terminal-video-panel__status">
-              <span>MATERIALS · FACTORY · QC · DELIVERY</span>
-              <div>
-                <strong>{text({ zh: "从材料确认到交付归档", en: "Materials to Delivery Records", ko: "소재 승인부터 납품 기록까지" })}</strong>
-                <p>{text({ zh: "平台汇总由项目团队依据实际资料更新的节点状态，不代替供方文件、人工质检或双方正式确认。", en: "The platform organizes milestone updates entered from actual project records; it does not replace supplier documents, human inspection or formal approval by both parties.", ko: "플랫폼은 실제 프로젝트 자료에 따라 업데이트된 단계 정보를 정리하며 공급업체 문서, 담당자 품질 검사 또는 양측의 공식 승인을 대체하지 않습니다." })}</p>
+              <span>PROJECT ID · OWNER · VERSION</span>
+              <div className="digital-factory-console">
+                <strong>{text({ zh: "六个节点，一条记录", en: "Six Gates, One Record", ko: "여섯 단계, 하나의 기록" })}</strong>
+                <p>{text({ zh: "平台把生产事实整理成可查询的项目记录：谁负责、当前在哪一关、依据哪一版资料、下一项由谁确认。", en: "The platform turns production facts into a queryable project record: who owns the task, which gate is current, which file version applies and who must approve next.", ko: "플랫폼은 생산 사실을 조회 가능한 프로젝트 기록으로 정리합니다. 담당자, 현재 단계, 적용 자료 버전과 다음 승인자를 명확히 확인할 수 있습니다." })}</p>
+                <ol className="digital-factory-gates">
+                  {factoryGates.map((gate, index) => (
+                    <li key={gate.title.en}>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                      <div><b>{text(gate.title)}</b><small>{text(gate.meta)}</small></div>
+                    </li>
+                  ))}
+                </ol>
+                <small className="digital-factory-disclaimer">{text({ zh: "状态由项目人员依据供方文件、现场检查和双方确认更新；不代表全部设备实时联网。", en: "Status is updated by project personnel from supplier files, on-site checks and formal approvals; it does not imply live connectivity for every machine.", ko: "상태는 공급업체 문서, 현장 검사와 양측 승인에 따라 담당자가 업데이트하며 모든 설비의 실시간 연결을 의미하지 않습니다." })}</small>
               </div>
             </div>
           </div>

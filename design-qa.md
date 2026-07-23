@@ -1,24 +1,22 @@
-# RONDA Pagination Design QA
+# RONDA Global, Digital and About Design QA
 
-## Reference and implementation compared
+## Reference and implementation comparison
 
-- Reference: the pre-change Products, Services, Digital Platform, About, Global, Contact and product-detail routes captured locally before implementation.
-- Implementation: the same routes after the page-hero, supporting-media, copy and palette update.
-- Direct visual comparison: the before/after Global page hero was reviewed side by side at the same desktop state; the new map adds the requested hierarchy without changing the existing page system.
-- Responsive coverage: default desktop viewport plus 390 × 844 checks for Chinese, English and Korean routes.
+- Global supporting visual: the supplied Hangzhou pattern-room photo and the implemented Global-page crop were placed in one side-by-side comparison at the same desktop state. The central Brother machine, ceiling grid and depth of the room remain visible; the source was not stretched or degraded.
+- About introduction: the supplied pattern-cutting-room photo and the implemented introduction panel were placed in one side-by-side comparison. The image remains recognizable behind the steel-blue readability layer, with the RONDA mark and text retaining sufficient contrast.
+- Capability reference: the supplied winter-garment technical-drawing sheet guided the restrained garment-evidence treatment. The final cards use existing RONDA winterwear category photography plus the tracked pattern-making background, avoiding a synthetic placeholder when built-in image generation was unavailable.
+- Responsive coverage: default 1280 px desktop plus 390 x 844 checks on Chinese, English and Korean Global, Digital Platform and About routes.
 
 ## Checks
 
-- Scope preservation: passed. Home and Partners were not redesigned. The fixed Sample App module, Contact section, Hangzhou and Seoul city images, six category images and route structure remain unchanged.
-- Page heroes: passed. Products, Services, Digital Platform, About, Global, Contact and all six product-detail destinations now use relevant real or generated raster backgrounds with controlled opacity and readable foreground copy.
-- Supporting visuals: passed. Products uses the supplied fabric-library photo; Services adds a pattern/sample workspace; Digital adds a real factory-network view; Global adds Seoul/Hangzhou collaboration scenes; product details add category-specific process evidence.
-- Global map: passed. Hangzhou and Seoul are the two orange hubs. New York, London, Paris, Milan, Rome and Tokyo are six secondary market nodes, connected with restrained route lines and explicitly described as markets rather than offices.
-- Digital copy: passed. The page now explains one project ID, upstream materials, RONDA's own factory, 100+ selected contracted winterwear factories, production/QC/delivery records and the limits of platform status. The fixed Sample App module was not edited.
-- Service timeline: passed. All eight stages retain the existing sequence and now include a visible time coordinate, clearer professional output and a cautious project-specific timing note.
-- Color and hierarchy: passed. Near-black content blocks on the edited pages were replaced with deep steel blue while the existing RONDA snow, mist, steel and rust-orange palette remains intact.
-- Title behavior: passed. H1 and section titles remain single-line; mobile checks reported zero horizontal overflow across the requested primary routes and Korean variants.
-- Search content: passed. The localized SEO manifest now mirrors the visible Products, Services, Digital, About and Global copy, including the six markets and digital winterwear network.
-- Accessibility: passed. Added images have localized alt text, supporting scenes use semantic figures and captions, and existing navigation and route semantics remain intact.
-- Runtime: passed. TypeScript completed with no errors, the production client/server build succeeded, 51 localized static routes plus sitemap/robots/404 were regenerated, and browser console inspection returned no errors.
+- Global hero position: passed. The world-route map uses a lower vertical focal point (`center 34%`), keeping the Hangzhou/Seoul hubs and route network visible without interfering with the page title.
+- Global location imagery: passed. Seoul remains unchanged; the Hangzhou supporting image is the supplied real pattern-room photograph with a deliberate horizontal crop and localized semantic alt text.
+- Digital factory-network presentation: passed. The section now presents one project ID, accountable owners, versions and six real production gates instead of implying automatic machine telemetry. The fixed Sample App module and its route remain unchanged.
+- About introduction: passed. The supplied pattern-room image is integrated as the introduction panel background with a steel-blue overlay, RONDA identity and readable localized copy.
+- About capabilities: passed. Four cards form a balanced 2 x 2 desktop grid and one-column mobile stack, with subtle winterwear imagery, clear numbering, compact titles and sufficient contrast.
+- Layout and overflow: passed. Desktop and 390 px mobile checks report no horizontal overflow. The Digital factory-control panel explicitly switches to one column on mobile; all six gates remain readable.
+- Localization: passed. New Global, Digital and About content includes Chinese, English and Korean variants; the Korean factory-routing terminology is consistent.
+- Accessibility: passed. New visual content has localized alt text, supporting locations remain semantic figures with captions, and all edited text is visible HTML rather than baked into generated imagery.
+- Runtime: passed. `git diff --check`, TypeScript, Vite client build and server esbuild all complete successfully. The only build notice is the pre-existing-sized main JavaScript chunk exceeding Vite's advisory 500 kB threshold; it does not block publication.
 
 final result: passed

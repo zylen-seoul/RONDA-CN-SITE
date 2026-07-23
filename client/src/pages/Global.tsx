@@ -113,7 +113,7 @@ export default function Global() {
               <figcaption>{text({ zh: "首尔：跨境需求沟通、趋势信息与设计协作触点。", en: "Seoul: a touchpoint for cross-border briefs, trend information and design collaboration.", ko: "서울: 국경 간 요구 소통, 트렌드 정보와 디자인 협업 접점." })}</figcaption>
             </figure>
             <figure>
-              <img src="/ronda-platform/partners/factory-shell-8f8ebe.jpg" alt={text({ zh: "杭州冬装生产协作现场", en: "Hangzhou winterwear production coordination", ko: "항저우 겨울 의류 생산 협업 현장" })} loading="lazy" />
+              <img src="/ronda-v2/global/hangzhou-pattern-room-real-v1.jpg" alt={text({ zh: "杭州冬装生产协作现场", en: "Hangzhou winterwear production coordination", ko: "항저우 겨울 의류 생산 협업 현장" })} loading="lazy" />
               <figcaption>{text({ zh: "杭州：产品标准、工厂匹配、质量记录与交付节点统筹。", en: "Hangzhou: product standards, factory allocation, quality records and delivery coordination.", ko: "항저우: 제품 기준, 공장 배정, 품질 기록과 납품 단계 총괄." })}</figcaption>
             </figure>
           </div>

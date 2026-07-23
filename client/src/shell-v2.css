@@ -190,6 +190,10 @@ body {
   --page-hero-image-opacity: 0.88;
 }
 
+.page-hero-v2--global::before {
+  background-position: center 34%;
+}
+
 .page-hero-v2--global::after {
   background: linear-gradient(90deg, rgba(242, 243, 241, 0.94) 0%, rgba(242, 243, 241, 0.72) 40%, rgba(242, 243, 241, 0.28) 100%);
 }
