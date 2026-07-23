@@ -1,5 +1,6 @@
 import PageHero from "@/components/PageHero";
 import SiteShell from "@/components/SiteShell";
+import "@/products-enrichment.css";
 import { ArrowUpRight } from "lucide-react";
 import {
   TerminalCTA,
@@ -60,6 +61,36 @@ const productCards: Array<{
   },
 ];
 
+const materialExecution: Array<{
+  title: TerminalLocalized;
+  body: TerminalLocalized;
+}> = [
+  {
+    title: { zh: "品类适配", en: "Category Fit", ko: "품목 적합성" },
+    body: {
+      zh: "按羽绒服、冲锋衣、滑雪服、大衣、皮草与皮毛一体、羽绒寝具的使用场景，分别核对面料性能、结构兼容性与成衣手感。",
+      en: "Match fabric performance, structural compatibility and finished hand feel to the use case of down jackets, shells, skiwear, coats, fur and shearling, or down bedding.",
+      ko: "다운 재킷, 셸, 스키웨어, 코트, 퍼·시어링과 다운 침구의 사용 환경에 맞춰 소재 성능, 구조 적합성과 완제품 촉감을 각각 검토합니다.",
+    },
+  },
+  {
+    title: { zh: "材料组合", en: "Material System", ko: "소재 시스템" },
+    body: {
+      zh: "把面料、里料、填充、拉链、扣具、缝线与包装纳入同一材料清单，提前识别颜色、最低订量与工艺之间的联动限制。",
+      en: "Build shell, lining, insulation, zippers, hardware, thread and packaging into one bill of materials, exposing color, mill-minimum and construction dependencies early.",
+      ko: "겉감, 안감, 충전재, 지퍼, 하드웨어, 봉제사와 포장을 하나의 자재 명세로 관리해 색상, 최소 수량과 공정의 연동 조건을 조기에 확인합니다.",
+    },
+  },
+  {
+    title: { zh: "量产验证", en: "Production Gate", ko: "양산 검증" },
+    body: {
+      zh: "样衣阶段确认颜色、克重、手感、功能测试与关键工艺；量产前再复核材料批次、损耗、最低订量和交期后进入排产。",
+      en: "Validate color, weight, hand feel, performance tests and critical construction at sample stage; confirm lots, yield, minimums and lead time before production scheduling.",
+      ko: "샘플 단계에서 색상, 중량, 촉감, 기능 시험과 핵심 공정을 검증하고 양산 전 로트, 소요량, 최소 수량과 납기를 재확인합니다.",
+    },
+  },
+];
+
 export default function Products() {
   const { text, path } = useTerminalLanguage();
 
@@ -101,7 +132,7 @@ export default function Products() {
 
   return (
     <SiteShell pageKey="products">
-      <TerminalFrame>
+      <TerminalFrame className="terminal-site--products">
         <PageHero pageKey="products" />
         <TerminalProofStrip label={text({ zh: "六大品类关键标准", en: "Six-category standards", ko: "6대 품목 핵심 기준" })} items={proof} />
 
@@ -153,6 +184,68 @@ export default function Products() {
               ))}
             </tbody>
           </table>
+          <article
+            className="products-material-panel"
+            aria-labelledby="products-material-title"
+          >
+            <div className="products-material-media">
+              <img
+                src="/ronda-v2/materials/ronda-fabric-library-1600.jpg"
+                alt={text({
+                  zh: "杭州绒达冬装面料库中的真实面料卷与材料标签",
+                  en: "Real fabric rolls and material tags in Rongda's Hangzhou winterwear fabric library",
+                  ko: "항저우 룽다 겨울 의류 원단 라이브러리의 실제 원단 롤과 소재 태그",
+                })}
+                loading="lazy"
+                width="1600"
+                height="1200"
+              />
+              <div className="products-material-media-label">
+                <span>MATERIAL LIBRARY · HANGZHOU</span>
+                <strong>
+                  {text({
+                    zh: "真实材料库",
+                    en: "Working Fabric Library",
+                    ko: "실물 원단 라이브러리",
+                  })}
+                </strong>
+              </div>
+            </div>
+            <div className="products-material-content">
+              <p className="products-material-kicker">
+                {text({
+                  zh: "材料与品类可执行性",
+                  en: "Material & Category Readiness",
+                  ko: "소재와 품목 실행성",
+                })}
+              </p>
+              <h3 id="products-material-title">
+                {text({
+                  zh: "从材料匹配到量产落地",
+                  en: "Material Match to Production",
+                  ko: "소재 매칭에서 양산 준비까지",
+                })}
+              </h3>
+              <p className="products-material-intro">
+                {text({
+                  zh: "面料不是独立采购项。绒达先依据品类用途、目标市场、价格带与交付窗口建立材料边界，再把克重、手感、色牢度、后整理与供应商最低订量纳入样衣和量产确认。",
+                  en: "Fabric is not treated as an isolated purchase. Rongda defines the material envelope from product use, target market, price positioning and delivery window, then carries weight, hand feel, colorfastness, finishing and supplier minimums into sample and production approval.",
+                  ko: "원단을 독립된 구매 항목으로 보지 않습니다. 룽다는 품목 용도, 목표 시장, 가격대와 납기 창을 기준으로 소재 범위를 정하고 중량, 촉감, 견뢰도, 후가공과 공급사 최소 수량을 샘플 및 양산 승인에 연결합니다.",
+                })}
+              </p>
+              <div className="products-material-list">
+                {materialExecution.map((item, index) => (
+                  <div className="products-material-item" key={item.title.en}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div>
+                      <h4>{text(item.title)}</h4>
+                      <p>{text(item.body)}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </article>
           <TerminalNotice label={text({ zh: "起订与样衣", en: "MOQ & Sample", ko: "수량과 샘플" })}>
             <p>{text({ zh: "常规订单建议从 100 件起。常规样衣最快 7 天，具体按款式、面料、工艺评估；复杂结构、特殊材料、特殊工艺或多轮修改会延长。", en: "Standard orders are recommended from 100 pieces. Standard samples can be ready in as little as 7 days, subject to style, fabric and construction review; complex work or multiple revisions takes longer.", ko: "일반 주문은 100장부터 권장합니다. 일반 샘플은 빠르면 7일이며 스타일, 원단과 공정에 따라 달라지고 복잡한 작업과 여러 차례 수정은 기간이 늘어납니다." })}</p>
           </TerminalNotice>

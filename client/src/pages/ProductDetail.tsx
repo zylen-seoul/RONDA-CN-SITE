@@ -203,6 +203,39 @@ export const winterProductDetails: ProductDetailData[] = [
   },
 ];
 
+const detailEvidenceBySlug: Record<ProductSlug, { image: string; alt: TerminalLocalized; caption: TerminalLocalized }> = {
+  "down-jackets": {
+    image: "/ronda-platform/down-filling.webp",
+    alt: { zh: "羽绒服分区充绒工艺", en: "Down jacket chamber filling process", ko: "다운 재킷 구획 충전 공정" },
+    caption: { zh: "充绒与分区结构需要同步核对克重、分布、绒道尺寸和关键缝位，避免样衣确认与量产标准脱节。", en: "Fill weight, distribution, chamber dimensions and critical seams are checked together so the approved sample remains useful for production.", ko: "충전량, 분포, 구획 치수와 주요 봉제선을 함께 확인해 승인 샘플과 본생산 기준의 차이를 줄입니다." },
+  },
+  "technical-shells": {
+    image: "/ronda-platform/seam-sealing.webp",
+    alt: { zh: "冲锋衣压胶与功能工艺", en: "Technical shell seam sealing", ko: "테크니컬 셸 심실링 공정" },
+    caption: { zh: "压胶路径、胶条与面料适配、转角处理和功能拉链共同决定防护结构能否稳定执行。", en: "Tape routes, fabric compatibility, corner treatment and technical zippers determine whether the protective construction can be executed consistently.", ko: "심테이프 경로, 원단 적합성, 모서리 처리와 기능성 지퍼가 보호 구조의 안정적인 실행을 결정합니다." },
+  },
+  skiwear: {
+    image: "/ronda-platform/product-ski.webp",
+    alt: { zh: "滑雪服功能部件与运动结构", en: "Skiwear components and movement construction", ko: "스키웨어 기능 부속과 활동 구조" },
+    caption: { zh: "在保暖基础上同时核对屈伸活动量、耐磨区域、雪裙、通风和收纳位置，确保功能部件服务真实动作。", en: "Mobility, abrasion zones, snow skirt, ventilation and storage are reviewed with insulation so every component supports real movement.", ko: "보온과 함께 동작 여유, 내마모 구역, 스노우 스커트, 통풍과 수납 위치를 확인해 기능 부속이 실제 움직임을 지원하도록 합니다." },
+  },
+  "double-faced-coats": {
+    image: "/ronda-platform/product-wool.webp",
+    alt: { zh: "双面呢大衣面料与廓形工艺", en: "Double-faced coat fabric and silhouette", ko: "더블페이스 코트 원단과 실루엣" },
+    caption: { zh: "双面呢的克重、垂感、净边宽度和手工缝制路径需在样衣阶段共同确认，以维持廓形与内外观感。", en: "Weight, drape, clean-edge width and sewing route are approved together at sample stage to preserve silhouette and finish inside and out.", ko: "더블페이스 원단의 중량, 드레이프, 시접 폭과 봉제 경로를 샘플 단계에서 함께 승인해 안팎의 실루엣과 마감을 유지합니다." },
+  },
+  "fur-shearling": {
+    image: "/ronda-platform/product-fur.webp",
+    alt: { zh: "皮草与皮毛一体材料拼接", en: "Fur and shearling material planning", ko: "퍼와 시어링 소재 배치" },
+    caption: { zh: "厚度、毛向、色差、拼接利用率和成衣重量需依据实际材料逐批评估，并在裁剪前锁定排料方向。", en: "Thickness, nap, shade, panel efficiency and garment weight are assessed against the actual material before cutting direction is locked.", ko: "두께, 모 방향, 색차, 패널 효율과 완제품 중량을 실제 소재로 평가하고 재단 전 배치 방향을 확정합니다." },
+  },
+  "down-bedding": {
+    image: "/ronda-platform/product-duvet.webp",
+    alt: { zh: "羽绒寝具绗缝与填充分布", en: "Down bedding quilting and fill distribution", ko: "다운 침구 퀼팅과 충전 분포" },
+    caption: { zh: "绗缝分区、填充规格、面料防钻绒表现和成品重量共同形成寝具样品与量产核对标准。", en: "Quilting zones, fill specification, down-proof fabric performance and finished weight form the sample and production review standard.", ko: "퀼팅 구역, 충전 사양, 원단의 다운프루프 성능과 완제품 중량이 샘플과 본생산 검토 기준을 만듭니다." },
+  },
+};
+
 export function isProductSlug(value: string): value is ProductSlug {
   return winterProductDetails.some((item) => item.slug === value);
 }
@@ -217,6 +250,7 @@ function resolveSlug(slug?: ProductSlug): ProductSlug {
 export default function ProductDetail({ slug }: { slug?: ProductSlug }) {
   const { text, path } = useTerminalLanguage();
   const product = winterProductDetails.find((item) => item.slug === resolveSlug(slug)) || winterProductDetails[0];
+  const evidence = detailEvidenceBySlug[product.slug];
 
   const labels = {
     moq: { zh: "常规起订", en: "Standard MOQ", ko: "일반 최소 수량" } satisfies TerminalLocalized,
@@ -226,7 +260,7 @@ export default function ProductDetail({ slug }: { slug?: ProductSlug }) {
 
   return (
     <SiteShell pageKey={product.pageKey}>
-      <TerminalFrame>
+      <TerminalFrame className="terminal-site--product-detail">
         <PageHero pageKey={product.pageKey} />
 
         <section className="terminal-detail-lead" aria-label={text(product.title)}>
@@ -260,6 +294,10 @@ export default function ProductDetail({ slug }: { slug?: ProductSlug }) {
           title={text({ zh: "从设计到样衣的核对重点", en: "Design-to-Sample Checkpoints", ko: "디자인부터 샘플까지 체크포인트" })}
           intro={text({ zh: "每一项都在项目开始时转成可沟通、可记录的确认项，避免仅凭效果图进入生产。", en: "Each point becomes a documented decision before production rather than relying on visuals alone.", ko: "각 항목을 생산 전 기록 가능한 승인 사항으로 전환합니다." })}
         >
+          <figure className="terminal-detail-evidence">
+            <img src={evidence.image} alt={text(evidence.alt)} loading="lazy" />
+            <figcaption>{text(evidence.caption)}</figcaption>
+          </figure>
           <div className="terminal-detail-grid">
             <article className="terminal-detail-panel">
               <span>01 · DESIGN FOCUS</span>

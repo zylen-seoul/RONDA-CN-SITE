@@ -44,28 +44,47 @@ const handoff: Array<{ title: TerminalLocalized; body: TerminalLocalized }> = [
   },
 ];
 
+const priorityMarkets: Array<{ name: TerminalLocalized; role: "hub" | "market" }> = [
+  { name: { zh: "杭州", en: "Hangzhou", ko: "항저우" }, role: "hub" },
+  { name: { zh: "首尔", en: "Seoul", ko: "서울" }, role: "hub" },
+  { name: { zh: "纽约", en: "New York", ko: "뉴욕" }, role: "market" },
+  { name: { zh: "伦敦", en: "London", ko: "런던" }, role: "market" },
+  { name: { zh: "巴黎", en: "Paris", ko: "파리" }, role: "market" },
+  { name: { zh: "米兰", en: "Milan", ko: "밀라노" }, role: "market" },
+  { name: { zh: "罗马", en: "Rome", ko: "로마" }, role: "market" },
+  { name: { zh: "东京", en: "Tokyo", ko: "도쿄" }, role: "market" },
+];
+
 export default function Global() {
   const { text, path } = useTerminalLanguage();
 
   return (
     <SiteShell pageKey="global">
-      <TerminalFrame>
+      <TerminalFrame className="terminal-site--global">
         <PageHero pageKey="global" />
         <TerminalProofStrip
           label={text({ zh: "全球协作结构", en: "Global collaboration structure", ko: "글로벌 협업 구조" })}
           items={[
             { value: "HANGZHOU", caption: text({ zh: "产品与供应链项目统筹", en: "product and supply-chain coordination", ko: "제품과 공급망 프로젝트 총괄" }) },
             { value: "SEOUL", caption: text({ zh: "跨境沟通与时尚资源协作触点", en: "cross-border and fashion collaboration touchpoint", ko: "국경 간 소통과 패션 협업 접점" }) },
-            { value: "GLOBAL", caption: text({ zh: "按目标市场确认资料与交付", en: "market-specific documentation and delivery", ko: "목표 시장별 서류와 납품 확인" }) },
+            { value: "2 + 6", caption: text({ zh: "杭州与首尔双核，连接六个重点品牌市场", en: "two hubs connected with six priority brand markets", ko: "두 개의 허브와 여섯 개의 주요 브랜드 시장 연결" }) },
           ]}
         />
 
         <TerminalSection
           id="global-roles"
           eyebrow="GLOBAL COLLABORATION"
-          title={text({ zh: "两地协作，一个项目标准", en: "Two Locations, One Standard", ko: "두 지역, 하나의 기준" })}
-          intro={text({ zh: "杭州与首尔承担不同协作角色，但产品资料、样衣确认和交付要求始终回到同一份项目记录。", en: "Hangzhou and Seoul support different roles while product files, sample approvals and delivery requirements return to one project record.", ko: "항저우와 서울은 다른 역할을 지원하지만 제품 자료, 샘플 승인과 납품 요구는 하나의 프로젝트 기록으로 관리합니다." })}
+          title={text({ zh: "双核心连接六个重点品牌市场", en: "Two Hubs, Six Priority Markets", ko: "두 개의 허브와 여섯 개의 주요 시장" })}
+          intro={text({ zh: "杭州负责产品与供应链项目统筹，首尔支持跨境需求与时尚资源协作；纽约、伦敦、巴黎、米兰、罗马与东京作为重点品牌和项目市场被纳入前期需求研究，并不表示绒达在当地设有办公室。", en: "Hangzhou coordinates product and supply-chain projects while Seoul supports cross-border briefs and fashion resources. New York, London, Paris, Milan, Rome and Tokyo are treated as priority brand and project markets for early-stage research, not as RONDA office locations.", ko: "항저우는 제품과 공급망 프로젝트를 총괄하고 서울은 국경 간 요구와 패션 자원 협업을 지원합니다. 뉴욕, 런던, 파리, 밀라노, 로마와 도쿄는 초기 요구 분석을 위한 주요 브랜드·프로젝트 시장이며 RONDA의 현지 사무소를 의미하지 않습니다." })}
         >
+          <div className="global-market-strip" aria-label={text({ zh: "双核心与重点品牌市场", en: "Hubs and priority brand markets", ko: "허브와 주요 브랜드 시장" })}>
+            {priorityMarkets.map((market) => (
+              <span className={market.role === "hub" ? "is-hub" : ""} key={market.name.en}>
+                <small>{market.role === "hub" ? text({ zh: "协作中枢", en: "HUB", ko: "허브" }) : text({ zh: "重点市场", en: "MARKET", ko: "주요 시장" })}</small>
+                <strong>{text(market.name)}</strong>
+              </span>
+            ))}
+          </div>
           <div className="terminal-operating-grid">
             {collaborationRoles.map((item, index) => (
               <article className="terminal-operating-card" key={item.title.en}>
@@ -88,6 +107,16 @@ export default function Global() {
           intro={text({ zh: "清晰的责任与记录减少重复沟通，让品牌、项目团队与供应链围绕同一标准推进。", en: "Clear ownership and records reduce repetition and keep the brand, project team and supply chain aligned.", ko: "명확한 책임과 기록으로 반복 소통을 줄이고 브랜드, 프로젝트 팀과 공급망을 같은 기준에 맞춥니다." })}
           tone="steel"
         >
+          <div className="global-supporting-visuals">
+            <figure>
+              <img src="/ronda-v2/global/seoul-showroom-real.jpg" alt={text({ zh: "首尔冬装设计协作空间", en: "Seoul winterwear design collaboration space", ko: "서울 겨울 의류 디자인 협업 공간" })} loading="lazy" />
+              <figcaption>{text({ zh: "首尔：跨境需求沟通、趋势信息与设计协作触点。", en: "Seoul: a touchpoint for cross-border briefs, trend information and design collaboration.", ko: "서울: 국경 간 요구 소통, 트렌드 정보와 디자인 협업 접점." })}</figcaption>
+            </figure>
+            <figure>
+              <img src="/ronda-platform/partners/factory-shell-8f8ebe.jpg" alt={text({ zh: "杭州冬装生产协作现场", en: "Hangzhou winterwear production coordination", ko: "항저우 겨울 의류 생산 협업 현장" })} loading="lazy" />
+              <figcaption>{text({ zh: "杭州：产品标准、工厂匹配、质量记录与交付节点统筹。", en: "Hangzhou: product standards, factory allocation, quality records and delivery coordination.", ko: "항저우: 제품 기준, 공장 배정, 품질 기록과 납품 단계 총괄." })}</figcaption>
+            </figure>
+          </div>
           <div className="terminal-handoff">
             {handoff.map((item) => (
               <article key={item.title.en}>

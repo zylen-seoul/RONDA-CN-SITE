@@ -136,6 +136,73 @@ body {
   border-bottom: 1px solid var(--ronda-line);
 }
 
+.page-hero-v2--image {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #edf0ef;
+}
+
+.page-hero-v2--image::before,
+.page-hero-v2--image::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.page-hero-v2--image::before {
+  z-index: -2;
+  background-image: var(--page-hero-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: var(--page-hero-image-opacity, 0.3);
+}
+
+.page-hero-v2--image::after {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(242, 243, 241, 0.9) 0%, rgba(242, 243, 241, 0.7) 42%, rgba(242, 243, 241, 0.5) 100%),
+    linear-gradient(180deg, rgba(242, 243, 241, 0.18), rgba(242, 243, 241, 0.48));
+}
+
+.page-hero-v2--image .page-hero-v2-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.page-hero-v2--products {
+  --page-hero-image-opacity: 0.34;
+}
+
+.page-hero-v2--services,
+.page-hero-v2--about,
+.page-hero-v2--contact {
+  --page-hero-image-opacity: 0.58;
+}
+
+.page-hero-v2--digital {
+  --page-hero-image-opacity: 0.42;
+}
+
+.page-hero-v2--global {
+  --page-hero-image-opacity: 0.88;
+}
+
+.page-hero-v2--global::after {
+  background: linear-gradient(90deg, rgba(242, 243, 241, 0.94) 0%, rgba(242, 243, 241, 0.72) 40%, rgba(242, 243, 241, 0.28) 100%);
+}
+
+.page-hero-v2--downJackets::before,
+.page-hero-v2--technicalShells::before,
+.page-hero-v2--skiwear::before,
+.page-hero-v2--doubleFacedCoats::before,
+.page-hero-v2--furShearling::before,
+.page-hero-v2--downBedding::before {
+  background-position: center 42%;
+}
+
 .page-hero-v2-inner {
   width: min(1320px, 100%);
   margin: 0 auto;
@@ -195,6 +262,10 @@ body {
 
   .page-hero-v2 h1 {
     font-size: clamp(1.5rem, 6.2vw, 2.45rem);
+  }
+
+  .page-hero-v2--image::after {
+    background: linear-gradient(180deg, rgba(242, 243, 241, 0.9) 0%, rgba(242, 243, 241, 0.68) 100%);
   }
 }
 

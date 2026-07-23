@@ -1,24 +1,24 @@
-# RONDA Homepage Design QA
+# RONDA Pagination Design QA
 
 ## Reference and implementation compared
 
-- Reference: the supplied ATLY Seoul source running locally at `/zh`, captured in the in-app browser.
-- Implementation: the rebuilt Samplewear homepage at `/`, reviewed beside the ATLY reference in a single side-by-side comparison image.
-- Responsive coverage: desktop layout plus a 390 × 844 mobile check.
+- Reference: the pre-change Products, Services, Digital Platform, About, Global, Contact and product-detail routes captured locally before implementation.
+- Implementation: the same routes after the page-hero, supporting-media, copy and palette update.
+- Direct visual comparison: the before/after Global page hero was reviewed side by side at the same desktop state; the new map adds the requested hierarchy without changing the existing page system.
+- Responsive coverage: default desktop viewport plus 390 × 844 checks for Chinese, English and Korean routes.
 
 ## Checks
 
-- Visual direction: passed. The implementation keeps the ATLY hero/proof-strip rhythm, dark and light section cadence, production bridge, showroom, linear workflow, network panels and FAQ structure while remapping the visual system to RONDA warm white, stone, camel and deep slate.
-- Copy and company identity: passed. Homepage copy follows the Seoul source's product, sampling, supply-chain and consultation logic and consistently identifies 杭州绒达科技, RONDA and Samplewear.
-- Core MOQ: passed. The hero, proof strip, six product cards, FAQ, product page and searchable static HTML all foreground the standard 100-piece starting point with a project-condition qualifier.
-- Product coverage: passed. 羽绒服, 冲锋衣, 滑雪服, 双面大衣, 皮草与皮毛一体 and 羽绒寝具 are present on both the homepage and the independently crawlable `/products/` route.
-- Service timeline: passed. Eight linear stages show reference business days; first sample is highlighted at 7–15 days, revision at 3–7 days and standard production at 15–30 days. The homepage tabs work and the full flow is also available at `/services/`.
-- Cases and supplier resources: passed. Eight selected brand case logos and sixteen material/trim resource logos render in two clearly labeled panels with a scope note.
-- Titles and spacing: passed after reducing section-title sizes. Homepage H1/H2 titles remain on one line without desktop or mobile horizontal overflow, and the company section no longer collides with its supporting copy.
-- City imagery: passed. Hangzhou keeps `VEnkGmmicAmbbpjx.jpg` and Seoul keeps `mtPiHFXgDZRAQlWl.jpg`; neither city image was replaced.
-- Assets and performance: passed. Selected ATLY source assets were resized and converted to WebP; all new homepage assets total under 1 MB and load successfully from GitHub Pages-compatible paths.
-- Accessibility and interaction: passed. The page has one H1, semantic section headings, descriptive alt text, labeled navigation, keyboard-focus treatment, reduced-motion handling, working process controls, native FAQ disclosure controls and a working mobile menu.
-- Search and routing: passed. Nine physical route pages, canonical URLs, index/follow directives, JSON-LD, sitemap and robots files were generated; homepage, products, services and every checked asset returned HTTP 200 locally.
-- Runtime: passed. TypeScript and production builds completed successfully, and browser console inspection returned no warnings or errors.
+- Scope preservation: passed. Home and Partners were not redesigned. The fixed Sample App module, Contact section, Hangzhou and Seoul city images, six category images and route structure remain unchanged.
+- Page heroes: passed. Products, Services, Digital Platform, About, Global, Contact and all six product-detail destinations now use relevant real or generated raster backgrounds with controlled opacity and readable foreground copy.
+- Supporting visuals: passed. Products uses the supplied fabric-library photo; Services adds a pattern/sample workspace; Digital adds a real factory-network view; Global adds Seoul/Hangzhou collaboration scenes; product details add category-specific process evidence.
+- Global map: passed. Hangzhou and Seoul are the two orange hubs. New York, London, Paris, Milan, Rome and Tokyo are six secondary market nodes, connected with restrained route lines and explicitly described as markets rather than offices.
+- Digital copy: passed. The page now explains one project ID, upstream materials, RONDA's own factory, 100+ selected contracted winterwear factories, production/QC/delivery records and the limits of platform status. The fixed Sample App module was not edited.
+- Service timeline: passed. All eight stages retain the existing sequence and now include a visible time coordinate, clearer professional output and a cautious project-specific timing note.
+- Color and hierarchy: passed. Near-black content blocks on the edited pages were replaced with deep steel blue while the existing RONDA snow, mist, steel and rust-orange palette remains intact.
+- Title behavior: passed. H1 and section titles remain single-line; mobile checks reported zero horizontal overflow across the requested primary routes and Korean variants.
+- Search content: passed. The localized SEO manifest now mirrors the visible Products, Services, Digital, About and Global copy, including the six markets and digital winterwear network.
+- Accessibility: passed. Added images have localized alt text, supporting scenes use semantic figures and captions, and existing navigation and route semantics remain intact.
+- Runtime: passed. TypeScript completed with no errors, the production client/server build succeeded, 51 localized static routes plus sitemap/robots/404 were regenerated, and browser console inspection returned no errors.
 
 final result: passed

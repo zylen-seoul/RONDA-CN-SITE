@@ -18,10 +18,10 @@ export function useTerminalLanguage() {
   };
 }
 
-export function TerminalFrame({ children }: { children: ReactNode }) {
+export function TerminalFrame({ children, className = "" }: { children: ReactNode; className?: string }) {
   const { lang } = useLanguage();
   return (
-    <div className="terminal-site" data-lang={lang}>
+    <div className={`terminal-site ${className}`.trim()} data-lang={lang}>
       {children}
     </div>
   );
