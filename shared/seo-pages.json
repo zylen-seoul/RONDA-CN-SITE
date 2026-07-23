@@ -435,22 +435,22 @@
       "path": "/partners/",
       "index": true,
       "title": {
-        "zh": "合作资源与100+工厂联盟｜杭州绒达",
-        "en": "Materials, Brands & 100+ Factory Alliance | RONDA",
-        "ko": "원부자재·브랜드·100+ 공장 네트워크 | RONDA"
+        "zh": "自有工厂与100+精选冬装工厂｜杭州绒达",
+        "en": "Own Factory & 100+ Selected Winterwear Partners | RONDA",
+        "ko": "자체 공장·100+ 엄선 겨울 의류 파트너 | RONDA"
       },
       "description": {
-        "zh": "了解杭州绒达如何通过面辅料与品牌合作资源、100+家独家签约工厂联盟，为羽绒服、皮草和冲锋衣项目协调生产调度与全环节质量监控。",
-        "en": "Explore how RONDA combines material and brand resources with a 100+ exclusively contracted factory alliance for scheduled winterwear production and end-to-end quality control.",
-        "ko": "RONDA가 원부자재 및 브랜드 자원과 100개 이상 독점 계약 공장 네트워크를 연결해 겨울 의류 생산 배정과 전 과정 품질 관리를 수행하는 방식을 확인하세요."
+        "zh": "杭州绒达仅专注冬装，以自有工厂和100+家精选签约工厂服务设计师及中高端品牌，提供面辅料匹配、小单快反，以及生产至质检关键节点跟进。",
+        "en": "RONDA focuses exclusively on winterwear, combining its own factory with 100+ selected partners for designer-brand material matching, small-batch rapid response and production-to-QC milestone monitoring.",
+        "ko": "RONDA는 겨울 의류에만 집중하며 자체 공장과 100개 이상의 엄선된 계약 공장을 통해 디자이너 브랜드의 원부자재 매칭, 소량 신속 대응 및 생산·품질 검사 단계 관리를 지원합니다."
       },
       "h1": { "zh": "合作资源", "en": "Collaboration Resources", "ko": "협업 자원" },
       "intro": {
-        "zh": "绒达把品牌目标、面辅料选择与100+家独家签约精品工厂纳入同一项目标准，根据客户交期、数量、材料与工艺复杂度匹配中高端定制化生产资源。",
-        "en": "RONDA brings brand objectives, material choices and a 100+ exclusively contracted premium factory base into one project standard, matching customized production to timing, volume, materials and construction complexity.",
-        "ko": "RONDA는 브랜드 목표, 원부자재 선택과 100개 이상 독점 계약 프리미엄 공장을 하나의 프로젝트 기준으로 연결하고 일정, 수량, 소재와 공정 난이도에 맞춰 중고급 맞춤 생산을 배정합니다."
+        "zh": "除自有工厂外，绒达协同100+家精选签约联盟工厂，生产协作仅覆盖六大冬装品类。项目主要服务设计师品牌及中高端品牌，常规订单以100件为评估起点，并按款式、材料、工艺和排期匹配生产与质检节点。",
+        "en": "Alongside its own factory, RONDA works with a selected network of 100+ contracted factories dedicated exclusively to six winterwear categories. Projects are designed for designer and premium brands, with standard orders evaluated from a 100-piece starting point and production and QC milestones matched to style, materials, construction and schedule.",
+        "ko": "RONDA는 자체 공장과 함께 100개 이상의 엄선된 계약 공장을 운영하며 생산 협업은 6대 겨울 의류 품목에만 집중합니다. 디자이너 및 프리미엄 브랜드를 대상으로 일반 주문은 100장을 평가 기준으로 시작하고 스타일, 소재, 공정과 일정에 맞춰 생산 및 품질 검사 단계를 구성합니다."
       },
-      "summary": { "zh": "了解冬装项目中的面辅料、品牌案例与100+工厂联盟。", "en": "Explore winterwear materials, brand cases and RONDA's 100+ factory alliance.", "ko": "겨울 의류 원부자재, 브랜드 사례와 RONDA의 100개 이상 공장 네트워크를 확인하세요." },
+      "summary": { "zh": "了解绒达面辅料资源、自有工厂与100+精选冬装工厂如何支持设计师品牌小单快反。", "en": "Explore RONDA's materials, own factory and 100+ selected winterwear partners for designer-brand small-batch rapid response.", "ko": "룽다의 원부자재, 자체 공장과 100개 이상 엄선된 겨울 의류 파트너가 디자이너 브랜드의 소량 신속 생산을 지원하는 방식을 확인하세요." },
       "staticSections": [
         {
           "heading": { "zh": "面辅料与品牌合作", "en": "Materials and Brand Collaboration", "ko": "원부자재 및 브랜드 협업" },
@@ -461,11 +461,11 @@
           }
         },
         {
-          "heading": { "zh": "100+家独家签约工厂联盟", "en": "100+ Exclusive Factory Alliance", "ko": "100개 이상 독점 계약 공장 네트워크" },
+          "heading": { "zh": "自有工厂与100+精选签约工厂", "en": "Own Factory and 100+ Selected Contracted Factories", "ko": "자체 공장과 100개 이상 엄선된 계약 공장" },
           "paragraphs": {
-            "zh": ["绒达根据羽绒服、皮草、冲锋衣等品类专长、设备能力、当前排期与质量记录调度签约工厂，从生产投放、关键节点巡检到成衣终检实施全环节监控，以满足不同时间窗口和不同客户的中高端定制化生产需求。"],
-            "en": ["RONDA schedules contracted factories by expertise in down jackets, fur and shearling, technical shells and other categories, together with equipment, live capacity and quality records. Control spans production launch, milestone checks and final garment inspection to support premium customized requirements across different client timelines."],
-            "ko": ["RONDA는 다운 재킷, 퍼·시어링, 테크니컬 셸 등 품목 전문성, 설비 역량, 현재 일정과 품질 기록을 기준으로 계약 공장을 배정합니다. 생산 투입, 주요 단계 검사와 완제품 최종 검사까지 전 과정을 관리해 고객별 일정에 맞는 중고급 맞춤 생산 요구를 지원합니다."]
+            "zh": ["绒达以自有工厂承接核心冬装生产，并协同100+家精选签约工厂补充不同品类、工艺与排期所需的产能。该网络仅服务六大冬装品类，重点支持设计师品牌及中高端品牌的小单快反需求；生产投放、首件确认、关键工序巡检和成衣终检均按项目记录。"],
+            "en": ["RONDA handles core winterwear production through its own factory and supplements category-, process- and schedule-specific capacity through 100+ selected contracted factories. The network serves six winterwear categories only, focusing on small-batch rapid response for designer and premium brands, with project records for production launch, first-piece approval, key-process inspections and final garment inspection."],
+            "ko": ["RONDA는 자체 공장에서 핵심 겨울 의류를 생산하고 100개 이상의 엄선된 계약 공장을 통해 품목, 공정 및 일정별 생산 역량을 보완합니다. 이 네트워크는 6대 겨울 의류 품목만을 대상으로 하며 디자이너 및 프리미엄 브랜드의 소량 신속 생산에 집중하고 생산 투입, 초도품 확인, 주요 공정 검사와 완제품 최종 검사를 프로젝트별로 기록합니다."]
           }
         }
       ]

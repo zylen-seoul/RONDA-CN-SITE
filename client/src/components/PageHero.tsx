@@ -9,7 +9,7 @@ export default function PageHero({ pageKey }: { pageKey: PageKey }) {
   return (
     <section
       aria-labelledby={`${pageKey}-page-title`}
-      className="page-hero-v2"
+      className={`page-hero-v2 page-hero-v2--${pageKey}`}
     >
       <div className="page-hero-v2-inner">
         <nav aria-label="Breadcrumb" className="page-hero-v2-breadcrumb">
