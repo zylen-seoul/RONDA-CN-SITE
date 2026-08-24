@@ -129,6 +129,94 @@
   padding-top: 0;
 }
 
+.contact-section__channel-list {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-section__qr-channel,
+.contact-section__external-channel {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  font-family: "DM Sans", "Noto Sans SC", "Noto Sans KR", sans-serif;
+  padding: 0;
+  text-decoration: none;
+  width: 88px;
+}
+
+.contact-section__qr-channel {
+  cursor: zoom-in;
+}
+
+.contact-section__external-channel {
+  cursor: pointer;
+}
+
+.contact-section__channel-icon {
+  align-items: center;
+  display: inline-flex;
+  height: 22px;
+  justify-content: center;
+  margin-bottom: 0.35rem;
+}
+
+.contact-section__channel-name {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.contact-section__channel-handle {
+  color: #77716a;
+  font-size: 0.53rem;
+  line-height: 1.35;
+  margin-bottom: 0.45rem;
+  max-width: 88px;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.contact-section__qr-frame {
+  background: #fff;
+  border: 1px solid rgba(19, 23, 25, 0.14);
+  display: block;
+  padding: 5px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  width: 82px;
+}
+
+.contact-section__qr-frame img {
+  aspect-ratio: 1;
+  display: block;
+  height: auto;
+  object-fit: contain;
+  width: 100%;
+}
+
+.contact-section__qr-channel:hover .contact-section__qr-frame,
+.contact-section__qr-channel:focus-visible .contact-section__qr-frame {
+  border-color: rgba(139, 115, 85, 0.68);
+  box-shadow: 0 8px 24px rgba(19, 23, 25, 0.1);
+}
+
+.contact-section__qr-hint {
+  color: #77716a;
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  margin-top: 0.35rem;
+}
+
 @media (max-width: 760px) {
   .contact-section.is-home .contact-section__title {
     font-size: clamp(1.05rem, 5.2vw, 1.45rem) !important;
@@ -162,6 +250,19 @@
 
   .contact-section .contact-section__inquiry {
     justify-content: flex-start;
+  }
+
+  .contact-section__channel-list {
+    gap: 0.75rem;
+  }
+
+  .contact-section__qr-channel,
+  .contact-section__external-channel {
+    width: 78px;
+  }
+
+  .contact-section__qr-frame {
+    width: 74px;
   }
 }
 

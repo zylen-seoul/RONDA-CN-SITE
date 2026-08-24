@@ -1,5 +1,6 @@
 node_modules/
 dist/
 .manus-logs/
+.tools/
 *.tsbuildinfo
 .DS_Store

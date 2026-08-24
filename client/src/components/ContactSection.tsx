@@ -4,7 +4,7 @@
  * Social media + IM icons in one row
  * Inquiry button triggers modal
  */
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, X } from 'lucide-react';
 import { localizedPath, useLanguage, type Language } from '@/contexts/LanguageContext';
@@ -68,18 +68,66 @@ const CITY_MEDIA: Record<
   },
 };
 
-const QR = {
-  wechatWork: '/manus-storage/wechat_work_qr_fbd3eec0.png',
-  douyin: '/manus-storage/douyin_qr_d648ee6c.png',
-  whatsapp: '/manus-storage/whatsapp_qr_4c97cab8.png',
-  kakao: '/manus-storage/kakao_pure_qr_00e88e26.png',
+type ChannelCopy = {
+  enlarge: string;
+  viewQr: string;
+  qrCode: string;
+  dialogLabel: string;
+  closeDialog: string;
+  visitProfile: string;
 };
 
-const SOCIAL_ITEMS = [
+const CHANNEL_COPY: Record<Language, ChannelCopy> = {
+  zh: {
+    enlarge: '点击放大',
+    viewQr: '查看并放大二维码',
+    qrCode: '二维码',
+    dialogLabel: '二维码大图',
+    closeDialog: '关闭二维码大图',
+    visitProfile: '访问官方主页',
+  },
+  en: {
+    enlarge: 'Click to enlarge',
+    viewQr: 'View and enlarge QR code',
+    qrCode: 'QR code',
+    dialogLabel: 'QR code preview',
+    closeDialog: 'Close QR code preview',
+    visitProfile: 'Visit official profile',
+  },
+  ko: {
+    enlarge: '확대 보기',
+    viewQr: 'QR 코드 확대 보기',
+    qrCode: 'QR 코드',
+    dialogLabel: 'QR 코드 크게 보기',
+    closeDialog: 'QR 코드 닫기',
+    visitProfile: '공식 프로필 방문',
+  },
+};
+
+const QR = {
+  wechatWork: '/media-qr/wechat-work.png',
+  instagram: '/media-qr/instagram.jpg',
+  xiaohongshu: '/media-qr/xiaohongshu.jpg',
+  douyin: '/media-qr/tiktok.jpg',
+  tiktok: '/media-qr/tiktok.jpg',
+  whatsapp: '/media-qr/whatsapp.png',
+  kakao: '/media-qr/kakaotalk.png',
+};
+
+type ChannelItem = {
+  name: string;
+  icon: ReactNode;
+  handle?: string;
+  href?: string;
+  qr?: string;
+};
+
+const SOCIAL_ITEMS: ChannelItem[] = [
   {
     name: 'Instagram',
     handle: '@samplewear_official',
     href: 'https://www.instagram.com/samplewear_official',
+    qr: QR.instagram,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
         <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
@@ -90,6 +138,7 @@ const SOCIAL_ITEMS = [
     name: '小红书',
     handle: 'samplewear',
     href: 'https://www.xiaohongshu.com/user/profile/49653701006',
+    qr: QR.xiaohongshu,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
         <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4a8 8 0 1 1 0 16A8 8 0 0 1 12 4zm-1 3v2H9v2h2v6h2v-6h2V9h-2V7h-2z" />
@@ -99,7 +148,6 @@ const SOCIAL_ITEMS = [
   {
     name: '抖音',
     handle: 'Sample服装供应链',
-    href: '#',
     qr: QR.douyin,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
@@ -111,6 +159,7 @@ const SOCIAL_ITEMS = [
     name: 'TikTok',
     handle: '@samplewear',
     href: 'https://www.tiktok.com/@samplewear',
+    qr: QR.tiktok,
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
         <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z" />
@@ -119,7 +168,7 @@ const SOCIAL_ITEMS = [
   },
 ];
 
-const IM_ITEMS = [
+const IM_ITEMS: ChannelItem[] = [
   {
     name: 'WhatsApp',
     qr: QR.whatsapp,
@@ -149,13 +198,25 @@ const IM_ITEMS = [
   },
 ];
 
-function QRModal({ name, qr, onClose }: { name: string; qr: string; onClose: () => void }) {
+function QRModal({ name, qr, href, copy, onClose }: { name: string; qr: string; href?: string; copy: ChannelCopy; onClose: () => void }) {
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') onClose();
+    };
+
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [onClose]);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-[200] flex items-center justify-center"
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${name} · ${copy.dialogLabel}`}
       style={{
         background: 'rgba(10,10,10,0.88)',
         backdropFilter: 'blur(10px)',
@@ -180,6 +241,7 @@ function QRModal({ name, qr, onClose }: { name: string; qr: string; onClose: () 
       >
         <button
           onClick={onClose}
+          aria-label={copy.closeDialog}
           style={{
             position: 'absolute',
             top: '1rem',
@@ -207,17 +269,87 @@ function QRModal({ name, qr, onClose }: { name: string; qr: string; onClose: () 
         >
           {name}
         </span>
-        <img src={qr} alt={`${name} QR`} style={{ width: '100%', height: 'auto', display: 'block' }} />
+        <img src={qr} alt={`${name} ${copy.qrCode}`} style={{ width: '100%', height: 'auto', display: 'block' }} />
+        {href && (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              alignItems: 'center',
+              color: '#4B626C',
+              display: 'inline-flex',
+              fontFamily: "'DM Sans', sans-serif",
+              fontSize: '0.65rem',
+              fontWeight: 600,
+              gap: '0.35rem',
+              letterSpacing: '0.05em',
+              marginTop: '1rem',
+              textDecoration: 'none',
+            }}
+          >
+            {copy.visitProfile}
+            <ArrowUpRight aria-hidden="true" size={13} />
+          </a>
+        )}
       </motion.div>
     </motion.div>
+  );
+}
+
+function QRChannel({ item, copy, onOpen }: { item: ChannelItem; copy: ChannelCopy; onOpen: (name: string, qr: string) => void }) {
+  if (!item.qr) return null;
+
+  return (
+    <motion.button
+      type="button"
+      className="contact-section__qr-channel"
+      onClick={() => onOpen(item.name, item.qr!)}
+      whileHover={{ y: -2 }}
+      aria-label={`${item.name} · ${copy.viewQr}`}
+      title={`${item.name} · ${copy.enlarge}`}
+    >
+      <span className="contact-section__channel-icon" aria-hidden="true">
+        {item.icon}
+      </span>
+      <span className="contact-section__channel-name">{item.name}</span>
+      {item.handle && <span className="contact-section__channel-handle">{item.handle}</span>}
+      <span className="contact-section__qr-frame">
+        <img src={item.qr} alt={`${item.name} ${copy.qrCode}`} loading="lazy" />
+      </span>
+      <span className="contact-section__qr-hint">{copy.enlarge}</span>
+    </motion.button>
+  );
+}
+
+function ExternalChannel({ item }: { item: ChannelItem }) {
+  if (!item.href) return null;
+
+  return (
+    <motion.a
+      href={item.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="contact-section__external-channel"
+      whileHover={{ y: -2 }}
+      aria-label={`${item.name}${item.handle ? ` · ${item.handle}` : ''}`}
+      title={item.name}
+    >
+      <span className="contact-section__channel-icon" aria-hidden="true">
+        {item.icon}
+      </span>
+      <span className="contact-section__channel-name">{item.name}</span>
+      {item.handle && <span className="contact-section__channel-handle">{item.handle}</span>}
+    </motion.a>
   );
 }
 export default function ContactSection({ showCityMedia = false }: { showCityMedia?: boolean }) {
   const { t, lang } = useLanguage();
   const cityMedia = CITY_MEDIA[lang];
+  const channelCopy = CHANNEL_COPY[lang];
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
-  const [activeQR, setActiveQR] = useState<{ name: string; qr: string } | null>(null);
+  const [activeQR, setActiveQR] = useState<{ name: string; qr: string; href?: string } | null>(null);
   const inquiryAction = (
     <motion.div className="contact-section__inquiry" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.3 }} style={{ textAlign: 'center' }}>
       <motion.a
@@ -554,26 +686,14 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
               >
                 社交媒体 / Social Media
               </span>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
-                {SOCIAL_ITEMS.map((item, i) => (
-                  <motion.a
-                    key={i}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      color: '#1A1A1A',
-                      cursor: 'pointer',
-                      transition: 'color 0.3s',
-                    }}
-                    whileHover={{ scale: 1.1 }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#8B7355')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#1A1A1A')}
-                    title={item.name}
-                  >
-                    {item.icon}
-                  </motion.a>
-                ))}
+              <div className="contact-section__channel-list">
+                {SOCIAL_ITEMS.map((item) =>
+                  item.qr ? (
+                    <QRChannel key={item.name} item={item} copy={channelCopy} onOpen={(name, qr) => setActiveQR({ name, qr, href: item.href })} />
+                  ) : (
+                    <ExternalChannel key={item.name} item={item} />
+                  ),
+                )}
               </div>
             </div>
 
@@ -592,26 +712,9 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
               >
                 即时通讯 / Messaging
               </span>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
-                {IM_ITEMS.map((item, i) => (
-                  <motion.button
-                    key={i}
-                    onClick={() => setActiveQR({ name: item.name, qr: item.qr })}
-                    style={{
-                      background: 'none',
-                      border: 'none',
-                      color: '#1A1A1A',
-                      cursor: 'pointer',
-                      padding: 0,
-                      transition: 'color 0.3s',
-                    }}
-                    whileHover={{ scale: 1.1 }}
-                    onMouseEnter={(e) => (e.currentTarget.style.color = '#8B7355')}
-                    onMouseLeave={(e) => (e.currentTarget.style.color = '#1A1A1A')}
-                    title={item.name}
-                  >
-                    {item.icon}
-                  </motion.button>
+              <div className="contact-section__channel-list">
+                {IM_ITEMS.map((item) => (
+                  <QRChannel key={item.name} item={item} copy={channelCopy} onOpen={(name, qr) => setActiveQR({ name, qr, href: item.href })} />
                 ))}
               </div>
             </div>
@@ -623,7 +726,11 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
       </div>
 
       {/* QR Modal */}
-      <AnimatePresence>{activeQR && <QRModal name={activeQR.name} qr={activeQR.qr} onClose={() => setActiveQR(null)} />}</AnimatePresence>
+      <AnimatePresence>
+        {activeQR && (
+          <QRModal name={activeQR.name} qr={activeQR.qr} href={activeQR.href} copy={channelCopy} onClose={() => setActiveQR(null)} />
+        )}
+      </AnimatePresence>
     </section>
   );
 }
