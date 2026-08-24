@@ -10,9 +10,6 @@ import { ArrowUpRight, X } from 'lucide-react';
 import { localizedPath, useLanguage, type Language } from '@/contexts/LanguageContext';
 import '@/contact-section.css';
 
-const HANGZHOU_IMAGE = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/VEnkGmmicAmbbpjx.jpg';
-const SEOUL_IMAGE = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/mtPiHFXgDZRAQlWl.jpg';
-
 const CITY_MEDIA: Record<
   Language,
   {
@@ -437,13 +434,10 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
           {/* Hangzhou */}
           <motion.div className="contact-section__city-card" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.1 }}>
             {showCityMedia && (
-              <div className="contact-section__city-media">
-                <img src={HANGZHOU_IMAGE} alt={cityMedia.hangzhou.alt} loading="lazy" decoding="async" />
-                <div className="contact-section__city-caption">
-                  <span>{cityMedia.hangzhou.tag}</span>
-                  <h3>{cityMedia.hangzhou.title}</h3>
-                  <p>{cityMedia.hangzhou.body}</p>
-                </div>
+              <div className="contact-section__city-caption">
+                <span>{cityMedia.hangzhou.tag}</span>
+                <h3>{cityMedia.hangzhou.title}</h3>
+                <p>{cityMedia.hangzhou.body}</p>
               </div>
             )}
             <div className="contact-section__city-details">
@@ -546,13 +540,10 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
           {/* Seoul */}
           <motion.div className="contact-section__city-card" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.2 }}>
             {showCityMedia && (
-              <div className="contact-section__city-media is-seoul">
-                <img src={SEOUL_IMAGE} alt={cityMedia.seoul.alt} loading="lazy" decoding="async" />
-                <div className="contact-section__city-caption">
-                  <span>{cityMedia.seoul.tag}</span>
-                  <h3>{cityMedia.seoul.title}</h3>
-                  <p>{cityMedia.seoul.body}</p>
-                </div>
+              <div className="contact-section__city-caption">
+                <span>{cityMedia.seoul.tag}</span>
+                <h3>{cityMedia.seoul.title}</h3>
+                <p>{cityMedia.seoul.body}</p>
               </div>
             )}
             <div className="contact-section__city-details">

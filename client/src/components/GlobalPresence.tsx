@@ -11,7 +11,7 @@ import { motion, useInView } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function GlobalPresence() {
-  const { t, lang } = useLanguage();
+  const { t } = useLanguage();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -19,33 +19,14 @@ export default function GlobalPresence() {
     {
       key: 'hangzhou',
       city: t('global.hangzhou.city'),
-      imageAlt: {
-        zh: '杭州城市景观',
-        en: 'Hangzhou city landscape',
-        ko: '항저우 도시 풍경',
-      }[lang],
       tag: t('global.hq'),
       desc: t('global.hz.desc'),
-      imagePlaceholder: false,
-      imageUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/VEnkGmmicAmbbpjx.jpg',
-      imageWidth: 600,
-      imageHeight: 800,
     },
     {
       key: 'seoul',
       city: t('global.seoul.city'),
-      imageAlt: {
-        zh: '首尔城市景观',
-        en: 'Seoul city landscape',
-        ko: '서울 도시 풍경',
-      }[lang],
       tag: t('global.branch'),
       desc: t('global.kr.desc'),
-      imagePlaceholder: false,
-      imageUrl: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/mtPiHFXgDZRAQlWl.jpg',
-      imagePosition: 'left center',
-      imageWidth: 600,
-      imageHeight: 800,
     },
   ];
 
@@ -110,76 +91,6 @@ export default function GlobalPresence() {
               transition={{ duration: 0.8, delay: 0.1 + i * 0.18 }}
               style={{ position: 'relative', overflow: 'hidden' }}
             >
-              {/* ── Large landmark image ── */}
-              {city.imagePlaceholder ? (
-                <div
-                  style={{
-                    width: '100%',
-                    aspectRatio: '16 / 9',
-                    background: 'linear-gradient(135deg, #E8E4DE 0%, #D4CFC8 50%, #C8C2BA 100%)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    position: 'relative',
-                    overflow: 'hidden',
-                  }}
-                  data-image-placeholder={`${city.imageWidth}×${city.imageHeight}px — ${city.city} landmark`}
-                >
-                  {/* Placeholder visual cue */}
-                  <div style={{ textAlign: 'center', pointerEvents: 'none' }}>
-                    <div style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '0.6rem',
-                      letterSpacing: '0.2em',
-                      textTransform: 'uppercase' as const,
-                      color: 'rgba(139,115,85,0.5)',
-                      marginBottom: '0.5rem',
-                    }}>
-                      {city.imageWidth} × {city.imageHeight}
-                    </div>
-                    <div style={{
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontSize: '1.1rem',
-                      fontWeight: 300,
-                      color: 'rgba(139,115,85,0.4)',
-                    }}>
-                      {city.city}
-                    </div>
-                    <div style={{
-                      fontFamily: "'DM Sans', sans-serif",
-                      fontSize: '0.55rem',
-                      letterSpacing: '0.15em',
-                      textTransform: 'uppercase' as const,
-                      color: 'rgba(139,115,85,0.3)',
-                      marginTop: '0.3rem',
-                    }}>
-                      Landmark Photo
-                    </div>
-                  </div>
-                  {/* Subtle grid lines for placeholder feel */}
-                  <div style={{
-                    position: 'absolute',
-                    inset: 0,
-                    backgroundImage: 'linear-gradient(rgba(139,115,85,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(139,115,85,0.06) 1px, transparent 1px)',
-                    backgroundSize: '40px 40px',
-                  }} />
-                </div>
-              ) : (
-                <img
-                  src={city.imageUrl}
-                  alt={city.imageAlt}
-                  loading="lazy"
-                  decoding="async"
-                  style={{
-                    width: '100%',
-                    aspectRatio: '16 / 9',
-                    objectFit: 'cover',
-                    objectPosition: (city as any).imagePosition || 'center center',
-                    display: 'block',
-                  }}
-                />
-              )}
-
               {/* ── City info overlay at bottom ── */}
               <div style={{
                 background: '#EDEAE5',

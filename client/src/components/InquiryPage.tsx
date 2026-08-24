@@ -391,7 +391,7 @@ export default function InquiryPage({ onClose }: InquiryPageProps) {
                   fontSize: '0.7rem',
                   color: 'rgba(139,115,85,0.6)',
                 }}>
-                  → guangmdc0901@gmail.com
+                  → zylen@samplewear.com
                 </span>
               </div>
             </form>
