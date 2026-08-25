@@ -105,7 +105,7 @@ const QR = {
   wechatWork: '/media-qr/wechat-work.png',
   instagram: '/media-qr/instagram.jpg',
   xiaohongshu: '/media-qr/xiaohongshu.jpg',
-  douyin: '/media-qr/tiktok.jpg',
+  douyin: '/media-qr/douyin.png',
   tiktok: '/media-qr/tiktok.jpg',
   whatsapp: '/media-qr/whatsapp.png',
   kakao: '/media-qr/kakaotalk.png',

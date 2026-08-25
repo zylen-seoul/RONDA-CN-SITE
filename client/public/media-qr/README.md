@@ -6,11 +6,12 @@
 
 - `instagram.jpg`
 - `xiaohongshu.jpg`
+- `douyin.png`
 - `tiktok.jpg`
 - `whatsapp.png`
 - `kakaotalk.png`
 - `wechat-work.png`
 
-抖音暂时复用 `tiktok.jpg`，收到独立的抖音二维码后再替换路径。
+抖音使用独立的 `douyin.png`，TikTok 继续使用 `tiktok.jpg`。
 
 建议优先使用正方形图片并保留完整白边；现有非方形图片会完整缩放显示。页脚显示小图，点击后打开大图。
