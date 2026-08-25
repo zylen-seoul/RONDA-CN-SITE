@@ -4,291 +4,7 @@
  * Trilingual: Chinese / English / Korean
  */
 import { useLanguage } from '@/contexts/LanguageContext';
-
-const PRIVACY_CONTENT = {
-  zh: {
-    title: '隐私政策',
-    updated: '最后更新日期：2025年1月1日',
-    company: '杭州绒达科技有限公司',
-    sections: [
-      {
-        heading: '一、总则',
-        body: `杭州绒达科技有限公司（以下简称"本公司"、"我们"或"绒达科技"）深知个人信息对您的重要性，并将严格依据中华人民共和国相关法律法规（包括但不限于《个人信息保护法》《数据安全法》《网络安全法》）及国际通行隐私保护标准，保护您的个人信息安全。
-
-本隐私政策适用于您访问本公司官方网站（samplewear.com）及通过本网站提交的任何询盘、咨询或合作请求。请您在使用本网站前仔细阅读本政策。若您继续使用本网站，即表示您同意本政策的全部条款。`,
-      },
-      {
-        heading: '二、我们收集的信息',
-        body: `我们可能收集以下类型的信息：
-
-**（一）您主动提供的信息**
-当您通过本网站的询盘表单提交合作请求时，我们会收集您提供的信息，包括但不限于：姓名或公司名称、联系方式（电话、电子邮件）、所在地区或国家、样衣类型需求、预期订单数量、颜色与尺码要求、品牌信息及其他您在表单中填写的内容。
-
-**（二）自动收集的信息**
-当您访问本网站时，我们可能通过技术手段自动收集以下信息：IP地址、浏览器类型及版本、操作系统、访问时间与页面浏览记录、来源网站或搜索关键词。上述信息仅用于网站运营分析与安全保障，不会与您的个人身份信息相关联。
-
-**（三）Cookies及类似技术**
-本网站可能使用Cookies及类似技术以改善您的浏览体验。您可以通过浏览器设置拒绝或删除Cookies，但这可能影响网站部分功能的正常使用。`,
-      },
-      {
-        heading: '三、信息的使用目的',
-        body: `我们收集的信息将用于以下目的：
-
-1. **响应询盘与合作请求**：处理您通过表单提交的样衣定制、供应链合作等商业咨询，并与您取得联系。
-2. **提供专业服务**：根据您的需求为您匹配合适的产品方案、面料资源及生产安排。
-3. **改善网站体验**：分析网站访问数据，优化页面内容与用户体验。
-4. **法律合规**：履行法律法规规定的义务，配合监管机构的合法要求。
-5. **安全保障**：检测和防范欺诈行为、网络攻击及其他安全威胁。
-
-我们不会将您的个人信息用于与上述目的无关的任何商业营销活动，亦不会在未经您明确同意的情况下向第三方出售您的个人信息。`,
-      },
-      {
-        heading: '四、信息的共享与披露',
-        body: `在以下情形下，我们可能与第三方共享您的信息：
-
-**（一）业务合作方**
-为完成您的订单或服务请求，我们可能需要与生产工厂、面料供应商、物流服务商等合作伙伴共享必要的业务信息。上述合作方均须遵守与本公司签订的保密协议，不得将信息用于其他目的。
-
-**（二）法律要求**
-当法律法规、司法机关或监管机构要求披露时，我们将依法提供相关信息。
-
-**（三）企业重组**
-若本公司发生合并、收购、资产转让等重组情形，您的信息可能作为业务资产的一部分被转移，但新的信息控制方须继续受本政策约束。
-
-除上述情形外，我们不会向任何第三方披露您的个人信息。`,
-      },
-      {
-        heading: '五、信息的存储与安全',
-        body: `**存储地点**：您的个人信息将存储于中华人民共和国境内的服务器。如需进行跨境数据传输，我们将依据相关法律法规履行必要的合规程序。
-
-**存储期限**：我们将在实现收集目的所必要的最短期限内保存您的信息。通常情况下，商业询盘记录保存期限不超过3年；法律法规另有规定的，从其规定。
-
-**安全措施**：我们采用行业标准的技术手段（包括SSL加密传输、访问权限控制、数据备份等）保护您的信息安全。尽管如此，互联网传输本身存在一定风险，我们无法对绝对安全作出保证。`,
-      },
-      {
-        heading: '六、您的权利',
-        body: `依据适用法律，您对自己的个人信息享有以下权利：
-
-- **查阅权**：您有权查阅我们持有的关于您的个人信息。
-- **更正权**：若您的信息不准确或不完整，您有权要求更正。
-- **删除权**：在法律允许的范围内，您有权要求删除您的个人信息。
-- **撤回同意权**：若我们基于您的同意处理信息，您可随时撤回该同意。
-- **投诉权**：若您认为我们侵犯了您的个人信息权益，您有权向相关监管机构投诉。
-
-如需行使上述权利，请通过本政策末尾的联系方式与我们联系，我们将在15个工作日内予以回复。`,
-      },
-      {
-        heading: '七、未成年人保护',
-        body: `本网站的服务对象为具有完全民事行为能力的成年商业用户。我们不会故意收集未满18周岁未成年人的个人信息。若您发现我们无意间收集了未成年人的信息，请立即联系我们，我们将及时予以删除。`,
-      },
-      {
-        heading: '八、第三方链接',
-        body: `本网站可能包含指向第三方网站（如社交媒体平台）的链接。我们对第三方网站的隐私实践不承担责任，建议您在访问第三方网站时仔细阅读其隐私政策。`,
-      },
-      {
-        heading: '九、政策更新',
-        body: `我们可能根据法律法规变化或业务需要不时更新本政策。更新后的政策将在本页面发布，并注明更新日期。若更新内容对您的权利有重大影响，我们将通过显著方式通知您。建议您定期查阅本政策以了解最新内容。`,
-      },
-      {
-        heading: '十、联系我们',
-        body: `若您对本隐私政策有任何疑问、意见或请求，请通过以下方式联系我们：
-
-**公司名称**：杭州绒达科技有限公司
-**电子邮件**：guangmdc0901@gmail.com
-**工作时间**：周一至周五 9:00–18:00（北京时间）
-**公司地址**：中国浙江省杭州市`,
-      },
-    ],
-  },
-  en: {
-    title: 'Privacy Policy',
-    updated: 'Last Updated: January 1, 2025',
-    company: 'Hangzhou Rongda Technology Co., Ltd.',
-    sections: [
-      {
-        heading: '1. Introduction',
-        body: `Hangzhou Rongda Technology Co., Ltd. (hereinafter referred to as "the Company", "we", "us", or "Rongda Technology") is committed to protecting your personal information in strict accordance with applicable laws and regulations of the People's Republic of China (including but not limited to the Personal Information Protection Law, the Data Security Law, and the Cybersecurity Law) as well as internationally recognized privacy standards.
-
-This Privacy Policy applies to your use of our official website (samplewear.com) and any inquiries, consultations, or cooperation requests submitted through the website. Please read this Policy carefully before using our website. By continuing to use our website, you agree to all terms of this Policy.`,
-      },
-      {
-        heading: '2. Information We Collect',
-        body: `We may collect the following types of information:
-
-**A. Information You Provide Voluntarily**
-When you submit a cooperation request through our inquiry form, we collect information you provide, including but not limited to: your name or company name, contact details (phone number, email address), region or country, sample garment type requirements, expected order quantity, color and size requirements, brand information, and any other content you fill in the form.
-
-**B. Automatically Collected Information**
-When you visit our website, we may automatically collect the following information through technical means: IP address, browser type and version, operating system, access time and page browsing records, referring website or search keywords. This information is used solely for website operational analysis and security purposes and will not be associated with your personal identity.
-
-**C. Cookies and Similar Technologies**
-Our website may use cookies and similar technologies to improve your browsing experience. You may refuse or delete cookies through your browser settings, but this may affect the normal use of certain website functions.`,
-      },
-      {
-        heading: '3. How We Use Your Information',
-        body: `The information we collect will be used for the following purposes:
-
-1. **Responding to Inquiries and Cooperation Requests**: Processing your business inquiries submitted through the form regarding sample garment customization, supply chain cooperation, etc., and contacting you accordingly.
-2. **Providing Professional Services**: Matching you with appropriate product solutions, fabric resources, and production arrangements based on your needs.
-3. **Improving Website Experience**: Analyzing website access data to optimize page content and user experience.
-4. **Legal Compliance**: Fulfilling obligations required by laws and regulations and cooperating with lawful requests from regulatory authorities.
-5. **Security Assurance**: Detecting and preventing fraud, cyberattacks, and other security threats.
-
-We will not use your personal information for any commercial marketing activities unrelated to the above purposes, nor will we sell your personal information to third parties without your explicit consent.`,
-      },
-      {
-        heading: '4. Sharing and Disclosure of Information',
-        body: `We may share your information with third parties in the following circumstances:
-
-**A. Business Partners**
-To fulfill your orders or service requests, we may need to share necessary business information with production factories, fabric suppliers, logistics service providers, and other partners. Such partners must comply with confidentiality agreements signed with our company and may not use the information for other purposes.
-
-**B. Legal Requirements**
-When required by laws and regulations, judicial authorities, or regulatory agencies, we will provide relevant information in accordance with the law.
-
-**C. Corporate Restructuring**
-In the event of a merger, acquisition, asset transfer, or other restructuring of our company, your information may be transferred as part of the business assets, but the new information controller must continue to be bound by this Policy.
-
-Apart from the above circumstances, we will not disclose your personal information to any third party.`,
-      },
-      {
-        heading: '5. Storage and Security',
-        body: `**Storage Location**: Your personal information will be stored on servers within the People's Republic of China. For cross-border data transfers, we will comply with necessary regulatory procedures under applicable laws.
-
-**Retention Period**: We will retain your information for the minimum period necessary to achieve the collection purpose. Generally, commercial inquiry records are retained for no more than 3 years; where otherwise required by law, such requirements shall prevail.
-
-**Security Measures**: We employ industry-standard technical measures (including SSL encrypted transmission, access control, data backup, etc.) to protect your information security. Nevertheless, internet transmission inherently carries certain risks, and we cannot guarantee absolute security.`,
-      },
-      {
-        heading: '6. Your Rights',
-        body: `Under applicable law, you have the following rights regarding your personal information:
-
-- **Right of Access**: You have the right to access the personal information we hold about you.
-- **Right of Rectification**: If your information is inaccurate or incomplete, you have the right to request correction.
-- **Right of Erasure**: To the extent permitted by law, you have the right to request deletion of your personal information.
-- **Right to Withdraw Consent**: Where we process information based on your consent, you may withdraw that consent at any time.
-- **Right to Complain**: If you believe we have violated your personal information rights, you have the right to file a complaint with the relevant regulatory authority.
-
-To exercise the above rights, please contact us through the contact information at the end of this Policy. We will respond within 15 business days.`,
-      },
-      {
-        heading: '7. Protection of Minors',
-        body: `Our services are intended for adult commercial users with full civil capacity. We do not intentionally collect personal information from individuals under the age of 18. If you discover that we have inadvertently collected information from a minor, please contact us immediately and we will promptly delete it.`,
-      },
-      {
-        heading: '8. Third-Party Links',
-        body: `Our website may contain links to third-party websites (such as social media platforms). We are not responsible for the privacy practices of third-party websites and recommend that you carefully read their privacy policies when visiting them.`,
-      },
-      {
-        heading: '9. Policy Updates',
-        body: `We may update this Policy from time to time in response to changes in laws and regulations or business needs. The updated Policy will be published on this page with the update date noted. If the updates materially affect your rights, we will notify you in a prominent manner. We recommend that you regularly review this Policy for the latest content.`,
-      },
-      {
-        heading: '10. Contact Us',
-        body: `If you have any questions, comments, or requests regarding this Privacy Policy, please contact us through the following:
-
-**Company Name**: Hangzhou Rongda Technology Co., Ltd.
-**Email**: guangmdc0901@gmail.com
-**Business Hours**: Monday to Friday, 9:00–18:00 (Beijing Time)
-**Address**: Hangzhou, Zhejiang Province, China`,
-      },
-    ],
-  },
-  ko: {
-    title: '개인정보 처리방침',
-    updated: '최종 업데이트: 2025년 1월 1일',
-    company: '항저우 룽다 테크놀로지 유한공사',
-    sections: [
-      {
-        heading: '1. 총칙',
-        body: `항저우 룽다 테크놀로지 유한공사(이하 "당사", "저희" 또는 "룽다 테크놀로지")는 귀하의 개인정보를 중화인민공화국 관련 법률 및 규정(개인정보보호법, 데이터보안법, 사이버보안법 포함)과 국제적으로 인정된 개인정보 보호 기준에 따라 엄격히 보호할 것을 약속드립니다.
-
-본 개인정보 처리방침은 당사 공식 웹사이트(samplewear.com) 이용 및 웹사이트를 통해 제출된 모든 문의, 상담 또는 협력 요청에 적용됩니다. 웹사이트 이용 전 본 방침을 주의 깊게 읽어주시기 바랍니다. 웹사이트를 계속 이용하시면 본 방침의 모든 조항에 동의하는 것으로 간주됩니다.`,
-      },
-      {
-        heading: '2. 수집하는 정보',
-        body: `당사는 다음과 같은 유형의 정보를 수집할 수 있습니다:
-
-**가. 귀하가 자발적으로 제공하는 정보**
-문의 양식을 통해 협력 요청을 제출하실 때, 귀하가 제공하는 정보(성명 또는 회사명, 연락처(전화번호, 이메일 주소), 지역 또는 국가, 샘플 의류 유형 요구사항, 예상 주문 수량, 색상 및 사이즈 요구사항, 브랜드 정보 등)를 수집합니다.
-
-**나. 자동으로 수집되는 정보**
-웹사이트 방문 시 기술적 수단을 통해 IP 주소, 브라우저 유형 및 버전, 운영체제, 접속 시간 및 페이지 열람 기록, 유입 경로 등의 정보가 자동으로 수집될 수 있습니다. 이 정보는 웹사이트 운영 분석 및 보안 목적으로만 사용되며 개인 신원 정보와 연결되지 않습니다.
-
-**다. 쿠키 및 유사 기술**
-당사 웹사이트는 귀하의 브라우징 경험을 개선하기 위해 쿠키 및 유사 기술을 사용할 수 있습니다. 브라우저 설정을 통해 쿠키를 거부하거나 삭제할 수 있으나, 이 경우 일부 웹사이트 기능 이용에 영향을 줄 수 있습니다.`,
-      },
-      {
-        heading: '3. 정보 이용 목적',
-        body: `수집된 정보는 다음 목적으로 사용됩니다:
-
-1. **문의 및 협력 요청 응대**: 샘플 의류 맞춤 제작, 공급망 협력 등에 관한 상업적 문의를 처리하고 귀하에게 연락합니다.
-2. **전문 서비스 제공**: 귀하의 요구에 맞는 제품 솔루션, 원단 자원 및 생산 일정을 매칭합니다.
-3. **웹사이트 경험 개선**: 웹사이트 접속 데이터를 분석하여 페이지 콘텐츠와 사용자 경험을 최적화합니다.
-4. **법적 준수**: 법률 및 규정에서 요구하는 의무를 이행하고 규제 기관의 합법적인 요청에 협조합니다.
-5. **보안 보장**: 사기, 사이버 공격 및 기타 보안 위협을 탐지하고 예방합니다.
-
-당사는 귀하의 개인정보를 위 목적과 무관한 상업적 마케팅 활동에 사용하지 않으며, 귀하의 명시적 동의 없이 제3자에게 판매하지 않습니다.`,
-      },
-      {
-        heading: '4. 정보의 공유 및 공개',
-        body: `다음의 경우 제3자와 귀하의 정보를 공유할 수 있습니다:
-
-**가. 비즈니스 파트너**
-귀하의 주문 또는 서비스 요청을 이행하기 위해 생산 공장, 원단 공급업체, 물류 서비스 제공업체 등 파트너와 필요한 비즈니스 정보를 공유할 수 있습니다. 이러한 파트너는 당사와 체결한 기밀 유지 계약을 준수해야 하며 다른 목적으로 정보를 사용할 수 없습니다.
-
-**나. 법적 요구**
-법률, 사법 기관 또는 규제 기관의 요구가 있을 경우 법에 따라 관련 정보를 제공합니다.
-
-**다. 기업 구조 조정**
-합병, 인수, 자산 양도 등 구조 조정이 발생할 경우 귀하의 정보가 사업 자산의 일부로 이전될 수 있으나, 새로운 정보 관리자는 본 방침을 계속 준수해야 합니다.
-
-위의 경우를 제외하고는 귀하의 개인정보를 제3자에게 공개하지 않습니다.`,
-      },
-      {
-        heading: '5. 정보 보관 및 보안',
-        body: `**보관 위치**: 귀하의 개인정보는 중화인민공화국 내 서버에 보관됩니다. 국경 간 데이터 전송이 필요한 경우 관련 법률에 따른 필요한 규정 준수 절차를 이행합니다.
-
-**보관 기간**: 수집 목적 달성에 필요한 최소 기간 동안 귀하의 정보를 보관합니다. 일반적으로 상업적 문의 기록은 3년을 초과하지 않는 기간 동안 보관됩니다.
-
-**보안 조치**: SSL 암호화 전송, 접근 권한 제어, 데이터 백업 등 업계 표준 기술 조치를 통해 귀하의 정보를 보호합니다. 그러나 인터넷 전송에는 본질적인 위험이 있으며 절대적인 보안을 보장할 수 없습니다.`,
-      },
-      {
-        heading: '6. 귀하의 권리',
-        body: `적용 법률에 따라 귀하는 개인정보에 대해 다음과 같은 권리를 가집니다:
-
-- **열람권**: 당사가 보유한 귀하의 개인정보를 열람할 권리가 있습니다.
-- **정정권**: 정보가 부정확하거나 불완전한 경우 정정을 요청할 권리가 있습니다.
-- **삭제권**: 법률이 허용하는 범위 내에서 개인정보 삭제를 요청할 권리가 있습니다.
-- **동의 철회권**: 동의에 기반하여 정보를 처리하는 경우 언제든지 동의를 철회할 수 있습니다.
-- **민원 제기권**: 당사가 개인정보 권리를 침해했다고 판단되는 경우 관련 규제 기관에 민원을 제기할 권리가 있습니다.
-
-위 권리를 행사하려면 본 방침 말미의 연락처를 통해 당사에 연락해 주시기 바랍니다. 15 영업일 이내에 회신드리겠습니다.`,
-      },
-      {
-        heading: '7. 미성년자 보호',
-        body: `당사 서비스는 완전한 민사 행위 능력을 가진 성인 상업 사용자를 대상으로 합니다. 당사는 18세 미만 미성년자의 개인정보를 의도적으로 수집하지 않습니다. 미성년자의 정보를 무심코 수집한 것을 발견하신 경우 즉시 연락해 주시면 신속히 삭제하겠습니다.`,
-      },
-      {
-        heading: '8. 제3자 링크',
-        body: `당사 웹사이트에는 소셜 미디어 플랫폼 등 제3자 웹사이트 링크가 포함될 수 있습니다. 당사는 제3자 웹사이트의 개인정보 보호 관행에 대해 책임을 지지 않으며, 제3자 웹사이트 방문 시 해당 개인정보 처리방침을 주의 깊게 읽어보시기 권장합니다.`,
-      },
-      {
-        heading: '9. 방침 업데이트',
-        body: `당사는 법률 및 규정 변경이나 사업 필요에 따라 본 방침을 수시로 업데이트할 수 있습니다. 업데이트된 방침은 본 페이지에 게시되며 업데이트 날짜가 표시됩니다. 업데이트 내용이 귀하의 권리에 중대한 영향을 미치는 경우 눈에 띄는 방식으로 알려드리겠습니다.`,
-      },
-      {
-        heading: '10. 문의처',
-        body: `본 개인정보 처리방침에 관한 질문, 의견 또는 요청이 있으시면 다음 연락처로 문의해 주시기 바랍니다:
-
-**회사명**: 항저우 룽다 테크놀로지 유한공사
-**이메일**: guangmdc0901@gmail.com
-**업무 시간**: 월–금 9:00–18:00 (베이징 시간)
-**주소**: 중국 저장성 항저우시`,
-      },
-    ],
-  },
-};
+import { APP_PRIVACY_CONTENT } from '@/content/appPrivacyPolicyContent';
 
 const TERMS_CONTENT = {
   zh: {
@@ -567,11 +283,24 @@ Any disputes arising from the use of this website or these Terms shall first be 
 };
 
 function renderBody(text: string) {
-  // Convert **bold** to <strong> and newlines to <br>
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  // Convert emphasis and policy URLs into accessible inline elements.
+  const parts = text.split(/(\*\*[^*]+\*\*|https?:\/\/[^\s]+)/g);
   return parts.map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
       return <strong key={i}>{part.slice(2, -2)}</strong>;
+    }
+    if (/^https?:\/\//.test(part)) {
+      return (
+        <a
+          key={i}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: '#8B7355', textDecoration: 'underline', overflowWrap: 'anywhere' }}
+        >
+          {part}
+        </a>
+      );
     }
     return <span key={i}>{part}</span>;
   });
@@ -587,7 +316,7 @@ export default function LegalPage({ type, onBack }: LegalPageProps) {
   const currentLang = (lang === 'zh' || lang === 'en' || lang === 'ko') ? lang : 'zh';
 
   const content = type === 'privacy'
-    ? PRIVACY_CONTENT[currentLang]
+    ? APP_PRIVACY_CONTENT[currentLang]
     : TERMS_CONTENT[currentLang];
 
   return (
@@ -731,7 +460,7 @@ export default function LegalPage({ type, onBack }: LegalPageProps) {
             color: '#9A9590',
             margin: 0,
           }}>
-            © 2025 杭州绒达科技有限公司 · 浙ICP备2025188038号-1
+            © 2026 杭州绒达科技有限公司 · 浙ICP备2025188038号-1
           </p>
         </div>
       </div>
