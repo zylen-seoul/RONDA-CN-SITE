@@ -661,19 +661,19 @@
       "key": "privacy",
       "path": "/privacy/",
       "index": false,
-      "title": { "zh": "隐私政策｜杭州绒达", "en": "Privacy Policy | RONDA", "ko": "개인정보 처리방침 | RONDA" },
+      "title": { "zh": "隐私政策｜杭州绒达科技有限公司 · Sample APP", "en": "Privacy Policy | RONDA Sample APP", "ko": "개인정보 처리방침 | RONDA Sample APP" },
       "description": {
-        "zh": "杭州绒达科技官方网站隐私政策。",
-        "en": "Privacy policy for the official RONDA website.",
-        "ko": "RONDA 공식 웹사이트 개인정보 처리방침입니다."
+        "zh": "杭州绒达科技有限公司 Sample APP 隐私政策，说明我们如何收集、使用、存储和保护用户个人信息。",
+        "en": "Privacy policy for the RONDA Sample APP, explaining how we collect, use, store, and protect personal information.",
+        "ko": "RONDA Sample APP 개인정보 처리방침입니다. 개인정보 수집, 이용, 보관 및 보호 방식을 안내합니다."
       },
       "h1": { "zh": "隐私政策", "en": "Privacy Policy", "ko": "개인정보 처리방침" },
       "intro": {
-        "zh": "了解杭州绒达科技如何处理官网访问与项目咨询过程中提供的信息。",
-        "en": "Learn how RONDA handles information provided while visiting the website or making a project inquiry.",
-        "ko": "RONDA가 웹사이트 방문 및 프로젝트 문의 과정에서 제공된 정보를 처리하는 방식을 확인하세요."
+        "zh": "本政策适用于 Sample APP 及通过本应用提交的询盘、咨询或合作请求。更新日期、生效日期：2026年8月21日。",
+        "en": "This policy applies to the Sample APP and inquiries submitted through the app. Updated and effective: August 21, 2026.",
+        "ko": "본 방침은 Sample APP 및 앱을 통해 제출된 문의에 적용됩니다. 업데이트 및 시행일: 2026년 8월 21일."
       },
-      "summary": { "zh": "网站隐私政策。", "en": "Website privacy policy.", "ko": "웹사이트 개인정보 처리방침입니다." },
+      "summary": { "zh": "Sample APP 隐私政策。", "en": "Sample APP privacy policy.", "ko": "Sample APP 개인정보 처리방침입니다." },
       "staticSections": []
     },
     {

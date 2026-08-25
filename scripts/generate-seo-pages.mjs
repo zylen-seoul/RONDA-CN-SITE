@@ -283,8 +283,13 @@ for (const page of manifest.pages) {
     const routePath = localizedPagePath(page.path, lang);
     const outputDir = routePath === "/" ? distDir : path.join(distDir, ...routePath.split("/").filter(Boolean));
     fs.mkdirSync(outputDir, { recursive: true });
+    const outputFile = path.join(outputDir, "index.html");
+    // Keep the hand-authored Sample APP privacy HTML copied from client/public.
+    if (page.key === "privacy" && lang === "zh" && fs.existsSync(outputFile)) {
+      continue;
+    }
     const html = adjustNestedAssets(withPageHead(shell, page, lang), routePath);
-    fs.writeFileSync(path.join(outputDir, "index.html"), html, "utf8");
+    fs.writeFileSync(outputFile, html, "utf8");
   }
 }
 
