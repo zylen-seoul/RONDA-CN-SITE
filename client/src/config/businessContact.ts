@@ -3,7 +3,8 @@
 export const businessContact = {
   advisor: { zh: '吴翔', en: 'Wu Xiang', ko: '우샹 (Wu Xiang)' },
   qrImage: '/business-contact/wu-xiang-wecom.png',
-  qrVerified: false,
+  // Owner confirmed admin-generated customer-contact QR and successful ordinary WeChat scan, 2026-11-17.
+  qrVerified: true,
   officialLink: '', // Official HTTPS work.weixin.qq.com contact URL only
   officialLinkTested: false,
   email: 'zylen@samplewear.com',

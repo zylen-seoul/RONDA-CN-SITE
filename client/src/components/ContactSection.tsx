@@ -9,6 +9,8 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, X } from 'lucide-react';
 import { localizedPath, useLanguage, type Language } from '@/contexts/LanguageContext';
 import '@/contact-section.css';
+import { useBusinessContact } from '@/components/BusinessContact';
+import { verifiedQrPath } from '@/config/businessContact';
 
 const CITY_MEDIA: Record<
   Language,
@@ -102,7 +104,7 @@ const CHANNEL_COPY: Record<Language, ChannelCopy> = {
 };
 
 const QR = {
-  wechatWork: '/media-qr/wechat-work.png',
+  wechatWork: verifiedQrPath() || '/media-qr/wechat-work.png',
   instagram: '/media-qr/instagram.jpg',
   xiaohongshu: '/media-qr/xiaohongshu.jpg',
   douyin: '/media-qr/douyin.png',
@@ -294,14 +296,14 @@ function QRModal({ name, qr, href, copy, onClose }: { name: string; qr: string; 
   );
 }
 
-function QRChannel({ item, copy, onOpen }: { item: ChannelItem; copy: ChannelCopy; onOpen: (name: string, qr: string) => void }) {
+function QRChannel({ item, copy, onOpen }: { item: ChannelItem; copy: ChannelCopy; onOpen: (name: string, qr: string, trigger: HTMLElement) => void }) {
   if (!item.qr) return null;
 
   return (
     <motion.button
       type="button"
       className="contact-section__qr-channel"
-      onClick={() => onOpen(item.name, item.qr!)}
+      onClick={event => onOpen(item.name, item.qr!, event.currentTarget)}
       whileHover={{ y: -2 }}
       aria-label={`${item.name} · ${copy.viewQr}`}
       title={`${item.name} · ${copy.enlarge}`}
@@ -342,6 +344,7 @@ function ExternalChannel({ item }: { item: ChannelItem }) {
 }
 export default function ContactSection({ showCityMedia = false }: { showCityMedia?: boolean }) {
   const { t, lang } = useLanguage();
+  const business = useBusinessContact();
   const cityMedia = CITY_MEDIA[lang];
   const channelCopy = CHANNEL_COPY[lang];
   const ref = useRef(null);
@@ -707,7 +710,13 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
                   const preferred = lang === 'zh' ? '企业微信' : lang === 'ko' ? 'KakaoTalk' : 'WhatsApp';
                   return Number(b.name === preferred) - Number(a.name === preferred);
                 }).map((item) => (
-                  <QRChannel key={item.name} item={item} copy={channelCopy} onOpen={(name, qr) => setActiveQR({ name, qr, href: item.href })} />
+                  <QRChannel key={item.name} item={item} copy={channelCopy} onOpen={(name, qr, trigger) => {
+                    if (name === '企业微信' && qr === verifiedQrPath() && business.available) {
+                      business.open('contact-wecom-card', trigger);
+                    } else {
+                      setActiveQR({ name, qr, href: item.href });
+                    }
+                  }} />
                 ))}
               </div>
             </div>

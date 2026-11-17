@@ -2,16 +2,16 @@ import { describe, expect, it } from 'vitest';
 import { businessContact, previewQrPath, verifiedContactLink, verifiedQrPath } from './businessContact';
 
 describe('business contact production gates', () => {
-  it('allows local image preview without bypassing identity verification', () => {
+  it('enables the owner-verified QR while keeping the untested direct link disabled', () => {
     expect(previewQrPath()).toBe('/business-contact/wu-xiang-wecom.png');
-    expect(businessContact.qrVerified).toBe(false);
+    expect(businessContact.qrVerified).toBe(true);
     expect(businessContact.officialLinkTested).toBe(false);
-    expect(verifiedQrPath()).toBeNull();
+    expect(verifiedQrPath()).toBe(previewQrPath());
     expect(verifiedContactLink()).toBeNull();
   });
   it('keeps unconfirmed or external QR assets disabled', () => {
-    expect(verifiedQrPath()).toBeNull();
-    expect(verifiedQrPath({ ...businessContact, qrImage: '/real.png' })).toBeNull();
+    expect(verifiedQrPath({ ...businessContact, qrVerified: false })).toBeNull();
+    expect(verifiedQrPath({ ...businessContact, qrVerified: false, qrImage: '/real.png' })).toBeNull();
     for (const qrImage of ['https://example.com/qr.png', '//example.com/qr.png', '/fake.svg']) {
       expect(verifiedQrPath({ ...businessContact, qrVerified: true, qrImage })).toBeNull();
     }

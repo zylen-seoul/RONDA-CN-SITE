@@ -13,6 +13,10 @@ const copy = {
 
 const ContactContext = createContext<{ open: (source: string, trigger: HTMLElement) => void; available: boolean }>({ open: () => {}, available: false });
 
+export function useBusinessContact() {
+  return useContext(ContactContext);
+}
+
 // Only use the existing Umami installation, if present. No script or personal data added.
 function track(event: string, source: string, language: string) {
   const analytics = (window as Window & { umami?: { track: (event: string, data: Record<string, string>) => unknown } }).umami;
