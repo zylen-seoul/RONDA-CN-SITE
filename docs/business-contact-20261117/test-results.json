@@ -1,0 +1,818 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "path": "/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/products/down-jackets/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/products/technical-shells/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/products/skiwear/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/products/double-faced-coats/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/products/fur-shearling/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/products/down-bedding/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/services/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/about/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/contact/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/down-jackets/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/technical-shells/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/skiwear/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/double-faced-coats/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/fur-shearling/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/down-bedding/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/services/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/about/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/en/contact/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/down-jackets/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/technical-shells/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/skiwear/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/double-faced-coats/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/fur-shearling/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/down-bedding/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/services/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/about/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 1440,
+      "path": "/ko/contact/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/products/down-jackets/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/products/technical-shells/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/products/skiwear/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/products/double-faced-coats/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/products/fur-shearling/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/products/down-bedding/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/services/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/about/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/contact/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/products/down-jackets/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/products/technical-shells/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/products/skiwear/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/products/double-faced-coats/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/products/fur-shearling/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/products/down-bedding/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/services/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/about/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/en/contact/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/down-jackets/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/technical-shells/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/skiwear/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/double-faced-coats/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/fur-shearling/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/down-bedding/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/services/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/about/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 390,
+      "path": "/ko/contact/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/products/down-jackets/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/products/technical-shells/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/products/skiwear/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/products/double-faced-coats/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/products/fur-shearling/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/products/down-bedding/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/services/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/about/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/contact/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/products/down-jackets/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/products/technical-shells/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/products/skiwear/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/products/double-faced-coats/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/products/fur-shearling/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/products/down-bedding/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/services/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/about/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/en/contact/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/down-jackets/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/technical-shells/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/skiwear/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/double-faced-coats/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/fur-shearling/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/down-bedding/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/services/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/about/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    },
+    {
+      "width": 360,
+      "path": "/ko/contact/",
+      "overflow": false,
+      "dialog": true,
+      "focusTrap": true,
+      "escape": true,
+      "overlayClose": true
+    }
+  ],
+  "qrFixtureDownload": "pass",
+  "qrFailureFallback": "pass",
+  "productionPlaceholderGuard": "pass",
+  "errors": []
+}

@@ -1,0 +1,30 @@
+.bc-floating { position:fixed; z-index:110; right:24px; bottom:calc(24px + env(safe-area-inset-bottom)); display:flex; align-items:center; gap:10px; min-height:48px; max-width:calc(100vw - 32px); padding:12px 18px; border:1px solid #8b7355; background:#8b7355; color:#fff; box-shadow:0 5px 22px #20191025; cursor:pointer; font:500 14px 'DM Sans','Noto Sans SC','Noto Sans KR',sans-serif; }
+.bc-overlay { position:fixed; inset:0; z-index:200; background:#16141299; }
+.bc-panel { position:fixed; z-index:201; top:50%; left:50%; transform:translate(-50%,-50%); width:min(460px,calc(100vw - 32px)); max-height:calc(100dvh - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); overflow-y:auto; padding:32px 24px 24px; background:#f7f5f2; color:#242321; border:1px solid #8b735533; box-shadow:0 20px 70px #0004; font:14px/1.75 'DM Sans','Noto Sans SC','Noto Sans KR',sans-serif; overflow-wrap:anywhere; }
+.bc-title { margin:0 32px 12px 0; font-size:22px; font-weight:500; line-height:1.4; }
+.bc-description { color:#6b6560; margin:0 0 20px; }
+.bc-advisor { font-size:20px; margin:0 0 16px; }
+.bc-advisor small,.bc-links small { display:block; font-size:12px; color:#6b6560; }
+.bc-qr { display:block; width:240px; max-width:100%; max-height:35dvh; object-fit:contain; margin:0 auto 16px; }
+.bc-qr[hidden] { display:none; }
+.bc-mobile-hint,.bc-direct { display:none; }
+.bc-pending { padding:16px; border:1px dashed #8b7355; background:#eee9e2; }
+.bc-links { display:grid; gap:8px; margin-top:20px; border-top:1px solid #8b735533; padding-top:16px; }
+.bc-links a,.bc-save,.bc-direct { min-height:44px; padding:8px 0; color:#685238; text-decoration:underline; text-underline-offset:3px; }
+.bc-save { display:block; }
+.bc-close { position:absolute; top:12px; right:12px; min-width:44px; min-height:44px; display:grid; place-items:center; background:transparent; border:0; cursor:pointer; }
+.bc-floating:focus-visible,.bc-panel :focus-visible { outline:3px solid #516b74; outline-offset:4px; }
+.ronda-site-shell:has(.bc-floating) { padding-bottom:calc(88px + env(safe-area-inset-bottom)); }
+.ronda-site-shell:has(.bc-floating) .ronda-scroll-top { bottom:calc(92px + env(safe-area-inset-bottom)) !important; }
+button.home-v2__button,button.terminal-button { cursor:pointer; font-family:inherit; }
+.bc-contact-entry { padding:0 clamp(1.5rem,5vw,5rem) 2rem; max-width:1440px; margin:auto; }
+@media(max-width:760px) {
+  /* Mobile uses the in-flow hero/product/contact CTAs, leaving body and cookie UI clear. */
+  .bc-floating { display:none; }
+  .ronda-site-shell:has(.bc-floating) { padding-bottom:env(safe-area-inset-bottom); }
+  .ronda-site-shell:has(.bc-floating) .ronda-scroll-top { bottom:calc(24px + env(safe-area-inset-bottom)) !important; }
+  [data-business-contact-trigger] { min-height:48px; }
+  .bc-mobile-hint,.bc-direct { display:block; }
+  .bc-desktop-hint { display:none; }
+  .bc-panel { padding:28px 20px 20px; }
+}

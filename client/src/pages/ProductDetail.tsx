@@ -1,4 +1,5 @@
 import SiteShell from "@/components/SiteShell";
+import { BusinessContactTrigger } from '@/components/BusinessContact';
 import PageHero from "@/components/PageHero";
 import { ArrowUpRight } from "lucide-react";
 import {
@@ -283,7 +284,7 @@ export default function ProductDetail({ slug }: { slug?: ProductSlug }) {
               </div>
             </dl>
             <div className="terminal-actions">
-              <a className="terminal-button terminal-button--primary" href={path("/inquiry/")}>{text({ zh: "提交此品类需求", en: "Submit This Brief", ko: "이 품목 문의" })}<ArrowUpRight aria-hidden="true" size={14} /></a>
+              <BusinessContactTrigger className="terminal-button terminal-button--primary" source={`product-${slug}`}>{text({ zh: "提交此品类需求", en: "Submit This Brief", ko: "이 품목 문의" })}<ArrowUpRight aria-hidden="true" size={14} /></BusinessContactTrigger>
             </div>
           </div>
         </section>

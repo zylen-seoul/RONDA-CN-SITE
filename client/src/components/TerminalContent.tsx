@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { useLanguage, localizedPath, type Language } from "@/contexts/LanguageContext";
 import "@/terminal-pages.css";
+import { BusinessContactTrigger } from '@/components/BusinessContact';
 
 export type TerminalLocalized = Record<Language, string>;
 
@@ -113,9 +114,9 @@ export function TerminalCTA({
         <div className="terminal-cta__copy">
           <p>{body}</p>
           <div className="terminal-actions">
-            <a className="terminal-button terminal-button--primary" href={primary.href}>
+            {/\/(inquiry)\/?$/.test(primary.href) ? <BusinessContactTrigger className="terminal-button terminal-button--primary" source="page-terminal">
               {primary.label}<ArrowUpRight aria-hidden="true" size={14} />
-            </a>
+            </BusinessContactTrigger> : <a className="terminal-button terminal-button--primary" href={primary.href}>{primary.label}<ArrowUpRight aria-hidden="true" size={14} /></a>}
             {secondary ? (
               <a className="terminal-button terminal-button--ghost" href={secondary.href}>
                 {secondary.label}<ArrowRight aria-hidden="true" size={14} />

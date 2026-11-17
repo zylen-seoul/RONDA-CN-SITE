@@ -1,5 +1,6 @@
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import SampleAppSection from "@/components/SampleAppSection";
+import { BusinessContactTrigger } from '@/components/BusinessContact';
 import {
   localizedPath,
   useLanguage,
@@ -508,13 +509,13 @@ export default function HomeEditorial() {
           <h1 id="home-v2-title">{c.heroTitle}</h1>
           <p className="home-v2__hero-text">{c.heroBody}</p>
           <div className="home-v2__hero-actions">
-            <a
+            <BusinessContactTrigger
               className="home-v2__button is-primary"
-              href={localizedPath("/inquiry/", lang)}
+              source="home-hero"
             >
               {c.heroPrimary}
               <ArrowRight aria-hidden="true" size={16} />
-            </a>
+            </BusinessContactTrigger>
             <a
               className="home-v2__text-link is-light"
               href="#winterwear-categories"
