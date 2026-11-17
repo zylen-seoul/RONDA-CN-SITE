@@ -9,7 +9,6 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, X } from 'lucide-react';
 import { localizedPath, useLanguage, type Language } from '@/contexts/LanguageContext';
 import '@/contact-section.css';
-import { BusinessContactTrigger } from '@/components/BusinessContact';
 
 const CITY_MEDIA: Record<
   Language,
@@ -350,8 +349,8 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
   const [activeQR, setActiveQR] = useState<{ name: string; qr: string; href?: string } | null>(null);
   const inquiryAction = (
     <motion.div className="contact-section__inquiry" initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.7, delay: 0.3 }} style={{ textAlign: 'center' }}>
-      <BusinessContactTrigger
-        source="contact-section"
+      <a
+        href={localizedPath('/inquiry/', lang)}
         style={{
           padding: '1.2rem 2.5rem',
           background: '#8B7355',
@@ -368,8 +367,8 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
           transition: 'all 0.3s ease',
         }}
       >
-        {{ zh: '企业微信咨询', en: 'WeCom Consultation', ko: '기업 위챗 상담' }[lang]}
-      </BusinessContactTrigger>
+        {t('contact.label')}
+      </a>
     </motion.div>
   );
 
