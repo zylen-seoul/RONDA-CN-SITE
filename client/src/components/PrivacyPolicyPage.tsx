@@ -805,7 +805,7 @@ export default function LegalPage({ type, onBack }: LegalPageProps) {
             color: '#9A9590',
             margin: 0,
           }}>
-            {'footer' in content && content.footer
+            {'footer' in content && typeof content.footer === 'string' && content.footer
               ? content.footer
               : '© 2025 杭州绒达科技有限公司 · 浙ICP备2025188038号-1'}
           </p>

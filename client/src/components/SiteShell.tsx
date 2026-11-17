@@ -4,17 +4,20 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import Seo from "@/components/Seo";
 import ContactSection from "@/components/ContactSection";
+import BusinessContact from "@/components/BusinessContact";
 import type { PageKey } from "@/lib/siteContent";
 
 export default function SiteShell({ pageKey, children }: { pageKey: PageKey; children: ReactNode }) {
   return (
     <div className="ronda-site-shell min-h-screen">
+      <BusinessContact>
       <Seo pageKey={pageKey} />
       <Navbar />
       <main>{children}</main>
       <ContactSection showCityMedia={pageKey === "home"} />
       <Footer />
       <ScrollToTop />
+      </BusinessContact>
     </div>
   );
 }

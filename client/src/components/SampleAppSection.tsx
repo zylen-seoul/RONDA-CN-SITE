@@ -2,13 +2,13 @@ import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { ClipboardList, ListChecks, BadgeCheck } from 'lucide-react';
 
-// 5张独立手机图片 CDN URL（已套壳 iPhone 15 Pro 金色模型）
+// 5张独立手机界面图；存放在本站，避免外部 CDN 权限或失效导致断图。
 const PHONE_IMAGES = [
-  'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/FOYxUxwSGEBZuwXe.png', // 01 定位双机 990x1800 v5内容97%对齐
-  'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/xdFiDvOhmZhcYSbm.png', // 02 订单详情 990x1800 内容裁剪对齐
-  'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/kfOzyokoOrJCxYDT.png', // 03 汇报周期 990x1800 内容裁剪对齐
-  'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/xeakRshXXIrZrRVo.png', // 04 在线定制 990x1800 内容裁剪对齐
-  'https://files.manuscdn.com/user_upload_by_module/session_file/310519663268754099/KjvAjhztUnEvcygp.png', // 05 个人工作台 990x1800 内容裁剪对齐
+  '/sample-app/slide-1-project-entry.png',
+  '/sample-app/slide-2-project-record.png',
+  '/sample-app/slide-3-progress-update.png',
+  '/sample-app/slide-4-online-request.png',
+  '/sample-app/slide-5-workbench.png',
 ];
 
 const SLIDE_KEYS = ['slide1', 'slide2', 'slide3', 'slide4', 'slide5'];

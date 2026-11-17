@@ -29,6 +29,8 @@ export default function ScrollToTop() {
     <AnimatePresence>
       {isVisible && (
         <motion.button
+          className="ronda-scroll-top"
+          aria-label="Back to top"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.8 }}
