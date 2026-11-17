@@ -4,3 +4,12 @@ dist/
 .tools/
 *.tsbuildinfo
 .DS_Store
+
+# Local, non-website PPT conversion/restyling work (including nested caches).
+# Keep these rules scoped so future website work under tmp/ remains visible.
+/tmp/ppt_convert/
+/tmp/restyle/
+/tmp/restyle_v2/
+
+# Original QR upload; the deployed copy is tracked in client/public/business-contact/.
+/docs/contact_me_qr (1).png
