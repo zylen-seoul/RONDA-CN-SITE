@@ -1,0 +1,1268 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "path": "/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/products/down-jackets/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/products/technical-shells/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/products/skiwear/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/products/double-faced-coats/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/products/fur-shearling/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/products/down-bedding/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/services/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/about/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/contact/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "pass"
+    },
+    {
+      "width": 1440,
+      "path": "/en/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/down-jackets/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/technical-shells/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/skiwear/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/double-faced-coats/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/fur-shearling/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/en/products/down-bedding/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/en/services/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/en/about/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/en/contact/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "pass"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/down-jackets/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/technical-shells/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/skiwear/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/double-faced-coats/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/fur-shearling/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/products/down-bedding/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/services/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/about/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 1440,
+      "path": "/ko/contact/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 560,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "pass"
+    },
+    {
+      "width": 390,
+      "path": "/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/products/down-jackets/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/products/technical-shells/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/products/skiwear/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/products/double-faced-coats/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/products/fur-shearling/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/products/down-bedding/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/services/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/about/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/contact/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "pass"
+    },
+    {
+      "width": 390,
+      "path": "/en/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/en/products/down-jackets/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/en/products/technical-shells/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/en/products/skiwear/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/en/products/double-faced-coats/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/en/products/fur-shearling/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/en/products/down-bedding/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/en/services/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/en/about/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/en/contact/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "pass"
+    },
+    {
+      "width": 390,
+      "path": "/ko/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/down-jackets/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/technical-shells/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/skiwear/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/double-faced-coats/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/fur-shearling/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/ko/products/down-bedding/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/ko/services/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/ko/about/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 390,
+      "path": "/ko/contact/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 358,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "pass"
+    },
+    {
+      "width": 360,
+      "path": "/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/products/down-jackets/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/products/technical-shells/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/products/skiwear/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/products/double-faced-coats/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/products/fur-shearling/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/products/down-bedding/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/services/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/about/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/contact/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "pass"
+    },
+    {
+      "width": 360,
+      "path": "/en/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/en/products/down-jackets/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/en/products/technical-shells/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/en/products/skiwear/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/en/products/double-faced-coats/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/en/products/fur-shearling/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/en/products/down-bedding/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/en/services/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/en/about/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/en/contact/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "pass"
+    },
+    {
+      "width": 360,
+      "path": "/ko/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/down-jackets/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/technical-shells/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/skiwear/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/double-faced-coats/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/fur-shearling/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/ko/products/down-bedding/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/ko/services/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/ko/about/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "n/a"
+    },
+    {
+      "width": 360,
+      "path": "/ko/contact/",
+      "directForm": true,
+      "qrComplete": true,
+      "geometry": {
+        "width": 200,
+        "height": 200,
+        "panelWidth": 328,
+        "inside": true
+      },
+      "keyboard": true,
+      "channels": "pass"
+    }
+  ],
+  "qrDownload": "all 9 screenshot combinations match original bytes",
+  "qrFailureFallback": "pass",
+  "productionGate": "pass",
+  "errors": []
+}

@@ -1,7 +1,14 @@
 import { describe, expect, it } from 'vitest';
-import { businessContact, verifiedContactLink, verifiedQrPath } from './businessContact';
+import { businessContact, previewQrPath, verifiedContactLink, verifiedQrPath } from './businessContact';
 
 describe('business contact production gates', () => {
+  it('allows local image preview without bypassing identity verification', () => {
+    expect(previewQrPath()).toBe('/business-contact/wu-xiang-wecom.png');
+    expect(businessContact.qrVerified).toBe(false);
+    expect(businessContact.officialLinkTested).toBe(false);
+    expect(verifiedQrPath()).toBeNull();
+    expect(verifiedContactLink()).toBeNull();
+  });
   it('keeps unconfirmed or external QR assets disabled', () => {
     expect(verifiedQrPath()).toBeNull();
     expect(verifiedQrPath({ ...businessContact, qrImage: '/real.png' })).toBeNull();

@@ -509,13 +509,14 @@ export default function HomeEditorial() {
           <h1 id="home-v2-title">{c.heroTitle}</h1>
           <p className="home-v2__hero-text">{c.heroBody}</p>
           <div className="home-v2__hero-actions">
-            <BusinessContactTrigger
+            <a
               className="home-v2__button is-primary"
-              source="home-hero"
+              href={localizedPath('/inquiry/', lang)}
             >
               {c.heroPrimary}
               <ArrowRight aria-hidden="true" size={16} />
-            </BusinessContactTrigger>
+            </a>
+            <BusinessContactTrigger className="home-v2__button bc-hero-wecom" source="home-wecom" />
             <a
               className="home-v2__text-link is-light"
               href="#winterwear-categories"

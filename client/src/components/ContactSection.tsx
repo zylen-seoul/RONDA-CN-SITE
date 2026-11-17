@@ -368,7 +368,7 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
           transition: 'all 0.3s ease',
         }}
       >
-        {t('contact.label')}
+        {{ zh: '企业微信咨询', en: 'WeCom Consultation', ko: '기업 위챗 상담' }[lang]}
       </BusinessContactTrigger>
     </motion.div>
   );
@@ -704,7 +704,10 @@ export default function ContactSection({ showCityMedia = false }: { showCityMedi
                 即时通讯 / Messaging
               </span>
               <div className="contact-section__channel-list">
-                {IM_ITEMS.map((item) => (
+                {[...IM_ITEMS].sort((a, b) => {
+                  const preferred = lang === 'zh' ? '企业微信' : lang === 'ko' ? 'KakaoTalk' : 'WhatsApp';
+                  return Number(b.name === preferred) - Number(a.name === preferred);
+                }).map((item) => (
                   <QRChannel key={item.name} item={item} copy={channelCopy} onOpen={(name, qr) => setActiveQR({ name, qr, href: item.href })} />
                 ))}
               </div>
